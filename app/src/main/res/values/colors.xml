@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#98C5C1</color><!--
+    <color name="colorPrimary">#6495ed</color>
+    <color name="colorPrimaryDark">#4F78C1</color>-->
+    <color name="colorAccent">#1ecfc2</color>
+    <color name="colorAccent2">#009688</color>
+
+
+
+    <color name="tboxViolet">#9e92c1</color>
+    <color name="tboxGreen">#61aab6</color>
+    <color name="tboxBlue">#628eb9</color>
+    <color name="tboxGreenLight">#24bbc8</color>
+
+    <color name="tboxTabsGreen">#45c01a</color>
+
+    <color name="textColorSecondary">#ff727272</color>
+    <color name="colorGameButtonNext">#414141</color>
+
+    <color name="materialGreenPrimary">#7B1FA2</color>
+    <color name="materialTeal">#4DB6AC</color>
+    <color name="materialGreenDark">#378e3b</color>
+    <color name="materialBlue">#5b6abf</color>
+    <color name="materialBlue2">#3F51B5</color>
+    <color name="materialPurple">#9C27B0</color>
+    <color name="materialGrey">#414141</color>
+    <color name="materialGrey2">#778f9b</color>
+
+    <color name="fabTint">#f1f1f1</color>
+
+    <color name="colorTeal">#009688</color>
+
+    <color name="materialCyanPrimary">#00BCD4</color>
+    <color name="materialCyanDark">#00838F</color>
+    <color name="materialBrown">#8c6d62</color>
+    <color name="materialBrown2">#795548</color>
+    <color name="materialYellow">#f8a724</color>
+    <color name="materialRed">#FF5252</color>
+    <color name="materialOrange">#ff6f42</color>
+    <color name="materialPink">#FF6499</color>
+    <color name="white">#ffffff</color>
+
+
 </resources>
