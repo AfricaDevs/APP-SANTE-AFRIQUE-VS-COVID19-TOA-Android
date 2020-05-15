@@ -28,6 +28,7 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
+            app:titleTextColor="@color/toolbar_text_color"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimary"/>
 
@@ -35,6 +36,6 @@
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#fafafa" />
+            android:background="@color/layouts_main_white_bg" />
     </LinearLayout>
 </nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout>

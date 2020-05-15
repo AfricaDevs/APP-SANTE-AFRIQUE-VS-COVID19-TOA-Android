@@ -11,7 +11,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="#daf3f1"
+        android:background="@color/shapes_green_color"
         />
     <ImageView
         android:layout_width="match_parent"
@@ -82,6 +82,7 @@
                 android:layout_height="wrap_content"
                 app:contentPadding="8dp"
                 app:cardUseCompatPadding="true"
+                app:cardCornerRadius="@dimen/main_cards_radius"
                 >
 
                 <LinearLayout
@@ -94,7 +95,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/app_main_text_size"
                     android:text="@string/main_intro_about_app"
                     />
 

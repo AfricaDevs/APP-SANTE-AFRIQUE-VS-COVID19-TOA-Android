@@ -41,6 +41,9 @@
     <color name="materialOrange">#ff6f42</color>
     <color name="materialPink">#FF6499</color>
     <color name="white">#ffffff</color>
+    <color name="toolbar_text_color">#555555</color>
+    <color name="layouts_main_white_bg">#fafafa</color>
+    <color name="shapes_green_color">#daf3f1</color>
 
 
 </resources>
