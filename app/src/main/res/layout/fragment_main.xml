@@ -8,58 +8,25 @@
     android:clipToPadding="false"
     tools:context=".ui.MainFragment">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/shapes_green_color"
-        />
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="2dp"
-        android:background="@drawable/ic_bg_primary_color_shapes"
-        />
 
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="200dp"
-        android:background="@drawable/ic_bg_primary_color_shapes"
-        android:rotation="360"
-        />
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="150dp"
-        android:background="@drawable/ic_bg_primary_color_shapes"
-        android:rotation="180"
-        />
 
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="350dp"
         android:background="@drawable/ic_bg_primary_color_shapes"
         android:rotation="180"
         />
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginTop="350dp"
-        android:background="@drawable/ic_bg_primary_color_shapes"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/ic_bg_blue_shape"
         android:rotation="360"
         />
 
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_gravity="bottom"
-        android:background="@drawable/ic_bg_primary_color_shapes"
-        android:rotation="180"
-        />
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -72,6 +39,23 @@
             >
 
 
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentPadding="8dp"
+                app:cardUseCompatPadding="false"
+                app:cardCornerRadius="@dimen/main_cards_radius">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/app_main_text_size"
+                    android:text="@string/main_intro_about_app" />
+
+            </androidx.cardview.widget.CardView>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
@@ -123,34 +107,7 @@
                     />
             </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                app:contentPadding="8dp"
-                app:cardUseCompatPadding="false"
-                app:cardCornerRadius="@dimen/main_cards_radius">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/logo_round"
-                        android:layout_gravity="center_horizontal" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:textSize="@dimen/app_main_text_size"
-                        android:text="@string/main_intro_about_app" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 

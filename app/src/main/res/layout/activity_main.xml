@@ -20,23 +20,82 @@
         app:header="@layout/toa_view_header"
         app:footer="@layout/toa_view_footer" />
 
-    <LinearLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:tag="@string/tag_content">
+        android:tag="@string/tag_content"
+        tools:context=".MainActivity">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
             android:layout_width="match_parent"
-            app:titleTextColor="@color/toolbar_text_color"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/white" />
+            android:layout_height="230dp"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolabar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/layouts_main_white_bg"
+                android:layout_marginTop="0dp"
+                app:scrimVisibleHeightTrigger="100dp"
+                app:contentScrim="@color/colorPrimary"
+                app:expandedTitleGravity="center_horizontal|top"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                >
 
+            <com.github.florent37.arclayout.ArcLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp"
+                app:arc_cropDirection="cropInside"
+                android:background="@color/white"
+                app:arc_position="bottom"
+                app:arc_height="80dp" >
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    />
+            </com.github.florent37.arclayout.ArcLayout>
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginTop="0dp"
+
+
+                android:minHeight="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                />
+
+
+                <ImageView
+
+                    android:id="@+id/toa_logo"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:src="@drawable/logo_round"
+                    android:layout_gravity="bottom|center_horizontal"
+                    />
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
         <FrameLayout
             android:id="@+id/container"
+
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/layouts_main_white_bg" />
-    </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 </nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout>

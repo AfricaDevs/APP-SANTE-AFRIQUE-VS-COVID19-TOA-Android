@@ -1,13 +1,19 @@
 package org.changemakers.toa;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.ViewCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.PointerIcon;
+import android.widget.TextView;
+
+import com.google.android.material.appbar.AppBarLayout;
 
 import org.changemakers.toa.databinding.ActivityMainBinding;
+import org.changemakers.toa.databinding.ToaViewHeaderBinding;
 import org.changemakers.toa.ui.MainFragment;
 
 import java.util.ArrayList;
@@ -19,6 +25,7 @@ import nl.psdcompany.duonavigationdrawer.widgets.DuoDrawerToggle;
 public class MainActivity extends AppCompatActivity implements DuoMenuView.OnMenuClickListener {
 
     ActivityMainBinding binding;
+    ToaViewHeaderBinding bindingHeaderView;
 
     private MenuAdapter mMenuAdapter;
 
@@ -45,6 +52,36 @@ public class MainActivity extends AppCompatActivity implements DuoMenuView.OnMen
         mMenuAdapter.setViewSelected(0, true);
         setTitle(mTitles.get(0));
         goToFragment(null, false);
+
+        //underline header view clickable TextViews
+        TextView privacyPoliciesView  = binding.menuView.getHeaderView().findViewById(R.id.privacy_policies);
+        TextView termsOfUseView  = binding.menuView.getHeaderView().findViewById(R.id.terms_of_use);
+
+        privacyPoliciesView.setPaintFlags(privacyPoliciesView.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        termsOfUseView.setPaintFlags(termsOfUseView.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+
+
+        binding.appBar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+            @Override
+            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+                if (verticalOffset == 0) {
+
+                    ViewCompat.animate(binding.toaLogo).setDuration(400).alpha(1f).start();
+                    ViewCompat.animate(binding.toaLogo).setDuration(500).scaleX(1f).start();
+                    ViewCompat.animate(binding.toaLogo).setDuration(500).scaleY(1f).start();
+                    //EXPANDED;
+                } else if (Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange()) {
+
+                    ViewCompat.animate(binding.toaLogo).setDuration(200).alpha(0f).start();
+                    ViewCompat.animate(binding.toaLogo).setDuration(200).scaleX(0f).start();
+                    ViewCompat.animate(binding.toaLogo).setDuration(200).scaleY(0f).start();
+                    //COLLAPSED;
+                } else {
+
+                    //IDDLE
+                }
+            }
+        });
     }
 
     private void handleToolbar() {

@@ -45,6 +45,9 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui:2.2.2'
 
 
+    //Custom layouts
+    implementation 'com.github.florent37:arclayout:1.0.5'
+
     //Image libs
     implementation 'de.hdodenhof:circleimageview:2.2.0'
 
