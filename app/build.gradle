@@ -50,11 +50,14 @@ dependencies {
 
     //Image libs
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
 
     //View animations
     implementation 'com.daimajia.easing:library:2.0@aar'
     implementation 'com.daimajia.androidanimations:library:2.3@aar'
     implementation 'com.facebook.rebound:rebound:0.3.8'
+    implementation 'com.airbnb.android:lottie:3.4.0'
+
 
     implementation 'nl.psdcompany:duo-navigation-drawer:3.0.0'
 
