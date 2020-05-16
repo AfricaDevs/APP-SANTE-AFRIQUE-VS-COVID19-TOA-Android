@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="false"
     android:id="@+id/drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,6 +14,7 @@
     <nl.psdcompany.duonavigationdrawer.views.DuoMenuView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fitsSystemWindows="false"
         android:id="@+id/menuView"
         android:orientation="vertical"
         android:tag="@string/tag_menu"
@@ -24,6 +26,7 @@
         android:id="@+id/coordinator_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fitsSystemWindows="false"
         android:tag="@string/tag_content"
         tools:context=".MainActivity">
 
@@ -40,7 +43,6 @@
                 android:layout_height="match_parent"
                 android:background="@color/layouts_main_white_bg"
                 android:layout_marginTop="0dp"
-                app:scrimVisibleHeightTrigger="100dp"
                 app:contentScrim="@color/colorPrimary"
                 app:expandedTitleGravity="center_horizontal|top"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed"
@@ -61,6 +63,21 @@
                     android:layout_height="match_parent"
                     android:background="@color/colorPrimary"
                     />
+
+
+
+                <com.flaviofaria.kenburnsview.KenBurnsView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/covid_worms_bg"
+                    />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#b5193150"
+                    />
+
             </com.github.florent37.arclayout.ArcLayout>
 
 

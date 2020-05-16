@@ -67,16 +67,17 @@ public class MainActivity extends AppCompatActivity implements DuoMenuView.OnMen
                 if (verticalOffset == 0) {
 
                     ViewCompat.animate(binding.toaLogo).setDuration(400).alpha(1f).start();
-                    ViewCompat.animate(binding.toaLogo).setDuration(500).scaleX(1f).start();
-                    ViewCompat.animate(binding.toaLogo).setDuration(500).scaleY(1f).start();
+                    //ViewCompat.animate(binding.toaLogo).setDuration(500).scaleX(1f).start();
+                    //ViewCompat.animate(binding.toaLogo).setDuration(500).scaleY(1f).start();
                     //EXPANDED;
                 } else if (Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange()) {
 
                     ViewCompat.animate(binding.toaLogo).setDuration(200).alpha(0f).start();
-                    ViewCompat.animate(binding.toaLogo).setDuration(200).scaleX(0f).start();
-                    ViewCompat.animate(binding.toaLogo).setDuration(200).scaleY(0f).start();
+                    //ViewCompat.animate(binding.toaLogo).setDuration(200).scaleX(0f).start();
+                    //ViewCompat.animate(binding.toaLogo).setDuration(200).scaleY(0f).start();
                     //COLLAPSED;
                 } else {
+
 
                     //IDDLE
                 }
