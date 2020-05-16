@@ -3,10 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
+    android:background="@color/white"
     android:padding="8dp">
 
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="280dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/ic_bg_blue_shape"
+            android:rotation="360"
 
+            />
         <ImageView
             android:layout_width="350dp"
             android:layout_height="250dp"
@@ -15,6 +22,7 @@
             android:rotation="360"
 
             />
+
 
         <ImageView
             android:layout_width="100dp"
@@ -448,7 +456,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
-                    android:textColor="@color/tboxBlue"
+                    android:textColor="@color/linksBlue"
                     android:text="politique de confidentialité" />
 
                 <TextView
@@ -457,7 +465,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:textSize="18sp"
-                    android:textColor="@color/tboxBlue"
+                    android:textColor="@color/linksBlue"
                     android:text="conditions d'utilisation" />
 
         </LinearLayout>
