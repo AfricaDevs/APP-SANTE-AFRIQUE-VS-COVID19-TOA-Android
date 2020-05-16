@@ -4,16 +4,18 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
-    android:padding="8dp">
+    android:paddingTop="8dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    >
 
         <ImageView
             android:layout_width="350dp"
             android:layout_height="280dp"
             android:layout_gravity="bottom"
             android:background="@drawable/ic_bg_blue_shape"
-            android:rotation="360"
+            android:rotation="360"/>
 
-            />
         <ImageView
             android:layout_width="350dp"
             android:layout_height="250dp"
@@ -21,6 +23,43 @@
             android:background="@drawable/ic_bg_primary_dark_color_shapes"
             android:rotation="360"
 
+            />
+
+        <ImageView
+            android:id="@+id/bottom_shape"
+            android:layout_width="125dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/ic_bg_blue_shape"
+            android:rotation="180"
+            />
+        <ImageView
+            android:id="@+id/bottom_shape_green"
+            android:layout_width="125dp"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/ic_bg_primary_dark_color_shapes"
+            android:rotation="180"
+            />
+
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="125dp"
+            android:background="@drawable/ic_bg_blue_shape"
+            android:rotation="360"
+            />
+        <ImageView
+
+            android:layout_width="200dp"
+            android:layout_height="10dp"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="125dp"
+            android:background="@drawable/ic_bg_primary_dark_color_shapes"
+            android:rotation="360"
             />
 
 
@@ -445,9 +484,13 @@
             android:id="@+id/toa_footer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/bottom_shape"
             android:paddingLeft="14dp"
-            android:paddingBottom="4dp"
+            android:paddingRight="50dp"
+            android:paddingEnd="50dp"
+            android:paddingBottom="24dp"
             android:orientation="vertical"
+            android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true">
 
 
