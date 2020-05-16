@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="2dp"
-        android:background="@drawable/ic_bg_grey"
+        android:background="@drawable/ic_bg_primary_color_shapes"
         />
 
 
@@ -25,14 +25,14 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginTop="200dp"
-        android:background="@drawable/ic_bg_grey"
+        android:background="@drawable/ic_bg_primary_color_shapes"
         android:rotation="360"
         />
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="150dp"
-        android:background="@drawable/ic_bg_grey"
+        android:background="@drawable/ic_bg_primary_color_shapes"
         android:rotation="180"
         />
 
@@ -41,14 +41,14 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="300dp"
-        android:background="@drawable/ic_bg_grey"
+        android:background="@drawable/ic_bg_primary_color_shapes"
         android:rotation="180"
         />
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="350dp"
-        android:background="@drawable/ic_bg_grey"
+        android:background="@drawable/ic_bg_primary_color_shapes"
         android:rotation="360"
         />
 
@@ -57,7 +57,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_gravity="bottom"
-        android:background="@drawable/ic_bg_grey"
+        android:background="@drawable/ic_bg_primary_color_shapes"
         android:rotation="180"
         />
     <androidx.core.widget.NestedScrollView
@@ -71,37 +71,86 @@
             android:orientation="vertical"
             >
 
-            <ImageView
-                android:layout_width="100dp"
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:src="@drawable/logo_round"
-                android:layout_gravity="center_horizontal"
-                />
+
+                android:padding="4dp"
+                android:background="@drawable/shape_main_button_rounded_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Comment se protéger tous les jours?"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/shape_main_button_rounded_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Analyser vos symptômes"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_centerInParent="true" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_height="1dp"
+                    android:background="#999999" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="recevez aussitôt des informations adaptées sur ce qu’il est préférable de faire"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    />
+            </LinearLayout>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 app:contentPadding="8dp"
-                app:cardUseCompatPadding="true"
-                app:cardCornerRadius="@dimen/main_cards_radius"
-                >
+                app:cardUseCompatPadding="false"
+                app:cardCornerRadius="@dimen/main_cards_radius">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/logo_round"
+                        android:layout_gravity="center_horizontal" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:textSize="@dimen/app_main_text_size"
-                    android:text="@string/main_intro_about_app"
-                    />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/app_main_text_size"
+                        android:text="@string/main_intro_about_app" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
         </LinearLayout>
 

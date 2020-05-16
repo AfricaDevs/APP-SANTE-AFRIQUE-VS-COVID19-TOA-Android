@@ -16,6 +16,7 @@
         android:id="@+id/menuView"
         android:orientation="vertical"
         android:tag="@string/tag_menu"
+        app:contentScaleOpen="0.7"
         app:header="@layout/toa_view_header"
         app:footer="@layout/toa_view_footer" />
 
@@ -30,7 +31,7 @@
             android:layout_width="match_parent"
             app:titleTextColor="@color/toolbar_text_color"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimary"/>
+            android:background="@color/white" />
 
         <FrameLayout
             android:id="@+id/container"
