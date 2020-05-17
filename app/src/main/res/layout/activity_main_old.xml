@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
+<nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,6 +10,17 @@
     tools:context=".MainActivity"
     >
 
+
+    <nl.psdcompany.duonavigationdrawer.views.DuoMenuView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="false"
+        android:id="@+id/menuView"
+        android:orientation="vertical"
+        android:tag="@string/tag_menu"
+        app:contentScaleOpen="0.7"
+        app:header="@layout/fragment_nav"
+        app:footer="@layout/toa_view_footer" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinator_layout"
@@ -42,7 +53,6 @@
             <com.github.florent37.arclayout.ArcLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fitsSystemWindows="true"
                 android:layout_marginTop="0dp"
                 app:arc_cropDirection="cropInside"
                 android:background="@color/white"
@@ -53,7 +63,6 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:fitsSystemWindows="true"
                     android:background="@color/colorPrimary"
                     />
 
@@ -63,13 +72,11 @@
                     android:id="@+id/image"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:fitsSystemWindows="true"
                     android:src="@drawable/covid_worms_bg"
                     />
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:fitsSystemWindows="true"
                     android:background="#b5193150"
                     />
 
@@ -80,7 +87,6 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:fitsSystemWindows="true"
                 android:layout_marginTop="@dimen/toolbar_api_version_top_margin"
 
                 android:minHeight="?attr/actionBarSize"
@@ -110,20 +116,4 @@
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-
-
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/duo_view_header"
-        android:id="@+id/navigation_view"
-        app:itemTextColor="@color/white"
-        >
-        <fragment
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            class="org.changemakers.toa.ui.NavFragment"
-            />
-    </com.google.android.material.navigation.NavigationView>
-</androidx.drawerlayout.widget.DrawerLayout>
+</nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout>

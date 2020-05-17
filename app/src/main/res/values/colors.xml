@@ -44,6 +44,7 @@
     <color name="materialYellow">#f8a724</color>
     <color name="materialRed">#FF5252</color>
     <color name="materialOrange">#ff6f42</color>
+    <color name="materialOrange2">#EC8D6F</color>
     <color name="materialPink">#FF6499</color>
     <color name="white">#ffffff</color>
     <color name="toolbar_text_color">#555555</color>

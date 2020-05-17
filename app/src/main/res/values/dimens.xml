@@ -4,4 +4,6 @@
     <dimen name="list_item_spacing_half">8dp</dimen>
     <dimen name="app_main_text_size">16sp</dimen>
     <dimen name="main_cards_radius">5dp</dimen>
+    <dimen name="toolbar_api_version_top_margin">0dp</dimen>
+    <dimen name="toa_header_view_api_version_top_padding">8dp</dimen>
 </resources>
