@@ -42,4 +42,5 @@
     <dimen name="value_text_size_15sp">15sp</dimen>
     <dimen name="value_text_size_11sp">11sp</dimen>
     <dimen name="value_text_size_10sp">10sp</dimen>
+    <dimen name="value_150dp">150dp</dimen>
 </resources>

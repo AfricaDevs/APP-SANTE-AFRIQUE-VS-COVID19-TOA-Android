@@ -11,7 +11,6 @@
     <color name="colorAccent3">#1ecfc2</color>
 
 
-
     <color name="linksBlue">#225378</color>
 
     <color name="tboxViolet">#9e92c1</color>
@@ -50,6 +49,8 @@
     <color name="toolbar_text_color">#555555</color>
     <color name="layouts_main_white_bg">#f5f5f5</color>
     <color name="shapes_green_color">#daf3f1</color>
+
+    <color name="black_overlay">#66000000</color>
 
 
 </resources>

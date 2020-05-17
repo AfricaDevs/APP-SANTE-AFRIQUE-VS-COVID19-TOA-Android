@@ -47,17 +47,6 @@ public class MainActivity extends AppCompatActivity  {
 
         goToFragment(null, false);
 
-        //underline header view clickable TextViews
-        /*
-        TextView privacyPoliciesView  = binding.navigationView.getHeaderView(0).findViewById(R.id.privacy_policies);
-        TextView termsOfUseView  = binding.navigationView.getHeaderView(0).findViewById(R.id.terms_of_use);
-
-        privacyPoliciesView.setPaintFlags(privacyPoliciesView.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-        termsOfUseView.setPaintFlags(termsOfUseView.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-
-         */
-
-
         binding.appBar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
@@ -96,7 +85,6 @@ public class MainActivity extends AppCompatActivity  {
     }
 
 
-
     private void goToFragment(Fragment fragment, boolean addToBackStack) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
@@ -105,8 +93,8 @@ public class MainActivity extends AppCompatActivity  {
         }
 
         if(fragment!=null)
-        transaction.add(R.id.container, fragment).commit();
+        transaction.replace(R.id.container, fragment).commit();
         else
-        transaction.add(R.id.container, new MainFragment()).commit();
+        transaction.replace(R.id.container, new MainFragment()).commit();
     }
 }

@@ -76,7 +76,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                app:cardElevation="3dp"
+                app:cardElevation="@dimen/basic_cardview_elevation_3dp"
                 app:cardUseCompatPadding="true"
                 app:cardCornerRadius="@dimen/main_cards_radius">
 
@@ -149,7 +149,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginTop="10dp"
-                app:cardElevation="3dp"
+                app:cardElevation="@dimen/basic_cardview_elevation_3dp"
                 app:cardUseCompatPadding="true"
                 app:cardCornerRadius="@dimen/main_cards_radius">
 
