@@ -4,6 +4,8 @@
 
     <string name="navigation_drawer_open">Drawer Open</string>
     <string name="navigation_drawer_close">Drawer Closed</string>
+    <string name="nav_toa_contacts">Collectif TOÂ\n17 rue Duguay-Trouin\n75006 Paris</string>
+    <string name="nav_toa_contacts_email">Tel: +33 0613411835\ncollectif.toa@gmail.com</string>
 
     <array name="menuOptions">
         <item>TOÂ</item>

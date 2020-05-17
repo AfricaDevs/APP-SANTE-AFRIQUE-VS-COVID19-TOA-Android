@@ -6,4 +6,41 @@
     <dimen name="main_cards_radius">5dp</dimen>
     <dimen name="toolbar_api_version_top_margin">0dp</dimen>
     <dimen name="toa_header_view_api_version_top_padding">8dp</dimen>
+    <dimen name="basic_cardview_elevation_3dp">3dp</dimen>
+
+    <dimen name="frament_nav_contact_left_padding">10dp</dimen>
+    <dimen name="frament_nav_contact_top_padding">10dp</dimen>
+    <dimen name="frament_nav_contact_text_size">14sp</dimen>
+    <dimen name="nav_cardview_left_padding">10dp</dimen>
+    <dimen name="nav_cardview_right_padding">15dp</dimen>
+    <dimen name="nav_cardview_top_margin">15dp</dimen>
+    <dimen name="nav_cardview_conttent_padding">8dp</dimen>
+    <dimen name="nav_fragment_footer_content_bottom_margin">45dp</dimen>
+
+    <dimen name="value_2dp">2dp</dimen>
+    <dimen name="value_4dp">4dp</dimen>
+    <dimen name="value_5dp">5dp</dimen>
+    <dimen name="value_8dp">8dp</dimen>
+    <dimen name="value_10dp">10dp</dimen>
+    <dimen name="value_20dp">20dp</dimen>
+    <dimen name="value_25dp">25dp</dimen>
+    <dimen name="value_30dp">30dp</dimen>
+    <dimen name="value_40dp">40dp</dimen>
+    <dimen name="value_50dp">50dp</dimen>
+    <dimen name="value_80dp">80dp</dimen>
+    <dimen name="value_100dp">100dp</dimen>
+    <dimen name="value_125dp">125dp</dimen>
+    <dimen name="value_200dp">200dp</dimen>
+    <dimen name="value_300dp">300dp</dimen>
+    <dimen name="value_24dp">24dp</dimen>
+    <dimen name="value_18dp">18dp</dimen>
+    <dimen name="nav_header_shape_primary_color_height">240dp</dimen>
+    <dimen name="nav_header_shape_accent_color_height">300dp</dimen>
+    <dimen name="nav_links_text_size">18sp</dimen>
+    <dimen name="value_30dp">30dp</dimen>
+    <dimen name="value_45dp">45dp</dimen>
+    <dimen name="value_1dp">1dp</dimen>
+    <dimen name="value_text_size_15sp">15sp</dimen>
+    <dimen name="value_text_size_11sp">11sp</dimen>
+    <dimen name="value_text_size_10sp">10sp</dimen>
 </resources>
