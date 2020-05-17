@@ -9,6 +9,7 @@
 - ***Manon Aminatou***, Dr en Pharmacologie, Toxicologue, Directrice VisaTox
 - ***Nyan  Frederick Goumou***, Médecin, chirurgien  oncologue pédiatre et consultant en PCI 
 - ***Sandrine Mansoutre***, Docteur en physique et ingénieur en chimie, Open innovation
-- ***Clémentine Langlois***, Directeur de programme Santé, épidémiologiste
+- ***Clémentine Langlois***, Directeur de programme Santé, épidémiologiste.
+
 *👨‍💻 Développeur(s):*
 - ***[Steve NDENDE](https://www.github.com/steve111MV)***, Chef de projet mobile, Développeur
