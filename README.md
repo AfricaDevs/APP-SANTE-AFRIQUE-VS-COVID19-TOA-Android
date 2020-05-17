@@ -12,11 +12,11 @@
 - ***Clémentine Langlois***, Directeur de programme Santé, épidémiologiste.
 
 *👨‍💻 Développeur(s):*
-- ***[Steve NDENDE](https://www.github.com/steve111MV)***, Chef de projet mobile, Développeur
+- ***[Steve NDENDE](https://www.github.com/steve111MV){:target="_blank"}***, Chef de projet mobile, Développeur
 
 ## Licence :
-**[GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html)**
+**[GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html){:target="_blank"}**
 
-## Contacts :
+## Contacts:
 :email: [collectif.toa@gmail.com](mailto:collectif.toa@gmail.com)
 
