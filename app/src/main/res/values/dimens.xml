@@ -37,7 +37,6 @@
     <dimen name="nav_header_shape_primary_color_height">240dp</dimen>
     <dimen name="nav_header_shape_accent_color_height">300dp</dimen>
     <dimen name="nav_links_text_size">18sp</dimen>
-    <dimen name="value_30dp">30dp</dimen>
     <dimen name="value_45dp">45dp</dimen>
     <dimen name="value_1dp">1dp</dimen>
     <dimen name="value_text_size_15sp">15sp</dimen>
