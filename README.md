@@ -13,3 +13,10 @@
 
 *👨‍💻 Développeur(s):*
 - ***[Steve NDENDE](https://www.github.com/steve111MV)***, Chef de projet mobile, Développeur
+
+## Licence :
+**[GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html)**
+
+## Contacts :
+:email: [collectif.toa@gmail.com](mailto:collectif.toa@gmail.com)**
+
