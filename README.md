@@ -18,5 +18,5 @@
 **[GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html)**
 
 ## Contacts :
-:email: [collectif.toa@gmail.com](mailto:collectif.toa@gmail.com)**
+:email: [collectif.toa@gmail.com](mailto:collectif.toa@gmail.com)
 
