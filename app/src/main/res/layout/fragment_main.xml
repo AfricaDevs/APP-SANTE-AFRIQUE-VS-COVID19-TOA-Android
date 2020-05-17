@@ -74,8 +74,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="11dp"
                 app:cardElevation="@dimen/basic_cardview_elevation_3dp"
                 app:cardUseCompatPadding="true"
                 app:cardCornerRadius="@dimen/main_cards_radius">
@@ -146,8 +146,8 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="11dp"
                 android:layout_marginTop="10dp"
                 app:cardElevation="@dimen/basic_cardview_elevation_3dp"
                 app:cardUseCompatPadding="true"
