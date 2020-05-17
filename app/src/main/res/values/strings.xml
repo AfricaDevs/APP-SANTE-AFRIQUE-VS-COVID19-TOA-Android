@@ -2,6 +2,8 @@
     <string name="app_name">TOÂ</string>
     <string name="main_intro_about_app">Chercheurs, médecins et scientifiques ont créé cette application rien que pour TOÂ.\nPour promouvoir les bonnes pratiques pour faire face à la pandémie de Covid-19 en Afrique.</string>
 
+    <string name="navigation_drawer_open">Drawer Open</string>
+    <string name="navigation_drawer_close">Drawer Closed</string>
 
     <array name="menuOptions">
         <item>TOÂ</item>

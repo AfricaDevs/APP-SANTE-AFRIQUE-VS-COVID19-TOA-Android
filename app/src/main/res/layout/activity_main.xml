@@ -16,7 +16,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
-        android:tag="@string/tag_content"
         tools:context=".MainActivity">
 
 
@@ -45,7 +44,7 @@
                 android:fitsSystemWindows="true"
                 android:layout_marginTop="0dp"
                 app:arc_cropDirection="cropInside"
-                android:background="@color/white"
+                android:background="@color/layouts_main_white_bg"
                 app:arc_position="bottom"
                 app:arc_height="80dp" >
 
@@ -116,7 +115,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:headerLayout="@layout/duo_view_header"
         android:id="@+id/navigation_view"
         app:itemTextColor="@color/white"
         >
