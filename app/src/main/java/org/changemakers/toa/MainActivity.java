@@ -4,6 +4,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.WindowManager;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.ViewCompat;
@@ -47,6 +48,12 @@ public class MainActivity extends AppCompatActivity  {
 
         goToFragment(null, false);
 
+    }
+
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+
         binding.appBar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
@@ -63,7 +70,7 @@ public class MainActivity extends AppCompatActivity  {
 
                     binding.collapsingToolabar.setTitleEnabled(false);
                 } else {
-                     //binding.collapsingToolabar.setTitleEnabled(false);
+                    //binding.collapsingToolabar.setTitleEnabled(false);
 
                     //IDDLE
                 }

@@ -6,6 +6,8 @@
     <string name="navigation_drawer_close">Drawer Closed</string>
     <string name="nav_toa_contacts">Collectif TOÂ\n17 rue Duguay-Trouin\n75006 Paris</string>
     <string name="nav_toa_contacts_email">Tel: +33 0613411835\ncollectif.toa@gmail.com</string>
+    <string name="alert_cant_handle">Erreur !</string>
+    <string name="privacy_policies_link">https://africadevs.github.io/policies.html</string>
 
     <array name="menuOptions">
         <item>TOÂ</item>

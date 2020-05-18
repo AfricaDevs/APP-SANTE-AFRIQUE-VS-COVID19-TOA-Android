@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white"
+    android:background="@color/layouts_main_white_bg"
     >
 
         <ImageView
@@ -37,7 +37,7 @@
             android:paddingRight="@dimen/value_50dp"
             android:paddingEnd="@dimen/value_50dp"
             android:paddingLeft="@dimen/value_2dp"
-            android:paddingBottom="@dimen/value_24dp"
+            android:paddingBottom="@dimen/value_30dp"
             android:layout_marginStart="@dimen/nav_cardview_left_padding"
             android:layout_marginLeft="@dimen/nav_cardview_left_padding"
             android:layout_marginBottom="@dimen/nav_fragment_footer_content_bottom_margin"
@@ -53,14 +53,14 @@
                     android:textColor="@color/linksBlue"
                     android:text="politique de confidentialité" />
 
-                <TextView
+                <!--TextView
                     android:id="@+id/terms_of_use"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/value_5dp"
                     android:textSize="@dimen/nav_links_text_size"
                     android:textColor="@color/linksBlue"
-                    android:text="conditions d'utilisation" />
+                    android:text="conditions d'utilisation" /-->
 
         </LinearLayout>
         <RelativeLayout
