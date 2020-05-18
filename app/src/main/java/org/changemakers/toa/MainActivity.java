@@ -2,6 +2,7 @@ package org.changemakers.toa;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Window;
 import android.view.WindowManager;
 
 import androidx.annotation.Nullable;
@@ -29,9 +30,15 @@ public class MainActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP  ) {
+            try {
+                getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+                getWindow().setAllowEnterTransitionOverlap(true);
+            } catch (Exception ex) { }
+        }
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP  ) {
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS|WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION| WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);

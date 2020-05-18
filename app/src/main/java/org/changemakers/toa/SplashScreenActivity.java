@@ -10,6 +10,9 @@ import android.view.View;
 import android.view.Window;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.ActivityOptionsCompat;
+import androidx.core.util.Pair;
 
 import org.changemakers.toa.databinding.ActivitySplashScreenBinding;
 
@@ -34,14 +37,35 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         @Override
         public void run() {
-            startActivity(new Intent(SplashScreenActivity.this, MainActivity.class));
-            finish();
+
+
+            Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
+            Pair<View, String> pair1 = Pair.create((View) binding.logo, "shared_logo");
+
+            try {
+                ActivityOptionsCompat optionsCompat =
+                        ActivityOptionsCompat.makeSceneTransitionAnimation(SplashScreenActivity.this, pair1);
+
+                ActivityCompat.startActivity(SplashScreenActivity.this, intent, optionsCompat.toBundle());
+                //overridePendingTransition(android.R.anim.fade_out, android.R.anim.fade_in);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+
+                startActivity(new Intent(SplashScreenActivity.this, MainActivity.class));
+                overridePendingTransition(android.R.anim.fade_out, android.R.anim.fade_in);
+            }
+
         }
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Enable transitions for the logo, from API LEVEL 21
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+        }
 
         binding = ActivitySplashScreenBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -71,6 +95,11 @@ public class SplashScreenActivity extends AppCompatActivity {
         transition.startTransition(UI_ANIMATION_DELAY);
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+    }
 
     /**
      * Schedules a call to load the main Activity, canceling any
