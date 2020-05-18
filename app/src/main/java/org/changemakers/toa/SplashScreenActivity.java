@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.app.ActivityOptionsCompat;
 import androidx.core.util.Pair;
+import androidx.core.view.ViewCompat;
 
 import org.changemakers.toa.databinding.ActivitySplashScreenBinding;
 
@@ -69,6 +70,10 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         binding = ActivitySplashScreenBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        //annimate logo size
+        ViewCompat.animate(binding.logo).scaleX(1f).setDuration(1000).start();
+        ViewCompat.animate(binding.logo).scaleY(1f).setDuration(1000).start();
 
     }
 

@@ -11,6 +11,8 @@
         android:id="@+id/logo"
         android:layout_width="@dimen/value_150dp"
         android:layout_height="@dimen/value_150dp"
+        android:scaleX="0.2"
+        android:scaleY="0.2"
         android:src="@drawable/logo_round"
         android:transitionName="shared_logo"
         android:layout_gravity="bottom|center_horizontal"
