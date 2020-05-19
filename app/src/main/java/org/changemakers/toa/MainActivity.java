@@ -2,8 +2,10 @@ package org.changemakers.toa;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Window;
 import android.view.WindowManager;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.ViewCompat;
@@ -28,9 +30,15 @@ public class MainActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP  ) {
+            try {
+                getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+                getWindow().setAllowEnterTransitionOverlap(true);
+            } catch (Exception ex) { }
+        }
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP  ) {
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS|WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION| WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
@@ -46,6 +54,12 @@ public class MainActivity extends AppCompatActivity  {
         handleDrawer();
 
         goToFragment(null, false);
+
+    }
+
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
 
         binding.appBar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
@@ -63,7 +77,7 @@ public class MainActivity extends AppCompatActivity  {
 
                     binding.collapsingToolabar.setTitleEnabled(false);
                 } else {
-                     //binding.collapsingToolabar.setTitleEnabled(false);
+                    //binding.collapsingToolabar.setTitleEnabled(false);
 
                     //IDDLE
                 }

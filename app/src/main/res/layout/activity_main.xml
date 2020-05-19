@@ -69,6 +69,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fitsSystemWindows="true"
+                    android:transitionName="shared_logo"
                     android:background="#b5193150"
                     />
 
@@ -95,6 +96,7 @@
                     android:layout_width="110dp"
                     android:layout_height="110dp"
                     android:src="@drawable/logo_round"
+                    android:transitionName="shared_logo"
                     android:layout_gravity="bottom|center_horizontal"
                     />
             </com.google.android.material.appbar.CollapsingToolbarLayout>

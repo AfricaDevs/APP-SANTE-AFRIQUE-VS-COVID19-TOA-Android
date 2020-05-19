@@ -6,6 +6,22 @@
     <string name="navigation_drawer_close">Drawer Closed</string>
     <string name="nav_toa_contacts">Collectif TOÂ\n17 rue Duguay-Trouin\n75006 Paris</string>
     <string name="nav_toa_contacts_email">Tel: +33 0613411835\ncollectif.toa@gmail.com</string>
+    <string name="alert_cant_handle">Erreur !</string>
+    <string name="privacy_policies_link">https://africadevs.github.io/policies.html</string>
+    <string name="main_frag_prevention_btn">COMMENT\nSE PROTEGER\nTOUS LES JOURS?</string>
+    <string name="transition_shared_main_activity_lottie_image">shared_lottie_icon</string>
+    <string name="transition_splash_shared_logo">transition_shared_logo</string>
+
+    <string name="prevention_toolbar_title">Comment se protger tous les jours?</string>
+    <array name="prevention_options">
+        <item>Pourquoi, quand et comment se laver les mains?</item>
+        <item>Pourquoi, quand et comment fabriquer, porter et laver un masque?</item>
+        <item>Pourquoi, quand et comment se déplacer?</item>
+        <item>Que puis-je manger pour aider mon organisme à lutter?</item>
+        <item>Comment je gère l’eau?</item>
+        <item>Comment je gère les déchets ménagers?</item>
+        <item>Comment je gère les obsèques d’une personne?</item>
+    </array>
 
     <array name="menuOptions">
         <item>TOÂ</item>
