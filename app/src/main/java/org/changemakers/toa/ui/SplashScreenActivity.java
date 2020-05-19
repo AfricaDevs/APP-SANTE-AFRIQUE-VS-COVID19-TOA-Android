@@ -1,4 +1,4 @@
-package org.changemakers.toa;
+package org.changemakers.toa.ui;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -15,6 +15,8 @@ import androidx.core.app.ActivityOptionsCompat;
 import androidx.core.util.Pair;
 import androidx.core.view.ViewCompat;
 
+import org.changemakers.toa.MainActivity;
+import org.changemakers.toa.R;
 import org.changemakers.toa.databinding.ActivitySplashScreenBinding;
 
 /**
@@ -41,11 +43,10 @@ public class SplashScreenActivity extends AppCompatActivity {
 
 
             Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
-            Pair<View, String> pair1 = Pair.create((View) binding.logo, "shared_logo");
 
             try {
                 ActivityOptionsCompat optionsCompat =
-                        ActivityOptionsCompat.makeSceneTransitionAnimation(SplashScreenActivity.this, pair1);
+                        ActivityOptionsCompat.makeSceneTransitionAnimation(SplashScreenActivity.this, binding.logo, getString(R.string.transition_splash_shared_logo));
 
                 ActivityCompat.startActivity(SplashScreenActivity.this, intent, optionsCompat.toBundle());
                 //overridePendingTransition(android.R.anim.fade_out, android.R.anim.fade_in);
