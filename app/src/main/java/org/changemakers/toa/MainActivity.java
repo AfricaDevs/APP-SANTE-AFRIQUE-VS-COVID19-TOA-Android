@@ -1,13 +1,18 @@
 package org.changemakers.toa;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.transition.TransitionInflater;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.ActivityOptionsCompat;
 import androidx.core.view.ViewCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -15,16 +20,22 @@ import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.appbar.AppBarLayout;
 
 import org.changemakers.toa.databinding.ActivityMainBinding;
-import org.changemakers.toa.ui.MainFragment;
+import org.changemakers.toa.interfaces.MainActivityCallbackInterface;
+import org.changemakers.toa.ui.FragmentActivity;
+import org.changemakers.toa.ui.fragments.MainFragment;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+public class MainActivity extends AppCompatActivity implements MainActivityCallbackInterface {
 
-public class MainActivity extends AppCompatActivity  {
+    public static final int FRAGMENT_INDEX_PREVENTION = 1;
+    public static final int FRAGMENT_INDEX_PREVENTIO_FIRSTN = 11;
+    public static final int FRAGMENT_INDEX_PREVENTIO_SECOND = 12;
+    public static final int FRAGMENT_INDEX_PREVENTIO_THIRD = 13;
+    public static final int FRAGMENT_INDEX_DIAGNOSIS = 2;
+
+    private static final int MAIN_ACTIVITY_REQUEST_CODE = 10;
+    public static final String EXTRA_FRAGMENT_INDEX = "org.africadevs.toa.frag.index";
 
     ActivityMainBinding binding;
-
-    private ArrayList<String> mTitles = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,10 +53,8 @@ public class MainActivity extends AppCompatActivity  {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP  ) {
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS|WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION| WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-            getWindow().setNavigationBarColor(getResources().getColor(R.color.shapes_green_color));
+            getWindow().setNavigationBarColor(getResources().getColor(R.color.navBarColor));
         }
-
-        mTitles = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.menuOptions)));
 
         // Handle toolbar actions
         handleToolbar();
@@ -110,5 +119,30 @@ public class MainActivity extends AppCompatActivity  {
         transaction.replace(R.id.container, fragment).commit();
         else
         transaction.replace(R.id.container, new MainFragment()).commit();
+    }
+
+    @Override
+    public void cardSelected(int poisition, View sharedView){
+
+
+        Intent intent = new Intent(MainActivity.this, FragmentActivity.class);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+
+            /*
+            setSharedElementReturnTransition(TransitionInflater.from(
+                    MainActivity.this).inflateTransition(R.transition.change_image_fragment_transition));
+            setExitTransition(TransitionInflater.from(
+                    MainActivity.this).inflateTransition(android.R.transition.fade));
+             */
+
+            ActivityOptionsCompat optionsCompat =
+                    ActivityOptionsCompat.makeSceneTransitionAnimation(MainActivity.this, sharedView, ViewCompat.getTransitionName(sharedView));
+
+            ActivityCompat.startActivity(MainActivity.this, intent, optionsCompat.toBundle());
+        } else {
+            startActivity(new Intent(MainActivity.this, FragmentActivity.class));
+        }
+
     }
 }

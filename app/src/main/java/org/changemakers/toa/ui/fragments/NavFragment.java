@@ -1,4 +1,4 @@
-package org.changemakers.toa.ui;
+package org.changemakers.toa.ui.fragments;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -13,7 +13,6 @@ import androidx.annotation.Nullable;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import org.changemakers.toa.R;
-import org.changemakers.toa.databinding.FragmentMainBinding;
 import org.changemakers.toa.databinding.FragmentNavBinding;
 
 /**

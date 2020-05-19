@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/card_background_shape_left"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="-125dp"
+        android:background="@drawable/ic_bg_orange_light_shape"
+        android:rotation="170" />
+
+    <ImageView
+        android:id="@+id/card_background_shape_right"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_marginLeft="-125dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/ic_bg_orange_light_shape"
+        android:rotation="350" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_prevention"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="11dp"
+        app:cardCornerRadius="@dimen/main_cards_radius"
+        app:cardElevation="@dimen/value_1dp"
+        app:cardUseCompatPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottie_annim_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/covid_doctor" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/option_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@color/tboxGreenLight"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text=" TOÂ "
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

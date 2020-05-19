@@ -20,6 +20,7 @@
 
     <color name="tboxTabsGreen">#45c01a</color>
 
+    <color name="navBarColor">#99414141</color>
     <color name="textColorSecondary">#ff727272</color>
     <color name="colorGameButtonNext">#414141</color>
 

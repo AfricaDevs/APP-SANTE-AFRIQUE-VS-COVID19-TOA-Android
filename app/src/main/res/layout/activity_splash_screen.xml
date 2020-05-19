@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/splash_transition_colors"
     android:fitsSystemWindows="true"
-    tools:context=".SplashScreenActivity">
+    tools:context=".ui.SplashScreenActivity">
 
     <ImageView
         android:id="@+id/logo"
@@ -14,7 +14,7 @@
         android:scaleX="0.2"
         android:scaleY="0.2"
         android:src="@drawable/logo_round"
-        android:transitionName="shared_logo"
+        android:transitionName="@string/transition_splash_shared_logo"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginBottom="@dimen/value_25dp"
         />
