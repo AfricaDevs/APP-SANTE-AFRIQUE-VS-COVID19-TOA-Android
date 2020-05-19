@@ -19,6 +19,8 @@ import org.changemakers.toa.MainActivity;
 import org.changemakers.toa.R;
 import org.changemakers.toa.databinding.ActivitySplashScreenBinding;
 
+import javax.security.auth.callback.CallbackHandler;
+
 /**
  * An full-screen activity that hides the system UI (i.e.
  * status bar and navigation/system bar)
@@ -99,6 +101,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         TransitionDrawable transition = (TransitionDrawable) binding.getRoot().getBackground();
         transition.startTransition(UI_ANIMATION_DELAY);
+
     }
 
     @Override
@@ -114,5 +117,13 @@ public class SplashScreenActivity extends AppCompatActivity {
     private void loadMain(int delayMillis) {
         mLoadingHandler.removeCallbacks(mLoadingRunnable);
         mLoadingHandler.postDelayed(mLoadingRunnable, delayMillis);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        //clear the activity from the stack
+        finish();
     }
 }

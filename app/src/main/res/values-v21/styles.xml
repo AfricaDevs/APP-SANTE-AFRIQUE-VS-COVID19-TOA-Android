@@ -8,8 +8,6 @@
         <item name="colorAccent">@color/colorAccent</item>
 
         <!-- v21 specific-->
-        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
-        <item name="android:navigationBarColor">@color/colorAccent</item>
 
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -25,8 +23,13 @@
         <item name="android:windowEnterTransition">@transition/change_image_transform</item>
         <item name="android:windowExitTransition">@transition/change_image_transform</item>
 
-        <item name="android:windowTranslucentNavigation">true</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:navigationBarColor">@color/card_bg_color_orange_light</item>
     </style>
 
 </resources>

@@ -1,9 +1,11 @@
 package org.changemakers.toa.ui;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.transition.TransitionInflater;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -28,21 +30,26 @@ public class FragmentActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP  ) {
-            try {
-                getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
-                //getWindow().setEnterTransition(TransitionInflater.from(this).inflateTransition(android.R.transition.explode));
 
-            } catch (Exception ex) { }
+
+        if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        }
+        if (Build.VERSION.SDK_INT >= 19) {
+            getWindow().getDecorView().setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+        }
+        if (Build.VERSION.SDK_INT >= 21) {
+            getWindow().setStatusBarColor( Color.TRANSPARENT);
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP  ) {
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS|WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         }
 
         binding = ActivityFragmentBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP  ) {
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS|WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION| WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-            getWindow().setNavigationBarColor(getResources().getColor(R.color.navBarColor));
-        }
 
         Intent intent = getIntent();
         if(savedInstanceState==null && intent!=null){

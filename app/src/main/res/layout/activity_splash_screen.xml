@@ -11,12 +11,11 @@
         android:id="@+id/logo"
         android:layout_width="@dimen/value_150dp"
         android:layout_height="@dimen/value_150dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/value_25dp"
         android:scaleX="0.2"
         android:scaleY="0.2"
         android:src="@drawable/logo_round"
-        android:transitionName="@string/transition_splash_shared_logo"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="@dimen/value_25dp"
-        />
+        android:transitionName="@string/transition_splash_shared_logo" />
 
 </FrameLayout>
