@@ -1,92 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/layouts_main_white_bg"
-    >
+    android:background="@color/layouts_main_white_bg">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/value_18dp"
-            android:background="@color/colorPrimary"
-            />
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/nav_header_shape_accent_color_height"
-            android:layout_marginTop="@dimen/value_18dp"
-            android:layout_gravity="bottom"
-            android:background="@drawable/ic_bg_primary_dark_color_shapes"
-            android:rotation="360"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/value_18dp"
+        android:background="@color/colorPrimary" />
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/nav_header_shape_primary_color_height"
-            android:layout_marginTop="@dimen/value_18dp"
-            android:layout_gravity="bottom"
-            android:background="@drawable/ic_bg_blue_shape"
-            android:rotation="360"
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_header_shape_accent_color_height"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/value_18dp"
+        android:background="@drawable/ic_bg_primary_dark_color_shapes"
+        android:rotation="360" />
 
-            />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_header_shape_primary_color_height"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/value_18dp"
+        android:background="@drawable/ic_bg_blue_shape"
+        android:rotation="360"
+
+        />
 
 
-        <LinearLayout
-            android:id="@+id/toa_footer"
+    <LinearLayout
+        android:id="@+id/toa_footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/nav_cardview_left_padding"
+        android:layout_marginLeft="@dimen/nav_cardview_left_padding"
+        android:layout_marginBottom="@dimen/nav_fragment_footer_content_bottom_margin"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/value_2dp"
+        android:paddingEnd="@dimen/value_50dp"
+        android:paddingRight="@dimen/value_50dp"
+        android:paddingBottom="@dimen/value_30dp">
+
+
+        <TextView
+            android:id="@+id/privacy_policies"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingRight="@dimen/value_50dp"
-            android:paddingEnd="@dimen/value_50dp"
-            android:paddingLeft="@dimen/value_2dp"
-            android:paddingBottom="@dimen/value_30dp"
-            android:layout_marginStart="@dimen/nav_cardview_left_padding"
-            android:layout_marginLeft="@dimen/nav_cardview_left_padding"
-            android:layout_marginBottom="@dimen/nav_fragment_footer_content_bottom_margin"
-            android:orientation="vertical"
-            android:layout_alignParentBottom="true">
+            android:text="politique de confidentialité"
+            android:textColor="@color/linksBlue"
+            android:textSize="@dimen/nav_links_text_size" />
 
-
-                <TextView
-                    android:id="@+id/privacy_policies"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/nav_links_text_size"
-                    android:textColor="@color/linksBlue"
-                    android:text="politique de confidentialité" />
-
-                <!--TextView
-                    android:id="@+id/terms_of_use"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/value_5dp"
-                    android:textSize="@dimen/nav_links_text_size"
-                    android:textColor="@color/linksBlue"
-                    android:text="conditions d'utilisation" /-->
-
-        </LinearLayout>
-        <RelativeLayout
-            android:id="@+id/bottom_shapes"
-            android:layout_width="match_parent"
+        <!--TextView
+            android:id="@+id/terms_of_use"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/value_5dp"
+            android:textSize="@dimen/nav_links_text_size"
+            android:textColor="@color/linksBlue"
+            android:text="conditions d'utilisation" /-->
 
-            android:layout_marginBottom="@dimen/nav_fragment_footer_content_bottom_margin"
-            >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_shapes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginBottom="@dimen/nav_fragment_footer_content_bottom_margin">
 
         <ImageView
             android:id="@+id/bottom_shape"
             android:layout_width="@dimen/value_125dp"
             android:layout_height="@dimen/value_20dp"
             android:background="@drawable/ic_bg_blue_shape"
-            android:rotation="180"
-            />
+            android:rotation="180" />
+
         <ImageView
             android:id="@+id/bottom_shape_green"
             android:layout_width="@dimen/value_125dp"
             android:layout_height="@dimen/value_10dp"
             android:layout_marginTop="@dimen/value_10dp"
             android:background="@drawable/ic_bg_primary_dark_color_shapes"
-            android:rotation="180"
-            />
+            android:rotation="180" />
 
 
         <ImageView
@@ -94,467 +92,464 @@
             android:layout_height="@dimen/value_20dp"
             android:layout_marginLeft="@dimen/value_125dp"
             android:background="@drawable/ic_bg_blue_shape"
-            android:rotation="360"
-            />
+            android:rotation="360" />
+
         <ImageView
 
             android:layout_width="@dimen/value_200dp"
             android:layout_height="@dimen/value_10dp"
-            android:visibility="visible"
-            android:layout_marginTop="@dimen/value_10dp"
             android:layout_marginLeft="@dimen/value_125dp"
+            android:layout_marginTop="@dimen/value_10dp"
             android:background="@drawable/ic_bg_primary_dark_color_shapes"
             android:rotation="360"
-            />
-        </RelativeLayout>
+            android:visibility="visible" />
+    </RelativeLayout>
 
-        <ImageView
-            android:layout_width="@dimen/value_80dp"
-            android:layout_height="@dimen/value_80dp"
-            android:src="@drawable/logo_round"
-            android:layout_marginTop="@dimen/value_25dp"
-            android:layout_marginLeft="@dimen/value_10dp"
-            android:layout_marginStart="@dimen/value_10dp"
-            android:layout_toRightOf="@+id/drawer_header_contact"
-            android:layout_gravity="center_horizontal"
-            />
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/drawer_header_contact"
-            android:layout_marginTop="@dimen/toolbar_api_version_top_margin"
-            android:paddingTop="@dimen/frament_nav_contact_top_padding"
-            android:paddingLeft="@dimen/frament_nav_contact_left_padding"
-            android:orientation="horizontal">
+    <ImageView
+        android:layout_width="@dimen/value_80dp"
+        android:layout_height="@dimen/value_80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/value_10dp"
+        android:layout_marginLeft="@dimen/value_10dp"
+        android:layout_marginTop="@dimen/value_25dp"
+        android:layout_toRightOf="@+id/drawer_header_contact"
+        android:src="@drawable/logo_round" />
 
-                <com.airbnb.lottie.LottieAnimationView
-                    android:id="@+id/lottie_covid_anim2"
-                    android:layout_width="@dimen/value_30dp"
-                    android:layout_height="@dimen/value_30dp"
-                    android:layout_gravity="center_vertical"
-                    app:lottie_cacheComposition="true"
-                    app:lottie_autoPlay="true"
-                    app:lottie_loop="true"
-                    app:lottie_rawRes="@raw/lottie_location"
-                    />
+    <LinearLayout
+        android:id="@+id/drawer_header_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/toolbar_api_version_top_margin"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/frament_nav_contact_left_padding"
+        android:paddingTop="@dimen/frament_nav_contact_top_padding">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/value_4dp"
-                    android:layout_gravity="center"
-                    android:textSize="@dimen/frament_nav_contact_text_size"
-                    android:textColor="@color/white"
-                    android:text="@string/nav_toa_contacts"
-                    />
-        </LinearLayout>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_covid_anim2"
+            android:layout_width="@dimen/value_30dp"
+            android:layout_height="@dimen/value_30dp"
+            android:layout_gravity="center_vertical"
+            app:lottie_autoPlay="true"
+            app:lottie_cacheComposition="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/lottie_location" />
+
         <TextView
-            android:id="@+id/drawer_header_contact_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/drawer_header_contact"
-            android:layout_marginTop="@dimen/value_5dp"
-            android:paddingLeft="@dimen/frament_nav_contact_left_padding"
             android:layout_gravity="center"
-            android:textSize="@dimen/frament_nav_contact_text_size"
+            android:layout_marginLeft="@dimen/value_4dp"
+            android:text="@string/nav_toa_contacts"
             android:textColor="@color/white"
-            android:text="@string/nav_toa_contacts_email"
-            />
+            android:textSize="@dimen/frament_nav_contact_text_size" />
+    </LinearLayout>
 
-        <androidx.cardview.widget.CardView
+    <TextView
+        android:id="@+id/drawer_header_contact_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/drawer_header_contact"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/value_5dp"
+        android:paddingLeft="@dimen/frament_nav_contact_left_padding"
+        android:text="@string/nav_toa_contacts_email"
+        android:textColor="@color/white"
+        android:textSize="@dimen/frament_nav_contact_text_size" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/toa_footer"
+        android:layout_below="@+id/drawer_header_contact_email"
+        android:layout_marginStart="@dimen/nav_cardview_left_padding"
+        android:layout_marginLeft="@dimen/nav_cardview_left_padding"
+        android:layout_marginTop="@dimen/nav_cardview_top_margin"
+        android:layout_marginEnd="@dimen/nav_cardview_right_padding"
+        android:layout_marginRight="@dimen/nav_cardview_right_padding"
+        app:cardCornerRadius="@dimen/main_cards_radius"
+        app:cardElevation="@dimen/basic_cardview_elevation_3dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="@dimen/nav_cardview_conttent_padding">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/drawer_header_contact_email"
-            android:layout_marginTop="@dimen/nav_cardview_top_margin"
-            android:layout_marginStart="@dimen/nav_cardview_left_padding"
-            android:layout_marginLeft="@dimen/nav_cardview_left_padding"
-            android:layout_marginRight="@dimen/nav_cardview_right_padding"
-            android:layout_marginEnd="@dimen/nav_cardview_right_padding"
-            android:layout_above="@+id/toa_footer"
-            app:cardElevation="@dimen/basic_cardview_elevation_3dp"
-            app:contentPadding="@dimen/nav_cardview_conttent_padding"
-            app:cardUseCompatPadding="true"
-            app:cardCornerRadius="@dimen/main_cards_radius">
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/value_2dp"
+                android:text="noms des responsables de publication"
+                android:textSize="@dimen/value_text_size_11sp" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="noms des responsables de publication"
-                            android:textSize="@dimen/value_text_size_11sp"
-                            android:layout_marginBottom="@dimen/value_2dp" />
 
-                        <androidx.core.widget.NestedScrollView
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_5dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/logo_user_1"
+                            android:layout_width="@dimen/value_45dp"
+                            android:layout_height="@dimen/value_45dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/logo_round"
+                            app:civ_border_color="@color/materialOrange"
+                            app:civ_border_width="1dp" />
+
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="vertical">
-
-
-                                        <RelativeLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginTop="@dimen/value_5dp">
-
-                                                <de.hdodenhof.circleimageview.CircleImageView
-                                                    android:id="@+id/logo_user_1"
-                                                    android:layout_width="@dimen/value_45dp"
-                                                    android:layout_height="@dimen/value_45dp"
-                                                    android:layout_centerVertical="true"
-                                                    android:src="@drawable/logo_round"
-                                                    app:civ_border_color="@color/materialOrange"
-                                                    app:civ_border_width="1dp" />
-
-                                                <LinearLayout
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_toRightOf="@+id/logo_user_1"
-                                                    android:layout_centerVertical="true"
-                                                    android:layout_marginLeft="@dimen/value_5dp"
-                                                    android:orientation="vertical">
-
-                                                        <TextView
-                                                            android:layout_width="wrap_content"
-                                                            android:layout_height="wrap_content"
-                                                            android:textSize="@dimen/value_text_size_15sp"
-                                                            android:textColor="#414141"
-                                                            android:text="Karima Brahimi" />
-
-                                                        <TextView
-                                                            android:layout_width="wrap_content"
-                                                            android:layout_height="wrap_content"
-                                                            android:textSize="@dimen/value_text_size_11sp"
-                                                            android:textColor="#777777"
-                                                            android:text="Médecin, microbiologiste" />
-
-
-                                                </LinearLayout>
-                                        </RelativeLayout>
-
-                                        <include layout="@layout/list_separator" />
-
-                                        <RelativeLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginTop="@dimen/value_5dp">
-
-                                                <de.hdodenhof.circleimageview.CircleImageView
-                                                    android:id="@+id/logo_user_2"
-                                                    android:layout_width="@dimen/value_45dp"
-                                                    android:layout_height="@dimen/value_45dp"
-                                                    android:layout_centerVertical="true"
-                                                    android:src="@drawable/logo_round"
-                                                    app:civ_border_color="@color/materialBrown2"
-                                                    app:civ_border_width="@dimen/value_1dp" />
-
-                                                <LinearLayout
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_toRightOf="@+id/logo_user_2"
-                                                    android:layout_marginLeft="@dimen/value_5dp"
-                                                    android:layout_centerVertical="true"
-                                                    android:orientation="vertical">
-
-                                                        <TextView
-                                                            android:layout_width="wrap_content"
-                                                            android:layout_height="wrap_content"
-                                                            android:textSize="@dimen/value_text_size_15sp"
-                                                            android:textColor="#414141"
-                                                            android:text="Paul Tossa" />
-
-                                                        <TextView
-                                                            android:layout_width="wrap_content"
-                                                            android:layout_height="wrap_content"
-                                                            android:textSize="@dimen/value_text_size_11sp"
-                                                            android:textColor="#777777"
-                                                            android:text="Médecin toxicologue et de santé publique" />
-
-
-                                                </LinearLayout>
-                                        </RelativeLayout>
-
-
-                                        <include layout="@layout/list_separator" />
-
-                                        <RelativeLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginTop="@dimen/value_5dp">
-
-                                                <de.hdodenhof.circleimageview.CircleImageView
-                                                    android:id="@+id/logo_user_3"
-                                                    android:layout_width="@dimen/value_45dp"
-                                                    android:layout_height="@dimen/value_45dp"
-                                                    android:layout_centerVertical="true"
-                                                    android:src="@drawable/logo_round"
-                                                    app:civ_border_color="@color/materialBlue2"
-                                                    app:civ_border_width="@dimen/value_1dp" />
-
-                                                <LinearLayout
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_toRightOf="@+id/logo_user_3"
-                                                    android:layout_marginLeft="@dimen/value_5dp"
-                                                    android:layout_centerVertical="true"
-                                                    android:orientation="vertical">
-
-                                                        <TextView
-                                                            android:layout_width="wrap_content"
-                                                            android:layout_height="wrap_content"
-                                                            android:textSize="@dimen/value_text_size_15sp"
-                                                            android:textColor="#414141"
-                                                            android:text="Armelle Hebert" />
-
-                                                        <TextView
-                                                            android:layout_width="wrap_content"
-                                                            android:layout_height="wrap_content"
-                                                            android:textSize="@dimen/value_text_size_10sp"
-                                                            android:textColor="#777777"
-                                                            android:text="Expert en Santé Environnementale Renforcement des capacités Pays / Politiques publiques, Immunologiste"
-
-                                                            />
-
-
-                                                </LinearLayout>
-                                        </RelativeLayout>
-
-
-                                        <include layout="@layout/list_separator" />
-
-                                        <RelativeLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginTop="@dimen/value_5dp">
-
-                                                <de.hdodenhof.circleimageview.CircleImageView
-                                                    android:id="@+id/logo_user_4"
-                                                    android:layout_width="@dimen/value_45dp"
-                                                    android:layout_height="@dimen/value_45dp"
-                                                    android:layout_centerVertical="true"
-                                                    android:src="@drawable/logo_round"
-                                                    app:civ_border_color="@color/colorTeal"
-                                                    app:civ_border_width="@dimen/value_1dp" />
-
-                                                <LinearLayout
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_toRightOf="@+id/logo_user_4"
-                                                    android:layout_marginLeft="@dimen/value_5dp"
-                                                    android:layout_centerVertical="true"
-                                                    android:orientation="vertical">
-
-                                                        <TextView
-                                                            android:layout_width="wrap_content"
-                                                            android:layout_height="wrap_content"
-                                                            android:textSize="@dimen/value_text_size_15sp"
-                                                            android:textColor="#414141"
-                                                            android:text="Manon Aminatou" />
-
-                                                        <TextView
-                                                            android:layout_width="wrap_content"
-                                                            android:layout_height="wrap_content"
-                                                            android:textSize="@dimen/value_text_size_11sp"
-                                                            android:textColor="#777777"
-                                                            android:text="Dr en Pharmacologie, Toxicologue, Directrice VisaTox"
-
-                                                            />
-
-
-                                                </LinearLayout>
-                                        </RelativeLayout>
-
-
-                                        <include layout="@layout/list_separator" />
-
-                                        <RelativeLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginTop="@dimen/value_5dp">
-
-                                                <de.hdodenhof.circleimageview.CircleImageView
-                                                    android:id="@+id/logo_user_5"
-                                                    android:layout_width="@dimen/value_45dp"
-                                                    android:layout_height="@dimen/value_45dp"
-                                                    android:layout_centerVertical="true"
-                                                    android:src="@drawable/logo_round"
-                                                    app:civ_border_color="@color/materialRed"
-                                                    app:civ_border_width="@dimen/value_1dp" />
-
-                                                <LinearLayout
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_toRightOf="@+id/logo_user_5"
-                                                    android:layout_marginLeft="@dimen/value_5dp"
-                                                    android:layout_centerVertical="true"
-                                                    android:orientation="vertical">
-
-                                                        <TextView
-                                                            android:layout_width="wrap_content"
-                                                            android:layout_height="wrap_content"
-                                                            android:textSize="@dimen/value_text_size_15sp"
-                                                            android:textColor="#414141"
-                                                            android:text="Nyan Frederick Goumou" />
-
-                                                        <TextView
-                                                            android:layout_width="wrap_content"
-                                                            android:layout_height="wrap_content"
-                                                            android:textSize="@dimen/value_text_size_11sp"
-                                                            android:textColor="#777777"
-                                                            android:text="Médecin, chirurgien oncologue pédiatre et consultant en PCI"
-
-                                                            />
-
-                                                </LinearLayout>
-                                        </RelativeLayout>
-
-
-                                        <include layout="@layout/list_separator" />
-
-                                        <RelativeLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginTop="@dimen/value_5dp">
-
-                                                <de.hdodenhof.circleimageview.CircleImageView
-                                                    android:id="@+id/logo_user_6"
-                                                    android:layout_width="@dimen/value_45dp"
-                                                    android:layout_height="@dimen/value_45dp"
-                                                    android:layout_centerVertical="true"
-                                                    android:src="@drawable/logo_round"
-                                                    app:civ_border_color="@color/tboxBlue"
-                                                    app:civ_border_width="@dimen/value_1dp" />
-
-                                                <LinearLayout
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_toRightOf="@+id/logo_user_6"
-                                                    android:layout_marginLeft="@dimen/value_5dp"
-                                                    android:layout_centerVertical="true"
-                                                    android:orientation="vertical">
-
-                                                        <TextView
-                                                            android:layout_width="wrap_content"
-                                                            android:layout_height="wrap_content"
-                                                            android:textSize="@dimen/value_text_size_15sp"
-                                                            android:textColor="#414141"
-                                                            android:text="Sandrine Mansoutre" />
-
-                                                        <TextView
-                                                            android:layout_width="wrap_content"
-                                                            android:layout_height="wrap_content"
-                                                            android:textSize="@dimen/value_text_size_11sp"
-                                                            android:textColor="#777777"
-                                                            android:text="Docteur en physique et ingénieur en chimie, Open innovation"
-
-                                                            />
-
-                                                </LinearLayout>
-                                        </RelativeLayout>
-
-
-                                        <include layout="@layout/list_separator" />
-
-                                        <RelativeLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginTop="@dimen/value_5dp">
-
-                                                <de.hdodenhof.circleimageview.CircleImageView
-                                                    android:id="@+id/logo_user_7"
-                                                    android:layout_width="@dimen/value_45dp"
-                                                    android:layout_height="@dimen/value_45dp"
-                                                    android:layout_centerVertical="true"
-                                                    android:src="@drawable/logo_round"
-                                                    app:civ_border_color="@color/materialPink"
-                                                    app:civ_border_width="@dimen/value_1dp" />
-
-                                                <LinearLayout
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_toRightOf="@+id/logo_user_7"
-                                                    android:layout_marginLeft="@dimen/value_5dp"
-                                                    android:layout_centerVertical="true"
-                                                    android:orientation="vertical">
-
-                                                        <TextView
-                                                            android:layout_width="wrap_content"
-                                                            android:layout_height="wrap_content"
-                                                            android:textSize="@dimen/value_text_size_15sp"
-                                                            android:textColor="#414141"
-                                                            android:text="Clémentine Langlois" />
-
-                                                        <TextView
-                                                            android:layout_width="wrap_content"
-                                                            android:layout_height="wrap_content"
-                                                            android:textSize="@dimen/value_text_size_11sp"
-                                                            android:textColor="#777777"
-                                                            android:text="Directeur de programme Santé, épidémiologiste"
-
-                                                            />
-
-                                                </LinearLayout>
-                                        </RelativeLayout>
-
-
-                                        <include layout="@layout/list_separator" />
-
-                                        <RelativeLayout
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginTop="@dimen/value_5dp">
-
-                                                <de.hdodenhof.circleimageview.CircleImageView
-                                                    android:id="@+id/logo_user_8"
-                                                    android:layout_width="@dimen/value_45dp"
-                                                    android:layout_height="@dimen/value_45dp"
-                                                    android:layout_centerVertical="true"
-                                                    android:src="@drawable/logo_round"
-                                                    app:civ_border_color="@color/materialYellow"
-                                                    app:civ_border_width="@dimen/value_1dp" />
-
-                                                <LinearLayout
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_toRightOf="@+id/logo_user_8"
-                                                    android:layout_marginLeft="@dimen/value_5dp"
-                                                    android:layout_centerVertical="true"
-                                                    android:orientation="vertical">
-
-                                                        <TextView
-                                                            android:layout_width="wrap_content"
-                                                            android:layout_height="wrap_content"
-                                                            android:textSize="@dimen/value_text_size_15sp"
-                                                            android:textColor="#414141"
-                                                            android:text="Steve Ndende" />
-
-                                                        <TextView
-                                                            android:layout_width="wrap_content"
-                                                            android:layout_height="wrap_content"
-                                                            android:textSize="@dimen/value_text_size_11sp"
-                                                            android:textColor="#777777"
-                                                            android:text="Chef de projet mobile"
-
-                                                            />
-
-                                                </LinearLayout>
-                                        </RelativeLayout>
-
-
-                                </LinearLayout>
-
-                        </androidx.core.widget.NestedScrollView>
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/value_5dp"
+                            android:layout_toRightOf="@+id/logo_user_1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Karima Brahimi"
+                                android:textColor="#414141"
+                                android:textSize="@dimen/value_text_size_15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Médecin, microbiologiste"
+                                android:textColor="#777777"
+                                android:textSize="@dimen/value_text_size_11sp" />
+
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <include layout="@layout/list_separator" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_5dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/logo_user_2"
+                            android:layout_width="@dimen/value_45dp"
+                            android:layout_height="@dimen/value_45dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/logo_round"
+                            app:civ_border_color="@color/materialBrown2"
+                            app:civ_border_width="@dimen/value_1dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/value_5dp"
+                            android:layout_toRightOf="@+id/logo_user_2"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Paul Tossa"
+                                android:textColor="#414141"
+                                android:textSize="@dimen/value_text_size_15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Médecin toxicologue et de santé publique"
+                                android:textColor="#777777"
+                                android:textSize="@dimen/value_text_size_11sp" />
+
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                    <include layout="@layout/list_separator" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_5dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/logo_user_3"
+                            android:layout_width="@dimen/value_45dp"
+                            android:layout_height="@dimen/value_45dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/logo_round"
+                            app:civ_border_color="@color/materialBlue2"
+                            app:civ_border_width="@dimen/value_1dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/value_5dp"
+                            android:layout_toRightOf="@+id/logo_user_3"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Armelle Hebert"
+                                android:textColor="#414141"
+                                android:textSize="@dimen/value_text_size_15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Expert en Santé Environnementale Renforcement des capacités Pays / Politiques publiques, Immunologiste"
+                                android:textColor="#777777"
+                                android:textSize="@dimen/value_text_size_10sp"
+
+                                />
+
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                    <include layout="@layout/list_separator" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_5dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/logo_user_4"
+                            android:layout_width="@dimen/value_45dp"
+                            android:layout_height="@dimen/value_45dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/logo_round"
+                            app:civ_border_color="@color/colorTeal"
+                            app:civ_border_width="@dimen/value_1dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/value_5dp"
+                            android:layout_toRightOf="@+id/logo_user_4"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Manon Aminatou"
+                                android:textColor="#414141"
+                                android:textSize="@dimen/value_text_size_15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dr en Pharmacologie, Toxicologue, Directrice VisaTox"
+                                android:textColor="#777777"
+                                android:textSize="@dimen/value_text_size_11sp"
+
+                                />
+
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                    <include layout="@layout/list_separator" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_5dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/logo_user_5"
+                            android:layout_width="@dimen/value_45dp"
+                            android:layout_height="@dimen/value_45dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/logo_round"
+                            app:civ_border_color="@color/materialRed"
+                            app:civ_border_width="@dimen/value_1dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/value_5dp"
+                            android:layout_toRightOf="@+id/logo_user_5"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Nyan Frederick Goumou"
+                                android:textColor="#414141"
+                                android:textSize="@dimen/value_text_size_15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Médecin, chirurgien oncologue pédiatre et consultant en PCI"
+                                android:textColor="#777777"
+                                android:textSize="@dimen/value_text_size_11sp"
+
+                                />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                    <include layout="@layout/list_separator" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_5dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/logo_user_6"
+                            android:layout_width="@dimen/value_45dp"
+                            android:layout_height="@dimen/value_45dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/logo_round"
+                            app:civ_border_color="@color/tboxBlue"
+                            app:civ_border_width="@dimen/value_1dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/value_5dp"
+                            android:layout_toRightOf="@+id/logo_user_6"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sandrine Mansoutre"
+                                android:textColor="#414141"
+                                android:textSize="@dimen/value_text_size_15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Docteur en physique et ingénieur en chimie, Open innovation"
+                                android:textColor="#777777"
+                                android:textSize="@dimen/value_text_size_11sp"
+
+                                />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                    <include layout="@layout/list_separator" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_5dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/logo_user_7"
+                            android:layout_width="@dimen/value_45dp"
+                            android:layout_height="@dimen/value_45dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/logo_round"
+                            app:civ_border_color="@color/materialPink"
+                            app:civ_border_width="@dimen/value_1dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/value_5dp"
+                            android:layout_toRightOf="@+id/logo_user_7"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Clémentine Langlois"
+                                android:textColor="#414141"
+                                android:textSize="@dimen/value_text_size_15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Directeur de programme Santé, épidémiologiste"
+                                android:textColor="#777777"
+                                android:textSize="@dimen/value_text_size_11sp"
+
+                                />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                    <include layout="@layout/list_separator" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_5dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/logo_user_8"
+                            android:layout_width="@dimen/value_45dp"
+                            android:layout_height="@dimen/value_45dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/logo_round"
+                            app:civ_border_color="@color/materialYellow"
+                            app:civ_border_width="@dimen/value_1dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/value_5dp"
+                            android:layout_toRightOf="@+id/logo_user_8"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Steve Ndende"
+                                android:textColor="#414141"
+                                android:textSize="@dimen/value_text_size_15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Chef de projet mobile"
+                                android:textColor="#777777"
+                                android:textSize="@dimen/value_text_size_11sp"
+
+                                />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
 
                 </LinearLayout>
-        </androidx.cardview.widget.CardView>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 
 </RelativeLayout>

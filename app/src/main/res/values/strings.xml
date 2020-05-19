@@ -23,6 +23,16 @@
         <item>Comment je gère les obsèques d’une personne?</item>
     </array>
 
+    <array name="prevention_icons">
+        <item>lottie_covid_hands</item>
+        <item>lottie_covid_mask</item>
+        <item>lottie_covid_hands</item>
+        <item>covid_doctor</item>
+        <item>lottie_covid_hands</item>
+        <item>lottie_covid_mask</item>
+        <item>lottie_covid_hands</item>
+    </array>
+
     <array name="menuOptions">
         <item>TOÂ</item>
         <item>A propos</item>

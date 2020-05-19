@@ -1,9 +1,9 @@
 package org.changemakers.toa;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.transition.TransitionInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -45,16 +45,27 @@ public class MainActivity extends AppCompatActivity implements MainActivityCallb
             try {
                 getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
                 getWindow().setAllowEnterTransitionOverlap(true);
+
+
             } catch (Exception ex) { }
+        }
+
+
+        if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        }
+        if (Build.VERSION.SDK_INT >= 19) {
+            getWindow().getDecorView().setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+        }
+        if (Build.VERSION.SDK_INT >= 21) {
+            getWindow().setStatusBarColor( Color.TRANSPARENT);
         }
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP  ) {
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS|WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION| WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-            getWindow().setNavigationBarColor(getResources().getColor(R.color.navBarColor));
-        }
+
 
         // Handle toolbar actions
         handleToolbar();
@@ -139,9 +150,9 @@ public class MainActivity extends AppCompatActivity implements MainActivityCallb
             ActivityOptionsCompat optionsCompat =
                     ActivityOptionsCompat.makeSceneTransitionAnimation(MainActivity.this, sharedView, ViewCompat.getTransitionName(sharedView));
 
-            ActivityCompat.startActivity(MainActivity.this, intent, optionsCompat.toBundle());
+            ActivityCompat.startActivityForResult(MainActivity.this, intent,MAIN_ACTIVITY_REQUEST_CODE, optionsCompat.toBundle());
         } else {
-            startActivity(new Intent(MainActivity.this, FragmentActivity.class));
+            startActivityForResult(new Intent(MainActivity.this, FragmentActivity.class), MAIN_ACTIVITY_REQUEST_CODE);
         }
 
     }

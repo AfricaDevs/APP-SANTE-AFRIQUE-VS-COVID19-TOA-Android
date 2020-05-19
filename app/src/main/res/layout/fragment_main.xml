@@ -10,12 +10,22 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+
+        android:clipToPadding="false">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+
+            android:clipToPadding="false"
             android:orientation="vertical">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
@@ -31,18 +41,41 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="#F3EFEF"
-                    android:padding="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp"
                     android:text="@string/main_intro_about_app"
                     android:textSize="@dimen/app_main_text_size" />
 
             </androidx.cardview.widget.CardView>
 
 
+                <com.github.florent37.arclayout.ArcLayout
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="2dp"
+                    android:background="@color/layouts_main_white_bg"
+                    app:arc_cropDirection="cropOutside"
+                    app:arc_height="20dp"
+                    app:arc_position="bottom">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/layouts_main_white_bg"/>
+                </com.github.florent37.arclayout.ArcLayout>
+        </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:clipToPadding="false">
 
                 <ImageView
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="15dp"
                     android:layout_marginLeft="50dp"
@@ -57,7 +90,7 @@
                     android:layout_marginLeft="-20dp"
                     android:layout_marginTop="80dp"
                     android:layout_marginRight="50dp"
-                    android:background="@drawable/ic_bg_brown_shape"
+                    android:background="@drawable/ic_bg_fragment_main_tbox_green_color"
                     android:rotation="350" />
 
                 <androidx.cardview.widget.CardView
@@ -65,8 +98,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="11dp"
-                    android:layout_marginTop="10dp"
                     android:layout_marginRight="11dp"
+                    android:clipToPadding="false"
                     app:cardCornerRadius="@dimen/main_cards_radius"
                     app:cardElevation="@dimen/basic_cardview_elevation_3dp"
                     app:cardUseCompatPadding="true">
@@ -75,16 +108,19 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@color/white"
+                        android:clipToPadding="false"
                         android:orientation="horizontal">
 
                         <RelativeLayout
                             android:layout_width="150dp"
-                            android:layout_height="130dp">
+                            android:layout_height="130dp"
+                            android:clipToPadding="false">
 
                             <com.airbnb.lottie.LottieAnimationView
                                 android:id="@+id/lottie_covid_anim_prevention"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:layout_marginRight="5dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_centerHorizontal="true"
                                 android:transitionName="@string/transition_shared_main_activity_lottie_image"
@@ -92,6 +128,8 @@
                                 app:lottie_cacheComposition="true"
                                 app:lottie_loop="true"
                                 app:lottie_rawRes="@raw/covid_armor" />
+
+
                         </RelativeLayout>
 
                         <TextView
@@ -105,6 +143,17 @@
                             android:textColor="@color/white"
                             android:textSize="18sp" />
                     </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="10dp"
+                        android:elevation="0dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginLeft="120dp"
+                        android:background="@drawable/ic_bg_fragment_main_tbox_green_color"
+                        android:rotation="325" />
+
+
                 </androidx.cardview.widget.CardView>
 
             </RelativeLayout>
@@ -112,16 +161,18 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
 
 
                 <ImageView
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="15dp"
                     android:layout_marginLeft="50dp"
                     android:layout_marginTop="65dp"
                     android:layout_marginRight="-20dp"
-                    android:background="@drawable/ic_bg_brown_shape"
+                    android:background="@drawable/ic_bg_orange_light_shape"
                     android:rotation="170" />
 
                 <ImageView
@@ -130,15 +181,14 @@
                     android:layout_marginLeft="-20dp"
                     android:layout_marginTop="80dp"
                     android:layout_marginRight="50dp"
-                    android:background="@drawable/ic_bg_light_green_shape"
+                    android:background="@drawable/ic_bg_fragment_main_tbox_blue_color"
                     android:rotation="350" />
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/card_diagnosis"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/card_diagnosis"
                     android:layout_marginLeft="11dp"
-                    android:layout_marginTop="10dp"
                     android:layout_marginRight="11dp"
                     app:cardCornerRadius="@dimen/main_cards_radius"
                     app:cardElevation="@dimen/basic_cardview_elevation_3dp"
@@ -159,6 +209,7 @@
                                 android:id="@+id/lottie_covid_anim_diagnosis"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:layout_marginRight="5dp"
                                 android:layout_alignParentBottom="true"
                                 android:layout_centerHorizontal="true"
                                 android:transitionName="shared_lottie_icon2"
@@ -179,6 +230,17 @@
                             android:textColor="@color/white"
                             android:textSize="18sp" />
                     </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="10dp"
+                        android:elevation="0dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginLeft="120dp"
+                        android:background="@drawable/ic_bg_fragment_main_tbox_blue_color"
+                        android:rotation="325" />
+
                 </androidx.cardview.widget.CardView>
 
             </RelativeLayout>

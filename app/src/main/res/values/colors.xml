@@ -16,7 +16,9 @@
     <color name="tboxViolet">#9e92c1</color>
     <color name="tboxGreen">#61aab6</color>
     <color name="tboxBlue">#628eb9</color>
+    <color name="tboxBlue2">#628eb9</color>
     <color name="tboxGreenLight">#24bbc8</color>
+    <color name="tboxGreenLight2">#22ADB9</color>
 
     <color name="tboxTabsGreen">#45c01a</color>
 
@@ -52,6 +54,8 @@
     <color name="shapes_green_color">#daf3f1</color>
 
     <color name="black_overlay">#66000000</color>
+    <color name="card_bg_color_orange_light">#EC8D6F</color>
+    <color name="card_bg_color_brown_light">#A27D70</color>
 
 
 </resources>

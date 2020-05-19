@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:fitsSystemWindows="true"
     android:id="@+id/drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    >
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
 
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -23,70 +21,66 @@
             android:id="@+id/app_bar"
             android:layout_width="match_parent"
             android:layout_height="230dp"
-            android:fitsSystemWindows="true"
             android:background="@color/colorPrimary"
+            android:fitsSystemWindows="true"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
             <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:id="@+id/collapsing_toolabar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fitsSystemWindows="true"
-                android:background="@color/layouts_main_white_bg"
                 android:layout_marginTop="0dp"
+                android:background="@color/layouts_main_white_bg"
+                android:fitsSystemWindows="true"
                 app:contentScrim="@color/colorPrimary"
                 app:expandedTitleGravity="center_horizontal|top"
-                app:layout_scrollFlags="scroll|exitUntilCollapsed"
-                >
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <com.github.florent37.arclayout.ArcLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fitsSystemWindows="true"
-                android:layout_marginTop="0dp"
-                app:arc_cropDirection="cropInside"
-                android:background="@color/layouts_main_white_bg"
-                app:arc_position="bottom"
-                app:arc_height="80dp" >
-
-
-                <ImageView
+                <com.github.florent37.arclayout.ArcLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="0dp"
+                    android:background="@color/layouts_main_white_bg"
                     android:fitsSystemWindows="true"
-                    android:background="@color/colorPrimary"
-                    />
+                    app:arc_cropDirection="cropInside"
+                    app:arc_height="80dp"
+                    app:arc_position="bottom">
 
 
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimary"
+                        android:fitsSystemWindows="true" />
 
-                <com.flaviofaria.kenburnsview.KenBurnsView
-                    android:id="@+id/image"
+
+                    <com.flaviofaria.kenburnsview.KenBurnsView
+                        android:id="@+id/image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fitsSystemWindows="true"
+                        android:src="@drawable/covid_worms_bg" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#b5193150"
+                        android:fitsSystemWindows="true" />
+
+                </com.github.florent37.arclayout.ArcLayout>
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginTop="@dimen/toolbar_api_version_top_margin"
                     android:fitsSystemWindows="true"
-                    android:src="@drawable/covid_worms_bg"
-                    />
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fitsSystemWindows="true"
-                    android:background="#b5193150"
-                    />
 
-            </com.github.florent37.arclayout.ArcLayout>
-
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:fitsSystemWindows="true"
-                android:layout_marginTop="@dimen/toolbar_api_version_top_margin"
-
-                android:minHeight="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                />
+                    android:minHeight="?attr/actionBarSize"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
 
                 <ImageView
@@ -94,35 +88,33 @@
                     android:id="@+id/toa_logo"
                     android:layout_width="110dp"
                     android:layout_height="110dp"
-                    android:src="@drawable/logo_round"
-                    android:transitionName="@string/transition_splash_shared_logo"
                     android:layout_gravity="bottom|center_horizontal"
-                    />
+                    android:src="@drawable/logo_round"
+                    android:transitionName="@string/transition_splash_shared_logo" />
             </com.google.android.material.appbar.CollapsingToolbarLayout>
         </com.google.android.material.appbar.AppBarLayout>
+
         <FrameLayout
             android:id="@+id/container"
 
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/layouts_main_white_bg" />
+            android:background="@color/layouts_main_white_bg"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
-
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:id="@+id/navigation_view"
-        app:itemTextColor="@color/white"
-        >
+        app:itemTextColor="@color/white">
+
         <fragment
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             class="org.changemakers.toa.ui.fragments.NavFragment"
-            />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </com.google.android.material.navigation.NavigationView>
 </androidx.drawerlayout.widget.DrawerLayout>
