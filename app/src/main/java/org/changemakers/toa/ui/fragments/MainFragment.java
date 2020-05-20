@@ -2,26 +2,25 @@ package org.changemakers.toa.ui.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import org.changemakers.toa.MainActivity;
 import org.changemakers.toa.R;
 import org.changemakers.toa.databinding.FragmentMainBinding;
-import org.changemakers.toa.interfaces.MainActivityCallbackInterface;
+import org.changemakers.toa.interfaces.ActivityCallbackInterface;
 
 public class MainFragment extends BottomSheetDialogFragment implements View.OnClickListener {
 
     private FragmentMainBinding binding;
 
-    private MainActivityCallbackInterface mCallback;
+    private ActivityCallbackInterface mCallback;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,7 +41,7 @@ public class MainFragment extends BottomSheetDialogFragment implements View.OnCl
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.card_prevention:
                 mCallback.cardSelected(MainActivity.FRAGMENT_INDEX_PREVENTION, binding.lottieCovidAnimPrevention);
                 break;
@@ -56,8 +55,8 @@ public class MainFragment extends BottomSheetDialogFragment implements View.OnCl
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
 
-        if(mCallback == null)
-            mCallback = (MainActivityCallbackInterface) context;
+        if (mCallback == null)
+            mCallback = (ActivityCallbackInterface) context;
 
     }
 
@@ -65,7 +64,7 @@ public class MainFragment extends BottomSheetDialogFragment implements View.OnCl
     public void onDetach() {
         super.onDetach();
 
-        if(mCallback!=null)
+        if (mCallback != null)
             mCallback = null;
 
     }

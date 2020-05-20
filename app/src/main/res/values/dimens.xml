@@ -43,4 +43,5 @@
     <dimen name="value_text_size_11sp">11sp</dimen>
     <dimen name="value_text_size_10sp">10sp</dimen>
     <dimen name="value_150dp">150dp</dimen>
+    <dimen name="prevention_details_toolbar_top_margin_16dp_40dp">16dp</dimen>
 </resources>

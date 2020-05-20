@@ -12,19 +12,16 @@ import android.view.Window;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.app.ActivityOptionsCompat;
-import androidx.core.util.Pair;
 import androidx.core.view.ViewCompat;
 
 import org.changemakers.toa.MainActivity;
 import org.changemakers.toa.R;
 import org.changemakers.toa.databinding.ActivitySplashScreenBinding;
 
-import javax.security.auth.callback.CallbackHandler;
-
 /**
  * An full-screen activity that hides the system UI (i.e.
  * status bar and navigation/system bar)
- *
+ * <p>
  * Good UX approach to avoid brutal App landing
  */
 public class SplashScreenActivity extends AppCompatActivity {
@@ -84,7 +81,6 @@ public class SplashScreenActivity extends AppCompatActivity {
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-
 
 
         // Note that some of these constants are new as of API 16 (Jelly Bean)

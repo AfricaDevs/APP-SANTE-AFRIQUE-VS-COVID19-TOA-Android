@@ -45,7 +45,6 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment:2.2.2'
     implementation 'androidx.navigation:navigation-ui:2.2.2'
 
-
     //Custom layouts
     implementation 'com.github.florent37:arclayout:1.0.5'
 

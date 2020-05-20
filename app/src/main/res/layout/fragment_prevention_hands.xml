@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layouts_main_white_bg"
+    android:fitsSystemWindows="false"
+    tools:context=".ui.FragmentActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+        >
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_nav"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1" />
+
+        <!--com.fxn.BubbleTabBar
+            android:id="@+id/bubbleTabBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFF"
+            android:elevation="16dp"
+            android:padding="7dp"
+            android:layout_alignParentBottom="true"
+            app:bubbletab_menuResource="@menu/prevention_hands_nav_options"
+            app:bubbletab_custom_font="sans_serif"
+            app:bubbletab_disabled_icon_color="@color/colorPrimaryDark"
+            app:bubbletab_horizontal_padding="20dp"
+            app:bubbletab_icon_size="20dp"
+            app:bubbletab_title_size="16sp"
+            app:bubbletab_icon_padding="5sp"
+            app:bubbletab_vertical_padding="10dp">
+    </com.fxn.BubbleTabBar-->
+        <!--com.etebarian.meowbottomnavigation.MeowBottomNavigation
+            android:id="@+id/bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:mbn_circleColor="#ffffff"
+
+            app:autoSizeTextType="uniform"
+            app:mbn_backgroundBottomColor="#ffffff"
+            app:mbn_countBackgroundColor="#ff6f00"
+            app:mbn_countTextColor="#ffffff"
+            app:mbn_defaultIconColor="#90a4ae"
+            app:mbn_rippleColor="#2f424242"
+            app:mbn_selectedIconColor="#3c415e"
+            app:mbn_shadowColor="#1f212121"/-->
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:outlineProvider="none"
+
+            app:labelVisibilityMode="labeled"
+            app:itemTextColor="@drawable/prevention_hands_bottom_nav_colors"
+            app:itemIconTint="@drawable/prevention_hands_bottom_nav_colors"
+            android:background="@color/layouts_main_white_bg"
+            app:menu="@menu/prevention_hands_nav_options"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/toolbarRelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="@dimen/prevention_details_toolbar_top_margin_16dp_40dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/prevention_details_toolbar_bg"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            app:srcCompat="@drawable/ic_arrow_back_blue_24dp" />
+
+        <TextView
+            android:id="@+id/prevention_option_tittle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/backArrow"
+            android:layout_toEndOf="@+id/backArrow"
+            app:autoSizeTextType="uniform"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:fontFamily="sans-serif"
+            android:maxLines="2"
+            android:textColor="#414141"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="24dp" />
+
+
+    </RelativeLayout>
+</FrameLayout>
