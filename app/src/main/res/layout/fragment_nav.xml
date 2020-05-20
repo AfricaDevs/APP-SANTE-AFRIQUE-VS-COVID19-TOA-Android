@@ -185,6 +185,7 @@
                 android:textSize="@dimen/value_text_size_11sp" />
 
             <androidx.core.widget.NestedScrollView
+                android:id="@+id/todo_recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 

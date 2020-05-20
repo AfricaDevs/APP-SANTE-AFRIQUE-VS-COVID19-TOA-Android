@@ -54,6 +54,11 @@ public class MainActivity extends AppCompatActivity implements MainActivityCallb
         if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
+
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+
         if (Build.VERSION.SDK_INT >= 19) {
             getWindow().getDecorView().setSystemUiVisibility(
                     View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
@@ -61,11 +66,6 @@ public class MainActivity extends AppCompatActivity implements MainActivityCallb
         if (Build.VERSION.SDK_INT >= 21) {
             getWindow().setStatusBarColor( Color.TRANSPARENT);
         }
-
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-
-
 
         // Handle toolbar actions
         handleToolbar();

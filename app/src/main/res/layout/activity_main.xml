@@ -29,7 +29,7 @@
                 android:id="@+id/collapsing_toolabar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="0dp"
+                android:minHeight="?attr/actionBarSize"
                 android:background="@color/layouts_main_white_bg"
                 android:fitsSystemWindows="true"
                 app:contentScrim="@color/colorPrimary"
@@ -39,9 +39,10 @@
                 <com.github.florent37.arclayout.ArcLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="0dp"
                     android:background="@color/layouts_main_white_bg"
                     android:fitsSystemWindows="true"
+
+                    app:layout_scrollFlags="scroll"
                     app:arc_cropDirection="cropInside"
                     app:arc_height="80dp"
                     app:arc_position="bottom">
@@ -62,6 +63,7 @@
                         android:src="@drawable/covid_worms_bg" />
 
                     <ImageView
+                        android:id="@+id/toolbar_shadow_view"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#b5193150"
@@ -80,6 +82,8 @@
                     android:minHeight="?attr/actionBarSize"
                     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                     app:layout_collapseMode="pin"
+
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
                     app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
 
