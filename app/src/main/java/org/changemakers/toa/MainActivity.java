@@ -65,7 +65,10 @@ public class MainActivity extends AppCompatActivity implements MainActivityCallb
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
+        //Lionel Code
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP  ){
+            binding.toolbar_shadow_view.setMargins(0, 24, 0, 0)
+        }
 
         // Handle toolbar actions
         handleToolbar();
