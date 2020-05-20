@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_why"
+        android:title="@string/hands_tab_why"
+        android:icon="@drawable/ic_access_time_black_24dp"
+        android:checked="true" />
+
+    <item
+        android:id="@+id/item_when"
+        android:icon="@drawable/ic_access_time_black_24dp"
+        android:title="@string/hands_tab_when" />
+    <item
+        android:id="@+id/item_how"
+        android:icon="@drawable/ic_access_time_black_24dp"
+        android:title="@string/hands_tab_how" />
+
+
+</menu>

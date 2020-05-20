@@ -20,34 +20,33 @@ import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.appbar.AppBarLayout;
 
 import org.changemakers.toa.databinding.ActivityMainBinding;
-import org.changemakers.toa.interfaces.MainActivityCallbackInterface;
+import org.changemakers.toa.interfaces.ActivityCallbackInterface;
 import org.changemakers.toa.ui.FragmentActivity;
 import org.changemakers.toa.ui.fragments.MainFragment;
 
-public class MainActivity extends AppCompatActivity implements MainActivityCallbackInterface {
+public class MainActivity extends AppCompatActivity implements ActivityCallbackInterface {
 
     public static final int FRAGMENT_INDEX_PREVENTION = 1;
     public static final int FRAGMENT_INDEX_PREVENTIO_FIRSTN = 11;
     public static final int FRAGMENT_INDEX_PREVENTIO_SECOND = 12;
     public static final int FRAGMENT_INDEX_PREVENTIO_THIRD = 13;
     public static final int FRAGMENT_INDEX_DIAGNOSIS = 2;
-
-    private static final int MAIN_ACTIVITY_REQUEST_CODE = 10;
     public static final String EXTRA_FRAGMENT_INDEX = "org.africadevs.toa.frag.index";
-
+    private static final int MAIN_ACTIVITY_REQUEST_CODE = 10;
     ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP  ) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             try {
                 getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
                 getWindow().setAllowEnterTransitionOverlap(true);
 
 
-            } catch (Exception ex) { }
+            } catch (Exception ex) {
+            }
         }
 
 
@@ -58,13 +57,8 @@ public class MainActivity extends AppCompatActivity implements MainActivityCallb
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
-        if (Build.VERSION.SDK_INT >= 19) {
-            getWindow().getDecorView().setSystemUiVisibility(
-                    View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
-        }
         if (Build.VERSION.SDK_INT >= 21) {
-            getWindow().setStatusBarColor( Color.TRANSPARENT);
+            getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
 
         // Handle toolbar actions
@@ -126,14 +120,14 @@ public class MainActivity extends AppCompatActivity implements MainActivityCallb
             transaction.addToBackStack(null);
         }
 
-        if(fragment!=null)
-        transaction.replace(R.id.container, fragment).commit();
+        if (fragment != null)
+            transaction.replace(R.id.container, fragment).commit();
         else
-        transaction.replace(R.id.container, new MainFragment()).commit();
+            transaction.replace(R.id.container, new MainFragment()).commit();
     }
 
     @Override
-    public void cardSelected(int poisition, View sharedView){
+    public void cardSelected(int poisition, View sharedView) {
 
 
         Intent intent = new Intent(MainActivity.this, FragmentActivity.class);
@@ -150,10 +144,15 @@ public class MainActivity extends AppCompatActivity implements MainActivityCallb
             ActivityOptionsCompat optionsCompat =
                     ActivityOptionsCompat.makeSceneTransitionAnimation(MainActivity.this, sharedView, ViewCompat.getTransitionName(sharedView));
 
-            ActivityCompat.startActivityForResult(MainActivity.this, intent,MAIN_ACTIVITY_REQUEST_CODE, optionsCompat.toBundle());
+            ActivityCompat.startActivityForResult(MainActivity.this, intent, MAIN_ACTIVITY_REQUEST_CODE, optionsCompat.toBundle());
         } else {
             startActivityForResult(new Intent(MainActivity.this, FragmentActivity.class), MAIN_ACTIVITY_REQUEST_CODE);
         }
 
+    }
+
+    @Override
+    public void onPreventionOptionSelected(View view, int poisition) {
+        //IDDLE
     }
 }

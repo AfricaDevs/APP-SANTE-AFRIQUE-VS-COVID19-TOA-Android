@@ -7,6 +7,9 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
 
+        <!-- force monospace as default font, overridden in App-->
+        <item name="android:typeface">monospace</item>
+
         <!-- v21 specific-->
 
         <item name="windowActionBar">false</item>

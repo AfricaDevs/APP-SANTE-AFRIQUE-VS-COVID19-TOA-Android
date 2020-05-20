@@ -52,14 +52,14 @@ public class NavFragment extends BottomSheetDialogFragment implements View.OnCli
     @Override
     public void onClick(View v) {
 
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.privacy_policies:
                 Intent ppIntent = new Intent(Intent.ACTION_VIEW);
                 ppIntent.setData(Uri.parse(getString(R.string.privacy_policies_link)));
-                try{
+                try {
                     startActivity(ppIntent);
 
-                } catch (Exception ex){
+                } catch (Exception ex) {
                     Toast.makeText(getActivity(), getString(R.string.alert_cant_handle), Toast.LENGTH_SHORT).show();
                 }
                 break;

@@ -1,5 +1,8 @@
 package org.changemakers.toa.ui.fragments;
 
+import android.content.Context;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,15 +23,16 @@ import org.changemakers.toa.R;
 import org.changemakers.toa.databinding.FragmentPreventionBinding;
 import org.changemakers.toa.databinding.ItemPreventionFragmentBinding;
 import org.changemakers.toa.databinding.ItemPreventionFragmentRightBinding;
+import org.changemakers.toa.interfaces.ActivityCallbackInterface;
+import org.changemakers.toa.ui.FragmentActivity;
 
 public class PreventionFragment extends BottomSheetDialogFragment {
 
-    private static String[] sPreventionOptions;
-    private static String[] sPreventionIcons;
-
     private static final int ITEM_TYPE_LEFT = 1;
     private static final int ITEM_TYPE_RIGHT = 2;
-
+    private static String[] sPreventionOptions;
+    private static String[] sPreventionIcons;
+    ActivityCallbackInterface mCallback;
     private FragmentPreventionBinding binding;
 
     @Override
@@ -44,6 +48,7 @@ public class PreventionFragment extends BottomSheetDialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
+
         binding = FragmentPreventionBinding.inflate(getLayoutInflater());
 
         try {
@@ -60,8 +65,8 @@ public class PreventionFragment extends BottomSheetDialogFragment {
         binding.recyclerView.setAdapter(new PreventionRecyclerViewAdapter());
         binding.recyclerView.setHasFixedSize(true);
 
-        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration( getActivity(), DividerItemDecoration.VERTICAL );
-        binding.recyclerView.addItemDecoration( itemDecoration );
+        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
+        binding.recyclerView.addItemDecoration(itemDecoration);
 
 
         binding.appBar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
@@ -80,13 +85,14 @@ public class PreventionFragment extends BottomSheetDialogFragment {
 
                     binding.collapsingToolabar.setTitleEnabled(false);
                 } else {
-                    if(binding.lottieSelectedOption.getAlpha()==1)
-                    ViewCompat.animate(binding.lottieSelectedOption).setDuration(200).alpha(0f).start();
+                    if (binding.lottieSelectedOption.getAlpha() == 1)
+                        ViewCompat.animate(binding.lottieSelectedOption).setDuration(200).alpha(0f).start();
 
                     //IDDLE
                 }
             }
         });
+
 
         return binding.getRoot();
     }
@@ -96,13 +102,46 @@ public class PreventionFragment extends BottomSheetDialogFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        ((FragmentActivity) getActivity()).getDelegate().setSupportActionBar(binding.toolbar);
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            getActivity().getWindow().setStatusBarColor(Color.TRANSPARENT);
+        }
+
         binding.lottieSelectedOption.setAnimation(R.raw.covid_armor);
     }
 
+    private void onItemSelected(View v, int position) {
+        switch (position) {
+            case 0:
+                if (mCallback != null)
+                    mCallback.onPreventionOptionSelected(v, position);
+                break;
+            default:
 
-    private class PreventionRecyclerViewAdapter extends RecyclerView.Adapter<PreventionRecyclerViewAdapter.PreventionViewHolder>{
+                break;
+        }
+    }
 
-        public PreventionRecyclerViewAdapter(){
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+
+        if (mCallback == null)
+            mCallback = (ActivityCallbackInterface) context;
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+
+        if (mCallback != null)
+            mCallback = null;
+    }
+
+    private class PreventionRecyclerViewAdapter extends RecyclerView.Adapter<PreventionRecyclerViewAdapter.PreventionViewHolder> {
+
+        public PreventionRecyclerViewAdapter() {
 
         }
 
@@ -110,7 +149,7 @@ public class PreventionFragment extends BottomSheetDialogFragment {
         @Override
         public PreventionViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-            if(viewType == ITEM_TYPE_LEFT) {
+            if (viewType == ITEM_TYPE_LEFT) {
                 ItemPreventionFragmentBinding itemPreventionFragmentBinding = ItemPreventionFragmentBinding.inflate(getLayoutInflater(), parent, false);
                 return new PreventionViewHolder(itemPreventionFragmentBinding);
             } else {
@@ -122,7 +161,7 @@ public class PreventionFragment extends BottomSheetDialogFragment {
         @Override
         public void onBindViewHolder(@NonNull PreventionViewHolder holder, int position) {
 
-            if(getItemViewType(position) == ITEM_TYPE_LEFT){
+            if (getItemViewType(position) == ITEM_TYPE_LEFT) {
                 holder.itemviewBinding.optionTitle.setBackground(getResources().getDrawable(R.drawable.card_bg_gradient_tbox_blue));
 
                 holder.itemviewBinding.optionTitle.setText(sPreventionOptions[position]);
@@ -130,7 +169,7 @@ public class PreventionFragment extends BottomSheetDialogFragment {
                         .setAnimation(getResources()
                                 .getIdentifier(sPreventionIcons[position], "raw", getActivity().getPackageName()));
 
-            } else{
+            } else {
 
                 holder.itemviewRightBinding.optionTitle.setBackground(getResources().getDrawable(R.drawable.card_bg_gradient_tbox_green_light));
 
@@ -141,15 +180,12 @@ public class PreventionFragment extends BottomSheetDialogFragment {
 
             }
 
-
-
-
         }
 
         @Override
         public int getItemViewType(int position) {
 
-            return position % 2 != 0 ? ITEM_TYPE_LEFT : ITEM_TYPE_RIGHT ;
+            return position % 2 != 0 ? ITEM_TYPE_LEFT : ITEM_TYPE_RIGHT;
         }
 
         @Override
@@ -157,7 +193,7 @@ public class PreventionFragment extends BottomSheetDialogFragment {
             return sPreventionOptions.length;
         }
 
-        class PreventionViewHolder extends RecyclerView.ViewHolder{
+        class PreventionViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
             ItemPreventionFragmentBinding itemviewBinding;
             ItemPreventionFragmentRightBinding itemviewRightBinding;
@@ -165,10 +201,18 @@ public class PreventionFragment extends BottomSheetDialogFragment {
             public PreventionViewHolder(ItemPreventionFragmentBinding binding) {
                 super(binding.getRoot());
                 this.itemviewBinding = binding;
+                itemviewBinding.getRoot().setOnClickListener(this);
             }
+
             public PreventionViewHolder(ItemPreventionFragmentRightBinding binding) {
                 super(binding.getRoot());
                 this.itemviewRightBinding = binding;
+                itemviewRightBinding.getRoot().setOnClickListener(this);
+            }
+
+            @Override
+            public void onClick(View v) {
+                onItemSelected(v, getAdapterPosition());
             }
         }
 
