@@ -9,7 +9,7 @@
     <dimen name="basic_cardview_elevation_3dp">3dp</dimen>
 
     <dimen name="frament_nav_contact_left_padding">10dp</dimen>
-    <dimen name="frament_nav_contact_top_padding">10dp</dimen>
+    <dimen name="frament_nav_contact_top_padding">12dp</dimen>
     <dimen name="frament_nav_contact_text_size">14sp</dimen>
     <dimen name="nav_cardview_left_padding">10dp</dimen>
     <dimen name="nav_cardview_right_padding">15dp</dimen>

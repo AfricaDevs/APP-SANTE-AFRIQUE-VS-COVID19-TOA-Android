@@ -4,4 +4,5 @@
     <dimen name="prevention_details_toolbar_top_margin_16dp_40dp">40dp</dimen>
 
     <dimen name="toa_header_view_api_version_top_padding">32dp</dimen>
+    <dimen name="frament_nav_contact_top_padding">32dp</dimen>
 </resources>
