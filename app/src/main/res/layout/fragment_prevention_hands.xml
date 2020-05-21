@@ -97,7 +97,7 @@
         <TextView
             android:id="@+id/prevention_option_tittle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_toRightOf="@+id/backArrow"
             android:layout_toEndOf="@+id/backArrow"
             app:autoSizeTextType="uniform"

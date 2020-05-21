@@ -36,7 +36,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="@dimen/nav_cardview_left_padding"
         android:layout_marginLeft="@dimen/nav_cardview_left_padding"
-        android:layout_marginBottom="@dimen/nav_fragment_footer_content_bottom_margin"
         android:orientation="vertical"
         android:paddingLeft="@dimen/value_2dp"
         android:paddingEnd="@dimen/value_50dp"
@@ -67,9 +66,7 @@
         android:id="@+id/bottom_shapes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-
-        android:layout_marginBottom="@dimen/nav_fragment_footer_content_bottom_margin">
+        android:layout_alignParentBottom="true">
 
         <ImageView
             android:id="@+id/bottom_shape"
@@ -119,7 +116,7 @@
         android:id="@+id/drawer_header_contact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/toolbar_api_version_top_margin"
+        android:layout_marginTop="@dimen/value_5dp"
         android:orientation="horizontal"
         android:paddingLeft="@dimen/frament_nav_contact_left_padding"
         android:paddingTop="@dimen/frament_nav_contact_top_padding">
