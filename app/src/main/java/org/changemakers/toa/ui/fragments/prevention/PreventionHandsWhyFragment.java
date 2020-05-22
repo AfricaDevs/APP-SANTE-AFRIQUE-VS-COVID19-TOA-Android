@@ -27,12 +27,12 @@ public class PreventionHandsWhyFragment extends Fragment {
         mColorsArray = getResources().getIntArray(R.array.material_colors);
 
         //apply colors to the left and right background vectors
-        binding.card1LeftImageview.setColorFilter(mColorsArray[3]);
-        binding.card1RightImageview.setColorFilter(mColorsArray[3]);
+        binding.card1LeftImageview.setColorFilter(mColorsArray[12]);
+        binding.card1RightImageview.setColorFilter(mColorsArray[12]);
         binding.card2LeftImageview.setColorFilter(mColorsArray[1]);
         binding.card2RightImageview.setColorFilter(mColorsArray[1]);
-        binding.card3LeftImageview.setColorFilter(mColorsArray[12]);
-        binding.card3RightImageview.setColorFilter(mColorsArray[12]);
+        binding.card3LeftImageview.setColorFilter(mColorsArray[4]);
+        binding.card3RightImageview.setColorFilter(mColorsArray[4]);
 
         return binding.getRoot();
 
