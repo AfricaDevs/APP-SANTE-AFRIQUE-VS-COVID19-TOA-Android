@@ -75,5 +75,6 @@
         <item>@color/materialBrown2</item>
         <item>@color/colorTeal</item>
         <item>@color/materialCyanDark</item>
+        <item>@color/colorPrimary</item>
     </array>
 </resources>

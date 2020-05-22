@@ -41,13 +41,31 @@
                     android:layout_gravity="center"
                     android:background="#F3EFEF"
                     android:textColor="@color/prevention_details_text_color"
-                    android:paddingTop="10dp"
-                    android:paddingLeft="8dp"
+                    android:paddingTop="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_10dp"
                     android:paddingRight="8dp"
                     android:paddingBottom="8dp"
                     android:text="Le lavage des mains\n\nLes virus respiratoires tels que la maladie à coronavirus (COVID-19) se propagent lorsque du mucus ou des gouttelettes contenant le virus pén. ètrent dans votre corps par l’intermédiaire de de votre bouche, votre nez et vos yeux."
                     android:textSize="@dimen/app_main_text_size" />
 
+
+                <ImageView
+                    android:id="@+id/card1_left_imageview"
+                    android:layout_width="8dp"
+                    android:scaleType="fitXY"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_bg_orange_light_shape"
+                    />
+                <ImageView
+                    android:id="@+id/card1_right_imageview"
+                    android:layout_width="8dp"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="right|bottom"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:rotation="180"
+                    app:srcCompat="@drawable/ic_bg_orange_light_shape"
+                    />
             </androidx.cardview.widget.CardView>
 
 
@@ -65,8 +83,8 @@
                     android:layout_gravity="center"
                     android:background="#F3EFEF"
                     android:textColor="@color/prevention_details_text_color"
-                    android:paddingTop="10dp"
-                    android:paddingLeft="8dp"
+                    android:paddingTop="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_10dp"
                     android:paddingRight="8dp"
                     android:paddingBottom="8dp"
                     android:text="Le plus souvent, ce contact a lieu par les mains.
@@ -74,6 +92,24 @@
 "
                     android:textSize="@dimen/app_main_text_size" />
 
+
+                <ImageView
+                    android:id="@+id/card2_left_imageview"
+                    android:layout_width="8dp"
+                    android:scaleType="fitXY"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_bg_orange_light_shape"
+                    />
+                <ImageView
+                    android:id="@+id/card2_right_imageview"
+                    android:layout_width="8dp"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="right|bottom"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:rotation="180"
+                    app:srcCompat="@drawable/ic_bg_orange_light_shape"
+                    />
             </androidx.cardview.widget.CardView>
 
 
@@ -91,13 +127,30 @@
                     android:layout_gravity="center"
                     android:background="#F3EFEF"
                     android:textColor="@color/prevention_details_text_color"
-                    android:paddingTop="10dp"
-                    android:paddingLeft="8dp"
+                    android:paddingTop="@dimen/value_10dp"
+                    android:paddingLeft="@dimen/value_10dp"
                     android:paddingRight="8dp"
                     android:paddingBottom="8dp"
                     android:text="Durant une pandémie, le fait de se laver fréquemment les mains avec de l’eau et du savon fait partie des mesures les plus économiques, les plus faciles et les plus importantes pour prévenir la propagation d’un virus."
                     android:textSize="@dimen/app_main_text_size" />
 
+                <ImageView
+                    android:id="@+id/card3_left_imageview"
+                    android:layout_width="8dp"
+                    android:scaleType="fitXY"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_bg_orange_light_shape"
+                    />
+                <ImageView
+                    android:id="@+id/card3_right_imageview"
+                    android:layout_width="8dp"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="right|bottom"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:rotation="180"
+                    app:srcCompat="@drawable/ic_bg_orange_light_shape"
+                    />
             </androidx.cardview.widget.CardView>
 
 
