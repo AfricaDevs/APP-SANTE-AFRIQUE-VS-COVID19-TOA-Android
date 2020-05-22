@@ -64,11 +64,11 @@
     </array>
     <array name="prevention_hands_how_icons" translatable="false">
         <item>hands_how1</item>
-        <item>hands_how1</item>
-        <item>hands_how1</item>
-        <item>hands_how1</item>
-        <item>hands_how1</item>
-        <item>hands_how1</item>
+        <item>hands_how2</item>
+        <item>hands_how3</item>
+        <item>hands_how4</item>
+        <item>hands_how5</item>
+        <item>hands_how6</item>
     </array>
 
 </resources>

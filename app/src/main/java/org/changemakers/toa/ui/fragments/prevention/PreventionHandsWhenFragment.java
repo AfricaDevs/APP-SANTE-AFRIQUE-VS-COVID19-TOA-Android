@@ -8,14 +8,12 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.changemakers.toa.R;
 import org.changemakers.toa.databinding.FragmentPreventionHandsWhenBinding;
 import org.changemakers.toa.databinding.ItemPreventionWhenBinding;
-import org.changemakers.toa.ui.fragments.PreventionFragment;
 
 public class PreventionHandsWhenFragment extends Fragment {
 
@@ -35,10 +33,6 @@ public class PreventionHandsWhenFragment extends Fragment {
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false));
         binding.recyclerView.setAdapter(new MyRecyclerViewAdapter());
         binding.recyclerView.setHasFixedSize(true);
-
-        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
-        binding.recyclerView.addItemDecoration(itemDecoration);
-
 
         return binding.getRoot();
 
@@ -76,7 +70,6 @@ public class PreventionHandsWhenFragment extends Fragment {
 
                 if (position < mColorsArray.length) {
                     holder.itemviewBinding.bgImageview.setColorFilter(mColorsArray[position]);
-                    holder.itemviewBinding.bgImageview2.setColorFilter(mColorsArray[position]);
                 }
         }
 

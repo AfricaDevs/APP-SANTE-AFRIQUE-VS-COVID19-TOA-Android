@@ -4,14 +4,15 @@
     android:layout_width="match_parent"
     android:layout_marginLeft="@dimen/value_16dp"
     android:layout_marginRight="@dimen/value_16dp"
-    android:layout_marginTop="@dimen/value_1dp"
-    android:layout_marginBottom="@dimen/value_1dp"
+    android:layout_marginTop="@dimen/value_2dp"
+    android:layout_marginBottom="@dimen/value_2dp"
     app:cardCornerRadius="@dimen/value_5dp"
     android:layout_height="wrap_content" >
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/value_2dp">
 
 
 
@@ -28,24 +29,16 @@
             android:text=" Mon tex test pour voir le rendu "
             android:textColor="@color/toolbar_text_color"
             android:textSize="16sp" />
-        <ImageView
-            android:id="@+id/bg_imageview"
-            android:layout_width="8dp"
-            android:scaleType="fitXY"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_bg_orange_light_shape"
-            />
-        <ImageView
-            android:id="@+id/bg_imageview2"
-            android:layout_width="8dp"
-            android:scaleType="fitXY"
-            android:layout_alignParentRight="true"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:rotation="180"
-            app:srcCompat="@drawable/ic_bg_orange_light_shape"
-            />
     </RelativeLayout>
 
 
+    <ImageView
+        android:id="@+id/bg_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:rotation="180"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_bg_primary_color_shapes" />
     </androidx.cardview.widget.CardView>

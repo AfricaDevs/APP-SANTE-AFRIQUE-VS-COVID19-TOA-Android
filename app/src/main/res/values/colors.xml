@@ -64,10 +64,10 @@
         <item>@color/materialBrown</item>
         <item>@color/materialOrange</item>
         <item>@color/materialGrey2</item>
-        <item>@color/materialBlue</item>
-
-        <item>@color/materialRed</item>
         <item>@color/colorTeal</item>
+
+        <item>@color/tboxBlue</item>
+        <item>@color/materialBlue</item>
         <item>@color/materialYellow</item>
         <item>@color/materialGreenDark</item>
         <item>@color/materialGrey2</item>
