@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="@dimen/value_16dp"
+    android:layout_marginRight="@dimen/value_16dp"
+    android:layout_marginTop="@dimen/value_1dp"
+    android:layout_marginBottom="@dimen/value_1dp"
+    app:cardCornerRadius="@dimen/value_5dp"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+        <TextView
+            android:id="@+id/option_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/white"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/value_4dp"
+            android:text=" Mon tex test pour voir le rendu "
+            android:textColor="@color/toolbar_text_color"
+            android:textSize="16sp" />
+        <ImageView
+            android:id="@+id/bg_imageview"
+            android:layout_width="8dp"
+            android:scaleType="fitXY"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_bg_orange_light_shape"
+            />
+        <ImageView
+            android:id="@+id/bg_imageview2"
+            android:layout_width="8dp"
+            android:scaleType="fitXY"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:rotation="180"
+            app:srcCompat="@drawable/ic_bg_orange_light_shape"
+            />
+    </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>

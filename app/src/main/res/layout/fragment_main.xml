@@ -67,15 +67,6 @@
                 android:layout_marginTop="8dp"
                 android:clipToPadding="false">
 
-                <ImageView
-                    android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="15dp"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="65dp"
-                    android:layout_marginRight="-20dp"
-                    android:background="@drawable/ic_bg_orange_light_shape"
-                    android:rotation="170" />
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -157,16 +148,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp">
 
-
-                <ImageView
-                    android:visibility="gone"
-                    android:layout_width="match_parent"
-                    android:layout_height="15dp"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="65dp"
-                    android:layout_marginRight="-20dp"
-                    android:background="@drawable/ic_bg_orange_light_shape"
-                    android:rotation="170" />
 
                 <ImageView
                     android:layout_width="match_parent"

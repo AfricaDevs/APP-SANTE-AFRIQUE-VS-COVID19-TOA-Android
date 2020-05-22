@@ -22,6 +22,7 @@
     <dimen name="value_5dp">5dp</dimen>
     <dimen name="value_8dp">8dp</dimen>
     <dimen name="value_10dp">10dp</dimen>
+    <dimen name="value_16dp">16dp</dimen>
     <dimen name="value_20dp">20dp</dimen>
     <dimen name="value_25dp">25dp</dimen>
     <dimen name="value_30dp">30dp</dimen>
@@ -44,4 +45,6 @@
     <dimen name="value_text_size_10sp">10sp</dimen>
     <dimen name="value_150dp">150dp</dimen>
     <dimen name="prevention_details_toolbar_top_margin_16dp_40dp">16dp</dimen>
+    <dimen name="value_14dp">14dp</dimen>
+    <dimen name="value_13dp">13dp</dimen>
 </resources>
