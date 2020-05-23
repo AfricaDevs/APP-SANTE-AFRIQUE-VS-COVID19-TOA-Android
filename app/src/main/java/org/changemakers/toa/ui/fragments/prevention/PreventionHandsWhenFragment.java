@@ -39,7 +39,6 @@ public class PreventionHandsWhenFragment extends Fragment {
     }
 
 
-
     private class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.PreventionWhenViewHolder> {
 
 
@@ -55,7 +54,7 @@ public class PreventionHandsWhenFragment extends Fragment {
         public PreventionWhenViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             if (viewType == ITEM_TYPE_LEFT) {
                 ItemPreventionWhenBinding itemPreventionWhenBinding = ItemPreventionWhenBinding.inflate(getLayoutInflater(), parent, false);
-                return new  PreventionWhenViewHolder(itemPreventionWhenBinding);
+                return new PreventionWhenViewHolder(itemPreventionWhenBinding);
             } else {
                 ItemPreventionWhenBinding itemPreventionWhenBinding = ItemPreventionWhenBinding.inflate(getLayoutInflater(), parent, false);
                 return new PreventionWhenViewHolder(itemPreventionWhenBinding);
@@ -64,13 +63,13 @@ public class PreventionHandsWhenFragment extends Fragment {
 
 
         @Override
-        public void onBindViewHolder(@NonNull  MyRecyclerViewAdapter.PreventionWhenViewHolder holder, int position) {
+        public void onBindViewHolder(@NonNull MyRecyclerViewAdapter.PreventionWhenViewHolder holder, int position) {
 
-                holder.itemviewBinding.optionTitle.setText(mOptionsTitles[position]);
+            holder.itemviewBinding.optionTitle.setText(mOptionsTitles[position]);
 
-                if (position < mColorsArray.length) {
-                    holder.itemviewBinding.bgImageview.setColorFilter(mColorsArray[position]);
-                }
+            if (position < mColorsArray.length) {
+                holder.itemviewBinding.bgImageview.setColorFilter(mColorsArray[position]);
+            }
         }
 
         @Override
@@ -84,7 +83,7 @@ public class PreventionHandsWhenFragment extends Fragment {
             return mOptionsTitles.length;
         }
 
-        class PreventionWhenViewHolder extends RecyclerView.ViewHolder   {
+        class PreventionWhenViewHolder extends RecyclerView.ViewHolder {
 
             ItemPreventionWhenBinding itemviewBinding;
 

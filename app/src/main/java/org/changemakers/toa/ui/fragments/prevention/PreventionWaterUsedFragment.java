@@ -25,7 +25,8 @@ public class PreventionWaterUsedFragment extends Fragment {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
             binding.textView.setText(Html.fromHtml(getResources().getString(R.string.prevention_water_used), Html.FROM_HTML_MODE_LEGACY));
 
-        } else binding.textView.setText(Html.fromHtml(getResources().getString(R.string.prevention_water_used)));
+        } else
+            binding.textView.setText(Html.fromHtml(getResources().getString(R.string.prevention_water_used)));
 
         return binding.getRoot();
 

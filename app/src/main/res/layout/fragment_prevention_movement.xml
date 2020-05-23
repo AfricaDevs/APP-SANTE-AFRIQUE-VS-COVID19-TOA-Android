@@ -37,7 +37,7 @@
             app:itemIconTint="@drawable/prevention_hands_bottom_nav_colors"
             app:itemTextColor="@drawable/prevention_hands_bottom_nav_colors"
             app:labelVisibilityMode="labeled"
-            app:menu="@menu/prevention_water_nav_options" />
+            app:menu="@menu/prevention_movement_nav_options" />
 
     </RelativeLayout>
 

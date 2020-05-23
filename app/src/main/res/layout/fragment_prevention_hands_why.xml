@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/root"
     android:background="@drawable/prevention_blue_bg_gradient">
 
     <androidx.core.widget.NestedScrollView
@@ -17,10 +17,10 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:orientation="vertical">
 
 
@@ -37,33 +37,32 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="#ffffff"
-                    android:textColor="@color/prevention_details_text_color"
-                    android:paddingTop="@dimen/value_10dp"
                     android:paddingLeft="@dimen/value_10dp"
+                    android:paddingTop="@dimen/value_10dp"
                     android:paddingRight="8dp"
                     android:paddingBottom="8dp"
-                    android:textIsSelectable="true"
                     android:text="@string/prevention_hands_why_content_first"
+                    android:textColor="@color/prevention_details_text_color"
+                    android:textIsSelectable="true"
                     android:textSize="@dimen/app_main_text_size" />
 
 
                 <ImageView
                     android:id="@+id/card1_left_imageview"
                     android:layout_width="8dp"
-                    android:scaleType="fitXY"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_bg_orange_light_shape"
-                    />
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_bg_orange_light_shape" />
+
                 <ImageView
                     android:id="@+id/card1_right_imageview"
                     android:layout_width="8dp"
-                    android:scaleType="fitXY"
-                    android:layout_gravity="right|bottom"
                     android:layout_height="match_parent"
                     android:layout_alignParentBottom="true"
+                    android:layout_gravity="right|bottom"
                     android:rotation="180"
-                    app:srcCompat="@drawable/ic_bg_orange_light_shape"
-                    />
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_bg_orange_light_shape" />
             </androidx.cardview.widget.CardView>
 
 
@@ -80,41 +79,40 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="#FFFFF9"
-                    android:textColor="@color/prevention_details_text_color"
-                    android:textIsSelectable="true"
-                    android:paddingTop="@dimen/value_10dp"
                     android:paddingLeft="@dimen/value_10dp"
+                    android:paddingTop="@dimen/value_10dp"
                     android:paddingRight="8dp"
                     android:paddingBottom="8dp"
                     android:text="@string/prevention_hands_why_content_second"
+                    android:textColor="@color/prevention_details_text_color"
+                    android:textIsSelectable="true"
                     android:textSize="@dimen/app_main_text_size" />
 
 
                 <ImageView
                     android:id="@+id/card2_left_imageview"
                     android:layout_width="@dimen/value_8dp"
-                    android:scaleType="fitXY"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_bg_orange_light_shape"
-                    />
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_bg_orange_light_shape" />
+
                 <ImageView
                     android:id="@+id/card2_right_imageview"
                     android:layout_width="8dp"
-                    android:scaleType="fitXY"
-                    android:layout_gravity="right|bottom"
                     android:layout_height="match_parent"
                     android:layout_alignParentBottom="true"
+                    android:layout_gravity="right|bottom"
                     android:rotation="180"
-                    app:srcCompat="@drawable/ic_bg_orange_light_shape"
-                    />
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_bg_orange_light_shape" />
             </androidx.cardview.widget.CardView>
 
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/value_5dp"
                 android:layout_marginTop="@dimen/value_10dp"
+                android:layout_marginBottom="@dimen/value_5dp"
                 app:cardCornerRadius="@dimen/main_cards_radius"
                 app:cardUseCompatPadding="false">
 
@@ -124,32 +122,31 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="#fff"
-                    android:textColor="@color/prevention_details_text_color"
-                    android:textIsSelectable="true"
-                    android:paddingTop="@dimen/value_10dp"
                     android:paddingLeft="@dimen/value_10dp"
+                    android:paddingTop="@dimen/value_10dp"
                     android:paddingRight="8dp"
                     android:paddingBottom="8dp"
                     android:text="@string/prevention_hands_why_content_third"
+                    android:textColor="@color/prevention_details_text_color"
+                    android:textIsSelectable="true"
                     android:textSize="@dimen/app_main_text_size" />
 
                 <ImageView
                     android:id="@+id/card3_left_imageview"
                     android:layout_width="@dimen/value_8dp"
-                    android:scaleType="fitXY"
                     android:layout_height="match_parent"
-                    app:srcCompat="@drawable/ic_bg_orange_light_shape"
-                    />
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_bg_orange_light_shape" />
+
                 <ImageView
                     android:id="@+id/card3_right_imageview"
                     android:layout_width="@dimen/value_8dp"
-                    android:scaleType="fitXY"
-                    android:layout_gravity="right|bottom"
                     android:layout_height="match_parent"
                     android:layout_alignParentBottom="true"
+                    android:layout_gravity="right|bottom"
                     android:rotation="180"
-                    app:srcCompat="@drawable/ic_bg_orange_light_shape"
-                    />
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/ic_bg_orange_light_shape" />
             </androidx.cardview.widget.CardView>
 
 

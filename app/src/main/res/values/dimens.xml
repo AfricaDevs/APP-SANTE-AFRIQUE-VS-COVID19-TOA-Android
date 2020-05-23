@@ -48,4 +48,5 @@
     <dimen name="value_14dp">14dp</dimen>
     <dimen name="value_13dp">13dp</dimen>
     <dimen name="value_15dp">15dp</dimen>
+    <dimen name="value_18sp">18sp</dimen>
 </resources>
