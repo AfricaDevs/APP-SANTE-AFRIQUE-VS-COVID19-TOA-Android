@@ -17,7 +17,7 @@
     <string name="hands_tab_when">Quand ?</string>
     <string name="hands_tab_how">Comment ?</string>
 
-    <string name="prevention_hands_why_content_first">Le lavage des mains\n\nLes virus respiratoires tels que la maladie à coronavirus (COVID-19) se propagent lorsque du mucus ou des gouttelettes contenant le virus pén. ètrent dans votre corps par l\’intermédiaire de de votre bouche, votre nez et vos yeux.</string>
+    <string name="prevention_hands_why_content_first">Le lavage des mains\n\nLes virus respiratoires tels que la maladie à coronavirus (COVID-19) se propagent lorsque du mucus ou des gouttelettes contenant le virus pénètrent dans votre corps par l\’intermédiaire de votre bouche, votre nez et vos yeux.</string>
     <string name="prevention_hands_why_content_second">Le plus souvent, ce contact a lieu par les mains. \n\nLes mains sont également l\’une des manières les plus courantes de transmettre le virus d\’une personne à une autre.</string>
     <string name="prevention_hands_why_content_third">Durant une pandémie, le fait de se laver fréquemment les mains avec de l\’eau et du savon fait partie des mesures les plus économiques, les plus faciles et les plus importantes pour prévenir la propagation d\’un virus.</string>
 
@@ -36,7 +36,7 @@ quand c’est possible, prévoir des tranchées pour drainer les eaux usées afi
 <br/>
 Utiliser la chaux active pour désinfecter des excréments (chaulage)]]>
     </string>
-    <string name="prevention_water_consumption_first">Au 15-4-2020\n\n L\’OMS a confirmé qu\’il n\’y a selon les connaissances scientifiques et épidémiologiques, aucun cas de contamination en lien avec l\’eau potable. \n\n Les procédés conventionnels de désinfection en place sur les usines de potabilisation (chlore, UV, ozone) permettent ainsi d\’éliminer le virus COVID-19, tout comme les autres virus. \n\n En Afrique, l\’accès à l\’eau salubre est l\’une des conditions essentiels des gestes barrières, le lavage des mains</string>
+    <string name="prevention_water_consumption_first">Au 15-4-2020\n\nL\’OMS a confirmé qu\’il n\’y a selon les connaissances scientifiques et épidémiologiques, aucun cas de contamination en lien avec l\’eau potable. \n\n Les procédés conventionnels de désinfection en place sur les usines de potabilisation (chlore, UV, ozone) permettent ainsi d\’éliminer le virus COVID-19, tout comme les autres virus. \n\n En Afrique, l\’accès à l\’eau salubre est l\’une des conditions essentiels des gestes barrières, le lavage des mains</string>
     <string name="prevention_water_consumption_second"><![CDATA[La présence du virus dans
     l\'eau <b>non traitée</b> est possible<br/><br/>
 
@@ -52,6 +52,8 @@ Utiliser la chaux active pour désinfecter des excréments (chaulage)]]>
     <strong>Attention, rester vigilant sur les dosages de chlore</strong> qui peuvent se trouver sous forme de pastille, d\’eau de javel, de DCNA, ou SURE-EAU.
 ]]>
     </string>
+    <string name="prevention_movement_why">Evitez les foules,  Pratiquez la distanciation sociale   S\'abstenir de toute sortie non indispensable dans un lieu public. Ne participer à aucun regroupement, qu\'il soit de nature professionnelle, sociale ou familiale.\n\nEviter tout contact avec des personnes vulnérables (personnes âgées…). Eviter de fréquenter de lieux où se trouvent des personnes fragiles (hôpitaux, maternités, structures d\'hébergement pour personnes âgées...)</string>
+    <string name="prevention_movement_how">"Nommer une personne plus jeune et en bonne santé de faire les courses pendant toute la période de pandémie. "</string>
 
     <array name="prevention_options">
         <item>Pourquoi, quand et comment se laver les mains?</item>
@@ -66,7 +68,7 @@ Utiliser la chaux active pour désinfecter des excréments (chaulage)]]>
     <array name="prevention_icons">
         <item>lottie_covid_hands</item>
         <item>lottie_covid_mask</item>
-        <item>lottie_covid_hands</item>
+        <item>lottie_covid_mask</item>
         <item>covid_doctor</item>
         <item>lottie_covid_hands</item>
         <item>lottie_covid_mask</item>
@@ -119,7 +121,13 @@ Utiliser la chaux active pour désinfecter des excréments (chaulage)]]>
 
     <array name="prevention_water_options_titles">
         <item>Comment gérer l\’eau destinée à la consommation humaine?</item>
-        <item>Comment gérer les eaux usées et les latrines?</item>
+        <item>Comment gérer les eaux usées (nettoyage, domestique) et les latrines?</item>
+    </array>
+
+    <array name="prevention_movement_options_titles">
+        <item>Pourquoi réduire ses déplacements?</item>
+        <item>Quand se déplacer?</item>
+        <item>Comment se déplacer?</item>
     </array>
 
 </resources>
