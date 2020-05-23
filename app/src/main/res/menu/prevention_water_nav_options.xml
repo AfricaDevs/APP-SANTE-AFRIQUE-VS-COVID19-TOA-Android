@@ -11,5 +11,4 @@
         android:icon="@drawable/ic_prevention_instructions"
         android:title="@string/water_tab_used" />
 
-
 </menu>

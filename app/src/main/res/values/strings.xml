@@ -26,6 +26,7 @@
     <string name="text_collapse">réduire</string>
     <string name="water_tab_consumption">Eau de consommation</string>
     <string name="water_tab_used">Eaux usées</string>
+    <string name="funeral_tab_how">Comment organiser les obsèques?</string>
     <string name="prevention_water_used"><![CDATA[Le coronavirus peut être trouvé dans les fèces/urine, les eaux usées doivent donc être traitées correctement
 <br/><br/>
         <b>Eaux usées domestiques:</b>
@@ -37,6 +38,7 @@ quand c’est possible, prévoir des tranchées pour drainer les eaux usées afi
 Utiliser la chaux active pour désinfecter des excréments (chaulage)]]>
     </string>
     <string name="prevention_water_consumption_first">Au 15-4-2020\n\nL\’OMS a confirmé qu\’il n\’y a selon les connaissances scientifiques et épidémiologiques, aucun cas de contamination en lien avec l\’eau potable. \n\n Les procédés conventionnels de désinfection en place sur les usines de potabilisation (chlore, UV, ozone) permettent ainsi d\’éliminer le virus COVID-19, tout comme les autres virus. \n\n En Afrique, l\’accès à l\’eau salubre est l\’une des conditions essentiels des gestes barrières, le lavage des mains</string>
+
     <string name="prevention_water_consumption_second"><![CDATA[La présence du virus dans
     l\'eau <b>non traitée</b> est possible<br/><br/>
 
@@ -55,6 +57,37 @@ Utiliser la chaux active pour désinfecter des excréments (chaulage)]]>
     <string name="prevention_movement_why">Evitez les foules,  Pratiquez la distanciation sociale   S\'abstenir de toute sortie non indispensable dans un lieu public. Ne participer à aucun regroupement, qu\'il soit de nature professionnelle, sociale ou familiale.\n\nEviter tout contact avec des personnes vulnérables (personnes âgées…). Eviter de fréquenter de lieux où se trouvent des personnes fragiles (hôpitaux, maternités, structures d\'hébergement pour personnes âgées...)</string>
     <string name="prevention_movement_how">"Nommer une personne plus jeune et en bonne santé de faire les courses pendant toute la période de pandémie. "</string>
 
+    <string name="prevention_funeral_how2"><![CDATA[<b><big>Dispositif au domicile
+ou au sein de la communauté</big></b><br/><br/>
+
+La Croix Rouge locale recommande des procédure basée sur des spécificités locales
+<br/><br/>
+mesures de protection spécifiques aux soignants
+port de combinaisons + masque + gants <br/>
+désinfection par pulvérisations du logement du défunt (chaulage)<br/><br/>
+
+<b>Combien de personnes peuvent assister aux obsèques?</b><br/><br/>
+
+En chambre funéraire : 2 maximum<br/>
+Lors de cérémonie religieuse: 20 maximum<br/> <br/>
+Au cimetière : <br/>
+les tombes sont numérotées,
+un dispositif de géolocalisation est  mis en place afin d’associer le domicile du défunt à sa tombe. (?? en AF )<br/> <br/>
+Accompagnement de la famille et des proches endeuillés
+]]></string>
+    <string name="prevention_funeral_how"><![CDATA[<b>CICR</b> : <a href="https://www.icrc.org/fr">voir site</a><br/>
+
+Plans de préparation et de gestion garantissant le respect de la dignité des défunts et de leurs familles.<br/><br/>
+
+Les mesures exceptionnelles visent à
+
+<b>*</b> protéger  les soignants, la famille, la communauté<br/>
+
+<b>*</b> éviter la propagation du virus<br/><br/>
+
+Nécessité d’un dispositif respectant les spécificités des rituels ancestrales et les croyances pour la qualification d’un “Enterrement  Digne et Sécurisé “
+]]>
+    </string>
     <array name="prevention_options">
         <item>Pourquoi, quand et comment se laver les mains?</item>
         <item>Pourquoi, quand et comment fabriquer, porter et laver un masque?</item>
@@ -118,7 +151,6 @@ Utiliser la chaux active pour désinfecter des excréments (chaulage)]]>
         <item>hands_how6</item>
     </array>
 
-
     <array name="prevention_water_options_titles">
         <item>Comment gérer l\’eau destinée à la consommation humaine?</item>
         <item>Comment gérer les eaux usées (nettoyage, domestique) et les latrines?</item>
@@ -128,6 +160,10 @@ Utiliser la chaux active pour désinfecter des excréments (chaulage)]]>
         <item>Pourquoi réduire ses déplacements?</item>
         <item>Quand se déplacer?</item>
         <item>Comment se déplacer?</item>
+    </array>
+
+    <array name="prevention_funeral_options_titles">
+        <item>Comment organiser les obsèques de patients décédés du Covid-19?</item>
     </array>
 
 </resources>

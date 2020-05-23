@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/prevention_blue_bg_gradient">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/prevention_details_long_text_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/value_10dp">
+
+
+            <org.changemakers.toa.utils.ExpandableTextLayout
+                android:id="@+id/expandable_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:ExpandableMaxLines="8">
+
+                <TextView
+                    android:id="@+id/expandable_id_show_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoLink="web"
+                    android:ellipsize="end"
+                    android:linksClickable="true"
+                    android:scrollHorizontally="false"
+                    android:text="@string/prevention_water_consumption_first"
+                    android:textColor="@color/prevention_details_text_color"
+                    android:textColorLink="@color/colorAccent"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/app_main_text_size" />
+
+                <TextView
+                    android:id="@+id/expandable_id_more_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="25dp"
+                    android:paddingRight="25dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/text_expand"
+                    android:textColor="@color/colorAccent" />
+            </org.changemakers.toa.utils.ExpandableTextLayout>
+
+            <!-- string resource is HTML encoded, binded programatically -->
+            <TextView
+                android:id="@+id/textview2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/value_15dp"
+                android:textColor="@color/prevention_details_text_color"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/app_main_text_size" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
+

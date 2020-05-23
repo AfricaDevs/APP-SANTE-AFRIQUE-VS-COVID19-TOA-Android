@@ -15,6 +15,4 @@
         android:id="@+id/item_how"
         android:icon="@drawable/ic_prevention_instructions"
         android:title="@string/hands_tab_how" />
-
-
 </menu>
