@@ -26,7 +26,7 @@ public class PreventionWaterFragment extends BottomSheetDialogFragment implement
 
     private final static int BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT = 1;
     private final static int INDEX_FIRST_OPTION = 0;
-    HandsPagerAdapter mViewPagerAdapter;
+    PagerAdapter mViewPagerAdapter;
     private FragmentPreventionWaterBinding binding;
     private String[] mTitles;
 
@@ -48,7 +48,7 @@ public class PreventionWaterFragment extends BottomSheetDialogFragment implement
 
         binding.backArrow.setOnClickListener(this);
 
-        mViewPagerAdapter = new HandsPagerAdapter(getChildFragmentManager(), BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        mViewPagerAdapter = new PagerAdapter(getChildFragmentManager(), BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
 
         mViewPagerAdapter.addFragment(new PreventionWaterConsumptionFragment());
         mViewPagerAdapter.addFragment(new PreventionWaterUsedFragment());
@@ -128,12 +128,12 @@ public class PreventionWaterFragment extends BottomSheetDialogFragment implement
     }
 
 
-    public class HandsPagerAdapter extends FragmentPagerAdapter {
+    public class PagerAdapter extends FragmentPagerAdapter {
 
         public ArrayList<Fragment> fragments = new ArrayList<>();
         private int[] mSelectors = {R.drawable.ic_access_time_black_24dp, R.drawable.ic_access_time_black_24dp, R.drawable.ic_access_time_black_24dp};
 
-        public HandsPagerAdapter(@NonNull FragmentManager fm, int behavior) {
+        public PagerAdapter(@NonNull FragmentManager fm, int behavior) {
             super(fm, behavior);
 
         }
