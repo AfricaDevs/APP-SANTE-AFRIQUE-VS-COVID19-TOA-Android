@@ -25,39 +25,6 @@
             android:layout_marginBottom="5dp"
             android:layout_weight="1" />
 
-        <!--com.fxn.BubbleTabBar
-            android:id="@+id/bubbleTabBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFF"
-            android:elevation="16dp"
-            android:padding="7dp"
-            android:layout_alignParentBottom="true"
-            app:bubbletab_menuResource="@menu/prevention_hands_nav_options"
-            app:bubbletab_custom_font="sans_serif"
-            app:bubbletab_disabled_icon_color="@color/colorPrimaryDark"
-            app:bubbletab_horizontal_padding="20dp"
-            app:bubbletab_icon_size="20dp"
-            app:bubbletab_title_size="16sp"
-            app:bubbletab_icon_padding="5sp"
-            app:bubbletab_vertical_padding="10dp">
-    </com.fxn.BubbleTabBar-->
-        <!--com.etebarian.meowbottomnavigation.MeowBottomNavigation
-            android:id="@+id/bottom_nav"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            app:mbn_circleColor="#ffffff"
-
-            app:autoSizeTextType="uniform"
-            app:mbn_backgroundBottomColor="#ffffff"
-            app:mbn_countBackgroundColor="#ff6f00"
-            app:mbn_countTextColor="#ffffff"
-            app:mbn_defaultIconColor="#90a4ae"
-            app:mbn_rippleColor="#2f424242"
-            app:mbn_selectedIconColor="#3c415e"
-            app:mbn_shadowColor="#1f212121"/-->
-
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_nav"
             android:layout_width="match_parent"
