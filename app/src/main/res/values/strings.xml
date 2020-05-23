@@ -165,5 +165,8 @@ Nécessité d’un dispositif respectant les spécificités des rituels ancestra
     <array name="prevention_funeral_options_titles">
         <item>Comment organiser les obsèques de patients décédés du Covid-19?</item>
     </array>
+    <array name="prevention_garbage_options_titles">
+        <item>Comment gérer les déchets domestiques?</item>
+    </array>
 
 </resources>

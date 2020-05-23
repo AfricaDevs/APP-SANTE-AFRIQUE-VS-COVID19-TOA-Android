@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/prevention_blue_bg_gradient">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/prevention_details_long_text_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/value_10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/value_5dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_garbage_gants" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_garbage_top" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/lottie_covid_hands" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/value_20dp"
+                android:text="Jeter ses mouchoirs, gants et masques à usage unique dans un sac dans une poubelle avec couvercle.\n\nFermer soigneusement le sac poubelle et conserver 24 heures avant d\'être jeté dans le container d\'ordures ménagères ou mettre dans un second sac poubelle et fermer celui-ci.
+\n\nSe laver les mains soigneusement à l\'eau savonneuse ou au gel hydroalcoolique après cette opération.
+\n"
+                android:textColor="@color/prevention_details_text_color"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/app_main_text_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/value_10dp"
+                    android:layout_weight="1"
+                    android:text="Encore plus que jamais, veiller à ne surtout pas jeter ses mouchoirs et masques par terre."
+                    android:textColor="@color/prevention_details_text_color"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/app_main_text_size" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/value_5dp"
+                    android:layout_marginLeft="@dimen/value_5dp"
+                    android:src="@drawable/ic_garbage_last" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
+

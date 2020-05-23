@@ -15,17 +15,17 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import org.changemakers.toa.R;
-import org.changemakers.toa.databinding.FragmentPreventionFuneralBinding;
+import org.changemakers.toa.databinding.FragmentPreventionGarbageBinding;
 
 import java.util.ArrayList;
 
-public class PreventionFuneralFragment extends BottomSheetDialogFragment implements View.OnClickListener {
+public class PreventionGarbageFragment extends BottomSheetDialogFragment implements View.OnClickListener {
 
 
     private final static int BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT = 1;
     private final static int INDEX_FIRST_OPTION = 0;
     PagerAdapter mViewPagerAdapter;
-    private FragmentPreventionFuneralBinding binding;
+    private FragmentPreventionGarbageBinding binding;
     private String[] mTitles;
 
     @Override
@@ -40,7 +40,7 @@ public class PreventionFuneralFragment extends BottomSheetDialogFragment impleme
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        binding = FragmentPreventionFuneralBinding.inflate(getLayoutInflater());
+        binding = FragmentPreventionGarbageBinding.inflate(getLayoutInflater());
 
         mTitles = getResources().getStringArray(R.array.prevention_funeral_options_titles);
 
@@ -48,7 +48,7 @@ public class PreventionFuneralFragment extends BottomSheetDialogFragment impleme
 
         mViewPagerAdapter = new PagerAdapter(getChildFragmentManager(), BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
 
-        mViewPagerAdapter.addFragment(new PreventionFuneralHowFragment());
+        mViewPagerAdapter.addFragment(new PreventionGarbageHowFragment());
 
         binding.viewPager.setAdapter(mViewPagerAdapter);
 

@@ -133,7 +133,6 @@ public class PreventionWaterFragment extends BottomSheetDialogFragment implement
     public class PagerAdapter extends FragmentPagerAdapter {
 
         public ArrayList<Fragment> fragments = new ArrayList<>();
-        private int[] mSelectors = {R.drawable.ic_access_time_black_24dp, R.drawable.ic_access_time_black_24dp, R.drawable.ic_access_time_black_24dp};
 
         public PagerAdapter(@NonNull FragmentManager fm, int behavior) {
             super(fm, behavior);
@@ -151,10 +150,6 @@ public class PreventionWaterFragment extends BottomSheetDialogFragment implement
         @Override
         public CharSequence getPageTitle(int position) {
             return mTitles[position];
-        }
-
-        public void updateIcons(int[] icons) {
-            mSelectors = icons;
         }
 
         @NonNull

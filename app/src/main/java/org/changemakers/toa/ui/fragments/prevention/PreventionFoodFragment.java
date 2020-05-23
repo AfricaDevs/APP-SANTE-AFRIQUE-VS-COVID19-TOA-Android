@@ -2,6 +2,7 @@ package org.changemakers.toa.ui.fragments.prevention;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -12,20 +13,21 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import org.changemakers.toa.R;
-import org.changemakers.toa.databinding.FragmentPreventionFuneralBinding;
+import org.changemakers.toa.databinding.FragmentPreventionHandsBinding;
 
 import java.util.ArrayList;
 
-public class PreventionFuneralFragment extends BottomSheetDialogFragment implements View.OnClickListener {
+public class PreventionFoodFragment extends BottomSheetDialogFragment implements View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener {
 
 
     private final static int BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT = 1;
     private final static int INDEX_FIRST_OPTION = 0;
-    PagerAdapter mViewPagerAdapter;
-    private FragmentPreventionFuneralBinding binding;
+    HandsPagerAdapter mViewPagerAdapter;
+    private FragmentPreventionHandsBinding binding;
     private String[] mTitles;
 
     @Override
@@ -40,17 +42,20 @@ public class PreventionFuneralFragment extends BottomSheetDialogFragment impleme
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        binding = FragmentPreventionFuneralBinding.inflate(getLayoutInflater());
+        binding = FragmentPreventionHandsBinding.inflate(getLayoutInflater());
 
-        mTitles = getResources().getStringArray(R.array.prevention_funeral_options_titles);
+        mTitles = getResources().getStringArray(R.array.prevention_hands_options_titles);
 
         binding.backArrow.setOnClickListener(this);
 
-        mViewPagerAdapter = new PagerAdapter(getChildFragmentManager(), BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        mViewPagerAdapter = new HandsPagerAdapter(getChildFragmentManager(), BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
 
-        mViewPagerAdapter.addFragment(new PreventionFuneralHowFragment());
+        mViewPagerAdapter.addFragment(new PreventionHandsWhyFragment());
+        mViewPagerAdapter.addFragment(new PreventionHandsWhenFragment());
+        mViewPagerAdapter.addFragment(new PreventionHandsHowFragment());
 
         binding.viewPager.setAdapter(mViewPagerAdapter);
+        binding.bottomNav.setOnNavigationItemSelectedListener(this);
 
         // bind the option title to the custom Toolbar alike TextView
         binding.preventionOptionTittle.setText(mTitles[INDEX_FIRST_OPTION]);
@@ -69,6 +74,22 @@ public class PreventionFuneralFragment extends BottomSheetDialogFragment impleme
                         binding.preventionOptionTittle.setText(mTitles[position]);
                         binding.backArrow.setImageResource(R.drawable.ic_arrow_back_blue_24dp);
 
+                        binding.bottomNav.setSelectedItemId(R.id.item_why);
+                        binding.bottomNav.getMenu().findItem(R.id.item_why).setChecked(true);
+                        break;
+                    case 1:
+                        binding.preventionOptionTittle.setText(mTitles[position]);
+                        binding.backArrow.setImageResource(R.drawable.ic_arrow_back_violet_24dp);
+
+                        binding.bottomNav.setSelectedItemId(R.id.item_when);
+                        binding.bottomNav.getMenu().findItem(R.id.item_when).setChecked(true);
+                        break;
+                    case 2:
+                        binding.preventionOptionTittle.setText(mTitles[position]);
+                        binding.backArrow.setImageResource(R.drawable.ic_arrow_back_green_24dp);
+
+                        binding.bottomNav.setSelectedItemId(R.id.item_how);
+                        binding.bottomNav.getMenu().findItem(R.id.item_how).setChecked(true);
                         break;
                 }
             }
@@ -102,11 +123,31 @@ public class PreventionFuneralFragment extends BottomSheetDialogFragment impleme
         }
     }
 
-    public class PagerAdapter extends FragmentPagerAdapter {
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.item_why:
+                binding.viewPager.setCurrentItem(0);
+                break;
+            case R.id.item_when:
+                binding.viewPager.setCurrentItem(1);
+                break;
+            case R.id.item_how:
+                binding.viewPager.setCurrentItem(2);
+                break;
+        }
+
+        return false;
+    }
+
+
+    public class HandsPagerAdapter extends FragmentPagerAdapter {
 
         public ArrayList<Fragment> fragments = new ArrayList<>();
+        private int[] mSelectors = {R.drawable.ic_access_time_black_24dp, R.drawable.ic_access_time_black_24dp, R.drawable.ic_access_time_black_24dp};
 
-        public PagerAdapter(@NonNull FragmentManager fm, int behavior) {
+        public HandsPagerAdapter(@NonNull FragmentManager fm, int behavior) {
             super(fm, behavior);
 
         }
@@ -122,6 +163,10 @@ public class PreventionFuneralFragment extends BottomSheetDialogFragment impleme
         @Override
         public CharSequence getPageTitle(int position) {
             return mTitles[position];
+        }
+
+        public void updateIcons(int[] icons) {
+            mSelectors = icons;
         }
 
         @NonNull
