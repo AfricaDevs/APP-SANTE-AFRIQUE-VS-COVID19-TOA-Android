@@ -56,6 +56,25 @@
     <color name="black_overlay">#66000000</color>
     <color name="card_bg_color_orange_light">#EC8D6F</color>
     <color name="card_bg_color_brown_light">#A27D70</color>
+    <color name="prevention_details_text_color">#212121</color>
 
 
+    <array name="material_colors">
+        <item>@color/materialGrey</item>
+        <item>@color/materialBrown</item>
+        <item>@color/materialOrange</item>
+        <item>@color/materialGrey2</item>
+        <item>@color/colorTeal</item>
+
+        <item>@color/tboxBlue</item>
+        <item>@color/materialBlue</item>
+        <item>@color/materialYellow</item>
+        <item>@color/materialGreenDark</item>
+        <item>@color/materialGrey2</item>
+
+        <item>@color/materialBrown2</item>
+        <item>@color/colorTeal</item>
+        <item>@color/materialCyanDark</item>
+        <item>@color/colorPrimary</item>
+    </array>
 </resources>

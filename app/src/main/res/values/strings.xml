@@ -16,6 +16,11 @@
     <string name="hands_tab_why">Pourquoi ?</string>
     <string name="hands_tab_when">Quand ?</string>
     <string name="hands_tab_how">Comment ?</string>
+    <string name="prevention_hands_why_content_first">Le lavage des mains\n\nLes virus respiratoires tels que la maladie à coronavirus (COVID-19) se propagent lorsque du mucus ou des gouttelettes contenant le virus pén. ètrent dans votre corps par l’intermédiaire de de votre bouche, votre nez et vos yeux.</string>
+    <string name="prevention_hands_why_content_second">Le plus souvent, ce contact a lieu par les mains. \n\nLes mains sont également l’une des manières les plus courantes de transmettre le virus d’une personne à une autre.</string>
+    <string name="prevention_hands_why_content_third">Durant une pandémie, le fait de se laver fréquemment les mains avec de l’eau et du savon fait partie des mesures les plus économiques, les plus faciles et les plus importantes pour prévenir la propagation d’un virus.</string>
+
+
     <array name="prevention_options">
         <item>Pourquoi, quand et comment se laver les mains?</item>
         <item>Pourquoi, quand et comment fabriquer, porter et laver un masque?</item>
@@ -41,10 +46,34 @@
         <item>Quand se laver les mains?</item>
         <item>Comment se laver les mains?</item>
     </array>
-    <array name="menuOptions">
-        <item>TOÂ</item>
-        <item>A propos</item>
-        <item>Conditions d\'utilistaion</item>
+    <array name="prevention_hands_when">
+        <item>Avant de toucher vos yeux, votre nez ou votre bouche, car c\'est par là que les germes pénètrent dans notre corps.</item>
+        <item>Avant, pendant et après la préparation des aliments</item>
+        <item>Avant de manger</item>
+        <item>Avant et après la prise en charge d\'une personne à domicile souffrant de vomissements ou de diarrhée</item>
+        <item>Avant et après le traitement d\'une coupure ou d\'une plaie</item>
+        <item>Après avoir utilisé les toilettes</item>
+        <item>Après avoir changé des couches ou nettoyé un enfant qui a utilisé les toilettes</item>
+        <item>Après s\'être mouché, avoir toussé ou éternué</item>
+        <item>Après avoir touché un animal, des aliments pour animaux ou des déchets d\'animaux</item>
+        <item>Après avoir touché des ordures</item>
+        <item>Après avoir été dans un lieu public et avoir touché un objet ou une surface qui peut être fréquemment touché par d\'autres personnes, comme les poignées de porte, les tables, les pompes à essence</item>
+    </array>
+    <array name="prevention_hands_how">
+        <item>Paume contre paume</item>
+        <item>Le dos des mains</item>
+        <item>Entre les doigts</item>
+        <item>Le dos des doigts</item>
+        <item>Les pouces</item>
+        <item>Le bout des doigts et les angles</item>
+    </array>
+    <array name="prevention_hands_how_icons" translatable="false">
+        <item>hands_how1</item>
+        <item>hands_how2</item>
+        <item>hands_how3</item>
+        <item>hands_how4</item>
+        <item>hands_how5</item>
+        <item>hands_how6</item>
     </array>
 
 </resources>
