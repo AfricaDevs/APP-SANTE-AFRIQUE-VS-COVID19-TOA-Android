@@ -47,4 +47,5 @@
     <dimen name="prevention_details_toolbar_top_margin_16dp_40dp">16dp</dimen>
     <dimen name="value_14dp">14dp</dimen>
     <dimen name="value_13dp">13dp</dimen>
+    <dimen name="value_15dp">15dp</dimen>
 </resources>

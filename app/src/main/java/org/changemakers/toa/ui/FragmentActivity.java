@@ -16,6 +16,7 @@ import org.changemakers.toa.databinding.ActivityFragmentBinding;
 import org.changemakers.toa.interfaces.ActivityCallbackInterface;
 import org.changemakers.toa.ui.fragments.PreventionFragment;
 import org.changemakers.toa.ui.fragments.prevention.PreventionHandsFragment;
+import org.changemakers.toa.ui.fragments.prevention.PreventionWaterFragment;
 
 public class FragmentActivity extends AppCompatActivity implements ActivityCallbackInterface {
 
@@ -41,6 +42,8 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
 
         if (Build.VERSION.SDK_INT > 21) {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
+                getWindow().setNavigationBarColor(getResources().getColor(R.color.materialGrey2));
         }
 
         binding = ActivityFragmentBinding.inflate(getLayoutInflater());
@@ -84,14 +87,31 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
     }
 
     @Override
-    public void onPreventionOptionSelected(View view, int poisition) {
+    public void onPreventionOptionSelected(View view, int position) {
 
-        PreventionHandsFragment fragmentPreventionHands = new PreventionHandsFragment();
+        switch (position) {
+            case 0:
+                PreventionHandsFragment fragmentPreventionHands = new PreventionHandsFragment();
 
-        getSupportFragmentManager()
-                .beginTransaction()
-                .addToBackStack("main")
-                .replace(R.id.fragment_container, fragmentPreventionHands)
-                .commit();
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .addToBackStack(null)
+                        .replace(R.id.fragment_container, fragmentPreventionHands)
+                        .commit();
+
+                break;
+            case 4:
+                PreventionWaterFragment fragmentPreventionWater = new PreventionWaterFragment();
+
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .addToBackStack(null)
+                        .replace(R.id.fragment_container, fragmentPreventionWater)
+                        .commit();
+                break;
+            default:
+
+                break;
+        }
     }
 }

@@ -9,4 +9,9 @@
         <attr name="metaButtonBarButtonStyle" format="reference" />
     </declare-styleable>
 
+
+    <!-- Used in Cutom ExpandableTexview-->
+    <declare-styleable name="ExpandableTextViewAttr">
+        <attr name="ExpandableMaxLines" format="integer"></attr>
+    </declare-styleable>
 </resources>
