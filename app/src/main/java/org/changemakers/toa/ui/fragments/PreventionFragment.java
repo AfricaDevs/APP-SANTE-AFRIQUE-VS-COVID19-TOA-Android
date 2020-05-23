@@ -112,15 +112,9 @@ public class PreventionFragment extends BottomSheetDialogFragment {
     }
 
     private void onItemSelected(View v, int position) {
-        switch (position) {
-            case 0:
-                if (mCallback != null)
-                    mCallback.onPreventionOptionSelected(v, position);
-                break;
-            default:
 
-                break;
-        }
+        if (mCallback != null)
+            mCallback.onPreventionOptionSelected(v, position);
     }
 
     @Override

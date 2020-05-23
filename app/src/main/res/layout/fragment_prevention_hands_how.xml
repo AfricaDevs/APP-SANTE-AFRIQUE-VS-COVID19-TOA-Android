@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/root"
-    android:background="@drawable/prevention_hands_how_bg_gradient">
+    android:background="@drawable/prevention_green_bg_gradient">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"

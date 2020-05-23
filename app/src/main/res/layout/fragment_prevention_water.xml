@@ -25,6 +25,7 @@
             android:layout_marginBottom="5dp"
             android:layout_weight="1" />
 
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_nav"
             android:layout_width="match_parent"
@@ -36,7 +37,7 @@
             app:itemTextColor="@drawable/prevention_hands_bottom_nav_colors"
             app:itemIconTint="@drawable/prevention_hands_bottom_nav_colors"
             android:background="@color/layouts_main_white_bg"
-            app:menu="@menu/prevention_hands_nav_options"
+            app:menu="@menu/prevention_water_nav_options"
             />
 
     </RelativeLayout>

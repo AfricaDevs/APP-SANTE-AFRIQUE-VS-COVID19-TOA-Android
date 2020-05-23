@@ -16,10 +16,42 @@
     <string name="hands_tab_why">Pourquoi ?</string>
     <string name="hands_tab_when">Quand ?</string>
     <string name="hands_tab_how">Comment ?</string>
-    <string name="prevention_hands_why_content_first">Le lavage des mains\n\nLes virus respiratoires tels que la maladie à coronavirus (COVID-19) se propagent lorsque du mucus ou des gouttelettes contenant le virus pén. ètrent dans votre corps par l’intermédiaire de de votre bouche, votre nez et vos yeux.</string>
-    <string name="prevention_hands_why_content_second">Le plus souvent, ce contact a lieu par les mains. \n\nLes mains sont également l’une des manières les plus courantes de transmettre le virus d’une personne à une autre.</string>
-    <string name="prevention_hands_why_content_third">Durant une pandémie, le fait de se laver fréquemment les mains avec de l’eau et du savon fait partie des mesures les plus économiques, les plus faciles et les plus importantes pour prévenir la propagation d’un virus.</string>
 
+    <string name="prevention_hands_why_content_first">Le lavage des mains\n\nLes virus respiratoires tels que la maladie à coronavirus (COVID-19) se propagent lorsque du mucus ou des gouttelettes contenant le virus pén. ètrent dans votre corps par l\’intermédiaire de de votre bouche, votre nez et vos yeux.</string>
+    <string name="prevention_hands_why_content_second">Le plus souvent, ce contact a lieu par les mains. \n\nLes mains sont également l\’une des manières les plus courantes de transmettre le virus d\’une personne à une autre.</string>
+    <string name="prevention_hands_why_content_third">Durant une pandémie, le fait de se laver fréquemment les mains avec de l\’eau et du savon fait partie des mesures les plus économiques, les plus faciles et les plus importantes pour prévenir la propagation d\’un virus.</string>
+
+
+    <string name="text_expand">voir plus ...</string>
+    <string name="text_collapse">réduire</string>
+    <string name="water_tab_consumption">Eau de consommation</string>
+    <string name="water_tab_used">Eaux usées</string>
+    <string name="prevention_water_used"><![CDATA[Le coronavirus peut être trouvé dans les fèces/urine, les eaux usées doivent donc être traitées correctement
+<br/><br/>
+        <b>Eaux usées domestiques:</b>
+<br/>
+quand c’est possible, prévoir des tranchées pour drainer les eaux usées afin qu’elles ne ruissellent pas à proximité des lieux de vie
+<br/><br/>
+<b>Latrines:</b>
+<br/>
+Utiliser la chaux active pour désinfecter des excréments (chaulage)]]>
+    </string>
+    <string name="prevention_water_consumption_first">Au 15-4-2020\n\n L\’OMS a confirmé qu\’il n\’y a selon les connaissances scientifiques et épidémiologiques, aucun cas de contamination en lien avec l\’eau potable. \n\n Les procédés conventionnels de désinfection en place sur les usines de potabilisation (chlore, UV, ozone) permettent ainsi d\’éliminer le virus COVID-19, tout comme les autres virus. \n\n En Afrique, l\’accès à l\’eau salubre est l\’une des conditions essentiels des gestes barrières, le lavage des mains</string>
+    <string name="prevention_water_consumption_second"><![CDATA[La présence du virus dans
+    l\'eau <b>non traitée</b> est possible<br/><br/>
+
+    <strong>Pour détruire le virus dans l\’eau,
+    il est recommandé</strong>
+            <br /><br/>
+                <b>* faire bouillir l\’eau pendant 10 minute</b><br/>
+                <b>* d\’utiliser</b> du chlore pour désinfecter l\’eau destinée à la consommation humaine<br/>
+                <b>*</b> Chlore (en pastilles ou SURE EAU)<br/>
+                <b>*</b> maintenir un taux de chlore résiduel à 0,5 mg par Litre d\’eau<br/>
+            <br/><br/>
+
+    <strong>Attention, rester vigilant sur les dosages de chlore</strong> qui peuvent se trouver sous forme de pastille, d\’eau de javel, de DCNA, ou SURE-EAU.
+]]>
+    </string>
 
     <array name="prevention_options">
         <item>Pourquoi, quand et comment se laver les mains?</item>
@@ -47,17 +79,25 @@
         <item>Comment se laver les mains?</item>
     </array>
     <array name="prevention_hands_when">
-        <item>Avant de toucher vos yeux, votre nez ou votre bouche, car c\'est par là que les germes pénètrent dans notre corps.</item>
+        <item>Avant de toucher vos yeux, votre nez ou votre bouche, car c\'est par là que les germes
+            pénètrent dans notre corps.
+        </item>
         <item>Avant, pendant et après la préparation des aliments</item>
         <item>Avant de manger</item>
-        <item>Avant et après la prise en charge d\'une personne à domicile souffrant de vomissements ou de diarrhée</item>
+        <item>Avant et après la prise en charge d\'une personne à domicile souffrant de vomissements
+            ou de diarrhée
+        </item>
         <item>Avant et après le traitement d\'une coupure ou d\'une plaie</item>
         <item>Après avoir utilisé les toilettes</item>
         <item>Après avoir changé des couches ou nettoyé un enfant qui a utilisé les toilettes</item>
         <item>Après s\'être mouché, avoir toussé ou éternué</item>
-        <item>Après avoir touché un animal, des aliments pour animaux ou des déchets d\'animaux</item>
+        <item>Après avoir touché un animal, des aliments pour animaux ou des déchets d\'animaux
+        </item>
         <item>Après avoir touché des ordures</item>
-        <item>Après avoir été dans un lieu public et avoir touché un objet ou une surface qui peut être fréquemment touché par d\'autres personnes, comme les poignées de porte, les tables, les pompes à essence</item>
+        <item>Après avoir été dans un lieu public et avoir touché un objet ou une surface qui peut
+            être fréquemment touché par d\'autres personnes, comme les poignées de porte, les
+            tables, les pompes à essence
+        </item>
     </array>
     <array name="prevention_hands_how">
         <item>Paume contre paume</item>
@@ -74,6 +114,12 @@
         <item>hands_how4</item>
         <item>hands_how5</item>
         <item>hands_how6</item>
+    </array>
+
+
+    <array name="prevention_water_options_titles">
+        <item>Comment gérer l\’eau destinée à la consommation humaine?</item>
+        <item>Comment gérer les eaux usées et les latrines?</item>
     </array>
 
 </resources>
