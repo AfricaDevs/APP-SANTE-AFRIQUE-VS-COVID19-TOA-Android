@@ -42,6 +42,7 @@
                     android:paddingLeft="@dimen/value_10dp"
                     android:paddingRight="8dp"
                     android:paddingBottom="8dp"
+                    android:textIsSelectable="true"
                     android:text="@string/prevention_hands_why_content_first"
                     android:textSize="@dimen/app_main_text_size" />
 
@@ -80,6 +81,7 @@
                     android:layout_gravity="center"
                     android:background="#FFFFF9"
                     android:textColor="@color/prevention_details_text_color"
+                    android:textIsSelectable="true"
                     android:paddingTop="@dimen/value_10dp"
                     android:paddingLeft="@dimen/value_10dp"
                     android:paddingRight="8dp"
@@ -123,6 +125,7 @@
                     android:layout_gravity="center"
                     android:background="#fff"
                     android:textColor="@color/prevention_details_text_color"
+                    android:textIsSelectable="true"
                     android:paddingTop="@dimen/value_10dp"
                     android:paddingLeft="@dimen/value_10dp"
                     android:paddingRight="8dp"
