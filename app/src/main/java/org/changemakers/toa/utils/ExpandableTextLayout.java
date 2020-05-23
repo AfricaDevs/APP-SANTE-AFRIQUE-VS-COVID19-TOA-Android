@@ -114,9 +114,10 @@ public class ExpandableTextLayout extends LinearLayout {
         txtExpand = context.getString(R.string.text_expand);
         txtCollapse = context.getString(R.string.text_collapse);
     }
-        // github.com/Steve111mv instructions : these R.id.custom_resource must match your ids in the .xml where the view is used.
-        // If you want more than 1 Layout in the same .xml file, then duplicate this .java file
-        // and rename the following ids and mach them with the duplicated section in xml.
+
+    // github.com/Steve111mv instructions : these R.id.custom_resource must match your ids in the .xml where the view is used.
+    // If you want more than 1 Layout in the same .xml file, then duplicate this .java file
+    // and rename the following ids and mach them with the duplicated section in xml.
     private void initUI() {
         mShowTextview = (TextView) findViewById(R.id.expandable_id_show_textview);
         mMoreTextview = (TextView) findViewById(R.id.expandable_id_more_textview);

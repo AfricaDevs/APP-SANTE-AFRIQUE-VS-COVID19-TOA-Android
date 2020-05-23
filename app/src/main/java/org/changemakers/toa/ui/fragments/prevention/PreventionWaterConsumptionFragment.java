@@ -26,8 +26,9 @@ public class PreventionWaterConsumptionFragment extends Fragment {
         binding.expandableText.setTextMaxLines(6);
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-            binding.textview2.setText(Html.fromHtml(getResources().getString(R.string.prevention_water_consumption_second), Html.FROM_HTML_MODE_LEGACY ));
-        } else binding.textview2.setText(Html.fromHtml(getResources().getString(R.string.prevention_water_consumption_second)));
+            binding.textview2.setText(Html.fromHtml(getResources().getString(R.string.prevention_water_consumption_second), Html.FROM_HTML_MODE_LEGACY));
+        } else
+            binding.textview2.setText(Html.fromHtml(getResources().getString(R.string.prevention_water_consumption_second)));
 
         return binding.getRoot();
 

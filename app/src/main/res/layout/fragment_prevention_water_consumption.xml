@@ -35,9 +35,9 @@
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:scrollHorizontally="false"
-                    android:textIsSelectable="true"
                     android:text="@string/prevention_water_consumption_first"
                     android:textColor="@color/prevention_details_text_color"
+                    android:textIsSelectable="true"
                     android:textSize="@dimen/app_main_text_size" />
 
                 <TextView

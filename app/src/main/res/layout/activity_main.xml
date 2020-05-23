@@ -29,9 +29,9 @@
                 android:id="@+id/collapsing_toolabar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:minHeight="?attr/actionBarSize"
                 android:background="@color/layouts_main_white_bg"
                 android:fitsSystemWindows="true"
+                android:minHeight="?attr/actionBarSize"
                 app:contentScrim="@color/colorPrimary"
                 app:expandedTitleGravity="center_horizontal|top"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed">
@@ -42,10 +42,10 @@
                     android:background="@color/layouts_main_white_bg"
                     android:fitsSystemWindows="true"
 
-                    app:layout_scrollFlags="scroll"
                     app:arc_cropDirection="cropInside"
                     app:arc_height="80dp"
-                    app:arc_position="bottom">
+                    app:arc_position="bottom"
+                    app:layout_scrollFlags="scroll">
 
 
                     <ImageView
