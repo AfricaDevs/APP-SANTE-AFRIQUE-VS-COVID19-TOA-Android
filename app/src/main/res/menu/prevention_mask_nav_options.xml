@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_why"
+        android:checked="true"
+        android:icon="@drawable/ic_prevention_why"
+        android:title="@string/hands_tab_why" />
+
+    <item
+        android:id="@+id/item_when"
+        android:icon="@drawable/ic_prevention_when"
+        android:title="@string/hands_tab_when" />
+    <item
+        android:id="@+id/item_how"
+        android:icon="@drawable/ic_prevention_instructions"
+        android:title="@string/hands_tab_how" />
+</menu>

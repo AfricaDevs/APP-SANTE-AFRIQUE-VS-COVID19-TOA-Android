@@ -70,7 +70,7 @@
                 app:title=" " />
 
 
-            <com.airbnb.lottie.LottieAnimationView
+            <!--com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/lottie_selected_option"
                 android:layout_width="250dp"
                 android:layout_height="180dp"
@@ -79,7 +79,15 @@
                 android:transitionName="shared_lottie_icon"
 
                 app:lottie_autoPlay="false"
-                app:lottie_loop="true" />
+                app:lottie_loop="true" /-->
+            <ImageView
+                android:id="@+id/lottie_selected_option"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:scaleType="fitCenter"
+                android:src="@drawable/covid_prevention"
+                android:transitionName="shared_lottie_icon" />
 
             <TextView
                 style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"

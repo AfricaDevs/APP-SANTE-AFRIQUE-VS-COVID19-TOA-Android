@@ -108,7 +108,6 @@ public class PreventionFragment extends BottomSheetDialogFragment {
             getActivity().getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
 
-        binding.lottieSelectedOption.setAnimation(R.raw.covid_armor);
     }
 
     private void onItemSelected(View v, int position) {

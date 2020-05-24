@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/prevention_green_bg_gradient">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/prevention_details_long_text_bg"
+        android:paddingLeft="@dimen/value_8dp"
+        android:paddingRight="@dimen/value_8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/value_10dp"
+                android:paddingBottom="@dimen/value_8dp"
+                android:text="Avant tout, se laver les mains avant de porter le masque"
+                android:textColor="@color/prevention_details_text_color"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/value_18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/value_10dp"
+                android:weightSum="2">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="@dimen/value_100dp"
+                    android:layout_height="@dimen/value_100dp"
+                    android:layout_weight="1"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/lottie_covid_hands" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="@dimen/value_100dp"
+                    android:layout_height="@dimen/value_100dp"
+                    android:layout_weight="1"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/lottie_covid_mask" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/value_10dp"
+                android:paddingBottom="@dimen/value_8dp"
+                android:text="Le masque doit :
+. s'adapter parfaitement mais confortablement sur le côté du visage
+. être attaché avec des élastiques/cordons autour des oreilles
+. permettre de respirer sans restriction (etc…) => mettre la suite sur page suivante…
+"
+                android:textColor="@color/prevention_details_text_color"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/value_18sp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
+

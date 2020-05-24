@@ -19,6 +19,7 @@ import org.changemakers.toa.ui.fragments.prevention.PreventionFoodFragment;
 import org.changemakers.toa.ui.fragments.prevention.PreventionFuneralFragment;
 import org.changemakers.toa.ui.fragments.prevention.PreventionGarbageFragment;
 import org.changemakers.toa.ui.fragments.prevention.PreventionHandsFragment;
+import org.changemakers.toa.ui.fragments.prevention.PreventionMaskFragment;
 import org.changemakers.toa.ui.fragments.prevention.PreventionMovementFragment;
 import org.changemakers.toa.ui.fragments.prevention.PreventionWaterFragment;
 
@@ -101,6 +102,16 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
                         .beginTransaction()
                         .addToBackStack(null)
                         .replace(R.id.fragment_container, fragmentPreventionHands)
+                        .commit();
+
+                break;
+            case 1:
+                PreventionMaskFragment fragmentPreventionMask = new PreventionMaskFragment();
+
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .addToBackStack(null)
+                        .replace(R.id.fragment_container, fragmentPreventionMask)
                         .commit();
 
                 break;
