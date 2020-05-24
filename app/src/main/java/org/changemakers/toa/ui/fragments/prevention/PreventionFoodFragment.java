@@ -17,17 +17,17 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import org.changemakers.toa.R;
-import org.changemakers.toa.databinding.FragmentPreventionWaterBinding;
+import org.changemakers.toa.databinding.FragmentPreventionFoodBinding;
 
 import java.util.ArrayList;
 
-public class PreventionWaterFragment extends BottomSheetDialogFragment implements View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener {
+public class PreventionFoodFragment extends BottomSheetDialogFragment implements View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener {
 
 
     private final static int BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT = 1;
     private final static int INDEX_FIRST_OPTION = 0;
     PagerAdapter mViewPagerAdapter;
-    private FragmentPreventionWaterBinding binding;
+    private FragmentPreventionFoodBinding binding;
     private String[] mTitles;
 
     @Override
@@ -42,16 +42,16 @@ public class PreventionWaterFragment extends BottomSheetDialogFragment implement
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        binding = FragmentPreventionWaterBinding.inflate(getLayoutInflater());
+        binding = FragmentPreventionFoodBinding.inflate(getLayoutInflater());
 
-        mTitles = getResources().getStringArray(R.array.prevention_water_options_titles);
+        mTitles = getResources().getStringArray(R.array.prevention_food_options_titles);
 
         binding.backArrow.setOnClickListener(this);
 
         mViewPagerAdapter = new PagerAdapter(getChildFragmentManager(), BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
 
-        mViewPagerAdapter.addFragment(new PreventionWaterConsumptionFragment());
-        mViewPagerAdapter.addFragment(new PreventionWaterUsedFragment());
+        mViewPagerAdapter.addFragment(new PreventionFoodAlimentsFragment());
+        mViewPagerAdapter.addFragment(new PreventionFoodAlimentsFragment());
 
         binding.viewPager.setAdapter(mViewPagerAdapter);
         binding.bottomNav.setOnNavigationItemSelectedListener(this);
@@ -69,19 +69,20 @@ public class PreventionWaterFragment extends BottomSheetDialogFragment implement
             public void onPageSelected(int position) {
 
                 switch (position) {
-                    case 0:
-                        binding.preventionOptionTittle.setText(mTitles[position]);
-                        binding.backArrow.setImageResource(R.drawable.ic_arrow_back_blue_24dp);
 
-                        binding.bottomNav.setSelectedItemId(R.id.item_how);
-                        binding.bottomNav.getMenu().findItem(R.id.item_how).setChecked(true);
-                        break;
-                    case 1:
+                    case 0:
                         binding.preventionOptionTittle.setText(mTitles[position]);
                         binding.backArrow.setImageResource(R.drawable.ic_arrow_back_green_24dp);
 
-                        binding.bottomNav.setSelectedItemId(R.id.item_how_second);
-                        binding.bottomNav.getMenu().findItem(R.id.item_how_second).setChecked(true);
+                        binding.bottomNav.setSelectedItemId(R.id.item_food_aliments);
+                        binding.bottomNav.getMenu().findItem(R.id.item_food_aliments).setChecked(true);
+                        break;
+                    case 1:
+                        binding.preventionOptionTittle.setText(mTitles[position]);
+                        binding.backArrow.setImageResource(R.drawable.ic_arrow_back_blue_24dp);
+
+                        binding.bottomNav.setSelectedItemId(R.id.item_food_drink);
+                        binding.bottomNav.getMenu().findItem(R.id.item_food_drink).setChecked(true);
                         break;
                 }
             }
@@ -109,7 +110,8 @@ public class PreventionWaterFragment extends BottomSheetDialogFragment implement
             case R.id.backArrow:
                 try {
                     getActivity().onBackPressed();
-                } catch (Exception ex){}
+                } catch (Exception ex) {
+                }
                 break;
         }
     }
@@ -118,10 +120,10 @@ public class PreventionWaterFragment extends BottomSheetDialogFragment implement
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.item_how:
+            case R.id.item_food_aliments:
                 binding.viewPager.setCurrentItem(0);
                 break;
-            case R.id.item_how_second:
+            case R.id.item_food_drink:
                 binding.viewPager.setCurrentItem(1);
                 break;
         }

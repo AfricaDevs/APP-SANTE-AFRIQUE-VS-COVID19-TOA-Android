@@ -15,6 +15,9 @@ import org.changemakers.toa.R;
 import org.changemakers.toa.databinding.ActivityFragmentBinding;
 import org.changemakers.toa.interfaces.ActivityCallbackInterface;
 import org.changemakers.toa.ui.fragments.PreventionFragment;
+import org.changemakers.toa.ui.fragments.prevention.PreventionFoodFragment;
+import org.changemakers.toa.ui.fragments.prevention.PreventionFuneralFragment;
+import org.changemakers.toa.ui.fragments.prevention.PreventionGarbageFragment;
 import org.changemakers.toa.ui.fragments.prevention.PreventionHandsFragment;
 import org.changemakers.toa.ui.fragments.prevention.PreventionMovementFragment;
 import org.changemakers.toa.ui.fragments.prevention.PreventionWaterFragment;
@@ -110,6 +113,15 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
                         .replace(R.id.fragment_container, fragmentPreventionMovement)
                         .commit();
                 break;
+            case 3:
+                PreventionFoodFragment fragmentPreventionFood = new PreventionFoodFragment();
+
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .addToBackStack(null)
+                        .replace(R.id.fragment_container, fragmentPreventionFood)
+                        .commit();
+                break;
             case 4:
                 PreventionWaterFragment fragmentPreventionWater = new PreventionWaterFragment();
 
@@ -117,6 +129,24 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
                         .beginTransaction()
                         .addToBackStack(null)
                         .replace(R.id.fragment_container, fragmentPreventionWater)
+                        .commit();
+                break;
+            case 5:
+                PreventionGarbageFragment fragmentPreventionGarbage = new PreventionGarbageFragment();
+
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .addToBackStack(null)
+                        .replace(R.id.fragment_container, fragmentPreventionGarbage)
+                        .commit();
+                break;
+            case 6:
+                PreventionFuneralFragment fragmentPreventionFuneral = new PreventionFuneralFragment();
+
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .addToBackStack(null)
+                        .replace(R.id.fragment_container, fragmentPreventionFuneral)
                         .commit();
                 break;
             default:

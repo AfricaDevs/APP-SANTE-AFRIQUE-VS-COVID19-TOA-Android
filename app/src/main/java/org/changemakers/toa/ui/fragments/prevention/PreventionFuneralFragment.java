@@ -2,7 +2,6 @@ package org.changemakers.toa.ui.fragments.prevention;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -13,21 +12,20 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import org.changemakers.toa.R;
-import org.changemakers.toa.databinding.FragmentPreventionWaterBinding;
+import org.changemakers.toa.databinding.FragmentPreventionFuneralBinding;
 
 import java.util.ArrayList;
 
-public class PreventionWaterFragment extends BottomSheetDialogFragment implements View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener {
+public class PreventionFuneralFragment extends BottomSheetDialogFragment implements View.OnClickListener {
 
 
     private final static int BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT = 1;
     private final static int INDEX_FIRST_OPTION = 0;
     PagerAdapter mViewPagerAdapter;
-    private FragmentPreventionWaterBinding binding;
+    private FragmentPreventionFuneralBinding binding;
     private String[] mTitles;
 
     @Override
@@ -42,19 +40,17 @@ public class PreventionWaterFragment extends BottomSheetDialogFragment implement
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        binding = FragmentPreventionWaterBinding.inflate(getLayoutInflater());
+        binding = FragmentPreventionFuneralBinding.inflate(getLayoutInflater());
 
-        mTitles = getResources().getStringArray(R.array.prevention_water_options_titles);
+        mTitles = getResources().getStringArray(R.array.prevention_funeral_options_titles);
 
         binding.backArrow.setOnClickListener(this);
 
         mViewPagerAdapter = new PagerAdapter(getChildFragmentManager(), BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
 
-        mViewPagerAdapter.addFragment(new PreventionWaterConsumptionFragment());
-        mViewPagerAdapter.addFragment(new PreventionWaterUsedFragment());
+        mViewPagerAdapter.addFragment(new PreventionFuneralHowFragment());
 
         binding.viewPager.setAdapter(mViewPagerAdapter);
-        binding.bottomNav.setOnNavigationItemSelectedListener(this);
 
         // bind the option title to the custom Toolbar alike TextView
         binding.preventionOptionTittle.setText(mTitles[INDEX_FIRST_OPTION]);
@@ -73,15 +69,6 @@ public class PreventionWaterFragment extends BottomSheetDialogFragment implement
                         binding.preventionOptionTittle.setText(mTitles[position]);
                         binding.backArrow.setImageResource(R.drawable.ic_arrow_back_blue_24dp);
 
-                        binding.bottomNav.setSelectedItemId(R.id.item_how);
-                        binding.bottomNav.getMenu().findItem(R.id.item_how).setChecked(true);
-                        break;
-                    case 1:
-                        binding.preventionOptionTittle.setText(mTitles[position]);
-                        binding.backArrow.setImageResource(R.drawable.ic_arrow_back_green_24dp);
-
-                        binding.bottomNav.setSelectedItemId(R.id.item_how_second);
-                        binding.bottomNav.getMenu().findItem(R.id.item_how_second).setChecked(true);
                         break;
                 }
             }
@@ -109,26 +96,11 @@ public class PreventionWaterFragment extends BottomSheetDialogFragment implement
             case R.id.backArrow:
                 try {
                     getActivity().onBackPressed();
-                } catch (Exception ex){}
+                } catch (Exception ex) {
+                }
                 break;
         }
     }
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-        switch (item.getItemId()) {
-            case R.id.item_how:
-                binding.viewPager.setCurrentItem(0);
-                break;
-            case R.id.item_how_second:
-                binding.viewPager.setCurrentItem(1);
-                break;
-        }
-
-        return false;
-    }
-
 
     public class PagerAdapter extends FragmentPagerAdapter {
 

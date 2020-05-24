@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_food_aliments"
+        android:icon="@drawable/ic_local_dining"
+        android:title="@string/food_tab_aliment" />
+
+    <item
+        android:id="@+id/item_food_drink"
+        android:icon="@drawable/ic_local_drink"
+        android:title="@string/food_tab_water" />
+
+</menu>

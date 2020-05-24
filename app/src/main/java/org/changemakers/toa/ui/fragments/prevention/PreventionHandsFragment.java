@@ -115,7 +115,9 @@ public class PreventionHandsFragment extends BottomSheetDialogFragment implement
         switch (v.getId()) {
 
             case R.id.backArrow:
-                getActivity().finish();
+                try {
+                    getActivity().onBackPressed();
+                } catch (Exception ex){}
                 break;
         }
     }
