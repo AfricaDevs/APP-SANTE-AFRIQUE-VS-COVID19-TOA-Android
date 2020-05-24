@@ -1,5 +1,6 @@
 package org.changemakers.toa;
 
+import android.animation.Animator;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -17,7 +18,11 @@ import androidx.core.view.ViewCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
 
 import org.changemakers.toa.databinding.ActivityMainBinding;
 import org.changemakers.toa.interfaces.ActivityCallbackInterface;
@@ -127,26 +132,35 @@ public class MainActivity extends AppCompatActivity implements ActivityCallbackI
     }
 
     @Override
-    public void cardSelected(int poisition, View sharedView) {
+    public void cardSelected(int poisition, final View sharedView) {
 
 
-        Intent intent = new Intent(MainActivity.this, FragmentActivity.class);
+        if (poisition == FRAGMENT_INDEX_PREVENTION) {
+            YoYo.with(Techniques.Bounce).onEnd(new YoYo.AnimatorCallback() {
+                @Override
+                public void call(Animator animator) {
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    Intent intent = new Intent(MainActivity.this, FragmentActivity.class);
 
-            /*
-            setSharedElementReturnTransition(TransitionInflater.from(
-                    MainActivity.this).inflateTransition(R.transition.change_image_fragment_transition));
-            setExitTransition(TransitionInflater.from(
-                    MainActivity.this).inflateTransition(android.R.transition.fade));
-             */
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        ActivityOptionsCompat optionsCompat =
+                                ActivityOptionsCompat.makeSceneTransitionAnimation(MainActivity.this, sharedView, ViewCompat.getTransitionName(sharedView));
 
-            ActivityOptionsCompat optionsCompat =
-                    ActivityOptionsCompat.makeSceneTransitionAnimation(MainActivity.this, sharedView, ViewCompat.getTransitionName(sharedView));
+                        ActivityCompat.startActivityForResult(MainActivity.this, intent, MAIN_ACTIVITY_REQUEST_CODE, optionsCompat.toBundle());
+                    } else {
+                        startActivityForResult(new Intent(MainActivity.this, FragmentActivity.class), MAIN_ACTIVITY_REQUEST_CODE);
+                    }
+                }
+            }).playOn(sharedView.getRootView().findViewById(R.id.prevention_container));
 
-            ActivityCompat.startActivityForResult(MainActivity.this, intent, MAIN_ACTIVITY_REQUEST_CODE, optionsCompat.toBundle());
-        } else {
-            startActivityForResult(new Intent(MainActivity.this, FragmentActivity.class), MAIN_ACTIVITY_REQUEST_CODE);
+        } else { //Diagnosis
+
+            YoYo.with(Techniques.Bounce).onEnd(new YoYo.AnimatorCallback() {
+                @Override
+                public void call(Animator animator) {
+                    Snackbar.make(binding.getRoot(), "En cours d'implementation", BaseTransientBottomBar.LENGTH_SHORT).show();
+                }
+            }).playOn(sharedView.getRootView().findViewById(R.id.diagnosis_container));
         }
 
     }

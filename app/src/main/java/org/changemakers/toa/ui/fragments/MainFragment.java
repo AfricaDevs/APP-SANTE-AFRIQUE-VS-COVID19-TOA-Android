@@ -46,7 +46,7 @@ public class MainFragment extends BottomSheetDialogFragment implements View.OnCl
                 mCallback.cardSelected(MainActivity.FRAGMENT_INDEX_PREVENTION, binding.lottieCovidAnimPrevention);
                 break;
             case R.id.card_diagnosis:
-                mCallback.cardSelected(MainActivity.FRAGMENT_INDEX_PREVENTION, binding.lottieCovidAnimPrevention);
+                mCallback.cardSelected(MainActivity.FRAGMENT_INDEX_DIAGNOSIS, binding.lottieCovidAnimPrevention);
                 break;
         }
     }
