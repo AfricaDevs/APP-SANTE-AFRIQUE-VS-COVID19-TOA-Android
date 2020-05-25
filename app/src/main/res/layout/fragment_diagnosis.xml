@@ -51,7 +51,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/toolbar_api_version_top_margin"
-                    android:background="#e0193150"
+                    android:background="#88193150"
                     android:fitsSystemWindows="true" />
 
 
@@ -70,24 +70,16 @@
                 app:title=" " />
 
 
-            <!--com.airbnb.lottie.LottieAnimationView
+            <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/lottie_selected_option"
-                android:layout_width="250dp"
-                android:layout_height="180dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_gravity="center_horizontal|bottom"
-                android:layout_marginBottom="-40dp"
+                android:layout_marginBottom="0dp"
                 android:transitionName="shared_lottie_icon"
-
-                app:lottie_autoPlay="false"
-                app:lottie_loop="true" /-->
-            <ImageView
-                android:id="@+id/lottie_selected_option"
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_gravity="center_horizontal|bottom"
-                android:scaleType="fitCenter"
-                android:src="@drawable/covid_prevention"
-                android:transitionName="shared_lottie_icon" />
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/covid_doctor" />
 
             <TextView
                 style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
@@ -100,13 +92,13 @@
                 android:layout_marginEnd="24dp"
 
                 android:layout_marginRight="24dp"
-                android:text="@string/prevention_toolbar_title"
+                android:text="@string/main_diagnosis_title"
                 android:visibility="visible"
                 app:layout_collapseMode="pin" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

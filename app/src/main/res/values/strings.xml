@@ -91,6 +91,7 @@ Nécessité d’un dispositif respectant les spécificités des rituels ancestra
 ]]>
     </string>
     <string name="prevention_food_aliments"><![CDATA[Les aliments à privilégier sont ceux qui contiennent:\n<b>Vitamine C</b>2-4 grammes/ jour pendant 10 jours<br/><br/>Vitamine D<br/>1500-2000 UI/J<br/>Vitamine A<br/>Vitamine E</br/>Zinc  30 mg par jour<br/>pendant 10 jours<br/>à jeun à distance des repas ]]></string>
+    <string name="main_diagnosis_title">ANALYZSEZ VOS SYMPTOMES</string>
     <array name="prevention_options">
         <item>Pourquoi, quand et comment se laver les mains?</item>
         <item>Pourquoi, quand et comment fabriquer, porter et laver un masque?</item>

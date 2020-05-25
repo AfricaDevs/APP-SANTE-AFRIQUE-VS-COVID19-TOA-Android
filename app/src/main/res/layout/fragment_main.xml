@@ -199,7 +199,7 @@
                         android:background="@color/tboxBlue"
                         android:gravity="center"
                         android:padding="8dp"
-                        android:text="ANALYZEZ VOS SYMPTOMES"
+                        android:text="@string/main_diagnosis_title"
                         android:textColor="@color/white"
                         android:textSize="18sp" />
                 </LinearLayout>

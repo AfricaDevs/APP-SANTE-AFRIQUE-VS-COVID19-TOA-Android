@@ -21,8 +21,6 @@ import androidx.fragment.app.FragmentTransaction;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.google.android.material.appbar.AppBarLayout;
-import com.google.android.material.snackbar.BaseTransientBottomBar;
-import com.google.android.material.snackbar.Snackbar;
 
 import org.changemakers.toa.databinding.ActivityMainBinding;
 import org.changemakers.toa.interfaces.ActivityCallbackInterface;
@@ -148,17 +146,27 @@ public class MainActivity extends AppCompatActivity implements ActivityCallbackI
 
                         ActivityCompat.startActivityForResult(MainActivity.this, intent, MAIN_ACTIVITY_REQUEST_CODE, optionsCompat.toBundle());
                     } else {
-                        startActivityForResult(new Intent(MainActivity.this, FragmentActivity.class), MAIN_ACTIVITY_REQUEST_CODE);
+                        startActivityForResult(intent, MAIN_ACTIVITY_REQUEST_CODE);
                     }
                 }
             }).playOn(sharedView.getRootView().findViewById(R.id.prevention_container));
 
         } else { //Diagnosis
-
             YoYo.with(Techniques.Bounce).onEnd(new YoYo.AnimatorCallback() {
                 @Override
                 public void call(Animator animator) {
-                    Snackbar.make(binding.getRoot(), "En cours d'implementation", BaseTransientBottomBar.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(MainActivity.this, FragmentActivity.class);
+                    intent.putExtra(EXTRA_FRAGMENT_INDEX, FRAGMENT_INDEX_DIAGNOSIS);
+
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        ActivityOptionsCompat optionsCompat =
+                                ActivityOptionsCompat.makeSceneTransitionAnimation(MainActivity.this, sharedView, ViewCompat.getTransitionName(sharedView));
+
+                        ActivityCompat.startActivityForResult(MainActivity.this, intent, MAIN_ACTIVITY_REQUEST_CODE, optionsCompat.toBundle());
+                    } else {
+                        startActivityForResult(intent, MAIN_ACTIVITY_REQUEST_CODE);
+                    }
                 }
             }).playOn(sharedView.getRootView().findViewById(R.id.diagnosis_container));
         }
@@ -168,5 +176,10 @@ public class MainActivity extends AppCompatActivity implements ActivityCallbackI
     @Override
     public void onPreventionOptionSelected(View view, int poisition) {
         //IDDLE
+    }
+
+    @Override
+    public void onDiagnosis(View view, int poisition) {
+
     }
 }

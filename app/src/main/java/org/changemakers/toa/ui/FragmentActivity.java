@@ -14,6 +14,7 @@ import org.changemakers.toa.MainActivity;
 import org.changemakers.toa.R;
 import org.changemakers.toa.databinding.ActivityFragmentBinding;
 import org.changemakers.toa.interfaces.ActivityCallbackInterface;
+import org.changemakers.toa.ui.fragments.DiagnosisFragment;
 import org.changemakers.toa.ui.fragments.PreventionFragment;
 import org.changemakers.toa.ui.fragments.prevention.PreventionFoodFragment;
 import org.changemakers.toa.ui.fragments.prevention.PreventionFuneralFragment;
@@ -63,22 +64,22 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
                     mFragment = new PreventionFragment();
                     mFragment.setArguments(intent.getExtras());
 
-                    /*
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP  ) {
-                        mFragment.setSharedElementEnterTransition(TransitionInflater.from(
-                                this).inflateTransition(R.transition.change_image_fragment_transition));
-                        mFragment.setEnterTransition(TransitionInflater.from(
-                                this).inflateTransition(android.R.transition.fade));
-                    }
-                     */
+                    getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.fragment_container, mFragment)
+                            .commit();
+                    break;
+                case MainActivity.FRAGMENT_INDEX_DIAGNOSIS://DIAGNOSIS
+                    mFragment = new DiagnosisFragment();
+                    mFragment.setArguments(intent.getExtras());
 
                     getSupportFragmentManager()
                             .beginTransaction()
                             .replace(R.id.fragment_container, mFragment)
                             .commit();
                     break;
-                default: //PREVENTION
-                    mFragment = new PreventionFragment();
+                default:
+
                     break;
             }
 
@@ -164,5 +165,11 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
 
                 break;
         }
+    }
+
+    @Override
+    public void onDiagnosis(View view, int poisition) {
+        //TODO hand
+
     }
 }
