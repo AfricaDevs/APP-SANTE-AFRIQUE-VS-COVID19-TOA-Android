@@ -9,54 +9,25 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/collapsing_toolabar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:background="@color/layouts_main_white_bg"
             app:contentScrim="@color/colorPrimary"
             app:expandedTitleGravity="center_horizontal|top"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <com.github.florent37.arclayout.ArcLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="0dp"
-                android:background="@color/layouts_main_white_bg"
-                app:arc_cropDirection="cropOutside"
-                app:arc_height="90dp"
-                app:arc_position="bottom">
-
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/colorPrimary" />
-
-
-                <com.flaviofaria.kenburnsview.KenBurnsView
-                    android:id="@+id/image"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fitsSystemWindows="true"
-                    android:src="@drawable/covid_worms_bg" />
-
-                <ImageView
-                    android:id="@+id/toolbar_shadow_image"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="@dimen/toolbar_api_version_top_margin"
-                    android:background="#88193150"
-                    android:fitsSystemWindows="true" />
-
-
-            </com.github.florent37.arclayout.ArcLayout>
-
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -67,45 +38,139 @@
                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                app:title=" " />
+                app:title=" ">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="monospace"
+                    android:text="@string/main_diagnosis_toolbar_title"
+                    android:textSize="15sp"
+                    android:visibility="visible"
+                    app:layout_collapseMode="pin" />
+            </androidx.appcompat.widget.Toolbar>
 
 
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/lottie_selected_option"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_gravity="center_horizontal|bottom"
-                android:layout_marginBottom="0dp"
-                android:transitionName="shared_lottie_icon"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/covid_doctor" />
-
-            <TextView
-                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginStart="50dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="24dp"
-
-                android:layout_marginRight="24dp"
-                android:text="@string/main_diagnosis_title"
-                android:visibility="visible"
-                app:layout_collapseMode="pin" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/recycler_view"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/layouts_main_white_bg"
-        android:clipToPadding="false"
-        android:paddingTop="5dp"
-        android:paddingBottom="?actionBarSize"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="@dimen/value_8dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="@dimen/value_8dp"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="@dimen/value_6dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="@dimen/value_4dp"
+            app:cardCornerRadius="@dimen/main_cards_radius"
+            app:cardUseCompatPadding="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <org.changemakers.toa.utils.ExpandableTextLayout
+                    android:id="@+id/expandable_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="#F3EFEF"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp"
+                    app:ExpandableMaxLines="2">
+
+                    <TextView
+                        android:id="@+id/expandable_id_show_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:scrollHorizontally="false"
+                        android:text="Avez-vous un ou plusieurs des symptômes suivants ? (cocher la ou les cases). recevez aussitôt des informations adaptées sur ce qu’il est préférable de faire"
+                        android:textColor="@color/prevention_details_text_color"
+                        android:textSize="@dimen/app_main_text_size" />
+
+                    <TextView
+                        android:id="@+id/expandable_id_more_textview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="25dp"
+                        android:paddingRight="25dp"
+                        android:paddingBottom="5dp"
+                        android:text="@string/text_expand"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/app_main_text_size" />
+                </org.changemakers.toa.utils.ExpandableTextLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/value_4dp"
+            android:layout_marginBottom="@dimen/value_6dp"
+            android:layout_weight="1"
+            android:background="@color/layouts_main_white_bg"
+            android:clipToPadding="false"
+            android:paddingTop="5dp"
+            android:paddingBottom="?actionBarSize" />
+
+        <RelativeLayout
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_btn_next_primary"
+                android:fontFamily="monospace"
+                android:gravity="center_horizontal"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:text="@string/btn_next_spaced"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_no_syptom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="@dimen/value_6dp"
+            android:layout_marginRight="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_btn_next_red"
+                android:fontFamily="monospace"
+                android:gravity="center_horizontal"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:text="@string/btn_next_no_choice"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

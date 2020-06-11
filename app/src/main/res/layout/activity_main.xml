@@ -8,7 +8,6 @@
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
-
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinator_layout"
         android:layout_width="match_parent"

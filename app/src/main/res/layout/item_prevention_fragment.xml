@@ -72,7 +72,7 @@
                 android:padding="8dp"
                 android:text=" TOÂ "
                 android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
