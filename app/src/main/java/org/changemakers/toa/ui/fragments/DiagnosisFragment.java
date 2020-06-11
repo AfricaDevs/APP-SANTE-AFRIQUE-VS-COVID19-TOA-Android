@@ -38,10 +38,21 @@ public class DiagnosisFragment extends BottomSheetDialogFragment implements View
     GridLayoutManager mLayoutManager;
     DiagnosisRecyclerViewAdapter mAdapter;
 
-    public final int DIAGNOSIS_OPTIONS_FIRST_DEPTH = 1;
-    public final int DIAGNOSIS_OPTIONS_SECOND_DEPTH = 2;
-    public final int DIAGNOSIS_OPTIONS_THIRD_DEPTH = 3;
-    public final int DIAGNOSIS_OPTIONS_FOURTH_DEPTH = 4;
+    public static final int DIAGNOSIS_OPTIONS_FIRST_DEPTH = 1;
+    public static final int DIAGNOSIS_OPTIONS_FIRST_DEPTH_POSITION_SYMPTOMS = 1;
+    public static final int DIAGNOSIS_OPTIONS_FIRST_DEPTH_POSITION_NO_SYMPTOM = 0;
+
+    public static final int DIAGNOSIS_OPTIONS_SECOND_DEPTH = 2;
+    //The following positions follow the options alignment in /res/strings/@id -> diagnosis_first_options
+    public static final int DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_ANEMIA = 0;
+    public static final int DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_HYPERTENSION = 1;
+    public static final int DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_RESPIRATORY = 2;
+    public static final int DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_THALASEMIA = 3;
+    public static final int DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_DIABETES = 4;
+    public static final int DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_OBESITY = 5;
+
+    public static final int DIAGNOSIS_OPTIONS_THIRD_DEPTH = 3;
+    public static final int DIAGNOSIS_OPTIONS_FOURTH_DEPTH = 4;
 
     private FragmentDiagnosisBinding binding;
 
@@ -151,19 +162,29 @@ public class DiagnosisFragment extends BottomSheetDialogFragment implements View
                     YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
                         @Override
                         public void call(Animator animator) {
-
+                            binding.btnNext.setAlpha(0.4f);
                             Snackbar.make(binding.getRoot(), "Veuillez cocher une case pour continuer", BaseTransientBottomBar.LENGTH_SHORT).show();
+                        }
+                    }).playOn(v);
+                } else {
+                    YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
+                        @Override
+                        public void call(Animator animator) {
+
+                            //load next
+                            if (mCallback != null)
+                                mCallback.onDiagnosisOptionSelected(v, DIAGNOSIS_OPTIONS_FIRST_DEPTH, DIAGNOSIS_OPTIONS_FIRST_DEPTH_POSITION_SYMPTOMS);
                         }
                     }).playOn(v);
                 }
                 break;
             case R.id.btn_no_syptom:
 
-                YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
+                YoYo.with(Techniques.BounceInDown).onEnd(new YoYo.AnimatorCallback() {
                     @Override
                     public void call(Animator animator) {
                         if (mCallback != null)
-                            mCallback.onDiagnosisOptionSelected(v, DIAGNOSIS_OPTIONS_FIRST_DEPTH, sDiagnosisOptions.length);
+                            mCallback.onDiagnosisOptionSelected(v, DIAGNOSIS_OPTIONS_FIRST_DEPTH, DIAGNOSIS_OPTIONS_FIRST_DEPTH_POSITION_NO_SYMPTOM);
                     }
                 }).playOn(v);
                 break;

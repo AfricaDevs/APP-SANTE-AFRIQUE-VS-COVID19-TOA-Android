@@ -18,12 +18,12 @@ import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import org.changemakers.toa.R;
-import org.changemakers.toa.databinding.FragmentDiagnosisBinding;
-import org.changemakers.toa.databinding.ItemDiagnosisMainFragmentBinding;
+import org.changemakers.toa.databinding.FragmentDiagnosisFirstNoneBinding;
+import org.changemakers.toa.databinding.ItemDiagnosisNoSymptomsFragmentBinding;
 import org.changemakers.toa.interfaces.ActivityCallbackInterface;
-import org.changemakers.toa.utils.SmoothCheckBox;
+import org.changemakers.toa.ui.fragments.DiagnosisFragment;
 
-public class DiagnosisFirstNoneFragment extends BottomSheetDialogFragment implements View.OnClickListener {
+public class DiagnosisFirstNoneFragment extends BottomSheetDialogFragment {
 
     static boolean isNooptionChecked = false;
     static int noOptionCount = 0;
@@ -32,7 +32,7 @@ public class DiagnosisFirstNoneFragment extends BottomSheetDialogFragment implem
     GridLayoutManager mLayoutManager;
     DiagnosisRecyclerViewAdapter mAdapter;
 
-    private FragmentDiagnosisBinding binding;
+    private FragmentDiagnosisFirstNoneBinding binding;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -47,8 +47,8 @@ public class DiagnosisFirstNoneFragment extends BottomSheetDialogFragment implem
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
-        binding = FragmentDiagnosisBinding.inflate(getLayoutInflater());
-        sDiagnosisOptions = getResources().getStringArray(R.array.diagnosis_options);
+        binding = FragmentDiagnosisFirstNoneBinding.inflate(getLayoutInflater());
+        sDiagnosisOptions = getResources().getStringArray(R.array.diagnosis_first_options);
 
         try {
             ((AppCompatActivity) getActivity()).setSupportActionBar(binding.toolbar);
@@ -76,25 +76,12 @@ public class DiagnosisFirstNoneFragment extends BottomSheetDialogFragment implem
             }
         });
 
-        binding.expandableText.setTextMaxLines(3);
-        binding.btnNext.setOnClickListener(this);
-        binding.btnNoSyptom.setOnClickListener(this);
+        binding.expandableText.setTextMaxLines(2);
 
         mAdapter = new DiagnosisRecyclerViewAdapter();
-        mLayoutManager = new GridLayoutManager(getActivity(), 2, RecyclerView.VERTICAL, false);
+        mLayoutManager = new GridLayoutManager(getActivity(), 1, RecyclerView.VERTICAL, false);
 
 
-        mLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
-
-            @Override
-            public int getSpanSize(int position) {
-
-                //use a full swcreen width for the last item (as its text is long)
-                if (position == (sDiagnosisOptions.length - 1))
-                    return 2;
-                return 1;
-            }
-        });
 
         binding.recyclerView.setLayoutManager(mLayoutManager);
         binding.recyclerView.setAdapter(mAdapter);
@@ -111,9 +98,7 @@ public class DiagnosisFirstNoneFragment extends BottomSheetDialogFragment implem
         if (Build.VERSION.SDK_INT >= 21) {
             getActivity().getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
-
     }
-
 
     @Override
     public void onAttach(@NonNull Context context) {
@@ -131,19 +116,6 @@ public class DiagnosisFirstNoneFragment extends BottomSheetDialogFragment implem
             mCallback = null;
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btn_next:
-
-                break;
-            case R.id.btn_no_syptom:
-
-                break;
-        }
-    }
-
-
     private class DiagnosisRecyclerViewAdapter extends RecyclerView.Adapter<DiagnosisRecyclerViewAdapter.DiagnosisViewHolder> {
 
         public DiagnosisRecyclerViewAdapter() {
@@ -154,8 +126,8 @@ public class DiagnosisFirstNoneFragment extends BottomSheetDialogFragment implem
         @Override
         public DiagnosisViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-            ItemDiagnosisMainFragmentBinding itemDiagnosisMainFragmentBinding = ItemDiagnosisMainFragmentBinding.inflate(getLayoutInflater(), parent, false);
-            return new DiagnosisViewHolder(itemDiagnosisMainFragmentBinding);
+            ItemDiagnosisNoSymptomsFragmentBinding itemDiagnosisNoSymptomsBinding = ItemDiagnosisNoSymptomsFragmentBinding.inflate(getLayoutInflater(), parent, false);
+            return new DiagnosisViewHolder(itemDiagnosisNoSymptomsBinding);
 
         }
 
@@ -176,38 +148,25 @@ public class DiagnosisFirstNoneFragment extends BottomSheetDialogFragment implem
             return sDiagnosisOptions.length;
         }
 
-        class DiagnosisViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, SmoothCheckBox.OnCheckedChangeListener {
+        class DiagnosisViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-            ItemDiagnosisMainFragmentBinding itemviewBinding;
+            ItemDiagnosisNoSymptomsFragmentBinding itemviewBinding;
             boolean isChecked;
 
-            public DiagnosisViewHolder(ItemDiagnosisMainFragmentBinding binding) {
+            public DiagnosisViewHolder(ItemDiagnosisNoSymptomsFragmentBinding binding) {
                 super(binding.getRoot());
                 this.itemviewBinding = binding;
                 itemviewBinding.getRoot().setOnClickListener(this);
-                itemviewBinding.checkbox.setOnCheckedChangeListener(this);
             }
 
 
             @Override
             public void onClick(View v) {
-                itemviewBinding.checkbox.performClick();
-            }
-
-            @Override
-            public void onCheckedChanged(SmoothCheckBox checkBox, boolean isChecked) {
-                this.isChecked = isChecked;
-
-                if (isChecked) {
-                    noOptionCount++;
-                } else noOptionCount--;
-
-                if (noOptionCount > 0) {
-                    binding.btnNoSyptom.setAlpha(0.4f);
-                } else {
-                    binding.btnNoSyptom.setAlpha(1f);
+                if (mCallback != null) {
+                    mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH, getAdapterPosition());
                 }
             }
+
         }
 
     }
