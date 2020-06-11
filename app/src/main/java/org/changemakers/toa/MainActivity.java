@@ -23,11 +23,11 @@ import com.daimajia.androidanimations.library.YoYo;
 import com.google.android.material.appbar.AppBarLayout;
 
 import org.changemakers.toa.databinding.ActivityMainBinding;
-import org.changemakers.toa.interfaces.ActivityCallbackInterface;
+import org.changemakers.toa.interfaces.MainActivityCallbackInterface;
 import org.changemakers.toa.ui.FragmentActivity;
 import org.changemakers.toa.ui.fragments.MainFragment;
 
-public class MainActivity extends AppCompatActivity implements ActivityCallbackInterface {
+public class MainActivity extends AppCompatActivity implements MainActivityCallbackInterface {
 
     public static final int FRAGMENT_INDEX_PREVENTION = 1;
     public static final int FRAGMENT_INDEX_PREVENTIO_FIRSTN = 11;
@@ -173,13 +173,4 @@ public class MainActivity extends AppCompatActivity implements ActivityCallbackI
 
     }
 
-    @Override
-    public void onPreventionOptionSelected(View view, int poisition) {
-        //IDDLE
-    }
-
-    @Override
-    public void onDiagnosis(View view, int poisition) {
-
-    }
 }
