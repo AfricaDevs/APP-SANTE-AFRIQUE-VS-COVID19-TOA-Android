@@ -24,10 +24,10 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorPrimary" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary" />
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -61,7 +61,7 @@
         android:layout_marginLeft="14dp"
         android:layout_marginTop="@dimen/value_8dp"
         android:layout_marginRight="14dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="@dimen/value_8dp"
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
@@ -120,6 +120,15 @@
 
         </androidx.cardview.widget.CardView>
 
+        <TextView
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/value_4dp"
+            android:layout_marginBottom="@dimen/value_4dp"
+            android:gravity="center"
+            android:text="Souffrez-vous d’une des maladies reconnues suivantes ?" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
@@ -129,48 +138,7 @@
             android:layout_weight="1"
             android:background="@color/layouts_main_white_bg"
             android:clipToPadding="false"
-            android:paddingTop="5dp"
-            android:paddingBottom="?actionBarSize" />
+            android:paddingTop="5dp" />
 
-        <RelativeLayout
-            android:id="@+id/btn_next"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/shape_btn_next_red"
-                android:fontFamily="monospace"
-                android:gravity="center_horizontal"
-                android:paddingTop="6dp"
-                android:paddingBottom="6dp"
-                android:text="@string/btn_next_spaced"
-                android:textColor="@color/materialRedLight"
-                android:textSize="20sp" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/btn_no_syptom"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="@dimen/value_6dp"
-            android:layout_marginRight="2dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/shape_btn_next_primary"
-                android:fontFamily="monospace"
-                android:gravity="center_horizontal"
-                android:paddingTop="6dp"
-                android:paddingBottom="6dp"
-                android:text="@string/btn_next_no_choice"
-                android:textColor="@color/colorAccent"
-                android:textSize="20sp" />
-        </RelativeLayout>
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

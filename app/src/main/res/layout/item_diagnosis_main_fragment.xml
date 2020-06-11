@@ -9,7 +9,10 @@
     android:layout_marginRight="@dimen/value_2dp"
     android:layout_marginBottom="@dimen/value_2dp"
     android:orientation="horizontal"
-    app:contentPadding="4dp"
+    app:contentPaddingBottom="6dp"
+    app:contentPaddingLeft="4dp"
+    app:contentPaddingRight="4dp"
+    app:contentPaddingTop="6dp"
     tools:context=".ui.FragmentActivity">
 
     <LinearLayout

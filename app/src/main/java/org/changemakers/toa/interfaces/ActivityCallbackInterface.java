@@ -4,9 +4,9 @@ package org.changemakers.toa.interfaces;
 import android.view.View;
 
 public interface ActivityCallbackInterface {
-    public void cardSelected(int pisition, View sharedView);
 
-    public void onPreventionOptionSelected(View view, int poisition);
+    public void onPreventionOptionSelected(View view, int position);
 
-    public void onDiagnosis(View view, int poisition);
+    //We use 3 args here. The depth is placed for hierarchie mangagement
+    public void onDiagnosisOptionSelected(View view, int depth, int position);
 }

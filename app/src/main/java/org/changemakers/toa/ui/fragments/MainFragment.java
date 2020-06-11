@@ -14,13 +14,13 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import org.changemakers.toa.MainActivity;
 import org.changemakers.toa.R;
 import org.changemakers.toa.databinding.FragmentMainBinding;
-import org.changemakers.toa.interfaces.ActivityCallbackInterface;
+import org.changemakers.toa.interfaces.MainActivityCallbackInterface;
 
 public class MainFragment extends BottomSheetDialogFragment implements View.OnClickListener {
 
     private FragmentMainBinding binding;
 
-    private ActivityCallbackInterface mCallback;
+    private MainActivityCallbackInterface mCallback;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,7 +56,7 @@ public class MainFragment extends BottomSheetDialogFragment implements View.OnCl
         super.onAttach(context);
 
         if (mCallback == null)
-            mCallback = (ActivityCallbackInterface) context;
+            mCallback = (MainActivityCallbackInterface) context;
 
     }
 

@@ -9,6 +9,7 @@
     <string name="alert_cant_handle">Erreur !</string>
     <string name="privacy_policies_link">https://africadevs.github.io/policies.html</string>
     <string name="main_frag_prevention_btn">COMMENT\nSE PROTEGER\nTOUS LES JOURS?</string>
+    <string name="main_frag_prevention_title">Comment se protéger tous les jours?</string>
     <string name="transition_shared_main_activity_lottie_image">shared_lottie_icon</string>
     <string name="transition_splash_shared_logo">transition_shared_logo</string>
 
@@ -116,6 +117,14 @@ Nécessité d’un dispositif respectant les spécificités des rituels ancestra
         <item>Fièvre élevée et accompagnée de frissons, de sudations, de douleurs dans les muscles
             et les articulations
         </item>
+    </array>
+    <array name="diagnosis_first_options">
+        <item>Drépanocytose</item>
+        <item>Hypertension Artérielle</item>
+        <item>Maladies respiratoires chroniques</item>
+        <item>Thalassémie</item>
+        <item>Diabète</item>
+        <item>Obésité</item>
     </array>
 
     <array name="prevention_icons">

@@ -87,10 +87,6 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
 
     }
 
-    @Override
-    public void cardSelected(int poisition, View sharedView) {
-        //IDDLE
-    }
 
     @Override
     public void onPreventionOptionSelected(View view, int position) {
@@ -168,8 +164,8 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
     }
 
     @Override
-    public void onDiagnosis(View view, int poisition) {
-        //TODO hand
+    public void onDiagnosisOptionSelected(View view, int hierarchie, int poisition) {
+        //TODO handle
 
     }
 }
