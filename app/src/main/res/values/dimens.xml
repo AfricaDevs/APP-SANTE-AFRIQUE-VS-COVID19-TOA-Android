@@ -2,7 +2,7 @@
 <resources>
     <dimen name="list_item_spacing">16dp</dimen>
     <dimen name="list_item_spacing_half">8dp</dimen>
-    <dimen name="app_main_text_size">16sp</dimen>
+    <dimen name="app_main_text_size">14sp</dimen>
     <dimen name="main_cards_radius">5dp</dimen>
     <dimen name="toolbar_api_version_top_margin">0dp</dimen>
     <dimen name="toa_header_view_api_version_top_padding">8dp</dimen>
@@ -19,6 +19,7 @@
 
     <dimen name="value_2dp">2dp</dimen>
     <dimen name="value_4dp">4dp</dimen>
+    <dimen name="value_6dp">6dp</dimen>
     <dimen name="value_5dp">5dp</dimen>
     <dimen name="value_8dp">8dp</dimen>
     <dimen name="value_10dp">10dp</dimen>

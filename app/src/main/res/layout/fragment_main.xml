@@ -70,10 +70,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="15dp"
                 android:layout_marginLeft="-20dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="55dp"
                 android:layout_marginRight="50dp"
                 android:background="@drawable/ic_bg_fragment_main_tbox_green_color"
-                android:rotation="350" />
+                android:rotation="348" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_prevention"
@@ -94,8 +94,8 @@
                     android:orientation="horizontal">
 
                     <RelativeLayout
-                        android:layout_width="150dp"
-                        android:layout_height="130dp"
+                        android:layout_width="120dp"
+                        android:layout_height="110dp"
                         android:clipToPadding="false">
 
                         <com.airbnb.lottie.LottieAnimationView
@@ -104,7 +104,8 @@
                             android:layout_height="match_parent"
                             android:layout_alignParentBottom="true"
                             android:layout_centerHorizontal="true"
-                            android:layout_marginRight="5dp"
+                            android:layout_marginEnd="@dimen/value_8dp"
+                            android:layout_marginRight="@dimen/value_8dp"
                             android:transitionName="@string/transition_shared_main_activity_lottie_image"
                             app:lottie_autoPlay="true"
                             app:lottie_cacheComposition="true"
@@ -123,14 +124,15 @@
                         android:padding="8dp"
                         android:text="@string/main_frag_prevention_btn"
                         android:textColor="@color/white"
-                        android:textSize="18sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
                 <ImageView
-                    android:layout_width="80dp"
+                    android:layout_width="60dp"
                     android:layout_height="10dp"
-                    android:layout_marginLeft="120dp"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="95dp"
+                    android:layout_marginLeft="95dp"
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/ic_bg_fragment_main_tbox_green_color"
                     android:elevation="0dp"
                     android:rotation="325" />
@@ -152,10 +154,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="15dp"
                 android:layout_marginLeft="-20dp"
-                android:layout_marginTop="80dp"
-                android:layout_marginRight="50dp"
+                android:layout_marginTop="55dp"
+                android:layout_marginRight="55dp"
                 android:background="@drawable/ic_bg_fragment_main_tbox_blue_color"
-                android:rotation="350" />
+                android:rotation="348" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_diagnosis"
@@ -174,8 +176,8 @@
                     android:orientation="horizontal">
 
                     <RelativeLayout
-                        android:layout_width="150dp"
-                        android:layout_height="130dp"
+                        android:layout_width="120dp"
+                        android:layout_height="110dp"
                         android:padding="25dp">
 
                         <com.airbnb.lottie.LottieAnimationView
@@ -201,15 +203,16 @@
                         android:padding="8dp"
                         android:text="@string/main_diagnosis_title"
                         android:textColor="@color/white"
-                        android:textSize="18sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
 
                 <ImageView
-                    android:layout_width="80dp"
+                    android:layout_width="60dp"
                     android:layout_height="10dp"
-                    android:layout_marginLeft="120dp"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="95dp"
+                    android:layout_marginLeft="95dp"
+                    android:layout_marginTop="15dp"
                     android:background="@drawable/ic_bg_fragment_main_tbox_blue_color"
                     android:elevation="0dp"
                     android:rotation="325" />
@@ -234,7 +237,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:gravity="center"
-                android:text="recevez aussitôt des informations adaptées sur ce qu’il est préférable de faire"
+                android:text="@string/diagnosis_subtitle"
                 android:textColor="#616161"
                 android:textSize="14sp" />
         </LinearLayout>
