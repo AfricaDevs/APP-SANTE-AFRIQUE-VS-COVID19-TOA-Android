@@ -45,6 +45,7 @@
     <color name="materialBrown2">#795548</color>
     <color name="materialYellow">#f8a724</color>
     <color name="materialRed">#FF5252</color>
+    <color name="materialRedLight">#D85656</color>
     <color name="materialOrange">#ff6f42</color>
     <color name="materialOrange2">#EC8D6F</color>
     <color name="materialPink">#FF6499</color>

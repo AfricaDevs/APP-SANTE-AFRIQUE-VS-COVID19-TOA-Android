@@ -24,10 +24,10 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorPrimary" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary" />
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -61,7 +61,7 @@
         android:layout_marginLeft="14dp"
         android:layout_marginTop="@dimen/value_8dp"
         android:layout_marginRight="14dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="@dimen/value_8dp"
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 

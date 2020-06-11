@@ -1,6 +1,5 @@
-package org.changemakers.toa.ui.fragments;
+package org.changemakers.toa.ui.fragments.diagnosis;
 
-import android.animation.Animator;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
@@ -15,12 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.daimajia.androidanimations.library.Techniques;
-import com.daimajia.androidanimations.library.YoYo;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-import com.google.android.material.snackbar.BaseTransientBottomBar;
-import com.google.android.material.snackbar.Snackbar;
 
 import org.changemakers.toa.R;
 import org.changemakers.toa.databinding.FragmentDiagnosisBinding;
@@ -28,20 +23,14 @@ import org.changemakers.toa.databinding.ItemDiagnosisMainFragmentBinding;
 import org.changemakers.toa.interfaces.ActivityCallbackInterface;
 import org.changemakers.toa.utils.SmoothCheckBox;
 
-public class DiagnosisFragment extends BottomSheetDialogFragment implements View.OnClickListener {
+public class DiagnosisFirstNoneFragment extends BottomSheetDialogFragment implements View.OnClickListener {
 
     static boolean isNooptionChecked = false;
     static int noOptionCount = 0;
-
-    ActivityCallbackInterface mCallback;
     private static String[] sDiagnosisOptions;
+    ActivityCallbackInterface mCallback;
     GridLayoutManager mLayoutManager;
     DiagnosisRecyclerViewAdapter mAdapter;
-
-    public final int DIAGNOSIS_OPTIONS_FIRST_DEPTH = 1;
-    public final int DIAGNOSIS_OPTIONS_SECOND_DEPTH = 2;
-    public final int DIAGNOSIS_OPTIONS_THIRD_DEPTH = 3;
-    public final int DIAGNOSIS_OPTIONS_FOURTH_DEPTH = 4;
 
     private FragmentDiagnosisBinding binding;
 
@@ -123,7 +112,6 @@ public class DiagnosisFragment extends BottomSheetDialogFragment implements View
             getActivity().getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
 
-        binding.btnNext.setAlpha(0.4f);
     }
 
 
@@ -144,28 +132,13 @@ public class DiagnosisFragment extends BottomSheetDialogFragment implements View
     }
 
     @Override
-    public void onClick(final View v) {
+    public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_next:
-                if (noOptionCount == 0) {
-                    YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
-                        @Override
-                        public void call(Animator animator) {
 
-                            Snackbar.make(binding.getRoot(), "Veuillez cocher une case pour continuer", BaseTransientBottomBar.LENGTH_SHORT).show();
-                        }
-                    }).playOn(v);
-                }
                 break;
             case R.id.btn_no_syptom:
 
-                YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
-                    @Override
-                    public void call(Animator animator) {
-                        if (mCallback != null)
-                            mCallback.onDiagnosisOptionSelected(v, DIAGNOSIS_OPTIONS_FIRST_DEPTH, sDiagnosisOptions.length);
-                    }
-                }).playOn(v);
                 break;
         }
     }
@@ -200,7 +173,6 @@ public class DiagnosisFragment extends BottomSheetDialogFragment implements View
 
         @Override
         public int getItemCount() {
-            //Use items array size
             return sDiagnosisOptions.length;
         }
 
@@ -230,13 +202,10 @@ public class DiagnosisFragment extends BottomSheetDialogFragment implements View
                     noOptionCount++;
                 } else noOptionCount--;
 
-                //Handle button enable/disable appearance
                 if (noOptionCount > 0) {
                     binding.btnNoSyptom.setAlpha(0.4f);
-                    binding.btnNext.setAlpha(1f);
                 } else {
                     binding.btnNoSyptom.setAlpha(1f);
-                    binding.btnNext.setAlpha(0.4f);
                 }
             }
         }
