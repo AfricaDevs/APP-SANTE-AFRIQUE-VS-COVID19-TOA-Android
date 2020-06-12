@@ -23,6 +23,8 @@ import org.changemakers.toa.databinding.FragmentDiagnosisFirstMalariaBinding;
 import org.changemakers.toa.interfaces.ActivityCallbackInterface;
 import org.changemakers.toa.ui.fragments.DiagnosisFragment;
 
+import static org.changemakers.toa.ui.fragments.DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_MALARIA_NEXT;
+
 public class DiagnosisFirstMalariaFragment extends BottomSheetDialogFragment implements View.OnClickListener {
 
     ActivityCallbackInterface mCallback;
@@ -88,7 +90,7 @@ public class DiagnosisFirstMalariaFragment extends BottomSheetDialogFragment imp
                     YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
                         @Override
                         public void call(Animator animator) {
-                            mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH, 0);
+                            mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH, DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_MALARIA_NEXT);
                         }
                     }).playOn(v);
                 }

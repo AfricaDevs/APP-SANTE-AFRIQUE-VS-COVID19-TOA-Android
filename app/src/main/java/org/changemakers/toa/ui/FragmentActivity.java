@@ -203,21 +203,42 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
             case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH:
 
                 switch (position) {
+
+                    //when in MalariaFragment, the next button takes to FirstNoneFragment
+                    case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_MALARIA_NEXT:
+
+                        getSupportFragmentManager()
+                                .beginTransaction()
+                                .addToBackStack(null)
+                                .add(R.id.fragment_container, new DiagnosisFirstNoneFragment())
+                                .commit();
+                        break;
+
                     case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_ANEMIA:
 
+                        getSupportFragmentManager()
+                                .beginTransaction()
+                                .addToBackStack(null)
+                                .add(R.id.fragment_container, new PreventionFragment())
+                                .commit();
                         break;
+
                     case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_HYPERTENSION:
 
                         break;
+
                     case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_RESPIRATORY:
 
                         break;
+
                     case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_THALASEMIA:
 
                         break;
+
                     case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_DIABETES:
 
                         break;
+
                     case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_OBESITY:
 
                         break;

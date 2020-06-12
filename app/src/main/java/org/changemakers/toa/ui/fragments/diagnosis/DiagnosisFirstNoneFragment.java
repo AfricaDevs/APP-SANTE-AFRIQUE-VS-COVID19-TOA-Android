@@ -1,5 +1,6 @@
 package org.changemakers.toa.ui.fragments.diagnosis;
 
+import android.animation.Animator;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
@@ -14,6 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
@@ -23,10 +26,8 @@ import org.changemakers.toa.databinding.ItemDiagnosisNoSymptomsFragmentBinding;
 import org.changemakers.toa.interfaces.ActivityCallbackInterface;
 import org.changemakers.toa.ui.fragments.DiagnosisFragment;
 
-public class DiagnosisFirstNoneFragment extends BottomSheetDialogFragment {
+public class DiagnosisFirstNoneFragment extends BottomSheetDialogFragment implements View.OnClickListener {
 
-    static boolean isNooptionChecked = false;
-    static int noOptionCount = 0;
     private static String[] sDiagnosisOptions;
     ActivityCallbackInterface mCallback;
     GridLayoutManager mLayoutManager;
@@ -84,6 +85,8 @@ public class DiagnosisFirstNoneFragment extends BottomSheetDialogFragment {
         binding.recyclerView.setAdapter(mAdapter);
         binding.recyclerView.setHasFixedSize(true);
 
+        binding.btnPrevention.setOnClickListener(this);
+
         return binding.getRoot();
     }
 
@@ -94,6 +97,26 @@ public class DiagnosisFirstNoneFragment extends BottomSheetDialogFragment {
 
         if (Build.VERSION.SDK_INT >= 21) {
             getActivity().getWindow().setStatusBarColor(Color.TRANSPARENT);
+        }
+    }
+
+
+    @Override
+    public void onClick(final View v) {
+        switch (v.getId()) {
+            case R.id.btn_prevention:
+
+                if (mCallback != null) {
+                    YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
+                        @Override
+                        public void call(Animator animator) {
+                            mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_PREVENTION_DEPTH, 0);
+                        }
+                    }).playOn(v);
+
+                }
+
+                break;
         }
     }
 
@@ -158,9 +181,16 @@ public class DiagnosisFirstNoneFragment extends BottomSheetDialogFragment {
 
 
             @Override
-            public void onClick(View v) {
+            public void onClick(final View v) {
                 if (mCallback != null) {
-                    mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH, getAdapterPosition());
+
+                    YoYo.with(Techniques.BounceIn).onEnd(new YoYo.AnimatorCallback() {
+                        @Override
+                        public void call(Animator animator) {
+                            mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH, getAdapterPosition());
+                        }
+                    }).playOn(v);
+
                 }
             }
 

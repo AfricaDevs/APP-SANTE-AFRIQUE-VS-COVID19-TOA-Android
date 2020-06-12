@@ -105,7 +105,7 @@
                     android:scrollHorizontally="false"
                     android:text="Indiquez et recevez aussitôt des informations adaptées sur ce qu’il est préférable de faire"
                     android:textColor="@color/prevention_details_text_color"
-                    android:textSize="@dimen/app_main_text_size" />
+                      />
 
             </LinearLayout>
 
@@ -136,7 +136,7 @@
                 android:background="@drawable/shape_btn_next_primary"
                 android:fontFamily="monospace"
                 android:gravity="center_horizontal"
-                android:padding="4dp"
+                android:padding="6dp"
                 android:text="@string/main_frag_prevention_title"
                 android:textColor="@color/colorAccent"
                 android:textSize="16sp"

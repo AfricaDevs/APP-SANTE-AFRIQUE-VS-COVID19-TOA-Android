@@ -45,6 +45,7 @@ public class DiagnosisFragment extends BottomSheetDialogFragment implements View
 
     public static final int DIAGNOSIS_OPTIONS_SECOND_DEPTH = 2;
     //The following positions follow the options alignment in /res/strings/@id -> diagnosis_second_options
+    public static final int DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_MALARIA_NEXT = 10;
     public static final int DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_ANEMIA = 0;
     public static final int DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_HYPERTENSION = 1;
     public static final int DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_RESPIRATORY = 2;
@@ -112,10 +113,19 @@ public class DiagnosisFragment extends BottomSheetDialogFragment implements View
             @Override
             public int getSpanSize(int position) {
 
-                //use a full swcreen width for the last item (as its text is long)
-                if (position == (sDiagnosisOptions.length - 1))
-                    return 2;
-                return 1;
+                //use a full swcreen width for the items having long textes to fill the screen
+                //based on sDiagnosisOptions length
+                switch (position) {
+
+                    case 0:
+                        return 2;
+                    case 1:
+                        return 2;
+                    case 6:
+                        return 2;
+                    default:
+                        return 1;
+                }
             }
         });
 
@@ -254,10 +264,8 @@ public class DiagnosisFragment extends BottomSheetDialogFragment implements View
 
                 //Handle button enable/disable appearance
                 if (noOptionCount > 0) {
-                    binding.btnNoSyptom.setAlpha(0.4f);
                     binding.btnNext.setAlpha(1f);
                 } else {
-                    binding.btnNoSyptom.setAlpha(1f);
                     binding.btnNext.setAlpha(0.4f);
                 }
             }

@@ -142,15 +142,15 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="38dp"
                 android:background="@drawable/shape_btn_next_red"
                 android:fontFamily="monospace"
                 android:gravity="center_horizontal"
-                android:paddingTop="6dp"
-                android:paddingBottom="6dp"
+                android:padding="6dp"
                 android:text="@string/btn_next_spaced"
                 android:textColor="@color/materialRedLight"
-                android:textSize="20sp" />
+                android:textSize="16sp"
+                app:autoSizeTextType="uniform" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -158,20 +158,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"
-            android:layout_marginTop="@dimen/value_6dp"
+            android:layout_marginTop="@dimen/value_10dp"
             android:layout_marginRight="2dp">
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="38dp"
                 android:background="@drawable/shape_btn_next_primary"
                 android:fontFamily="monospace"
                 android:gravity="center_horizontal"
-                android:paddingTop="6dp"
-                android:paddingBottom="6dp"
+                android:padding="6dp"
                 android:text="@string/btn_next_no_choice"
                 android:textColor="@color/colorAccent"
-                android:textSize="20sp" />
+                android:textSize="16sp"
+                app:autoSizeTextType="uniform" />
         </RelativeLayout>
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
