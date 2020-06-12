@@ -56,6 +56,8 @@ public class DiagnosisFragment extends BottomSheetDialogFragment implements View
     public static final int DIAGNOSIS_OPTIONS_THIRD_DEPTH = 3;
     public static final int DIAGNOSIS_OPTIONS_FOURTH_DEPTH = 4;
 
+    public static final String EXTRA_SECOND_DEPTH_POSITION = "org.africadevs.toa.seconddepth";
+
     private FragmentDiagnosisBinding binding;
 
     @Override

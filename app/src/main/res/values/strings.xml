@@ -97,6 +97,8 @@ Nécessité d’un dispositif respectant les spécificités des rituels ancestra
     <string name="diagnosis_subtitle">recevez aussitôt des informations adaptées sur ce qu’il est préférable de faire</string>
     <string name="btn_next_spaced">S U I V A N T</string>
     <string name="btn_next_no_choice">AUCUN SYMPTOME</string>
+    <string name="diagnosis_continue_analysis">Continuer à analyser vos symptômes</string>
+
     <array name="prevention_options">
         <item>Pourquoi, quand et comment se laver les mains?</item>
         <item>Pourquoi, quand et comment fabriquer, porter et laver un masque?</item>
@@ -126,7 +128,67 @@ Nécessité d’un dispositif respectant les spécificités des rituels ancestra
         <item>Diabète</item>
         <item>Obésité</item>
     </array>
-
+    <array name="diagnosis_second_options_details_titles">
+        <item>Je souffre de Drépanocytose</item>
+        <item>Je souffre d\’Hypertension Artérielle</item>
+        <item>Je souffre de maladies respiratoires chroniques</item>
+        <item>Je souffre de Thalassémie</item>
+        <item>Je souffre de Diabète</item>
+        <item>Je souffre d\'Obésité</item>
+    </array>
+    <array name="diagnosis_second_options_details">
+        <item>Continuer à prendre vos traitements comme d\’habitude 
+            (hydrea/siklos, exjade, desferal…).
+            \n* Le rythme et le protocole des transfusions doit être conservé.
+            \n* Eviter les anti-inflammatoires susceptibles d\’aggraver une infection à Covid-19.
+            \n* Cependant, si les anti-inflammatoires constituent votre traitement journalier, il
+            est nécessaire de continuer.
+            \n* En cas de doute, n’hésitez pas à poser la question à votre pharmacien/médecin.
+        </item>
+        <item>Je vais consulter mon médecin pour adapter si nécessaire mon traitement pendant la
+            pandémie.\n
+            Si vous prenez des médicaments contre l\'hypertension de la famille des bêtabloquants
+            connus pour leur capacité à entrainer un étouffement (bronchospasme) chez les personnes
+            déjà sensibles sur le plan respiratoire.\n\n
+            La prudence recommande d\'en discuter avec votre médecin pour une alternative
+            thérapeutique. Continuez votre traitement s\'il n\'existe pas d\'alternative efficace
+            pour contrôler votre tension. Surtout,  n\'interrompez pas votre traitement sans en
+            parler votre votre médecin
+        </item>
+        <item>Les Bêta-bloquants peuvent provoquer un bronchospasme chez les sujets ayant des déjà
+            des pathologies bronchiques (bronchite chronique, Asthme, BPCO...). Si vous souffrez
+            d\'une affection bronchique chronique et que vous êtes sous bêta-bloquants pour
+            d\'autres affections, consulter votre médecin pour étudier une alternative
+            thérapeutique. N\'interrompez pas votre traitement sans en parler votre votre médecin.
+        </item>
+        <item>Si vous avez une thalassémie majeure, vous êtes régulièrement transfusé. Ces
+            transfusions sont nécessaires pour corriger l\’anémie mais également pour prévenir
+            d\’autres complications. Elles doivent se poursuivre selon le rythme habituel. Si vous
+            avez une thalassémie intermédiaire et que vous recevez des transfusions régulières, le
+            médecin spécialiste décidera de maintenir ou non les transfusions régulières en fonction
+            de votre situation médicale personnelle et des complications potentielles. Ne pas
+            prendre d\’anti-inflammatoires non stéroïdiens (ex. Ibuprofène) ni de vitamine C à forte
+            dose (plus de 250 mg/j).
+        </item>
+        <item>Je suis susceptible de développer des formes graves de Covid-19 en cas de diabète non
+            équilibré ou de complications. Je respecte strictement les mesures barrières et la
+            distanciation physique. Si je ne sais pas encore le faire, je dois apprendre à
+            reconnaître les signes d\'aggravation du diabète et des complications. J\'en parle avec
+            mon médecin si je ne sais le faire. Je dois veiller à maintenir un bon équilibre
+            glycémique. Je maintiens une alimentation adaptée pour prévenir le risque
+            d\'hypoglycémie et je limite la consommation d\'aliments riches en acides gras saturés
+            afin de contrôler la prise de poids. Une activité physique régulière minimale est
+            vivement conseillée.
+        </item>
+        <item>Je suis concerné si j\'ai un IMC supérieur ou égal à 30 kg/m2 et je respecte
+            strictement les mesures barrières et la distanciation physique. Si de plus, mon IMC est
+            supérieur ou égal à 40 kg/m2, j\'étudie sérieusement la possibilité de travailler à
+            distance dans la période de l\’épidémie en limitant au maximum possible les contacts. Je
+            continue tous mes traitements en cours. Je maintiens une alimentation adaptée et je
+            limite la consommation d\’aliments riches en acides gras saturés afin de contrôler la
+            prise de poids. Une activité physique régulière minimale est vivement conseillée.
+        </item>
+    </array>
     <array name="prevention_icons">
         <item>lottie_covid_hands</item>
         <item>lottie_covid_mask</item>

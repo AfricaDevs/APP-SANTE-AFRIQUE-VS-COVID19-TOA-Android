@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
@@ -18,6 +19,7 @@ import org.changemakers.toa.ui.fragments.DiagnosisFragment;
 import org.changemakers.toa.ui.fragments.PreventionFragment;
 import org.changemakers.toa.ui.fragments.diagnosis.DiagnosisFirstMalariaFragment;
 import org.changemakers.toa.ui.fragments.diagnosis.DiagnosisFirstNoneFragment;
+import org.changemakers.toa.ui.fragments.diagnosis.DiagnosisSecondDepthTemplate;
 import org.changemakers.toa.ui.fragments.prevention.PreventionFoodFragment;
 import org.changemakers.toa.ui.fragments.prevention.PreventionFuneralFragment;
 import org.changemakers.toa.ui.fragments.prevention.PreventionGarbageFragment;
@@ -214,33 +216,20 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
                                 .commit();
                         break;
 
-                    case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_ANEMIA:
+
+                    default:
+
+                        //when in MalariaFragment, the next button takes to FirstNoneFragment
+                        DiagnosisSecondDepthTemplate secondDepthDisease = new DiagnosisSecondDepthTemplate();
+                        Bundle data = new Bundle();
+                        data.putInt(DiagnosisFragment.EXTRA_SECOND_DEPTH_POSITION, position);
+                        secondDepthDisease.setArguments(data);
 
                         getSupportFragmentManager()
                                 .beginTransaction()
                                 .addToBackStack(null)
-                                .add(R.id.fragment_container, new PreventionFragment())
+                                .add(R.id.fragment_container, secondDepthDisease)
                                 .commit();
-                        break;
-
-                    case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_HYPERTENSION:
-
-                        break;
-
-                    case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_RESPIRATORY:
-
-                        break;
-
-                    case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_THALASEMIA:
-
-                        break;
-
-                    case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_DIABETES:
-
-                        break;
-
-                    case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_OBESITY:
-
                         break;
                 }
                 break;
@@ -266,5 +255,15 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
                         .commit();
                 break;
         }
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
     }
 }
