@@ -132,7 +132,6 @@ public class MainActivity extends AppCompatActivity implements MainActivityCallb
     @Override
     public void cardSelected(int poisition, final View sharedView) {
 
-
         if (poisition == FRAGMENT_INDEX_PREVENTION) {
             YoYo.with(Techniques.Bounce).onEnd(new YoYo.AnimatorCallback() {
                 @Override

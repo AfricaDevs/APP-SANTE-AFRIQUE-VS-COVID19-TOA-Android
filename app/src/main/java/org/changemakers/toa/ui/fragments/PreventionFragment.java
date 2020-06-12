@@ -107,7 +107,6 @@ public class PreventionFragment extends BottomSheetDialogFragment {
         if (Build.VERSION.SDK_INT >= 21) {
             getActivity().getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
-
     }
 
     private void onItemSelected(View v, int position) {

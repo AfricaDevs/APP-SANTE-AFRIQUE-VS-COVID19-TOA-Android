@@ -41,9 +41,10 @@ public class DiagnosisFragment extends BottomSheetDialogFragment implements View
     public static final int DIAGNOSIS_OPTIONS_FIRST_DEPTH = 1;
     public static final int DIAGNOSIS_OPTIONS_FIRST_DEPTH_POSITION_SYMPTOMS = 1;
     public static final int DIAGNOSIS_OPTIONS_FIRST_DEPTH_POSITION_NO_SYMPTOM = 0;
+    public static final int DIAGNOSIS_OPTIONS_PREVENTION_DEPTH = 10;
 
     public static final int DIAGNOSIS_OPTIONS_SECOND_DEPTH = 2;
-    //The following positions follow the options alignment in /res/strings/@id -> diagnosis_first_options
+    //The following positions follow the options alignment in /res/strings/@id -> diagnosis_second_options
     public static final int DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_ANEMIA = 0;
     public static final int DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_HYPERTENSION = 1;
     public static final int DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_RESPIRATORY = 2;

@@ -46,7 +46,7 @@
                     android:layout_gravity="center_vertical"
                     android:fontFamily="monospace"
                     android:text="@string/main_diagnosis_toolbar_title"
-                    android:textSize="15sp"
+                    android:textSize="@dimen/tootlar_custom_title_text_size"
                     android:visibility="visible"
                     app:layout_collapseMode="pin" />
             </androidx.appcompat.widget.Toolbar>
@@ -59,6 +59,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="14dp"
+        android:background="@color/layouts_main_white_bg"
         android:layout_marginTop="@dimen/value_8dp"
         android:layout_marginRight="14dp"
         android:layout_marginBottom="@dimen/value_8dp"
@@ -79,55 +80,36 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:background="#F3EFEF"
+                android:orientation="vertical"
+                android:paddingLeft="8dp"
+                android:paddingTop="10dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="8dp">
 
 
-                <org.changemakers.toa.utils.ExpandableTextLayout
-                    android:id="@+id/expandable_text"
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/value_4dp"
+                    android:layout_marginBottom="@dimen/value_4dp"
+                    android:gravity="center"
+                    android:text="Souffrez-vous d’une des maladies reconnues suivantes ?" />
 
-                    android:background="#F3EFEF"
-                    android:paddingLeft="8dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="8dp"
-                    android:paddingBottom="8dp"
-                    app:ExpandableMaxLines="2">
+                <TextView
+                    android:id="@+id/expandable_id_show_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:scrollHorizontally="false"
+                    android:text="Indiquez et recevez aussitôt des informations adaptées sur ce qu’il est préférable de faire"
+                    android:textColor="@color/prevention_details_text_color"
+                    android:textSize="@dimen/app_main_text_size" />
 
-                    <TextView
-                        android:id="@+id/expandable_id_show_textview"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:ellipsize="end"
-                        android:scrollHorizontally="false"
-                        android:text="Avez-vous un ou plusieurs des symptômes suivants ? (cocher la ou les cases). recevez aussitôt des informations adaptées sur ce qu’il est préférable de faire"
-                        android:textColor="@color/prevention_details_text_color"
-                        android:textSize="@dimen/app_main_text_size" />
-
-                    <TextView
-                        android:id="@+id/expandable_id_more_textview"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="5dp"
-                        android:paddingEnd="25dp"
-                        android:paddingRight="25dp"
-                        android:paddingBottom="5dp"
-                        android:text="@string/text_expand"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="@dimen/app_main_text_size" />
-                </org.changemakers.toa.utils.ExpandableTextLayout>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
-
-        <TextView
-            style="@style/TextAppearance.AppCompat.Title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/value_4dp"
-            android:layout_marginBottom="@dimen/value_4dp"
-            android:gravity="center"
-            android:text="Souffrez-vous d’une des maladies reconnues suivantes ?" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
@@ -140,5 +122,25 @@
             android:clipToPadding="false"
             android:paddingTop="5dp" />
 
+        <RelativeLayout
+            android:id="@+id/btn_prevention"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="@dimen/value_10dp"
+            android:layout_marginRight="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/shape_btn_next_primary"
+                android:fontFamily="monospace"
+                android:gravity="center_horizontal"
+                android:padding="4dp"
+                android:text="@string/main_frag_prevention_title"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                app:autoSizeTextType="uniform" />
+        </RelativeLayout>
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

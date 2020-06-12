@@ -48,7 +48,7 @@ public class DiagnosisFirstNoneFragment extends BottomSheetDialogFragment {
                              @Nullable Bundle savedInstanceState) {
 
         binding = FragmentDiagnosisFirstNoneBinding.inflate(getLayoutInflater());
-        sDiagnosisOptions = getResources().getStringArray(R.array.diagnosis_first_options);
+        sDiagnosisOptions = getResources().getStringArray(R.array.diagnosis_second_options);
 
         try {
             ((AppCompatActivity) getActivity()).setSupportActionBar(binding.toolbar);
@@ -76,11 +76,8 @@ public class DiagnosisFirstNoneFragment extends BottomSheetDialogFragment {
             }
         });
 
-        binding.expandableText.setTextMaxLines(2);
-
         mAdapter = new DiagnosisRecyclerViewAdapter();
         mLayoutManager = new GridLayoutManager(getActivity(), 1, RecyclerView.VERTICAL, false);
-
 
 
         binding.recyclerView.setLayoutManager(mLayoutManager);

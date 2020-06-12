@@ -9,7 +9,7 @@
     <string name="alert_cant_handle">Erreur !</string>
     <string name="privacy_policies_link">https://africadevs.github.io/policies.html</string>
     <string name="main_frag_prevention_btn">COMMENT\nSE PROTEGER\nTOUS LES JOURS?</string>
-    <string name="main_frag_prevention_title">Comment se protéger tous les jours?</string>
+    <string name="main_frag_prevention_title">Comment se protéger?</string>
     <string name="transition_shared_main_activity_lottie_image">shared_lottie_icon</string>
     <string name="transition_splash_shared_logo">transition_shared_logo</string>
 
@@ -118,7 +118,7 @@ Nécessité d’un dispositif respectant les spécificités des rituels ancestra
             et les articulations
         </item>
     </array>
-    <array name="diagnosis_first_options">
+    <array name="diagnosis_second_options">
         <item>Drépanocytose</item>
         <item>Hypertension Artérielle</item>
         <item>Maladies respiratoires chroniques</item>

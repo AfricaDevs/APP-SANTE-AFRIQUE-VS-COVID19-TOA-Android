@@ -16,6 +16,8 @@ import org.changemakers.toa.databinding.ActivityFragmentBinding;
 import org.changemakers.toa.interfaces.ActivityCallbackInterface;
 import org.changemakers.toa.ui.fragments.DiagnosisFragment;
 import org.changemakers.toa.ui.fragments.PreventionFragment;
+import org.changemakers.toa.ui.fragments.diagnosis.DiagnosisFirstMalariaFragment;
+import org.changemakers.toa.ui.fragments.diagnosis.DiagnosisFirstNoneFragment;
 import org.changemakers.toa.ui.fragments.prevention.PreventionFoodFragment;
 import org.changemakers.toa.ui.fragments.prevention.PreventionFuneralFragment;
 import org.changemakers.toa.ui.fragments.prevention.PreventionGarbageFragment;
@@ -164,8 +166,84 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
     }
 
     @Override
-    public void onDiagnosisOptionSelected(View view, int hierarchie, int poisition) {
+    public void onDiagnosisOptionSelected(View view, int depth, int position) {
         //TODO handle
 
+        switch (depth) {
+            case DiagnosisFragment.DIAGNOSIS_OPTIONS_FIRST_DEPTH:
+                switch (position) {
+
+                    //if any symptom, then Malaria is suspected
+                    case DiagnosisFragment.DIAGNOSIS_OPTIONS_FIRST_DEPTH_POSITION_SYMPTOMS:
+
+                        DiagnosisFirstMalariaFragment fragmentMalaria = new DiagnosisFirstMalariaFragment();
+
+                        getSupportFragmentManager()
+                                .beginTransaction()
+                                .addToBackStack(null)
+                                .replace(R.id.fragment_container, fragmentMalaria)
+                                .commit();
+                        break;
+
+                    //NO SYMPTOMS
+                    case DiagnosisFragment.DIAGNOSIS_OPTIONS_FIRST_DEPTH_POSITION_NO_SYMPTOM:
+
+                        DiagnosisFirstNoneFragment fragmentNoSymptoms = new DiagnosisFirstNoneFragment();
+
+                        getSupportFragmentManager()
+                                .beginTransaction()
+                                .addToBackStack(null)
+                                .replace(R.id.fragment_container, fragmentNoSymptoms)
+                                .commit();
+                        break;
+
+
+                }
+                break;
+            case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH:
+
+                switch (position) {
+                    case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_ANEMIA:
+
+                        break;
+                    case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_HYPERTENSION:
+
+                        break;
+                    case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_RESPIRATORY:
+
+                        break;
+                    case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_THALASEMIA:
+
+                        break;
+                    case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_DIABETES:
+
+                        break;
+                    case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_OBESITY:
+
+                        break;
+                }
+                break;
+            case DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH:
+
+                switch (position) {
+                    case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_ANEMIA:
+
+                        break;
+                }
+
+                break;
+
+            //This special position will be used accros the App to load the prevention Fragment
+            case DiagnosisFragment.DIAGNOSIS_OPTIONS_PREVENTION_DEPTH:
+
+                //clear stack , back to depth 0
+                onBackPressed();
+
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .add(R.id.fragment_container, new PreventionFragment())
+                        .commit();
+                break;
+        }
     }
 }
