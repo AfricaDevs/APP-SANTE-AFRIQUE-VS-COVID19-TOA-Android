@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/layouts_main_white_bg"
+    android:minHeight="150dp"
+    android:paddingTop="@dimen/value_5dp"
+    android:paddingBottom="@dimen/value_10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="@dimen/value_8dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="@dimen/value_8dp"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_diagnosis_old_time_rounded_bg"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingTop="10dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp">
+
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/value_4dp"
+                android:layout_marginBottom="@dimen/value_4dp"
+                android:gravity="center"
+                android:text="Vous avez effectué un test de Covid-19 et il est positif?" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_yes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="@dimen/value_20dp"
+            android:layout_marginRight="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/shape_btn_next_red"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="Oui, j’ai eu un test positif au COVID-19"
+                android:textColor="@color/materialRedLight"
+                android:textSize="15sp"
+                app:autoSizeTextType="uniform" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btn_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="@dimen/value_15dp"
+            android:layout_marginRight="2dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/shape_btn_next_primary"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="Non, je n’ai pas eu de test positif au Covid-19 "
+                android:textColor="@color/colorAccent"
+                android:textSize="15sp"
+                app:autoSizeTextType="uniform" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -5,7 +5,6 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,26 +12,21 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.google.android.material.appbar.AppBarLayout;
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import org.changemakers.toa.R;
-import org.changemakers.toa.databinding.FragmentDiagnosisSecondDepthDeseaseTemplateBinding;
+import org.changemakers.toa.databinding.FragmentDiagnosisFourthDepthTestPositiveBinding;
 import org.changemakers.toa.interfaces.ActivityCallbackInterface;
 import org.changemakers.toa.ui.fragments.DiagnosisFragment;
 
-import static org.changemakers.toa.ui.fragments.DiagnosisFragment.EXTRA_SECOND_DEPTH_POSITION;
+public class DiagnosisFourthTestPositiveFragment extends Fragment implements View.OnClickListener {
 
-public class DiagnosisSecondDepthTemplate extends BottomSheetDialogFragment implements View.OnClickListener {
-
-    private static String[] sDiagnosisOptionsTitles;
-    private static String[] sDiagnosisOptionsDetails;
     ActivityCallbackInterface mCallback;
-    int secondDepthPosition = 0;
-    private FragmentDiagnosisSecondDepthDeseaseTemplateBinding binding;
+    private FragmentDiagnosisFourthDepthTestPositiveBinding binding;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -47,10 +41,8 @@ public class DiagnosisSecondDepthTemplate extends BottomSheetDialogFragment impl
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
-        binding = FragmentDiagnosisSecondDepthDeseaseTemplateBinding.inflate(getLayoutInflater());
+        binding = FragmentDiagnosisFourthDepthTestPositiveBinding.inflate(getLayoutInflater());
 
-        sDiagnosisOptionsTitles = getResources().getStringArray(R.array.diagnosis_second_options_details_titles);
-        sDiagnosisOptionsDetails = getResources().getStringArray(R.array.diagnosis_second_options_details);
 
         try {
             ((AppCompatActivity) getActivity()).setSupportActionBar(binding.toolbar);
@@ -78,17 +70,7 @@ public class DiagnosisSecondDepthTemplate extends BottomSheetDialogFragment impl
             }
         });
 
-        if (savedInstanceState == null) {
-            secondDepthPosition = getArguments().getInt(EXTRA_SECOND_DEPTH_POSITION, 0 /*initial diagnosis_second_options_details_titles list position*/);
-            binding.title.setText(sDiagnosisOptionsTitles[secondDepthPosition]);
-            binding.details.setText(sDiagnosisOptionsDetails[secondDepthPosition]);
-        } else {
-            secondDepthPosition = savedInstanceState.getInt(EXTRA_SECOND_DEPTH_POSITION, secondDepthPosition);
-            binding.title.setText(sDiagnosisOptionsTitles[secondDepthPosition]);
-            binding.details.setText(sDiagnosisOptionsDetails[secondDepthPosition]);
-        }
-        binding.btnNext.setOnClickListener(this);
-        //binding.btnPrevention.setOnClickListener(this);
+        binding.btnPrevention.setOnClickListener(this);
 
         return binding.getRoot();
     }
@@ -97,21 +79,19 @@ public class DiagnosisSecondDepthTemplate extends BottomSheetDialogFragment impl
     @Override
     public void onClick(final View v) {
         switch (v.getId()) {
-            case R.id.btn_next:
+
+            case R.id.btn_prevention:
 
                 if (mCallback != null) {
                     YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
                         @Override
                         public void call(Animator animator) {
-
-                            //When ANALYSIS continuation is clicked, we load according to the position in previous adpter
-                            Log.i("toa_log", secondDepthPosition + "");
-                            mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH, secondDepthPosition);
+                            mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_PREVENTION_DEPTH, 0);
                         }
                     }).playOn(v);
                 }
-                break;
 
+                break;
         }
     }
 
@@ -140,21 +120,4 @@ public class DiagnosisSecondDepthTemplate extends BottomSheetDialogFragment impl
             mCallback = null;
     }
 
-
-    @Override
-    public void onSaveInstanceState(@NonNull Bundle outState) {
-
-        outState.putInt(EXTRA_SECOND_DEPTH_POSITION, secondDepthPosition);
-
-        super.onSaveInstanceState(outState);
-    }
-
-    @Override
-    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
-        super.onViewStateRestored(savedInstanceState);
-
-        if (savedInstanceState != null) {
-            secondDepthPosition = savedInstanceState.getInt(EXTRA_SECOND_DEPTH_POSITION, secondDepthPosition);
-        }
-    }
 }

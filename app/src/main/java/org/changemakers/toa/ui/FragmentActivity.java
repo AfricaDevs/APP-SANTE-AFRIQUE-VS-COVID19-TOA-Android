@@ -17,9 +17,11 @@ import org.changemakers.toa.databinding.ActivityFragmentBinding;
 import org.changemakers.toa.interfaces.ActivityCallbackInterface;
 import org.changemakers.toa.ui.fragments.DiagnosisFragment;
 import org.changemakers.toa.ui.fragments.PreventionFragment;
+import org.changemakers.toa.ui.fragments.diagnosis.DiagnosisFirstDepthNoneFragment;
 import org.changemakers.toa.ui.fragments.diagnosis.DiagnosisFirstMalariaFragment;
-import org.changemakers.toa.ui.fragments.diagnosis.DiagnosisFirstNoneFragment;
+import org.changemakers.toa.ui.fragments.diagnosis.DiagnosisFourthTestPositiveFragment;
 import org.changemakers.toa.ui.fragments.diagnosis.DiagnosisSecondDepthTemplate;
+import org.changemakers.toa.ui.fragments.diagnosis.DiagnosisThirdDepthTestBootomFragment;
 import org.changemakers.toa.ui.fragments.prevention.PreventionFoodFragment;
 import org.changemakers.toa.ui.fragments.prevention.PreventionFuneralFragment;
 import org.changemakers.toa.ui.fragments.prevention.PreventionGarbageFragment;
@@ -190,7 +192,7 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
                     //NO SYMPTOMS
                     case DiagnosisFragment.DIAGNOSIS_OPTIONS_FIRST_DEPTH_POSITION_NO_SYMPTOM:
 
-                        DiagnosisFirstNoneFragment fragmentNoSymptoms = new DiagnosisFirstNoneFragment();
+                        DiagnosisFirstDepthNoneFragment fragmentNoSymptoms = new DiagnosisFirstDepthNoneFragment();
 
                         getSupportFragmentManager()
                                 .beginTransaction()
@@ -212,7 +214,7 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
                         getSupportFragmentManager()
                                 .beginTransaction()
                                 .addToBackStack(null)
-                                .add(R.id.fragment_container, new DiagnosisFirstNoneFragment())
+                                .add(R.id.fragment_container, new DiagnosisFirstDepthNoneFragment())
                                 .commit();
                         break;
 
@@ -236,8 +238,40 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
             case DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH:
 
                 switch (position) {
-                    case DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_ANEMIA:
 
+                    /*
+                    case DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH_DISEASES_DETAILS_TEMPLATE:
+                        DiagnosisThirdDepthTestBootomFragment fragment = new DiagnosisThirdDepthTestBootomFragment();
+                        fragment.show(getSupportFragmentManager(), null);
+                    break;
+
+                     */
+
+                    case DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH_TEST_POSITIVE:
+
+                        getSupportFragmentManager()
+                                .beginTransaction()
+                                .addToBackStack(null)
+                                .add(R.id.fragment_container, new DiagnosisFourthTestPositiveFragment())
+                                .commit();
+                        break;
+
+                    case DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH_TEST_NAGATIVE:
+
+                        getSupportFragmentManager()
+                                .beginTransaction()
+                                .addToBackStack(null)
+                                .add(R.id.fragment_container, new DiagnosisFourthTestPositiveFragment())
+                                .commit();
+                        break;
+
+                    default:
+                        //template options next
+                        DiagnosisThirdDepthTestBootomFragment fragment = new DiagnosisThirdDepthTestBootomFragment();
+                        Bundle data = new Bundle();
+                        data.putInt(DiagnosisFragment.EXTRA_SECOND_DEPTH_POSITION, position);
+                        fragment.setArguments(data);
+                        fragment.show(getSupportFragmentManager(), null);
                         break;
                 }
 

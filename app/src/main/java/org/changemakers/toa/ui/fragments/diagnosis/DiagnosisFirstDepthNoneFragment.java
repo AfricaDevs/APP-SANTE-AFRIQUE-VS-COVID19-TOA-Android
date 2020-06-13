@@ -26,7 +26,7 @@ import org.changemakers.toa.databinding.ItemDiagnosisNoSymptomsFragmentBinding;
 import org.changemakers.toa.interfaces.ActivityCallbackInterface;
 import org.changemakers.toa.ui.fragments.DiagnosisFragment;
 
-public class DiagnosisFirstNoneFragment extends BottomSheetDialogFragment implements View.OnClickListener {
+public class DiagnosisFirstDepthNoneFragment extends BottomSheetDialogFragment implements View.OnClickListener {
 
     private static String[] sDiagnosisOptions;
     ActivityCallbackInterface mCallback;

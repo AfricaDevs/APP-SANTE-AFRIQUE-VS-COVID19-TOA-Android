@@ -11,24 +11,20 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
-import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import org.changemakers.toa.R;
-import org.changemakers.toa.databinding.FragmentDiagnosisFirstMalariaBinding;
+import org.changemakers.toa.databinding.FragmentDiagnosisThirdTestBinding;
 import org.changemakers.toa.interfaces.ActivityCallbackInterface;
 import org.changemakers.toa.ui.fragments.DiagnosisFragment;
 
-import static org.changemakers.toa.ui.fragments.DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_MALARIA_NEXT;
-
-public class DiagnosisFirstMalariaFragment extends Fragment implements View.OnClickListener {
+public class DiagnosisThirdDepthTestBootomFragment extends BottomSheetDialogFragment implements View.OnClickListener {
 
     ActivityCallbackInterface mCallback;
-    private FragmentDiagnosisFirstMalariaBinding binding;
+    private FragmentDiagnosisThirdTestBinding binding;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,39 +39,10 @@ public class DiagnosisFirstMalariaFragment extends Fragment implements View.OnCl
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
-        binding = FragmentDiagnosisFirstMalariaBinding.inflate(getLayoutInflater());
+        binding = FragmentDiagnosisThirdTestBinding.inflate(getLayoutInflater());
 
-
-        try {
-            ((AppCompatActivity) getActivity()).setSupportActionBar(binding.toolbar);
-            ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-
-        binding.appBar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
-            @Override
-            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-                if (verticalOffset == 0) {
-                    //EXPANDED;
-
-                    binding.collapsingToolabar.setTitleEnabled(false);
-                } else if (Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange()) {
-
-                    //COLLAPSED;
-
-                    binding.collapsingToolabar.setTitleEnabled(false);
-                } else {
-
-                    //IDDLE
-                }
-            }
-        });
-
-        binding.expandableText.setTextMaxLines(3);
-
-        binding.btnNext.setOnClickListener(this);
-        binding.btnPrevention.setOnClickListener(this);
+        binding.btnNo.setOnClickListener(this);
+        binding.btnYes.setOnClickListener(this);
 
         return binding.getRoot();
     }
@@ -84,28 +51,31 @@ public class DiagnosisFirstMalariaFragment extends Fragment implements View.OnCl
     @Override
     public void onClick(final View v) {
         switch (v.getId()) {
-            case R.id.btn_next:
+            case R.id.btn_no:
+
+                dismiss();
 
                 if (mCallback != null) {
                     YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
                         @Override
                         public void call(Animator animator) {
-                            mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH, DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_MALARIA_NEXT);
+                            mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH, DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH_TEST_POSITIVE);
                         }
                     }).playOn(v);
                 }
                 break;
 
-            case R.id.btn_prevention:
+            case R.id.btn_yes:
+
+                dismiss();
 
                 if (mCallback != null) {
                     YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
                         @Override
                         public void call(Animator animator) {
-                            mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_PREVENTION_DEPTH, 0);
+                            mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH, DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH_TEST_NAGATIVE);
                         }
                     }).playOn(v);
-
                 }
 
                 break;
