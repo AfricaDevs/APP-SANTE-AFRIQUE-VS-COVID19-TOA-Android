@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layouts_main_white_bg">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolabar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:background="@color/layouts_main_white_bg"
+            app:contentScrim="@color/colorPrimary"
+            app:expandedTitleGravity="center_horizontal|top"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginTop="@dimen/toolbar_api_version_top_margin"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:title=" ">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="monospace"
+                    android:text="@string/main_diagnosis_toolbar_title"
+                    android:textSize="@dimen/tootlar_custom_title_text_size"
+                    android:visibility="visible"
+                    app:layout_collapseMode="pin" />
+            </androidx.appcompat.widget.Toolbar>
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/first_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="@dimen/value_8dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/layouts_main_white_bg"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="@dimen/value_6dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="@dimen/value_4dp"
+                app:cardCornerRadius="@dimen/main_cards_radius"
+                app:cardUseCompatPadding="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_diagnosis_old_time_rounded_bg"
+                    android:orientation="vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp">
+
+
+                    <TextView
+                        android:id="@+id/expandable_id_show_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:scrollHorizontally="false"
+                        android:text="@string/diagnosis_subtitle"
+                        android:textColor="@color/prevention_details_text_color"
+                        android:textSize="@dimen/app_main_text_size" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="@dimen/value_6dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="@dimen/value_4dp"
+                app:cardCornerRadius="@dimen/main_cards_radius"
+                app:cardUseCompatPadding="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:scrollHorizontally="false"
+                        android:text="Avez-vous, dans les 10 jours suivants des symptômes d’une grippe, des difficultés respiratoires, une impression de la poitrine qui serre, une impression de ne pas pouvoir respirer profondément ?"
+                        android:textColor="@color/prevention_details_text_color"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <RelativeLayout
+                android:id="@+id/btn_first_symptoms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="@dimen/value_10dp"
+                android:layout_marginRight="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/shape_btn_next_red"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="Oui, j’ai des difficultés à respirer"
+                    android:textColor="@color/materialRedLight"
+                    android:textSize="16sp"
+                    app:autoSizeTextType="uniform" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btn_first_no_syptom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="@dimen/value_10dp"
+                android:layout_marginRight="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/shape_btn_next_primary"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="Non, je n’ai pas des difficultés à respirer"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    app:autoSizeTextType="uniform" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/second_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="@dimen/value_8dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginBottom="12dp"
+            android:alpha="0"
+            android:background="@color/layouts_main_white_bg"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="@dimen/value_6dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="@dimen/value_4dp"
+                app:cardCornerRadius="@dimen/main_cards_radius"
+                app:cardUseCompatPadding="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_diagnosis_old_time_rounded_bg"
+                    android:orientation="vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:scrollHorizontally="false"
+                        android:text="@string/diagnosis_subtitle"
+                        android:textColor="@color/prevention_details_text_color"
+                        android:textSize="@dimen/app_main_text_size" />
+
+
+                    <TextView
+                        style="@style/TextAppearance.AppCompat.Title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_10dp"
+                        android:layout_marginBottom="@dimen/value_4dp"
+                        android:gravity="center"
+                        android:text="@string/diagnosis_fourth_test_negative_depth2_question" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="(cocher la ou les cases)"
+                        android:textColor="@color/prevention_details_text_color"
+                        android:textSize="@dimen/app_main_text_size" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/second_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/value_4dp"
+                android:layout_marginBottom="@dimen/value_6dp"
+                android:layout_weight="1"
+                android:background="@color/layouts_main_white_bg"
+                android:clipToPadding="false"
+                android:paddingTop="5dp"
+                android:paddingBottom="?actionBarSize" />
+
+            <RelativeLayout
+                android:id="@+id/btn_second_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="@dimen/value_10dp"
+                android:layout_marginRight="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/shape_btn_next_red"
+                    android:fontFamily="monospace"
+                    android:gravity="center_horizontal"
+                    android:padding="6dp"
+                    android:text="@string/btn_next_spaced"
+                    android:textColor="@color/materialRedLight"
+                    android:textSize="16sp"
+                    app:autoSizeTextType="uniform" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btn_second_no_syptom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/value_2dp"
+                android:layout_marginTop="@dimen/value_10dp"
+                android:layout_marginRight="@dimen/value_2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/shape_btn_next_primary"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="@string/diagnosis_none_of_symptoms"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    app:autoSizeTextType="uniform" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/third_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="@dimen/value_8dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginBottom="12dp"
+            android:alpha="0"
+            android:background="@color/layouts_main_white_bg"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="@dimen/value_6dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="@dimen/value_4dp"
+                app:cardCornerRadius="@dimen/main_cards_radius"
+                app:cardUseCompatPadding="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_diagnosis_old_time_rounded_bg"
+                    android:orientation="vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:scrollHorizontally="false"
+                        android:text="@string/diagnosis_subtitle"
+                        android:textColor="@color/prevention_details_text_color"
+                        android:textSize="@dimen/app_main_text_size" />
+
+
+                    <TextView
+                        style="@style/TextAppearance.AppCompat.Title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_10dp"
+                        android:layout_marginBottom="@dimen/value_4dp"
+                        android:gravity="center"
+                        android:text="@string/diagnosis_fourth_test_negative_depth3_question" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="(cocher la ou les cases)"
+                        android:textColor="@color/prevention_details_text_color"
+                        android:textSize="@dimen/app_main_text_size" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/third_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/value_4dp"
+                android:layout_marginBottom="@dimen/value_6dp"
+                android:layout_weight="1"
+                android:background="@color/layouts_main_white_bg"
+                android:clipToPadding="false"
+                android:paddingTop="5dp"
+                android:paddingBottom="?actionBarSize" />
+
+            <RelativeLayout
+                android:id="@+id/btn_third_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="@dimen/value_10dp"
+                android:layout_marginRight="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/shape_btn_next_red"
+                    android:fontFamily="monospace"
+                    android:gravity="center_horizontal"
+                    android:padding="6dp"
+                    android:text="@string/btn_next_spaced"
+                    android:textColor="@color/materialRedLight"
+                    android:textSize="16sp"
+                    app:autoSizeTextType="uniform" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btn_third_no_syptom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="@dimen/value_10dp"
+                android:layout_marginRight="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/shape_btn_next_primary"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="Non, j'ai aucun de ces symptômes"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    app:autoSizeTextType="uniform" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/fourth_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/covid_worms_bg" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#c0132845" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/value_10dp"
+                android:paddingBottom="@dimen/value_10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/diagnosis_shape_bg_green_rounded"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/TextAppearance.AppCompat.Title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/value_40dp"
+                        android:paddingBottom="@dimen/value_40dp"
+                        android:text="@string/diagnosis_result_negatif"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/btn_fourth_restart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/value_12dp"
+                    android:layout_marginBottom="@dimen/value_12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:background="@drawable/shape_btn_next_white"
+                        android:fontFamily="monospace"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:text="Récommencer le diagnostic"
+                        android:textColor="@color/white"
+                        app:autoSizeTextType="uniform" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/btn_fourth_prevention"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:background="@drawable/shape_btn_next_white"
+                        android:fontFamily="monospace"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:text="Comment continuer à  me protéger?"
+                        android:textColor="@color/white"
+                        app:autoSizeTextType="uniform" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/value_15dp"
+                    android:layout_marginBottom="@dimen/value_10dp"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:text="Ne baissez pas la garde aussi longtemps la pandémie est active dans votre Pays de Résidence"
+                    android:textColor="@color/white"
+                    app:autoSizeTextType="uniform" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:padding="@dimen/value_10dp">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/lottie_covid_mask" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/lottie_covid_hands" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal">
+
+                        <com.airbnb.lottie.LottieAnimationView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:lottie_autoPlay="true"
+                            app:lottie_loop="true"
+                            app:lottie_rawRes="@raw/lottie_social_distancing" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

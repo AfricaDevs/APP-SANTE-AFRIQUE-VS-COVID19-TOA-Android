@@ -19,6 +19,7 @@ import org.changemakers.toa.ui.fragments.DiagnosisFragment;
 import org.changemakers.toa.ui.fragments.PreventionFragment;
 import org.changemakers.toa.ui.fragments.diagnosis.DiagnosisFirstDepthNoneFragment;
 import org.changemakers.toa.ui.fragments.diagnosis.DiagnosisFirstMalariaFragment;
+import org.changemakers.toa.ui.fragments.diagnosis.DiagnosisFourthTestNegativeFragment;
 import org.changemakers.toa.ui.fragments.diagnosis.DiagnosisFourthTestPositiveFragment;
 import org.changemakers.toa.ui.fragments.diagnosis.DiagnosisSecondDepthTemplate;
 import org.changemakers.toa.ui.fragments.diagnosis.DiagnosisThirdDepthTestBootomFragment;
@@ -29,6 +30,8 @@ import org.changemakers.toa.ui.fragments.prevention.PreventionHandsFragment;
 import org.changemakers.toa.ui.fragments.prevention.PreventionMaskFragment;
 import org.changemakers.toa.ui.fragments.prevention.PreventionMovementFragment;
 import org.changemakers.toa.ui.fragments.prevention.PreventionWaterFragment;
+
+import static org.changemakers.toa.ui.fragments.DiagnosisFragment.DIAGNOSIS_OPTIONS_FOURTH_DEPTH;
 
 public class FragmentActivity extends AppCompatActivity implements ActivityCallbackInterface {
 
@@ -214,7 +217,7 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
                         getSupportFragmentManager()
                                 .beginTransaction()
                                 .addToBackStack(null)
-                                .add(R.id.fragment_container, new DiagnosisFirstDepthNoneFragment())
+                                .replace(R.id.fragment_container, new DiagnosisFirstDepthNoneFragment())
                                 .commit();
                         break;
 
@@ -230,7 +233,7 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
                         getSupportFragmentManager()
                                 .beginTransaction()
                                 .addToBackStack(null)
-                                .add(R.id.fragment_container, secondDepthDisease)
+                                .replace(R.id.fragment_container, secondDepthDisease)
                                 .commit();
                         break;
                 }
@@ -252,7 +255,7 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
                         getSupportFragmentManager()
                                 .beginTransaction()
                                 .addToBackStack(null)
-                                .add(R.id.fragment_container, new DiagnosisFourthTestPositiveFragment())
+                                .replace(R.id.fragment_container, new DiagnosisFourthTestPositiveFragment())
                                 .commit();
                         break;
 
@@ -261,31 +264,57 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
                         getSupportFragmentManager()
                                 .beginTransaction()
                                 .addToBackStack(null)
-                                .add(R.id.fragment_container, new DiagnosisFourthTestPositiveFragment())
+                                .replace(R.id.fragment_container, new DiagnosisFourthTestNegativeFragment())
                                 .commit();
                         break;
 
                     default:
                         //template options next
                         DiagnosisThirdDepthTestBootomFragment fragment = new DiagnosisThirdDepthTestBootomFragment();
+
                         Bundle data = new Bundle();
                         data.putInt(DiagnosisFragment.EXTRA_SECOND_DEPTH_POSITION, position);
                         fragment.setArguments(data);
+
                         fragment.show(getSupportFragmentManager(), null);
                         break;
                 }
-
                 break;
 
-            //This special position will be used accros the App to load the prevention Fragment
-            case DiagnosisFragment.DIAGNOSIS_OPTIONS_PREVENTION_DEPTH:
+            case DIAGNOSIS_OPTIONS_FOURTH_DEPTH:
 
                 //clear stack , back to depth 0
                 onBackPressed();
 
                 getSupportFragmentManager()
                         .beginTransaction()
-                        .add(R.id.fragment_container, new PreventionFragment())
+                        .replace(R.id.fragment_container, new PreventionFragment())
+                        .commit();
+                break;
+
+            //This special position will be used accros the App to load the prevention Fragment
+            case DiagnosisFragment.DIAGNOSIS_OPTIONS_PREVENTION_DEPTH:
+
+                if (position == DIAGNOSIS_OPTIONS_FOURTH_DEPTH)
+                    getSupportFragmentManager().popBackStack();
+
+                //clear stack , back to depth 0
+                onBackPressed();
+
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragment_container, new PreventionFragment())
+                        .commit();
+                break;
+
+            case DiagnosisFragment.DIAGNOSIS_OPTIONS_RESTART:
+
+                //clear stack , back to depth 0
+                onBackPressed();
+
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragment_container, new DiagnosisFragment())
                         .commit();
                 break;
         }

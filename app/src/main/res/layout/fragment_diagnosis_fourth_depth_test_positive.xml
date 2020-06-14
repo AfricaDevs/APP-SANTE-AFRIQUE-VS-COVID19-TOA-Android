@@ -46,7 +46,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:fontFamily="monospace"
-                    android:text="@string/main_diagnosis_toolbar_title"
+                    android:text="@string/resul"
                     android:textSize="@dimen/tootlar_custom_title_text_size"
                     android:visibility="visible"
                     app:layout_collapseMode="pin" />

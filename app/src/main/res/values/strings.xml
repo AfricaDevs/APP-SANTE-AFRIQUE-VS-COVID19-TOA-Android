@@ -94,21 +94,42 @@ Nécessité d’un dispositif respectant les spécificités des rituels ancestra
     <string name="prevention_food_aliments"><![CDATA[Les aliments à privilégier sont ceux qui contiennent:\n<b>Vitamine C</b>2-4 grammes/ jour pendant 10 jours<br/><br/>Vitamine D<br/>1500-2000 UI/J<br/>Vitamine A<br/>Vitamine E</br/>Zinc  30 mg par jour<br/>pendant 10 jours<br/>à jeun à distance des repas ]]></string>
     <string name="main_diagnosis_toolbar_title">ANALYZSEZ VOS SYMPTOMES</string>
     <string name="main_diagnosis_title">ANALYZSEZ\nVOS SYMPTOMES</string>
-    <string name="diagnosis_subtitle">recevez aussitôt des informations adaptées sur ce qu’il est préférable de faire</string>
+    <string name="diagnosis_subtitle">recevez aussitôt des informations adaptées sur ce qu\’il est préférable de faire</string>
     <string name="btn_next_spaced">S U I V A N T</string>
     <string name="btn_next_no_choice">AUCUN SYMPTOME</string>
     <string name="diagnosis_continue_analysis">Continuer à analyser vos symptômes</string>
+    <string name="snack_check_one_case">Veuillez cocher une case pour continuer</string>
+    <string name="diagnosis_fourth_test_negative_depth3_question">Avez-vous au moins 3 des symptômes suivants ?</string>
+    <string name="diagnosis_fourth_test_negative_depth2_question">Avez-vous au moins un des symptômes suivants ?</string>
+    <string name="diagnosis_none_of_symptoms">Non, j\'ai aucun de ces symptômes</string>
+    <string name="diagnosis_none_of_diseases">Non, Aucune</string>
+    <string name="diagnosis_result_negatif">Votre diagnostic est négatif</string>
 
     <array name="prevention_options">
         <item>Pourquoi, quand et comment se laver les mains?</item>
         <item>Pourquoi, quand et comment fabriquer, porter et laver un masque?</item>
         <item>Pourquoi, quand et comment se déplacer?</item>
         <item>Que puis-je manger pour aider mon organisme à lutter?</item>
-        <item>Comment je gère l’eau?</item>
+        <item>Comment je gère l\’eau?</item>
         <item>Comment je gère les déchets ménagers?</item>
-        <item>Comment je gère les obsèques d’une personne?</item>
+        <item>Comment je gère les obsèques d\’une personne?</item>
     </array>
 
+    <array name="diagnosis_options_fourth_depth2">
+        <item>Perte d\'odorat</item>
+        <item>Perte du goût</item>
+        <item>Fièvre élevée (dès 38,5°C)</item>
+    </array>
+    <array name="diagnosis_options_fourth_depth3">
+        <item>Une toux, mal de gorge, rhume</item>
+        <item>Forte fatigue</item>
+        <item>souffle court</item>
+        <item>Des nausées, vomissements, diarrhées</item>
+        <item>Des maux de tête, migraine</item>
+        <item>Douleur dans les muscles et articulations</item>
+        <item>Yeux gonflés, humides, rouges</item>
+        <item>Rougeurs sur la peau, rash cutané, petites vésicules</item>
+    </array>
     <array name="diagnosis_options">
         <item>Des maux de tête</item>
         <item>Une forte fatigue</item>

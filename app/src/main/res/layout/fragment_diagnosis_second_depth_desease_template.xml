@@ -62,7 +62,7 @@
         android:layout_marginLeft="14dp"
         android:layout_marginTop="@dimen/value_8dp"
         android:layout_marginRight="14dp"
-        android:layout_marginBottom="@dimen/value_8dp"
+        android:layout_marginBottom="12dp"
         android:background="@color/layouts_main_white_bg"
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
@@ -71,6 +71,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_marginLeft="2dp"
             android:layout_marginTop="@dimen/value_6dp"
             android:layout_marginRight="2dp"
@@ -80,8 +81,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#F3EFEF"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_diagnosis_old_time_rounded_bg"
                 android:orientation="vertical"
                 android:paddingLeft="8dp"
                 android:paddingTop="10dp"
@@ -97,28 +98,29 @@
                     android:layout_marginTop="@dimen/value_4dp"
                     android:layout_marginBottom="@dimen/value_4dp"
                     android:gravity="center" />
+
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/value_4dp"
+                    android:layout_marginBottom="@dimen/value_6dp"
+                    android:clipToPadding="false"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="17sp" />
+                </androidx.core.widget.NestedScrollView>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
-        <androidx.core.widget.NestedScrollView
-            android:id="@+id/recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/value_4dp"
-            android:layout_marginBottom="@dimen/value_6dp"
-            android:layout_weight="1"
-            android:clipToPadding="false"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp">
-
-            <TextView
-                android:id="@+id/details"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:textSize="17sp" />
-        </androidx.core.widget.NestedScrollView>
 
         <RelativeLayout
             android:id="@+id/btn_next"

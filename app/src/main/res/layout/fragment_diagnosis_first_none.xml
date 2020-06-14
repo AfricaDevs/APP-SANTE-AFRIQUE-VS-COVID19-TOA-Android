@@ -63,7 +63,7 @@
         android:background="@color/layouts_main_white_bg"
         android:layout_marginTop="@dimen/value_8dp"
         android:layout_marginRight="14dp"
-        android:layout_marginBottom="@dimen/value_8dp"
+        android:layout_marginBottom="12dp"
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
@@ -124,7 +124,7 @@
             android:paddingTop="5dp" />
 
         <RelativeLayout
-            android:id="@+id/btn_prevention"
+            android:id="@+id/btn_no_disease"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"
@@ -134,12 +134,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="38dp"
-                android:background="@drawable/shape_btn_next_primary"
+                android:background="@drawable/shape_btn_next_red"
                 android:fontFamily="monospace"
                 android:gravity="center_horizontal"
                 android:padding="6dp"
-                android:text="@string/main_frag_prevention_title"
-                android:textColor="@color/colorAccent"
+                android:text="@string/diagnosis_none_of_diseases"
+                android:textColor="@color/materialRedLight"
                 android:textSize="16sp"
                 app:autoSizeTextType="uniform" />
         </RelativeLayout>

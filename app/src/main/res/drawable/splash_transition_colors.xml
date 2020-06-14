@@ -3,5 +3,5 @@
     <!-- The drawables used here can be solid colors, gradients, shapes, images, etc. -->
 
     <item android:drawable="@color/tboxBlue" />
-    <item android:drawable="@color/colorPrimary" />
+    <item android:drawable="@color/colorPrimaryDark" />
 </transition>

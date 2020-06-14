@@ -85,7 +85,7 @@ public class DiagnosisFirstDepthNoneFragment extends BottomSheetDialogFragment i
         binding.recyclerView.setAdapter(mAdapter);
         binding.recyclerView.setHasFixedSize(true);
 
-        binding.btnPrevention.setOnClickListener(this);
+        binding.btnNoDisease.setOnClickListener(this);
 
         return binding.getRoot();
     }
@@ -104,13 +104,13 @@ public class DiagnosisFirstDepthNoneFragment extends BottomSheetDialogFragment i
     @Override
     public void onClick(final View v) {
         switch (v.getId()) {
-            case R.id.btn_prevention:
+            case R.id.btn_no_disease:
 
                 if (mCallback != null) {
                     YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
                         @Override
                         public void call(Animator animator) {
-                            mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_PREVENTION_DEPTH, 0);
+                            mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH, 0);
                         }
                     }).playOn(v);
 

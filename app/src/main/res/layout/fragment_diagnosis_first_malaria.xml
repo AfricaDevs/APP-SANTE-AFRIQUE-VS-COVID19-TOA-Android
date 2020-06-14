@@ -122,27 +122,33 @@
 
         </androidx.cardview.widget.CardView>
 
-        <androidx.core.widget.NestedScrollView
-            android:id="@+id/recycler_view"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/value_4dp"
-            android:layout_marginBottom="@dimen/value_6dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="@dimen/value_6dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="@dimen/value_4dp"
             android:layout_weight="1"
-            android:clipToPadding="false"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp">
+            app:cardCornerRadius="@dimen/main_cards_radius"
+            app:cardUseCompatPadding="false">
 
-            <TextView
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/recycler_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="Vous avez un ou plusieurs symptômes du paludisme,
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/value_8dp"
+                    android:text="Vous avez un ou plusieurs symptômes du paludisme,
 il est nécessaire que vous consultiez un médecin qui pourra vous faire un test et vous donner les médicaments adéquats.
 \n\nSi vous avez déjà consulté et effectué ce test du paludisme et qu’il s’est révélé négatif alors cliquez sur le bouton ci-dessous."
-                android:textSize="17sp" />
-        </androidx.core.widget.NestedScrollView>
-
+                    android:textSize="17sp" />
+            </androidx.core.widget.NestedScrollView>
+        </androidx.cardview.widget.CardView>
         <RelativeLayout
             android:id="@+id/btn_next"
             android:layout_width="match_parent"

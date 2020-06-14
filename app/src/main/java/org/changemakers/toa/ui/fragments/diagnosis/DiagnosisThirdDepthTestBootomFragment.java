@@ -53,29 +53,32 @@ public class DiagnosisThirdDepthTestBootomFragment extends BottomSheetDialogFrag
         switch (v.getId()) {
             case R.id.btn_no:
 
-                dismiss();
 
-                if (mCallback != null) {
-                    YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
-                        @Override
-                        public void call(Animator animator) {
-                            mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH, DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH_TEST_POSITIVE);
-                        }
-                    }).playOn(v);
-                }
-                break;
-
-            case R.id.btn_yes:
-
-                dismiss();
 
                 if (mCallback != null) {
                     YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
                         @Override
                         public void call(Animator animator) {
                             mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH, DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH_TEST_NAGATIVE);
+                            dismiss();
                         }
                     }).playOn(v);
+
+                }
+
+                break;
+
+            case R.id.btn_yes:
+
+                if (mCallback != null) {
+                    YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
+                        @Override
+                        public void call(Animator animator) {
+                            mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH, DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH_TEST_POSITIVE);
+                            dismiss();
+                        }
+                    }).playOn(v);
+
                 }
 
                 break;

@@ -23,6 +23,8 @@ import org.changemakers.toa.databinding.FragmentDiagnosisFourthDepthTestPositive
 import org.changemakers.toa.interfaces.ActivityCallbackInterface;
 import org.changemakers.toa.ui.fragments.DiagnosisFragment;
 
+import static org.changemakers.toa.ui.fragments.DiagnosisFragment.DIAGNOSIS_OPTIONS_FOURTH_DEPTH;
+
 public class DiagnosisFourthTestPositiveFragment extends Fragment implements View.OnClickListener {
 
     ActivityCallbackInterface mCallback;
@@ -86,7 +88,7 @@ public class DiagnosisFourthTestPositiveFragment extends Fragment implements Vie
                     YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
                         @Override
                         public void call(Animator animator) {
-                            mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_PREVENTION_DEPTH, 0);
+                            mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_PREVENTION_DEPTH, DIAGNOSIS_OPTIONS_FOURTH_DEPTH /* this param will fire an additionall onBackPressed()*/);
                         }
                     }).playOn(v);
                 }
