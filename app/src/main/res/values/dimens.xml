@@ -52,4 +52,5 @@
     <dimen name="value_18sp">18sp</dimen>
     <dimen name="tootlar_custom_title_text_size">16sp</dimen>
     <dimen name="value_12dp">12dp</dimen>
+    <dimen name="diagnosis_bottom_sheet_corner_radius">10dp</dimen>
 </resources>
