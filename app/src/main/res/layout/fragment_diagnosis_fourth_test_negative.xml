@@ -57,6 +57,39 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
+
+    <RelativeLayout
+        android:id="@+id/result_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/covid_worms_bg" />
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/covid_worms_bg" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ce132845" />
+    </RelativeLayout>
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -135,7 +168,7 @@
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
                         android:scrollHorizontally="false"
-                        android:text="Avez-vous, dans les 10 jours suivants des symptômes d’une grippe, des difficultés respiratoires, une impression de la poitrine qui serre, une impression de ne pas pouvoir respirer profondément ?"
+                        android:text="@string/diagnosis_ten_days_trip"
                         android:textColor="@color/prevention_details_text_color"
                         android:textSize="17sp" />
 
@@ -159,7 +192,7 @@
                     android:fontFamily="monospace"
                     android:gravity="center"
                     android:padding="6dp"
-                    android:text="Oui, j’ai des difficultés à respirer"
+                    android:text="@string/diagnosis_respiratory_difficulties"
                     android:textColor="@color/materialRedLight"
                     android:textSize="16sp"
                     app:autoSizeTextType="uniform" />
@@ -180,7 +213,7 @@
                     android:fontFamily="monospace"
                     android:gravity="center"
                     android:padding="6dp"
-                    android:text="Non, je n’ai pas des difficultés à respirer"
+                    android:text="@string/diagnosis_no_respiratory_difficulties"
                     android:textColor="@color/colorAccent"
                     android:textSize="16sp"
                     app:autoSizeTextType="uniform" />
@@ -245,7 +278,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="(cocher la ou les cases)"
+                        android:text="@string/diagnosis_check_cases"
                         android:textColor="@color/prevention_details_text_color"
                         android:textSize="@dimen/app_main_text_size" />
 
@@ -366,7 +399,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="(cocher la ou les cases)"
+                        android:text="@string/diagnosis_check_cases"
                         android:textColor="@color/prevention_details_text_color"
                         android:textSize="@dimen/app_main_text_size" />
 
@@ -422,156 +455,149 @@
                     android:fontFamily="monospace"
                     android:gravity="center"
                     android:padding="6dp"
-                    android:text="Non, j'ai aucun de ces symptômes"
+                    android:text="@string/diagnosis_btn_none_symptoms"
                     android:textColor="@color/colorAccent"
                     android:textSize="16sp"
                     app:autoSizeTextType="uniform" />
             </RelativeLayout>
         </LinearLayout>
 
-        <RelativeLayout
+        <androidx.core.widget.NestedScrollView
             android:id="@+id/fourth_screen"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:visibility="gone">
 
-            <com.flaviofaria.kenburnsview.KenBurnsView
-                android:id="@+id/image"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/covid_worms_bg" />
+                android:layout_height="match_parent">
 
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#c0132845" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="12dp"
-                android:orientation="vertical"
-                android:paddingTop="@dimen/value_10dp"
-                android:paddingBottom="@dimen/value_10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/diagnosis_shape_bg_green_rounded"
-                    android:orientation="vertical">
+                    android:layout_height="match_parent"
+                    android:layout_margin="12dp"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/value_10dp"
+                    android:paddingBottom="@dimen/value_10dp">
 
-                    <TextView
-                        style="@style/TextAppearance.AppCompat.Title"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:paddingTop="@dimen/value_40dp"
-                        android:paddingBottom="@dimen/value_40dp"
-                        android:text="@string/diagnosis_result_negatif"
-                        android:textColor="@color/white" />
+                        android:background="@drawable/diagnosis_shape_bg_green_rounded"
+                        android:orientation="vertical">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/TextAppearance.AppCompat.Title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/value_40dp"
+                            android:paddingBottom="@dimen/value_40dp"
+                            android:text="@string/diagnosis_result_negatif"
+                            android:textColor="@color/white" />
 
-                <RelativeLayout
-                    android:id="@+id/btn_fourth_restart"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/value_12dp"
-                    android:layout_marginBottom="@dimen/value_12dp">
+                    </LinearLayout>
 
-                    <TextView
+                    <RelativeLayout
+                        android:id="@+id/btn_fourth_restart"
                         android:layout_width="match_parent"
-                        android:layout_height="42dp"
-                        android:background="@drawable/shape_btn_next_white"
-                        android:fontFamily="monospace"
-                        android:gravity="center"
-                        android:padding="6dp"
-                        android:text="Récommencer le diagnostic"
-                        android:textColor="@color/white"
-                        app:autoSizeTextType="uniform" />
-                </RelativeLayout>
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_12dp"
+                        android:layout_marginBottom="@dimen/value_12dp">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:background="@drawable/shape_btn_next_white"
+                            android:fontFamily="monospace"
+                            android:gravity="center"
+                            android:padding="6dp"
+                            android:text="@string/diagnosis_restart"
+                            android:textColor="@color/white"
+                            app:autoSizeTextType="uniform" />
+                    </RelativeLayout>
 
-                    <TextView
+                    <RelativeLayout
                         android:id="@+id/btn_fourth_prevention"
                         android:layout_width="match_parent"
-                        android:layout_height="42dp"
-                        android:background="@drawable/shape_btn_next_white"
-                        android:fontFamily="monospace"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:background="@drawable/shape_btn_next_white"
+                            android:fontFamily="monospace"
+                            android:gravity="center"
+                            android:padding="6dp"
+                            android:text="@string/diagnosis_prevention_cotinuation"
+                            android:textColor="@color/white"
+                            app:autoSizeTextType="uniform" />
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/value_15dp"
+                        android:layout_marginBottom="@dimen/value_10dp"
                         android:gravity="center"
-                        android:padding="6dp"
-                        android:text="Comment continuer à  me protéger?"
-                        android:textColor="@color/white"
-                        app:autoSizeTextType="uniform" />
-                </RelativeLayout>
+                        android:padding="1dp"
+                        android:text="@string/diagnosis_result_negative_warning"
+                        android:textColor="@color/white" />
 
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/value_15dp"
-                    android:layout_marginBottom="@dimen/value_10dp"
-                    android:gravity="center"
-                    android:padding="1dp"
-                    android:text="Ne baissez pas la garde aussi longtemps la pandémie est active dans votre Pays de Résidence"
-                    android:textColor="@color/white"
-                    app:autoSizeTextType="uniform" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="3">
-
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:padding="@dimen/value_10dp">
+                        android:layout_height="100dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
 
-                        <com.airbnb.lottie.LottieAnimationView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            app:lottie_autoPlay="true"
-                            app:lottie_loop="true"
-                            app:lottie_rawRes="@raw/lottie_covid_mask" />
-                    </RelativeLayout>
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:padding="@dimen/value_10dp">
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal">
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true"
+                                app:lottie_rawRes="@raw/lottie_covid_mask" />
+                        </RelativeLayout>
 
-                        <com.airbnb.lottie.LottieAnimationView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            app:lottie_autoPlay="true"
-                            app:lottie_loop="true"
-                            app:lottie_rawRes="@raw/lottie_covid_hands" />
-                    </RelativeLayout>
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal">
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal">
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true"
+                                app:lottie_rawRes="@raw/lottie_covid_hands" />
+                        </RelativeLayout>
 
-                        <com.airbnb.lottie.LottieAnimationView
+                        <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            app:lottie_autoPlay="true"
-                            app:lottie_loop="true"
-                            app:lottie_rawRes="@raw/lottie_social_distancing" />
-                    </RelativeLayout>
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal">
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true"
+                                app:lottie_rawRes="@raw/lottie_social_distancing" />
+                        </RelativeLayout>
+                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
-        </RelativeLayout>
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
     </FrameLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

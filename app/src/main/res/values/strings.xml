@@ -104,6 +104,19 @@ Nécessité d’un dispositif respectant les spécificités des rituels ancestra
     <string name="diagnosis_none_of_symptoms">Non, j\'ai aucun de ces symptômes</string>
     <string name="diagnosis_none_of_diseases">Non, Aucune</string>
     <string name="diagnosis_result_negatif">Votre diagnostic est négatif</string>
+    <string name="diagnisis_result_toolbar_title">VOTRE RÉSULTAT</string>
+    <string name="diagnosis_result_positive_btn_prevention">J’aide mon organisme à se défendre contre la maladie</string>
+    <string name="diagosis_result_positive_advice">Pensez à protéger vos proches et concitoyens en observant les mésures barrières</string>
+    <string name="diagnosis_prevention_cotinuation">Comment continuer à me protéger?</string>
+    <string name="diagnosis_result_positive">Consultez immédiatement un médecin ou un centre de soin Covid-19 le plus proche. Ou téléphonez au numéro dédié pour le Covid 19.</string>
+    <string name="diagnosis_btn_none_symptoms">Non, j\'ai aucun de ces symptômes</string>
+    <string name="diagnosis_restart">Récommencer le diagnostic</string>
+    <string name="diagnosis_result_negative_warning">Ne baissez pas la garde aussi longtemps que la pandémie est active dans le Pays où vous êtes</string>
+    <string name="diagnosis_check_cases">(cocher la ou les cases)</string>
+    <string name="diagnosis_no_respiratory_difficulties">Non, je n’ai pas des difficultés à respirer</string>
+    <string name="diagnosis_respiratory_difficulties">Oui, j’ai des difficultés à respirer</string>
+    <string name="diagnosis_ten_days_trip">Avez-vous, dans les 10 jours suivants des symptômes d’une grippe, des difficultés respiratoires, une impression de la poitrine qui serre, une impression de ne pas pouvoir respirer profondément ?</string>
+    <string name="diagnosis_result_positive_restart">Récommencer mon diagnostic COVID-19</string>
 
     <array name="prevention_options">
         <item>Pourquoi, quand et comment se laver les mains?</item>
