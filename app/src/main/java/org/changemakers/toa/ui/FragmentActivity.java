@@ -295,11 +295,12 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
             //This special position will be used accros the App to load the prevention Fragment
             case DiagnosisFragment.DIAGNOSIS_OPTIONS_PREVENTION_DEPTH:
 
-                if (position == DIAGNOSIS_OPTIONS_FOURTH_DEPTH)
-                    getSupportFragmentManager().popBackStack();
+                int stack = getSupportFragmentManager().getBackStackEntryCount();
 
                 //clear stack , back to depth 0
-                onBackPressed();
+                for (int j = 0; j < stack; j++) {
+                    onBackPressed();
+                }
 
                 getSupportFragmentManager()
                         .beginTransaction()

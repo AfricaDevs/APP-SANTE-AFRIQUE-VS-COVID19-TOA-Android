@@ -49,10 +49,14 @@ public class DiagnosisThirdDepthTestBootomFragment extends BottomSheetDialogFrag
 
 
     @Override
+    public int getTheme() {
+        return R.style.BottomSheetDialogTheme;
+    }
+
+    @Override
     public void onClick(final View v) {
         switch (v.getId()) {
             case R.id.btn_no:
-
 
 
                 if (mCallback != null) {

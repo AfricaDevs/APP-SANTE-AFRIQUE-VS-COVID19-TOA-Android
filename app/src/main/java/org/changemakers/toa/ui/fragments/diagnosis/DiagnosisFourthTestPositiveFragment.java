@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.ViewPropertyAnimatorListener;
 import androidx.fragment.app.Fragment;
 
 import com.daimajia.androidanimations.library.Techniques;
@@ -22,8 +24,6 @@ import org.changemakers.toa.R;
 import org.changemakers.toa.databinding.FragmentDiagnosisFourthDepthTestPositiveBinding;
 import org.changemakers.toa.interfaces.ActivityCallbackInterface;
 import org.changemakers.toa.ui.fragments.DiagnosisFragment;
-
-import static org.changemakers.toa.ui.fragments.DiagnosisFragment.DIAGNOSIS_OPTIONS_FOURTH_DEPTH;
 
 public class DiagnosisFourthTestPositiveFragment extends Fragment implements View.OnClickListener {
 
@@ -72,7 +72,29 @@ public class DiagnosisFourthTestPositiveFragment extends Fragment implements Vie
             }
         });
 
-        binding.btnPrevention.setOnClickListener(this);
+        binding.btnFourthRestart.setOnClickListener(this);
+        binding.btnFourthPrevention.setOnClickListener(this);
+        binding.btnFourthPreventionOthers.setOnClickListener(this);
+
+        binding.getRoot().setTranslationY(-getResources().getDisplayMetrics().heightPixels);
+        binding.toolbarTitle.setText(getResources().getString(R.string.diagnisis_result_toolbar_title));
+
+        ViewCompat.animate(binding.getRoot()).translationY(0).setDuration(1000).setListener(new ViewPropertyAnimatorListener() {
+            @Override
+            public void onAnimationStart(View view) {
+            }
+
+            @Override
+            public void onAnimationEnd(View view) {
+
+            }
+
+            @Override
+            public void onAnimationCancel(View view) {
+
+            }
+        });
+
 
         return binding.getRoot();
     }
@@ -82,17 +104,42 @@ public class DiagnosisFourthTestPositiveFragment extends Fragment implements Vie
     public void onClick(final View v) {
         switch (v.getId()) {
 
-            case R.id.btn_prevention:
 
-                if (mCallback != null) {
-                    YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
-                        @Override
-                        public void call(Animator animator) {
-                            mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_PREVENTION_DEPTH, DIAGNOSIS_OPTIONS_FOURTH_DEPTH /* this param will fire an additionall onBackPressed()*/);
-                        }
-                    }).playOn(v);
-                }
+            case R.id.btn_fourth_restart:
 
+                YoYo.with(Techniques.BounceInDown).onEnd(new YoYo.AnimatorCallback() {
+                    @Override
+                    public void call(Animator animator) {
+
+                        if (mCallback != null)
+                            mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_RESTART, 0);
+                    }
+                }).playOn(v);
+                break;
+
+            case R.id.btn_fourth_prevention:
+
+                YoYo.with(Techniques.BounceInDown).onEnd(new YoYo.AnimatorCallback() {
+                    @Override
+                    public void call(Animator animator) {
+
+                        if (mCallback != null)
+                            mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_PREVENTION_DEPTH, R.id.btn_fourth_prevention);
+
+                    }
+                }).playOn(v);
+                break;
+            case R.id.btn_fourth_prevention_others:
+
+                YoYo.with(Techniques.BounceInDown).onEnd(new YoYo.AnimatorCallback() {
+                    @Override
+                    public void call(Animator animator) {
+
+                        if (mCallback != null)
+                            mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_PREVENTION_DEPTH, R.id.btn_fourth_prevention);
+
+                    }
+                }).playOn(v);
                 break;
         }
     }

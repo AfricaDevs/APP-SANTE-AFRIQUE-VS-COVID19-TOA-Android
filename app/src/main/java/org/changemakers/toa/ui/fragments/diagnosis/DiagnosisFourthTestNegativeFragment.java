@@ -269,7 +269,7 @@ public class DiagnosisFourthTestNegativeFragment extends BottomSheetDialogFragme
                     public void call(Animator animator) {
 
                         if (mCallback != null)
-                            mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_PREVENTION_DEPTH, DiagnosisFragment.DIAGNOSIS_OPTIONS_FOURTH_DEPTH);
+                            mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_PREVENTION_DEPTH, R.id.btn_fourth_prevention);
 
                     }
                 }).playOn(v);
@@ -338,10 +338,30 @@ public class DiagnosisFourthTestNegativeFragment extends BottomSheetDialogFragme
                 break;
             case 4:
                 binding.fourthScreen.setTranslationY(-getResources().getDisplayMetrics().heightPixels);
+                binding.resultBg.setTranslationY(-getResources().getDisplayMetrics().heightPixels);
                 binding.fourthScreen.setVisibility(View.VISIBLE);
-                binding.toolbarTitle.setText("VOTRE RÉSULTAT");
+                binding.resultBg.setVisibility(View.VISIBLE);
+
+                binding.toolbarTitle.setText(getString(R.string.diagnisis_result_toolbar_title));
 
                 ViewCompat.animate(binding.thirdScreen).alpha(0);
+
+                ViewCompat.animate(binding.resultBg).translationY(0).setDuration(1000).setListener(new ViewPropertyAnimatorListener() {
+                    @Override
+                    public void onAnimationStart(View view) {
+                        binding.secondScreen.setVisibility(View.GONE);
+                    }
+
+                    @Override
+                    public void onAnimationEnd(View view) {
+
+                    }
+
+                    @Override
+                    public void onAnimationCancel(View view) {
+
+                    }
+                });
                 ViewCompat.animate(binding.fourthScreen).translationY(0).setDuration(1000).setListener(new ViewPropertyAnimatorListener() {
                     @Override
                     public void onAnimationStart(View view) {
