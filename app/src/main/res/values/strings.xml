@@ -13,7 +13,7 @@
     <string name="transition_shared_main_activity_lottie_image">shared_lottie_icon</string>
     <string name="transition_splash_shared_logo">transition_shared_logo</string>
 
-    <string name="prevention_toolbar_title">Comment se protger tous les jours?</string>
+    <string name="prevention_toolbar_title">Comment se protéger tous les jours?</string>
     <string name="hands_tab_why">Pourquoi ?</string>
     <string name="hands_tab_when">Quand ?</string>
     <string name="hands_tab_how">Comment ?</string>
