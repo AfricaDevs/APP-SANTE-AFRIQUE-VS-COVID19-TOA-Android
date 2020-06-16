@@ -178,7 +178,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="@dimen/value_2dp"
-                android:text="noms des responsables de publication"
+                android:fontFamily="sans-serif"
+                android:text="@string/main_publishing_authors"
+                android:textStyle="bold"
                 android:textSize="@dimen/value_text_size_11sp" />
 
             <androidx.core.widget.NestedScrollView
