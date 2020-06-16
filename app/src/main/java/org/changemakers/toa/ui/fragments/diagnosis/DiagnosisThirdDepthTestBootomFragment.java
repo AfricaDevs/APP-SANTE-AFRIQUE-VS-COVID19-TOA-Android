@@ -60,7 +60,7 @@ public class DiagnosisThirdDepthTestBootomFragment extends BottomSheetDialogFrag
 
 
                 if (mCallback != null) {
-                    YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
+                    YoYo.with(Techniques.BounceIn).onEnd(new YoYo.AnimatorCallback() {
                         @Override
                         public void call(Animator animator) {
                             mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH, DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH_TEST_NAGATIVE);
@@ -75,7 +75,7 @@ public class DiagnosisThirdDepthTestBootomFragment extends BottomSheetDialogFrag
             case R.id.btn_yes:
 
                 if (mCallback != null) {
-                    YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
+                    YoYo.with(Techniques.BounceIn).onEnd(new YoYo.AnimatorCallback() {
                         @Override
                         public void call(Animator animator) {
                             mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH, DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH_TEST_POSITIVE);

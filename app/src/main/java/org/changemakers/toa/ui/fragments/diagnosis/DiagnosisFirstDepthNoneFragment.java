@@ -107,7 +107,7 @@ public class DiagnosisFirstDepthNoneFragment extends BottomSheetDialogFragment i
             case R.id.btn_no_disease:
 
                 if (mCallback != null) {
-                    YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
+                    YoYo.with(Techniques.BounceIn).onEnd(new YoYo.AnimatorCallback() {
                         @Override
                         public void call(Animator animator) {
                             mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH, 0);

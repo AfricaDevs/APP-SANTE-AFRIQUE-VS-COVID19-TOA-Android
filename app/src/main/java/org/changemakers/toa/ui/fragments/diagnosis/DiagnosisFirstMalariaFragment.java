@@ -87,7 +87,7 @@ public class DiagnosisFirstMalariaFragment extends Fragment implements View.OnCl
             case R.id.btn_next:
 
                 if (mCallback != null) {
-                    YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
+                    YoYo.with(Techniques.BounceIn).onEnd(new YoYo.AnimatorCallback() {
                         @Override
                         public void call(Animator animator) {
                             mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_SECOND_DEPTH, DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_MALARIA_NEXT);
@@ -99,7 +99,7 @@ public class DiagnosisFirstMalariaFragment extends Fragment implements View.OnCl
             case R.id.btn_prevention:
 
                 if (mCallback != null) {
-                    YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
+                    YoYo.with(Techniques.BounceIn).onEnd(new YoYo.AnimatorCallback() {
                         @Override
                         public void call(Animator animator) {
                             mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_PREVENTION_DEPTH, 0);

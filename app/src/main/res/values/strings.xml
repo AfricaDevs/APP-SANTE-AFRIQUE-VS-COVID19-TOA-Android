@@ -117,6 +117,7 @@ Nécessité d’un dispositif respectant les spécificités des rituels ancestra
     <string name="diagnosis_respiratory_difficulties">Oui, j’ai des difficultés à respirer</string>
     <string name="diagnosis_ten_days_trip">Avez-vous, dans les 10 jours suivants des symptômes d’une grippe, des difficultés respiratoires, une impression de la poitrine qui serre, une impression de ne pas pouvoir respirer profondément ?</string>
     <string name="diagnosis_result_positive_restart">Récommencer mon diagnostic COVID-19</string>
+    <string name="main_publishing_authors">Nom des responsables de publication</string>
 
     <array name="prevention_options">
         <item>Pourquoi, quand et comment se laver les mains?</item>
