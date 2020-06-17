@@ -159,7 +159,7 @@ public class DiagnosisFourthTestNegativeFragment extends BottomSheetDialogFragme
         switch (v.getId()) {
             case R.id.btn_first_symptoms:
 
-                YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
+                YoYo.with(Techniques.BounceIn).onEnd(new YoYo.AnimatorCallback() {
                     @Override
                     public void call(Animator animator) {
                         mCallback.onDiagnosisOptionSelected(v, DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH, DiagnosisFragment.DIAGNOSIS_OPTIONS_THIRD_DEPTH_TEST_POSITIVE);
@@ -171,7 +171,7 @@ public class DiagnosisFourthTestNegativeFragment extends BottomSheetDialogFragme
                 break;
             case R.id.btn_first_no_syptom:
 
-                YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
+                YoYo.with(Techniques.BounceIn).onEnd(new YoYo.AnimatorCallback() {
                     @Override
                     public void call(Animator animator) {
                         //load depth2
@@ -184,7 +184,7 @@ public class DiagnosisFourthTestNegativeFragment extends BottomSheetDialogFragme
             case R.id.btn_second_next:
 
                 if (noOptionCount == 0) {
-                    YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
+                    YoYo.with(Techniques.BounceIn).onEnd(new YoYo.AnimatorCallback() {
                         @Override
                         public void call(Animator animator) {
                             binding.btnSecondNext.setAlpha(0.4f);
@@ -192,7 +192,7 @@ public class DiagnosisFourthTestNegativeFragment extends BottomSheetDialogFragme
                         }
                     }).playOn(v);
                 } else {
-                    YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
+                    YoYo.with(Techniques.BounceIn).onEnd(new YoYo.AnimatorCallback() {
                         @Override
                         public void call(Animator animator) {
 
@@ -219,7 +219,7 @@ public class DiagnosisFourthTestNegativeFragment extends BottomSheetDialogFragme
             case R.id.btn_third_next:
 
                 if (noOptionCount == 0) {
-                    YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
+                    YoYo.with(Techniques.BounceIn).onEnd(new YoYo.AnimatorCallback() {
                         @Override
                         public void call(Animator animator) {
                             binding.btnThirdNext.setAlpha(0.4f);
@@ -227,7 +227,7 @@ public class DiagnosisFourthTestNegativeFragment extends BottomSheetDialogFragme
                         }
                     }).playOn(v);
                 } else {
-                    YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
+                    YoYo.with(Techniques.BounceIn).onEnd(new YoYo.AnimatorCallback() {
                         @Override
                         public void call(Animator animator) {
 

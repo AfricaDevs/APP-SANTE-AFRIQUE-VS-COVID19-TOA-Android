@@ -100,7 +100,7 @@ public class DiagnosisSecondDepthTemplate extends BottomSheetDialogFragment impl
             case R.id.btn_next:
 
                 if (mCallback != null) {
-                    YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
+                    YoYo.with(Techniques.BounceIn).onEnd(new YoYo.AnimatorCallback() {
                         @Override
                         public void call(Animator animator) {
 

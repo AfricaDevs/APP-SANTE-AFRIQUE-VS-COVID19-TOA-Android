@@ -177,7 +177,7 @@ public class DiagnosisFragment extends BottomSheetDialogFragment implements View
         switch (v.getId()) {
             case R.id.btn_next:
                 if (noOptionCount == 0) {
-                    YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
+                    YoYo.with(Techniques.BounceIn).onEnd(new YoYo.AnimatorCallback() {
                         @Override
                         public void call(Animator animator) {
                             binding.btnNext.setAlpha(0.4f);
@@ -185,7 +185,7 @@ public class DiagnosisFragment extends BottomSheetDialogFragment implements View
                         }
                     }).playOn(v);
                 } else {
-                    YoYo.with(Techniques.BounceInUp).onEnd(new YoYo.AnimatorCallback() {
+                    YoYo.with(Techniques.BounceIn).onEnd(new YoYo.AnimatorCallback() {
                         @Override
                         public void call(Animator animator) {
 
