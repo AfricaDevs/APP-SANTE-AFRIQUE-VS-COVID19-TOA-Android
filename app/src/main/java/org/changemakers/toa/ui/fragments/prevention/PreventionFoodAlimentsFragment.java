@@ -23,7 +23,7 @@ import org.changemakers.toa.databinding.ItemPreventionFoodAlimentBinding;
 public class PreventionFoodAlimentsFragment extends Fragment {
 
     FragmentPreventionFoodAlimentsBinding binding;
-    int mImagesCount = 14;
+    final static int IMAGES_COUNT = 14;
     private String[] mOptionsTitles;
     private int[] mColorsArray;
 
@@ -109,7 +109,7 @@ public class PreventionFoodAlimentsFragment extends Fragment {
 
         @Override
         public int getItemCount() {
-            return mImagesCount;
+            return IMAGES_COUNT;
         }
 
         class PreventionFoodViewHolder extends RecyclerView.ViewHolder {

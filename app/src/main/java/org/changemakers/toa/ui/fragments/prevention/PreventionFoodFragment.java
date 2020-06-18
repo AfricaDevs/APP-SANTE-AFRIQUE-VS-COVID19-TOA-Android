@@ -51,7 +51,7 @@ public class PreventionFoodFragment extends BottomSheetDialogFragment implements
         mViewPagerAdapter = new PagerAdapter(getChildFragmentManager(), BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
 
         mViewPagerAdapter.addFragment(new PreventionFoodAlimentsFragment());
-        mViewPagerAdapter.addFragment(new PreventionFoodAlimentsFragment());
+        mViewPagerAdapter.addFragment(new PreventionFoodDrinksFragment());
 
         binding.viewPager.setAdapter(mViewPagerAdapter);
         binding.bottomNav.setOnNavigationItemSelectedListener(this);
