@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.changemakers.toa.utils;
+package org.changemakers.toa.custom_views;
 
 import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
@@ -34,6 +34,7 @@ import android.view.animation.LinearInterpolator;
 import android.widget.Checkable;
 
 import org.changemakers.toa.R;
+import org.changemakers.toa.utils.CompatUtils;
 
 /**
  * Author : andy

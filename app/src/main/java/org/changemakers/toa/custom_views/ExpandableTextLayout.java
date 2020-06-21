@@ -7,7 +7,7 @@
  * https://github.com/xiaxveliang/Android_ExpandableTextView
  */
 
-package org.changemakers.toa.utils;
+package org.changemakers.toa.custom_views;
 
 import android.content.Context;
 import android.content.res.TypedArray;

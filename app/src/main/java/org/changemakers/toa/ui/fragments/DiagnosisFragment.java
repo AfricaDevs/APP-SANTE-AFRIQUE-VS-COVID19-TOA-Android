@@ -23,10 +23,10 @@ import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.changemakers.toa.R;
+import org.changemakers.toa.custom_views.SmoothCheckBox;
 import org.changemakers.toa.databinding.FragmentDiagnosisBinding;
 import org.changemakers.toa.databinding.ItemDiagnosisMainFragmentBinding;
 import org.changemakers.toa.interfaces.ActivityCallbackInterface;
-import org.changemakers.toa.utils.SmoothCheckBox;
 
 public class DiagnosisFragment extends BottomSheetDialogFragment implements View.OnClickListener {
 
