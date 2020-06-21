@@ -22,7 +22,7 @@
             android:orientation="vertical">
 
 
-            <org.changemakers.toa.utils.ExpandableTextLayout
+            <org.changemakers.toa.custom_views.ExpandableTextLayout
                 android:id="@+id/expandable_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
                     android:paddingRight="25dp"
                     android:text="@string/text_expand"
                     android:textColor="@color/colorAccent" />
-            </org.changemakers.toa.utils.ExpandableTextLayout>
+            </org.changemakers.toa.custom_views.ExpandableTextLayout>
 
 
             <androidx.recyclerview.widget.RecyclerView
