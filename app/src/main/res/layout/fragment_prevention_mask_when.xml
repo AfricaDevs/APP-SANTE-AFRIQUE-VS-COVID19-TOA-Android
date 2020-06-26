@@ -28,11 +28,7 @@
                 android:layout_height="match_parent"
                 android:paddingTop="@dimen/value_10dp"
                 android:paddingBottom="@dimen/value_8dp"
-                android:text="Dans les lieux publics où toutes autres mesures de distanciation sociale sont difficiles à maintenir
-partout à l’extérieur,
-dans les épiceries, les pharmacies, les marchés
-dans les zones de transmission communautaire importante
-"
+                android:text="@string/prevention_mask_when"
                 android:textColor="@color/prevention_details_text_color"
                 android:textIsSelectable="true"
                 android:textSize="@dimen/value_18sp" />
