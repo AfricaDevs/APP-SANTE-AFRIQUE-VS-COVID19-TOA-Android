@@ -102,7 +102,7 @@
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
                         android:scrollHorizontally="false"
-                        android:text="Avez-vous un ou plusieurs des symptômes suivants ? (cocher la ou les cases). recevez aussitôt des informations adaptées sur ce qu’il est préférable de faire"
+                        android:text="@string/diagnosis_one_or_more_symptoms_question"
                         android:textColor="@color/prevention_details_text_color"
                         android:textSize="@dimen/app_main_text_size" />
 
@@ -143,9 +143,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:padding="@dimen/value_8dp"
-                    android:text="Vous avez un ou plusieurs symptômes du paludisme,
-il est nécessaire que vous consultiez un médecin qui pourra vous faire un test et vous donner les médicaments adéquats.
-\n\nSi vous avez déjà consulté et effectué ce test du paludisme et qu’il s’est révélé négatif alors cliquez sur le bouton ci-dessous."
+                    android:text="@string/diagnosis_malaria_text"
                     android:textSize="17sp" />
             </androidx.core.widget.NestedScrollView>
         </androidx.cardview.widget.CardView>
