@@ -96,7 +96,7 @@
                     android:layout_marginTop="@dimen/value_4dp"
                     android:layout_marginBottom="@dimen/value_4dp"
                     android:gravity="center"
-                    android:text="Souffrez-vous d’une des maladies reconnues suivantes ?" />
+                    android:text="@string/diagnosis_disease_question" />
 
                 <TextView
                     android:id="@+id/expandable_id_show_textview"
@@ -104,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:scrollHorizontally="false"
-                    android:text="Indiquez et recevez aussitôt des informations adaptées sur ce qu’il est préférable de faire"
+                    android:text="@string/diagnosis_disease_top_hint"
                     android:textColor="@color/prevention_details_text_color"
                       />
 
