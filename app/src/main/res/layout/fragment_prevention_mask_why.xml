@@ -27,10 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingTop="@dimen/value_10dp"
-                android:text="Pour ralentir la propagation du virus
-protéger les personnes fragiles
-(vos proches, personnes âgées et malades autour de vous)
-"
+                android:text="@string/prevention_mask_why"
                 android:textColor="@color/prevention_details_text_color"
                 android:textIsSelectable="true"
                 android:textSize="@dimen/value_18sp" />
