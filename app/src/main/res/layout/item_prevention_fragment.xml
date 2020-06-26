@@ -70,7 +70,7 @@
                 android:background="@color/tboxGreenLight"
                 android:gravity="center"
                 android:padding="8dp"
-                android:text=" TOÂ "
+                android:text="@string/prevention_movement_toa"
                 android:textColor="@color/white"
                 android:textSize="16sp" />
         </LinearLayout>
