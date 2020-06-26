@@ -54,7 +54,7 @@
                     android:paddingTop="@dimen/value_10dp"
                     android:paddingRight="@dimen/value_10dp"
                     android:paddingBottom="@dimen/value_4dp"
-                    android:text="Evitez tout contact raproché, y compris les salutations et les accolades avec les autres"
+                    android:text="@string/prevention_movement_when1"
                     android:textColor="@color/toolbar_text_color"
                     android:textSize="@dimen/value_18sp"
                     app:autoSizeTextType="uniform" />
@@ -100,7 +100,7 @@
                     android:paddingTop="@dimen/value_5dp"
                     android:paddingRight="@dimen/value_10dp"
                     android:paddingBottom="@dimen/value_4dp"
-                    android:text="Maintenez une distance d'au moins 1m avec les autres personnes"
+                    android:text="@string/prevention_movement_when2"
                     android:textColor="@color/toolbar_text_color"
                     android:textSize="@dimen/value_18sp"
                     app:autoSizeTextType="uniform" />
@@ -143,7 +143,7 @@
                     android:paddingTop="@dimen/value_10dp"
                     android:paddingRight="@dimen/value_10dp"
                     android:paddingBottom="@dimen/value_4dp"
-                    android:text="Evitez les attroupements, les lieux et les transports publics"
+                    android:text="@string/prevention_movement_when3"
                     android:textColor="@color/toolbar_text_color"
                     android:textSize="@dimen/value_18sp"
                     app:autoSizeTextType="uniform" />
