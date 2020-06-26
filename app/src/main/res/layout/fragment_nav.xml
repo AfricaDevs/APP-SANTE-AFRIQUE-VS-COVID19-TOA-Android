@@ -47,7 +47,7 @@
             android:id="@+id/privacy_policies"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="politique de confidentialité"
+            android:text="@string/about_policies_btn_text"
             android:textColor="@color/linksBlue"
             android:textSize="@dimen/nav_links_text_size" />
 
@@ -220,14 +220,14 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Karima Brahimi"
+                                android:text="@string/member_1"
                                 android:textColor="#414141"
                                 android:textSize="@dimen/value_text_size_15sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Médecin, microbiologiste"
+                                android:text="@string/member_1_intro"
                                 android:textColor="#777777"
                                 android:textSize="@dimen/value_text_size_11sp" />
 
@@ -262,14 +262,14 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Paul Tossa"
+                                android:text="@string/member_2"
                                 android:textColor="#414141"
                                 android:textSize="@dimen/value_text_size_15sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Médecin toxicologue et de santé publique"
+                                android:text="@string/member_2_intro"
                                 android:textColor="#777777"
                                 android:textSize="@dimen/value_text_size_11sp" />
 
@@ -305,14 +305,14 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Armelle Hebert"
+                                android:text="@string/member_3"
                                 android:textColor="#414141"
                                 android:textSize="@dimen/value_text_size_15sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Expert en Santé Environnementale Renforcement des capacités Pays / Politiques publiques, Immunologiste"
+                                android:text="@string/member_3_intro"
                                 android:textColor="#777777"
                                 android:textSize="@dimen/value_text_size_10sp"
 
@@ -350,14 +350,14 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Manon Aminatou"
+                                android:text="@string/member_4"
                                 android:textColor="#414141"
                                 android:textSize="@dimen/value_text_size_15sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Dr en Pharmacologie, Toxicologue, Directrice VisaTox"
+                                android:text="@string/member_4_intro"
                                 android:textColor="#777777"
                                 android:textSize="@dimen/value_text_size_11sp"
 
@@ -395,14 +395,14 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Nyan Frederick Goumou"
+                                android:text="@string/member_5"
                                 android:textColor="#414141"
                                 android:textSize="@dimen/value_text_size_15sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Médecin, chirurgien oncologue pédiatre et consultant en PCI"
+                                android:text="@string/member_5_intro"
                                 android:textColor="#777777"
                                 android:textSize="@dimen/value_text_size_11sp"
 
@@ -439,14 +439,14 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Sandrine Mansoutre"
+                                android:text="@string/member_6"
                                 android:textColor="#414141"
                                 android:textSize="@dimen/value_text_size_15sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Docteur en physique et ingénieur en chimie, Open innovation"
+                                android:text="@string/member_6_intro"
                                 android:textColor="#777777"
                                 android:textSize="@dimen/value_text_size_11sp"
 
@@ -483,14 +483,14 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Clémentine Langlois"
+                                android:text="@string/member_7"
                                 android:textColor="#414141"
                                 android:textSize="@dimen/value_text_size_15sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Directeur de programme Santé, épidémiologiste"
+                                android:text="@string/member_7_intro"
                                 android:textColor="#777777"
                                 android:textSize="@dimen/value_text_size_11sp"
 
@@ -527,14 +527,14 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Steve Ndende"
+                                android:text="@string/member_8"
                                 android:textColor="#414141"
                                 android:textSize="@dimen/value_text_size_15sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Chef de projet mobile"
+                                android:text="@string/member_8_intro"
                                 android:textColor="#777777"
                                 android:textSize="@dimen/value_text_size_11sp"
 

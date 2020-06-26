@@ -38,7 +38,6 @@
             android:background="@color/white"
             android:gravity="center"
             android:padding="@dimen/value_4dp"
-            android:text=" Mon tex test pour voir le rendu "
             android:textColor="@color/toolbar_text_color"
             android:textSize="16sp" />
     </RelativeLayout>

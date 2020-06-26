@@ -29,7 +29,7 @@
                 android:layout_height="match_parent"
                 android:paddingTop="@dimen/value_10dp"
                 android:paddingBottom="@dimen/value_8dp"
-                android:text="Avant tout, se laver les mains avant de porter le masque"
+                android:text="@string/prevention_mask_how1"
                 android:textColor="@color/prevention_details_text_color"
                 android:textIsSelectable="true"
                 android:textSize="@dimen/value_18sp" />
@@ -63,11 +63,7 @@
                 android:layout_height="match_parent"
                 android:paddingTop="@dimen/value_10dp"
                 android:paddingBottom="@dimen/value_8dp"
-                android:text="Le masque doit :
-. s'adapter parfaitement mais confortablement sur le côté du visage
-. être attaché avec des élastiques/cordons autour des oreilles
-. permettre de respirer sans restriction (etc…) => mettre la suite sur page suivante…
-"
+                android:text="@string/prevention_mask_how2"
                 android:textColor="@color/prevention_details_text_color"
                 android:textIsSelectable="true"
                 android:textSize="@dimen/value_18sp" />

@@ -236,7 +236,7 @@
                         android:fontFamily="monospace"
                         android:gravity="center"
                         android:padding="6dp"
-                        android:text="Comment protéger les autres?"
+                        android:text="@string/diagnosis_btn_test_protect_others"
                         android:textColor="@color/white"
                         app:autoSizeTextType="uniform" />
                 </RelativeLayout>
