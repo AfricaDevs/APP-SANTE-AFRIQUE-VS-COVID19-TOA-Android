@@ -55,9 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/value_20dp"
-                android:text="Jeter ses mouchoirs, gants et masques à usage unique dans un sac dans une poubelle avec couvercle.\n\nFermer soigneusement le sac poubelle et conserver 24 heures avant d\'être jeté dans le container d\'ordures ménagères ou mettre dans un second sac poubelle et fermer celui-ci.
-\n\nSe laver les mains soigneusement à l\'eau savonneuse ou au gel hydroalcoolique après cette opération.
-\n"
+                android:text="@string/prevention_garbage_text1"
                 android:textColor="@color/prevention_details_text_color"
                 android:textIsSelectable="true"
                 android:textSize="@dimen/app_main_text_size" />
@@ -73,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/value_10dp"
                     android:layout_weight="1"
-                    android:text="Encore plus que jamais, veiller à ne surtout pas jeter ses mouchoirs et masques par terre."
+                    android:text="@string/prevention_garbage_text2"
                     android:textColor="@color/prevention_details_text_color"
                     android:textIsSelectable="true"
                     android:textSize="@dimen/app_main_text_size" />
