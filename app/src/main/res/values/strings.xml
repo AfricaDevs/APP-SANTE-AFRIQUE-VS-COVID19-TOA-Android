@@ -119,6 +119,42 @@ Nécessité d’un dispositif respectant les spécificités des rituels ancestra
     <string name="diagnosis_ten_days_trip">Avez-vous, dans les 10 jours suivants des symptômes d’une grippe, des difficultés respiratoires, une impression de la poitrine qui serre, une impression de ne pas pouvoir respirer profondément ?</string>
     <string name="diagnosis_result_positive_restart">Récommencer mon diagnostic COVID-19</string>
     <string name="main_publishing_authors">Nom des responsables de publication</string>
+    <string name="diagnosis_one_or_more_symptoms_question">Avez-vous un ou plusieurs des symptômes suivants ? (cocher la ou les cases). recevez aussitôt des informations adaptées sur ce qu’il est préférable de faire</string>
+    <string name="diagnosis_malaria_text">Vous avez un ou plusieurs symptômes du paludisme, il est nécessaire que vous consultiez un médecin qui pourra vous faire un test et vous donner les médicaments adéquats. \n\nSi vous avez déjà consulté et effectué ce test du paludisme et qu’il s’est révélé négatif alors cliquez sur le bouton ci-dessous.</string>
+    <string name="diagnosis_disease_question">Souffrez-vous d’une des maladies reconnues suivantes ?</string>
+    <string name="diagnosis_disease_top_hint">Indiquez et recevez aussitôt des informations adaptées sur ce qu’il est préférable de faire</string>
+    <string name="diagnosis_btn_test_protect_others">Comment protéger les autres?</string>
+    <string name="diagnosis_test_positive_result_question">Vous avez effectué un test de Covid-19 et il est positif?</string>
+    <string name="diagnosis_test_positive_yes">Oui, j’ai eu un test positif au COVID-19</string>
+    <string name="diagnosis_test_positive_no">Non, je n’ai pas eu de test positif au Covid-19</string>
+    <string name="about_policies_btn_text">politique de confidentialité</string>
+    <string name="member_1">Karima Brahimi</string>
+    <string name="member_1_intro">Médecin, microbiologiste</string>
+    <string name="member_2">Paul Tossa</string>
+    <string name="member_2_intro">Médecin toxicologue et de santé publique</string>
+    <string name="member_3">Armelle Hebert</string>
+    <string name="member_3_intro">Expert en Santé Environnementale Renforcement des capacités Pays / Politiques publiques, Immunologiste</string>
+    <string name="member_4">Manon Aminatou</string>
+    <string name="member_4_intro">Dr en Pharmacologie, Toxicologue, Directrice VisaTox</string>
+    <string name="member_5">Nyan Frederick Goumou</string>
+    <string name="member_5_intro">Médecin, chirurgien oncologue pédiatre et consultant en PCI</string>
+    <string name="member_6">Sandrine Mansoutre</string>
+    <string name="member_6_intro">Docteur en physique et ingénieur en chimie, Open innovation</string>
+    <string name="member_7">Clémentine Langlois</string>
+    <string name="member_7_intro">Directeur de programme Santé, épidémiologiste</string>
+    <string name="member_8">Steve Ndende</string>
+    <string name="member_8_intro">Chef de projet mobile</string>
+    <string name="prevention_garbage_text1">Jeter ses mouchoirs, gants et masques à usage unique dans un sac dans une poubelle avec couvercle.\n\nFermer soigneusement le sac poubelle et conserver 24 heures avant d\'être jeté dans le container d\'ordures ménagères ou mettre dans un second sac poubelle et fermer celui-ci. \n\nSe laver les mains soigneusement à l\'eau savonneuse ou au gel hydroalcoolique après cette opération. \n</string>
+    <string name="prevention_garbage_text2">Encore plus que jamais, veiller à ne surtout pas jeter ses mouchoirs et masques par terre.</string>
+    <string name="prevention_mask_how1">Avant tout, se laver les mains avant de porter le masque</string>
+    <string name="prevention_mask_how2"><![CDATA[Le masque doit : . s\'adapter parfaitement mais confortablement sur le côté du visage . être attaché avec des élastiques/cordons autour des oreilles . permettre de respirer sans restriction (etc…) => mettre la suite sur page suivante…]]></string>
+    <string name="prevention_mask_when">Dans les lieux publics où toutes autres mesures de distanciation sociale sont difficiles à maintenir partout à l’extérieur, dans les épiceries, les pharmacies, les marchés dans les zones de transmission communautaire importante</string>
+    <string name="prevention_mask_why">Pour ralentir la propagation du virus protéger les personnes fragiles (vos proches, personnes âgées et malades autour de vous)</string>
+    <string name="prevention_movement_when1">Evitez tout contact raproché, y compris les salutations et les accolades avec les autres</string>
+    <string name="prevention_movement_when2">Maintenez une distance d\'au moins 1m avec les autres personnes</string>
+    <string name="prevention_movement_when3">Evitez les attroupements, les lieux et les transports publics</string>
+    <string name="prevention_movement_toa">TOÂ</string>
+    <string name="prevention_toa">TOÂ</string>
 
     <array name="prevention_options">
         <item>Pourquoi, quand et comment se laver les mains?</item>
