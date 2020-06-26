@@ -33,7 +33,7 @@
                 android:layout_marginTop="@dimen/value_4dp"
                 android:layout_marginBottom="@dimen/value_4dp"
                 android:gravity="center"
-                android:text="Vous avez effectué un test de Covid-19 et il est positif?" />
+                android:text="@string/diagnosis_test_positive_result_question" />
         </LinearLayout>
 
         <RelativeLayout
@@ -51,7 +51,7 @@
                 android:fontFamily="monospace"
                 android:gravity="center"
                 android:padding="6dp"
-                android:text="Oui, j’ai eu un test positif au COVID-19"
+                android:text="@string/diagnosis_test_positive_yes"
                 android:textColor="@color/materialRedLight"
                 android:textSize="15sp"
                 app:autoSizeTextType="uniform" />
@@ -72,7 +72,7 @@
                 android:fontFamily="monospace"
                 android:gravity="center"
                 android:padding="6dp"
-                android:text="Non, je n’ai pas eu de test positif au Covid-19 "
+                android:text="@string/diagnosis_test_positive_no"
                 android:textColor="@color/colorAccent"
                 android:textSize="15sp"
                 app:autoSizeTextType="uniform" />
