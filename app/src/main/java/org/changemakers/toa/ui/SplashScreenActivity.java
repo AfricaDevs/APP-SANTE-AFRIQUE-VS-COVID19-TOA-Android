@@ -72,8 +72,8 @@ public class SplashScreenActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         //annimate logo size
-        ViewCompat.animate(binding.logo).scaleX(1f).setDuration(1000).start();
-        ViewCompat.animate(binding.logo).scaleY(1f).setDuration(1000).start();
+        ViewCompat.animate(binding.logoBackground).scaleX(1f).setDuration(1000).start();
+        ViewCompat.animate(binding.logoBackground).scaleY(1f).setDuration(1000).start();
 
     }
 
