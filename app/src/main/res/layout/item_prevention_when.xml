@@ -24,7 +24,6 @@
             android:layout_marginRight="8dp"
             android:background="@color/white"
             android:padding="@dimen/value_4dp"
-            android:text=" Mon tex test pour voir le rendu "
             android:textColor="@color/toolbar_text_color"
             android:textSize="16sp" />
     </RelativeLayout>
