@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.palette.graphics.Palette;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -93,7 +94,7 @@ public class PreventionFoodDrinksFragment extends Fragment {
                 //the Titles array
                 image = getResources().getDrawable(getResources().getIdentifier("drink_" + position, "drawable", getActivity().getPackageName()), getActivity().getTheme());
             } else {
-                image = getResources().getDrawable(getResources().getIdentifier("drink_" + position, "drawable", getActivity().getPackageName()));
+                image = ContextCompat.getDrawable(getActivity(), getResources().getIdentifier("drink_" + position, "drawable", getActivity().getPackageName()));
             }
 
             holder.itemviewBinding.imageView.setImageDrawable(image);
