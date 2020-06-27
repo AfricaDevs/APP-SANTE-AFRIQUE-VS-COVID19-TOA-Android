@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -154,7 +155,7 @@ public class PreventionFragment extends BottomSheetDialogFragment {
         public void onBindViewHolder(@NonNull PreventionViewHolder holder, int position) {
 
             if (getItemViewType(position) == ITEM_TYPE_LEFT) {
-                holder.itemviewBinding.optionTitle.setBackground(getResources().getDrawable(R.drawable.card_bg_gradient_tbox_blue));
+                holder.itemviewBinding.optionTitle.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.card_bg_gradient_tbox_blue));
 
                 holder.itemviewBinding.optionTitle.setText(sPreventionOptions[position]);
                 holder.itemviewBinding.lottieAnnimIcon
@@ -163,7 +164,7 @@ public class PreventionFragment extends BottomSheetDialogFragment {
 
             } else {
 
-                holder.itemviewRightBinding.optionTitle.setBackground(getResources().getDrawable(R.drawable.card_bg_gradient_tbox_green_light));
+                holder.itemviewRightBinding.optionTitle.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.card_bg_gradient_tbox_green_light));
 
                 holder.itemviewRightBinding.optionTitle.setText(sPreventionOptions[position]);
                 holder.itemviewRightBinding.lottieAnnimIcon
