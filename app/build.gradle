@@ -16,17 +16,12 @@ android {
     }
 
     signingConfigs {
-        release {
-            keyAlias 'SN'
-            keyPassword 'steve111'
-            storeFile file('/Users/stevendende/NdendeLab/nigeria.keystore.jks')
-            storePassword 'steve111'
-        }
+
     }
 
     buildTypes {
         release {
-            signingConfig signingConfigs.release
+            //signingConfig signingConfigs.release
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
