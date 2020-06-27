@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.palette.graphics.Palette;
 import androidx.recyclerview.widget.RecyclerView;
@@ -85,7 +86,7 @@ public class PreventionFoodAlimentsFragment extends Fragment {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 image = getResources().getDrawable(getResources().getIdentifier("food_" + position, "drawable", getActivity().getPackageName()), getActivity().getTheme());
             } else {
-                image = getResources().getDrawable(getResources().getIdentifier("food_" + position, "drawable", getActivity().getPackageName()));
+                image = ContextCompat.getDrawable(getActivity(), getResources().getIdentifier("food_" + position, "drawable", getActivity().getPackageName()));
             }
 
             holder.itemviewBinding.imageView.setImageDrawable(image);
