@@ -9,6 +9,7 @@ import android.view.WindowManager;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import org.changemakers.toa.MainActivity;
@@ -57,8 +58,7 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
 
         if (Build.VERSION.SDK_INT > 21) {
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-
-            getWindow().setNavigationBarColor(getResources().getColor(R.color.materialGrey2));
+            getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.materialGrey2));
         }
 
         binding = ActivityFragmentBinding.inflate(getLayoutInflater());
