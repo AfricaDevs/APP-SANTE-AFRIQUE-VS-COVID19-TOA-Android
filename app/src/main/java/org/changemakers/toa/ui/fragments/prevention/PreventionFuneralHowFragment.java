@@ -27,8 +27,9 @@ public class PreventionFuneralHowFragment extends Fragment {
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
             binding.expandableIdShowTextview.setText(Html.fromHtml(getResources().getString(R.string.prevention_funeral_how), Html.FROM_HTML_MODE_LEGACY));
-        } else
+        } else {
             binding.expandableIdShowTextview.setText(Html.fromHtml(getResources().getString(R.string.prevention_funeral_how)));
+        }
 
         binding.expandableText.setTextMaxLines(8);
 

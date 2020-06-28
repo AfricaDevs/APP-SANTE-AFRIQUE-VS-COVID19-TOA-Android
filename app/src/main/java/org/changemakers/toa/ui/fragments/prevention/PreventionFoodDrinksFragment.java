@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import org.changemakers.toa.databinding.FragmentPreventionFoodDrinksBinding;
 import org.changemakers.toa.databinding.ItemPreventionFoodDrinkBinding;
 
+
 public class PreventionFoodDrinksFragment extends Fragment {
 
     FragmentPreventionFoodDrinksBinding binding;
