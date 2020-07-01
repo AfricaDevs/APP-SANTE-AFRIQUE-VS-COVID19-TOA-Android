@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityCallb
 
                     binding.collapsingToolabar.setTitleEnabled(false);
                 } else {
-                    //binding.collapsingToolabar.setTitleEnabled(false);
+                    //binding.appBar.collapsingToolabar.setTitleEnabled(false);
 
                     //IDDLE
                 }

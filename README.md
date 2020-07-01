@@ -19,4 +19,3 @@
 
 ## Contacts:
 :email: [collectif.toa@gmail.com](mailto:collectif.toa@gmail.com)
-
