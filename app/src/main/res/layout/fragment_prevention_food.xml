@@ -58,7 +58,7 @@
             android:layout_height="30dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="16dp"
-            app:srcCompat="@drawable/ic_arrow_back_blue_24dp" />
+            app:srcCompat="@drawable/ic_arrow_back_green_24dp" />
 
         <TextView
             android:id="@+id/prevention_option_tittle"
