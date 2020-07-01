@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<resources>
+    <dimen name="app_main_text_size">16sp</dimen>
+    <dimen name="main_cards_radius">6dp</dimen>
+    <dimen name="toolbar_api_version_top_margin">0dp</dimen>
+    <dimen name="toa_header_view_api_version_top_padding">8dp</dimen>
+    <dimen name="basic_cardview_elevation_3dp">3dp</dimen>
+
+    <dimen name="frament_nav_contact_left_padding">10dp</dimen>
+    <dimen name="frament_nav_contact_top_padding">12dp</dimen>
+    <dimen name="frament_nav_contact_text_size">14sp</dimen>
+    <dimen name="nav_cardview_left_padding">10dp</dimen>
+    <dimen name="nav_cardview_right_padding">15dp</dimen>
+    <dimen name="nav_cardview_top_margin">15dp</dimen>
+    <dimen name="nav_cardview_conttent_padding">8dp</dimen>
+    <dimen name="nav_fragment_footer_content_bottom_margin">45dp</dimen>
+
+    <dimen name="nav_header_shape_primary_color_height">240dp</dimen>
+    <dimen name="nav_header_shape_accent_color_height">300dp</dimen>
+    <dimen name="nav_links_text_size">16sp</dimen>
+    <dimen name="value_45dp">45dp</dimen>
+    <dimen name="value_1dp">1dp</dimen>
+    <dimen name="value_text_size_15sp">15sp</dimen>
+    <dimen name="value_text_size_11sp">11sp</dimen>
+    <dimen name="value_text_size_10sp">10sp</dimen>
+    <dimen name="value_150dp">150dp</dimen>
+    <dimen name="prevention_details_toolbar_top_margin_16dp_40dp">16dp</dimen>
+    <dimen name="tootlar_custom_title_text_size">17sp</dimen>
+
+
+</resources>
