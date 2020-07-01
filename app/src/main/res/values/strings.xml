@@ -155,6 +155,7 @@ Nécessité d’un dispositif respectant les spécificités des rituels ancestra
     <string name="prevention_movement_when3">Evitez les attroupements, les lieux et les transports publics</string>
     <string name="prevention_movement_toa">TOÂ</string>
     <string name="prevention_toa">TOÂ</string>
+    <string name="halt_select_a_case_to_continue">Veuillez cocher une case pour continuer</string>
 
     <array name="prevention_options">
         <item>Pourquoi, quand et comment se laver les mains?</item>

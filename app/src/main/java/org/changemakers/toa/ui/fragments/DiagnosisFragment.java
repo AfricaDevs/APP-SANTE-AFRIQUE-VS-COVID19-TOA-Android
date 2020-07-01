@@ -177,11 +177,11 @@ public class DiagnosisFragment extends BottomSheetDialogFragment implements View
         switch (v.getId()) {
             case R.id.btn_next:
                 if (noOptionCount == 0) {
-                    YoYo.with(Techniques.BounceIn).onEnd(new YoYo.AnimatorCallback() {
+                    YoYo.with(Techniques.Bounce).onEnd(new YoYo.AnimatorCallback() {
                         @Override
                         public void call(Animator animator) {
                             binding.btnNext.setAlpha(0.4f);
-                            Snackbar.make(binding.getRoot(), "Veuillez cocher une case pour continuer", BaseTransientBottomBar.LENGTH_SHORT).show();
+                            Snackbar.make(binding.getRoot(), getString(R.string.halt_select_a_case_to_continue), BaseTransientBottomBar.LENGTH_SHORT).show();
                         }
                     }).playOn(v);
                 } else {
@@ -198,7 +198,7 @@ public class DiagnosisFragment extends BottomSheetDialogFragment implements View
                 break;
             case R.id.btn_no_syptom:
 
-                YoYo.with(Techniques.BounceInDown).onEnd(new YoYo.AnimatorCallback() {
+                YoYo.with(Techniques.BounceIn).onEnd(new YoYo.AnimatorCallback() {
                     @Override
                     public void call(Animator animator) {
                         if (mCallback != null)
