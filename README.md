@@ -1,4 +1,5 @@
 **Chercheurs, médecins, scientifiques et designers ont créé cette application rien que pour TOÂ « toi » pour promouvoir les bonnes pratiques pour faire face à la pandémie de Covid-19 en Afrique.**
+![TOÂ Android App](https://github.com/AfricaDevs/APP-SANTE-AFRIQUE-VS-COVID19-TOA-Android/raw/master/screenshots/francais-french/promo_1024_500.jpg)
 
 ## Contributeurs
 
