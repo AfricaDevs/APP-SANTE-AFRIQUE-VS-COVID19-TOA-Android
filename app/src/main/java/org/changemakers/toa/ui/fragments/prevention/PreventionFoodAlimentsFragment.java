@@ -23,8 +23,8 @@ import org.changemakers.toa.databinding.ItemPreventionFoodAlimentBinding;
 
 public class PreventionFoodAlimentsFragment extends Fragment {
 
-    FragmentPreventionFoodAlimentsBinding binding;
     final static int IMAGES_COUNT = 14;
+    FragmentPreventionFoodAlimentsBinding binding;
     private String[] mOptionsTitles;
     private int[] mColorsArray;
 

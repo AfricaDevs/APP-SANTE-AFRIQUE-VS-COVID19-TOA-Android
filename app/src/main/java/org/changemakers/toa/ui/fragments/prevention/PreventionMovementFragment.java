@@ -117,7 +117,8 @@ public class PreventionMovementFragment extends BottomSheetDialogFragment implem
             case R.id.backArrow:
                 try {
                     getActivity().onBackPressed();
-                } catch (Exception ex){}
+                } catch (Exception ex) {
+                }
                 break;
         }
     }

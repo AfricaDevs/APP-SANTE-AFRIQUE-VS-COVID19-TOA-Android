@@ -180,8 +180,8 @@
                 android:layout_marginBottom="@dimen/value_2dp"
                 android:fontFamily="sans-serif"
                 android:text="@string/main_publishing_authors"
-                android:textStyle="bold"
-                android:textSize="@dimen/value_text_size_11sp" />
+                android:textSize="@dimen/value_text_size_11sp"
+                android:textStyle="bold" />
 
             <androidx.core.widget.NestedScrollView
                 android:id="@+id/todo_recycler_view"

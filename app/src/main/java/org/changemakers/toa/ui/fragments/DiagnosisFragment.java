@@ -30,20 +30,11 @@ import org.changemakers.toa.interfaces.ActivityCallbackInterface;
 
 public class DiagnosisFragment extends BottomSheetDialogFragment implements View.OnClickListener {
 
-    static boolean isNooptionChecked = false;
-    static int noOptionCount = 0;
-
-    ActivityCallbackInterface mCallback;
-    private static String[] sDiagnosisOptions;
-    GridLayoutManager mLayoutManager;
-    DiagnosisRecyclerViewAdapter mAdapter;
-
     public static final int DIAGNOSIS_OPTIONS_FIRST_DEPTH = 1;
     public static final int DIAGNOSIS_OPTIONS_FIRST_DEPTH_POSITION_SYMPTOMS = 1;
     public static final int DIAGNOSIS_OPTIONS_FIRST_DEPTH_POSITION_NO_SYMPTOM = 0;
     public static final int DIAGNOSIS_OPTIONS_PREVENTION_DEPTH = 10;
     public static final int DIAGNOSIS_OPTIONS_RESTART = 11;
-
     public static final int DIAGNOSIS_OPTIONS_SECOND_DEPTH = 2;
     //The following positions follow the options alignment in /res/strings/@id -> diagnosis_second_options
     public static final int DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_MALARIA_NEXT = 10;
@@ -53,16 +44,18 @@ public class DiagnosisFragment extends BottomSheetDialogFragment implements View
     public static final int DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_THALASEMIA = 3;
     public static final int DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_DIABETES = 4;
     public static final int DIAGNOSIS_OPTIONS_SECOND_DEPTH_POSITION_OBESITY = 5;
-
     public static final int DIAGNOSIS_OPTIONS_THIRD_DEPTH = 3;
     public static final int DIAGNOSIS_OPTIONS_THIRD_DEPTH_DISEASES_DETAILS_TEMPLATE = 100;
     public static final int DIAGNOSIS_OPTIONS_THIRD_DEPTH_TEST_POSITIVE = 101;
     public static final int DIAGNOSIS_OPTIONS_THIRD_DEPTH_TEST_NAGATIVE = 102;
-
     public static final int DIAGNOSIS_OPTIONS_FOURTH_DEPTH = 4;
-
     public static final String EXTRA_SECOND_DEPTH_POSITION = "org.africadevs.toa.seconddepth";
-
+    static boolean isNooptionChecked = false;
+    static int noOptionCount = 0;
+    private static String[] sDiagnosisOptions;
+    ActivityCallbackInterface mCallback;
+    GridLayoutManager mLayoutManager;
+    DiagnosisRecyclerViewAdapter mAdapter;
     private FragmentDiagnosisBinding binding;
 
     @Override
