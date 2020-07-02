@@ -47,24 +47,24 @@ public class DiagnosisFourthTestPositiveFragment extends Fragment implements Vie
 
 
         try {
-            ((AppCompatActivity) getActivity()).setSupportActionBar(binding.toolbar);
+            ((AppCompatActivity) getActivity()).setSupportActionBar(binding.appBar.toolbar);
             ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
 
-        binding.appBar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+        binding.appBar.appBar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
                 if (verticalOffset == 0) {
                     //EXPANDED;
 
-                    binding.collapsingToolabar.setTitleEnabled(false);
+                    binding.appBar.collapsingToolabar.setTitleEnabled(false);
                 } else if (Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange()) {
 
                     //COLLAPSED;
 
-                    binding.collapsingToolabar.setTitleEnabled(false);
+                    binding.appBar.collapsingToolabar.setTitleEnabled(false);
                 } else {
 
                     //IDDLE
@@ -77,7 +77,7 @@ public class DiagnosisFourthTestPositiveFragment extends Fragment implements Vie
         binding.btnFourthPreventionOthers.setOnClickListener(this);
 
         binding.getRoot().setTranslationY(-getResources().getDisplayMetrics().heightPixels);
-        binding.toolbarTitle.setText(getResources().getString(R.string.diagnisis_result_toolbar_title));
+        binding.appBar.toolbarTitle.setText(getResources().getString(R.string.diagnisis_result_toolbar_title));
 
         ViewCompat.animate(binding.getRoot()).translationY(0).setDuration(1000).setListener(new ViewPropertyAnimatorListener() {
             @Override

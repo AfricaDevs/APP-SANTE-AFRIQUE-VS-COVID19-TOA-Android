@@ -47,24 +47,24 @@ public class DiagnosisFirstMalariaFragment extends Fragment implements View.OnCl
 
 
         try {
-            ((AppCompatActivity) getActivity()).setSupportActionBar(binding.toolbar);
+            ((AppCompatActivity) getActivity()).setSupportActionBar(binding.appBar.toolbar);
             ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
 
-        binding.appBar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+        binding.appBar.appBar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
                 if (verticalOffset == 0) {
                     //EXPANDED;
 
-                    binding.collapsingToolabar.setTitleEnabled(false);
+                    binding.appBar.collapsingToolabar.setTitleEnabled(false);
                 } else if (Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange()) {
 
                     //COLLAPSED;
 
-                    binding.collapsingToolabar.setTitleEnabled(false);
+                    binding.appBar.collapsingToolabar.setTitleEnabled(false);
                 } else {
 
                     //IDDLE

@@ -82,24 +82,24 @@ public class DiagnosisFragment extends BottomSheetDialogFragment implements View
         sDiagnosisOptions = getResources().getStringArray(R.array.diagnosis_options);
 
         try {
-            ((AppCompatActivity) getActivity()).setSupportActionBar(binding.toolbar);
+            ((AppCompatActivity) getActivity()).setSupportActionBar(binding.appBar.toolbar);
             ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
 
-        binding.appBar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+        binding.appBar.appBar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
                 if (verticalOffset == 0) {
                     //EXPANDED;
 
-                    binding.collapsingToolabar.setTitleEnabled(false);
+                    binding.appBar.collapsingToolabar.setTitleEnabled(false);
                 } else if (Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange()) {
 
                     //COLLAPSED;
 
-                    binding.collapsingToolabar.setTitleEnabled(false);
+                    binding.appBar.collapsingToolabar.setTitleEnabled(false);
                 } else {
 
                     //IDDLE
@@ -177,11 +177,11 @@ public class DiagnosisFragment extends BottomSheetDialogFragment implements View
         switch (v.getId()) {
             case R.id.btn_next:
                 if (noOptionCount == 0) {
-                    YoYo.with(Techniques.BounceIn).onEnd(new YoYo.AnimatorCallback() {
+                    YoYo.with(Techniques.Bounce).onEnd(new YoYo.AnimatorCallback() {
                         @Override
                         public void call(Animator animator) {
                             binding.btnNext.setAlpha(0.4f);
-                            Snackbar.make(binding.getRoot(), "Veuillez cocher une case pour continuer", BaseTransientBottomBar.LENGTH_SHORT).show();
+                            Snackbar.make(binding.getRoot(), getString(R.string.halt_select_a_case_to_continue), BaseTransientBottomBar.LENGTH_SHORT).show();
                         }
                     }).playOn(v);
                 } else {
@@ -198,7 +198,7 @@ public class DiagnosisFragment extends BottomSheetDialogFragment implements View
                 break;
             case R.id.btn_no_syptom:
 
-                YoYo.with(Techniques.BounceInDown).onEnd(new YoYo.AnimatorCallback() {
+                YoYo.with(Techniques.BounceIn).onEnd(new YoYo.AnimatorCallback() {
                     @Override
                     public void call(Animator animator) {
                         if (mCallback != null)
