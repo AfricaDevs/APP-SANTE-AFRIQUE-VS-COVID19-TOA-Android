@@ -5,4 +5,4 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/layouts_main_white_bg"
-    tools:context=".ui.FragmentActivity" />
+    tools:context="com.africadevs.toa.ui.FragmentActivity" />

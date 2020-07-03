@@ -41,7 +41,7 @@
                 android:orientation="vertical">
 
 
-                <org.changemakers.toa.custom_views.ExpandableTextLayout
+                <com.africadevs.toa.custom_views.ExpandableTextLayout
                     android:id="@+id/expandable_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
                         android:text="@string/text_expand"
                         android:textColor="@color/colorAccent"
                         android:textSize="@dimen/app_main_text_size" />
-                </org.changemakers.toa.custom_views.ExpandableTextLayout>
+                </com.africadevs.toa.custom_views.ExpandableTextLayout>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>

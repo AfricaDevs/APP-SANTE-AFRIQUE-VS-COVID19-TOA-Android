@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.2"
 
     defaultConfig {
-        applicationId "org.changemakers.toa"
+        applicationId "com.africadevs.toa"
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
@@ -16,16 +16,24 @@ android {
     }
 
     signingConfigs {
-
+        /*
+        release {
+            storeFile file("myreleasekey.keystore")
+            storePassword "password"
+            keyAlias "MyReleaseKey"
+            keyPassword "password"
+            v2SigningEnabled false
+        }
+         */
     }
 
     buildTypes {
         release {
-            //signingConfig signingConfigs.release
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    //toa-v1.0_FrenchOnly.apk
 
 
     viewBinding {
