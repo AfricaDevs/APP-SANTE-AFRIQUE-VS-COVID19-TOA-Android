@@ -13,7 +13,7 @@
     app:contentPaddingLeft="4dp"
     app:contentPaddingRight="4dp"
     app:contentPaddingTop="6dp"
-    tools:context=".ui.FragmentActivity">
+    tools:context="com.africadevs.toa.ui.FragmentActivity">
 
 
     <TextView

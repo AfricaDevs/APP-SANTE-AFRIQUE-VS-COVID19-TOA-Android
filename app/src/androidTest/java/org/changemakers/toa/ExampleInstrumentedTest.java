@@ -1,4 +1,4 @@
-package org.changemakers.toa;
+package com.africadevs.toa;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("org.changemakers.toa", appContext.getPackageName());
+        assertEquals("com.africadevs.toa", appContext.getPackageName());
     }
 }
