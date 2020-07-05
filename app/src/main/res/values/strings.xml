@@ -8,24 +8,25 @@
     <string name="nav_toa_contacts_email" translatable="false">Tel: +33 0613411835\ncollectif.toa@gmail.com</string>
 
     <string name="privacy_policies_link" translatable="false">https://africadevs.github.io/toa/policies.html</string>
-    <string name="main_frag_prevention_btn">COMMENT\nSE PROTEGER\nTOUS LES JOURS?</string>
-    <string name="main_frag_prevention_title">Comment se protéger?</string>
     <string name="transition_shared_main_activity_lottie_image">shared_lottie_icon</string>
     <string name="transition_splash_shared_logo">transition_shared_logo</string>
-    <string name="alert_cant_handle">Erreur !</string>
-    <string name="prevention_toolbar_title">Comment se protéger tous les jours?</string>
-    <string name="hands_tab_why">Pourquoi ?</string>
-    <string name="hands_tab_when">Quand ?</string>
-    <string name="hands_tab_how">Comment ?</string>
 
-    <string name="prevention_hands_why_content_first">Le lavage des mains\n\nLes virus respiratoires tels que la maladie à coronavirus (COVID-19) se propagent lorsque du mucus ou des gouttelettes contenant le virus pénètrent dans votre corps par l\’intermédiaire de votre bouche, votre nez et vos yeux.</string>
-    <string name="prevention_hands_why_content_second">Le plus souvent, ce contact a lieu par les mains. \n\nLes mains sont également l\’une des manières les plus courantes de transmettre le virus d\’une personne à une autre.</string>
-    <string name="prevention_hands_why_content_third">Durant une pandémie, le fait de se laver fréquemment les mains avec de l\’eau et du savon fait partie des mesures les plus économiques, les plus faciles et les plus importantes pour prévenir la propagation d\’un virus.</string>
+    <string name="alert_cant_handle">Error !</string>
+    <string name="main_frag_prevention_btn">HOW\nTO PROTECT\nYOURSELF EVERY DAYS?</string>
+    <string name="main_frag_prevention_title">How to protect myself?</string>
+    <string name="prevention_toolbar_title">How to protect yourself every day?</string>
+    <string name="hands_tab_why">Why ?</string>
+    <string name="hands_tab_when">When ?</string>
+    <string name="hands_tab_how">How ?</string>
+<!-- translation position -->
+    <string name="prevention_hands_why_content_first">Hand washing\n\nRespiratory viruses such as coronavirus disease (COVID-19) spread when mucus or droplets containing the virus enter your body through your mouth, nose, and eyes.</string>
+    <string name="prevention_hands_why_content_second">Most often, this contact takes place by the hands.\n\nHands are also one of the most common ways of spreading the virus from one person to another.</string>
+    <string name="prevention_hands_why_content_third">Washing a hand frequently with soap and water during a pandemic is one of the most economical, easiest and most important measures to prevent the spread of a virus.</string>
 
 
-    <string name="text_expand">voir plus ...</string>
-    <string name="text_collapse">réduire</string>
-    <string name="water_tab_consumption">Eau de consommation</string>
+    <string name="text_expand">expand ...</string>
+    <string name="text_collapse">collapse</string>
+    <string name="water_tab_consumption">Water supply for human consumption</string>
     <string name="water_tab_used">Eaux usées</string>
     <string name="food_tab_aliment">Aliments à privilégier</string>
     <string name="food_tab_water">Boissons récommandées</string>

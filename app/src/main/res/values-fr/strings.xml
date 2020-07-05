@@ -90,11 +90,11 @@ Nécessité d’un dispositif respectant les spécificités des rituels ancestra
     </string>
     <string name="prevention_food_aliments"><![CDATA[Les aliments à privilégier sont ceux qui contiennent:<br/><b>Vitamine C</b><br/>2-4 grammes/ jour<br/>pendant 10 jours<br/><b>Vitamine D</b><br/>1500-2000 UI/J<br/><b>Vitamine A</b><br/><b>Vitamine E</b><br/><b>Zinc</b><br/>30 mg par jour<br/>pendant 10 jours<br/>à jeun à distance des repas.<br/><br/>Aliments riches en
 <b>Vitamines</b> et <b>Zinc</b> recommandés pour lutter contre le Covid19 ]]></string>
-    <string name="main_diagnosis_toolbar_title">ANALYZSEZ VOS SYMPTOMES</string>
-    <string name="main_diagnosis_title">ANALYZSEZ\nVOS SYMPTOMES</string>
+    <string name="main_diagnosis_toolbar_title">ANALYZSEZ VOS SYMPTÔMES</string>
+    <string name="main_diagnosis_title">ANALYZSEZ\nVOS SYMPTÔMES</string>
     <string name="diagnosis_subtitle">recevez aussitôt des informations adaptées sur ce qu\’il est préférable de faire</string>
     <string name="btn_next_spaced">S U I V A N T</string>
-    <string name="btn_next_no_choice">AUCUN SYMPTOME</string>
+    <string name="btn_next_no_choice">AUCUN SYMPTÔME</string>
     <string name="diagnosis_continue_analysis">Continuer à analyser vos symptômes</string>
     <string name="snack_check_one_case">Veuillez cocher une case pour continuer</string>
     <string name="diagnosis_fourth_test_negative_depth3_question">Avez-vous au moins 3 des symptômes suivants ?</string>
