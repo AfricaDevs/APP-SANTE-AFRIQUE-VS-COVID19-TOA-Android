@@ -70,7 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="15dp"
                 android:layout_marginLeft="-20dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="33dp"
                 android:layout_marginRight="50dp"
                 android:background="@drawable/ic_bg_fragment_main_tbox_green_color"
                 android:rotation="348" />
@@ -94,8 +94,8 @@
                     android:orientation="horizontal">
 
                     <RelativeLayout
-                        android:layout_width="120dp"
-                        android:layout_height="110dp"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
                         android:clipToPadding="false">
 
                         <com.airbnb.lottie.LottieAnimationView
@@ -130,12 +130,12 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="10dp"
-                    android:layout_marginStart="95dp"
-                    android:layout_marginLeft="95dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/ic_bg_fragment_main_tbox_green_color"
                     android:elevation="0dp"
-                    android:rotation="325" />
+                    android:rotation="332" />
 
 
             </androidx.cardview.widget.CardView>
@@ -154,7 +154,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="15dp"
                 android:layout_marginLeft="-20dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="33dp"
                 android:layout_marginRight="55dp"
                 android:background="@drawable/ic_bg_fragment_main_tbox_blue_color"
                 android:rotation="348" />
@@ -176,9 +176,9 @@
                     android:orientation="horizontal">
 
                     <RelativeLayout
-                        android:layout_width="120dp"
-                        android:layout_height="110dp"
-                        android:padding="25dp">
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:padding="10dp">
 
                         <com.airbnb.lottie.LottieAnimationView
                             android:id="@+id/lottie_covid_anim_diagnosis"
@@ -210,12 +210,12 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="10dp"
-                    android:layout_marginStart="95dp"
-                    android:layout_marginLeft="95dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/ic_bg_fragment_main_tbox_blue_color"
                     android:elevation="0dp"
-                    android:rotation="325" />
+                    android:rotation="332" />
 
             </androidx.cardview.widget.CardView>
 
