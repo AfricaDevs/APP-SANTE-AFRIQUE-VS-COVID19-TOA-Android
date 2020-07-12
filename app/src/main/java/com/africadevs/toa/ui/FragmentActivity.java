@@ -91,9 +91,7 @@ public class FragmentActivity extends AppCompatActivity implements ActivityCallb
 
                     break;
             }
-
         }
-
     }
 
 

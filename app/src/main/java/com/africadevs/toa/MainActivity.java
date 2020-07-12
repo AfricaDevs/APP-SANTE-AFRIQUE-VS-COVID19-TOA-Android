@@ -71,7 +71,8 @@ public class MainActivity extends AppCompatActivity implements MainActivityCallb
         // Handle drawer actions
         handleDrawer();
 
-        goToFragment(null, false);
+        //load the initial fragment
+        goToFragment();
 
     }
 
@@ -117,17 +118,11 @@ public class MainActivity extends AppCompatActivity implements MainActivityCallb
     }
 
 
-    private void goToFragment(Fragment fragment, boolean addToBackStack) {
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
-        if (addToBackStack) {
-            transaction.addToBackStack(null);
-        }
-
-        if (fragment != null)
-            transaction.replace(R.id.container, fragment).commit();
-        else
-            transaction.replace(R.id.container, new MainFragment()).commit();
+    private void goToFragment( ) {
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.container, new MainFragment())
+                .commit();
     }
 
     @Override

@@ -19,7 +19,6 @@
     <string name="prevention_hands_why_content_second">Le plus souvent, ce contact a lieu par les mains. \n\nLes mains sont également l\’une des manières les plus courantes de transmettre le virus d\’une personne à une autre.</string>
     <string name="prevention_hands_why_content_third">Durant une pandémie, le fait de se laver fréquemment les mains avec de l\’eau et du savon fait partie des mesures les plus économiques, les plus faciles et les plus importantes pour prévenir la propagation d\’un virus.</string>
 
-
     <string name="text_expand">voir plus ...</string>
     <string name="text_collapse">réduire</string>
     <string name="water_tab_consumption">Eau de consommation</string>
@@ -31,7 +30,7 @@
 <br/><br/>
         <b>Eaux usées domestiques:</b>
 <br/>
-quand c’est possible, prévoir des tranchées pour drainer les eaux usées afin qu’elles ne ruissellent pas à proximité des lieux de vie
+quand c\’est possible, prévoir des tranchées pour drainer les eaux usées afin qu\’elles ne ruissellent pas à proximité des lieux de vie
 <br/><br/>
 <b>Latrines:</b>
 <br/>
@@ -75,7 +74,7 @@ les tombes sont numérotées,
 un dispositif de géolocalisation est  mis en place afin d’associer le domicile du défunt à sa tombe. (?? en AF )<br/> <br/>
 Accompagnement de la famille et des proches endeuillés
 ]]></string>
-    <string name="prevention_funeral_how"><![CDATA[<b>CICR</b> : <a href="https://www.icrc.org/fr">voir site</a><br/>
+    <string name="prevention_funeral_how"><![CDATA[<b>www.CICR.org</b> : voir site<br/>
 
 Plans de préparation et de gestion garantissant le respect de la dignité des défunts et de leurs familles.<br/><br/>
 
@@ -155,6 +154,13 @@ Nécessité d’un dispositif respectant les spécificités des rituels ancestra
     <string name="prevention_movement_toa">TOÂ</string>
     <string name="prevention_toa">TOÂ</string>
     <string name="halt_select_a_case_to_continue">Veuillez cocher une case pour continuer</string>
+
+    <string name="main_covid_cases_worldwide">Cas de Covid-19 dans le monde :</string>
+    <string name="main_covid_confirmed">Confirmés</string>
+    <string name="main_covid_active">Actifs</string>
+    <string name="main_covid_recovered">Guéris</string>
+    <string name="main_covid_deaths">Décès</string>
+    <string name="main_covid_cases_origin">Cas du COVID-19 servis par le centre de science des systèmes et d\'ingénierie (CSSE) de l\'Université John Hopkins grâce à l\'API github.com/mathdroid/covid-19-api</string>
 
     <array name="prevention_options">
         <item>Pourquoi, quand et comment se laver les mains?</item>
