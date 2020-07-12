@@ -6,5 +6,5 @@ import java.util.Date;
 
 public class CountryCasesDetails {
     public int value;
-    public String detailURL;
+    public String detail;
 }

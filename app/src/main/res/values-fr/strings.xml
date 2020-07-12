@@ -156,6 +156,13 @@ Nécessité d’un dispositif respectant les spécificités des rituels ancestra
     <string name="prevention_toa">TOÂ</string>
     <string name="halt_select_a_case_to_continue">Veuillez cocher une case pour continuer</string>
 
+    <string name="main_covid_cases_worldwide">Cas de Covid-19 dans le monde :</string>
+    <string name="main_covid_confirmed">Confirmés</string>
+    <string name="main_covid_active">Actifs</string>
+    <string name="main_covid_recovered">Guéris</string>
+    <string name="main_covid_deaths">Décès</string>
+    <string name="main_covid_cases_origin">Cas du COVID-19 servis par le centre de science des systèmes et d\'ingénierie (CSSE) de l\'Université John Hopkins grâce à l\'API github.com/mathdroid/covid-19-api</string>
+
     <array name="prevention_options">
         <item>Pourquoi, quand et comment se laver les mains?</item>
         <item>Pourquoi, quand et comment fabriquer, porter et laver un masque?</item>

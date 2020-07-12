@@ -242,20 +242,31 @@
                 android:textSize="14sp" />
         </LinearLayout>
 
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/main_covid_cases_worldwide"
+    android:layout_marginLeft="@dimen/value_16dp"
+    android:layout_marginStart="@dimen/value_16dp"
+    android:layout_marginRight="@dimen/value_16dp"
+    android:layout_marginEnd="@dimen/value_16dp"
+    android:layout_marginTop="20dp"
 
+    />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginLeft="@dimen/value_16dp"
+            android:layout_marginStart="@dimen/value_16dp"
+            android:layout_marginRight="@dimen/value_16dp"
+            android:layout_marginEnd="@dimen/value_16dp"
+            android:layout_marginTop="5dp"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/value_16dp"
-                android:layout_marginStart="@dimen/value_16dp"
-                android:layout_marginRight="@dimen/value_16dp"
-                android:layout_marginEnd="@dimen/value_16dp"
+                android:minWidth="130dp"
                 android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -276,7 +287,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black_overlay"
-                        android:text="Confirmés"
+                        android:text="@string/main_covid_confirmed"
                         />
                     <TextView
                         android:id="@+id/casesConfirmedCount"
@@ -298,7 +309,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black_overlay"
-                        android:text="Actifs"
+                        android:text="@string/main_covid_active"
                         />
                     <TextView
                         android:id="@+id/casesActiveCount"
@@ -320,7 +331,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black_overlay"
-                        android:text="Guéris"
+                        android:text="@string/main_covid_recovered"
                         />
                     <TextView
                         android:id="@+id/casesRecoveredCount"
@@ -342,7 +353,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/black_overlay"
-                        android:text="Décès"
+                        android:text="@string/main_covid_deaths"
                         />
                     <TextView
                         android:id="@+id/casesDeathsCount"
@@ -365,6 +376,24 @@
                 android:layout_marginLeft="@dimen/value_16dp"
                 />
         </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/value_10dp"
+            android:layout_marginLeft="@dimen/value_16dp"
+            android:layout_marginStart="@dimen/value_16dp"
+            android:layout_marginRight="@dimen/value_16dp"
+            android:layout_marginEnd="@dimen/value_16dp"
+            android:text="@string/main_covid_cases_origin"
+            android:textColor="#616161"
+            android:linksClickable="true"
+            android:autoLink="web"
+            android:textColorLink="@color/materialBlue"
+            android:layout_marginBottom="@dimen/value_20dp"
+            android:textSize="14sp" />
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
