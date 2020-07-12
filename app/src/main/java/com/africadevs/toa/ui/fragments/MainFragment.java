@@ -24,6 +24,11 @@ import com.daimajia.androidanimations.library.YoYo;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.gson.Gson;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.text.NumberFormat;
+import java.util.Locale;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Retrofit;
@@ -110,10 +115,10 @@ public class MainFragment extends BottomSheetDialogFragment implements View.OnCl
                 Log.i("cases", response.body().confirmed.value+"");
 
                 //bind data
-                binding.casesConfirmedCount.setText(""+response.body().confirmed.value);
-                binding.casesRecoveredCount.setText(""+response.body().recovered.value);
-                binding.casesDeathsCount.setText(""+response.body().deaths.value);
-                binding.casesActiveCount.setText(""+(response.body().confirmed.value - (response.body().recovered.value + response.body().deaths.value)));
+                binding.casesConfirmedCount.setText( formatNumber(response.body().confirmed.value));
+                binding.casesRecoveredCount.setText(formatNumber(response.body().recovered.value));
+                binding.casesDeathsCount.setText(formatNumber(response.body().deaths.value));
+                binding.casesActiveCount.setText(formatNumber( (response.body().confirmed.value - (response.body().recovered.value + response.body().deaths.value))));
             }
 
             @Override
@@ -124,6 +129,12 @@ public class MainFragment extends BottomSheetDialogFragment implements View.OnCl
 
     }
 
+    private String formatNumber(int number){
+        DecimalFormat formatter = (DecimalFormat) NumberFormat.getInstance((Locale.getDefault()));
+        DecimalFormatSymbols symbols = formatter.getDecimalFormatSymbols();
+        symbols.setGroupingSeparator(' ');
+        return formatter.format(number).replaceAll(","," ");
+    }
 
     @Override
     public void onAttach(@NonNull Context context) {
