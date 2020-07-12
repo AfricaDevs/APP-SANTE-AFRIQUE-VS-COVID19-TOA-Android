@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">TOÂ</string>
-    <string name="main_intro_about_app">Researchers, doctors, scientists and designers have created this application just for TOÂ « you » in order to promote Best Practices for dealing with the Covid-19 pandemic in Africa.</string>
+    <string name="main_intro_about_app">Researchers, doctors, scientists and designers have created this application just for TOÂ « you » in order to promote Best Practices for dealing with the COVID-19 pandemic in Africa.</string>
 
     <string name="navigation_drawer_open">Drawer Open</string>
     <string name="navigation_drawer_close">Drawer Closed</string>
@@ -18,7 +18,6 @@
     <string name="hands_tab_why">Why ?</string>
     <string name="hands_tab_when">When ?</string>
     <string name="hands_tab_how">How ?</string>
-<!-- translation position -->
     <string name="prevention_hands_why_content_first">Hand washing\n\nRespiratory viruses such as coronavirus disease (COVID-19) spread when mucus or droplets containing the virus enter your body through your mouth, nose, and eyes.</string>
     <string name="prevention_hands_why_content_second">Most often, this contact takes place by the hands.\n\nHands are also one of the most common ways of spreading the virus from one person to another.</string>
     <string name="prevention_hands_why_content_third">Washing a hand frequently with soap and water during a pandemic is one of the most economical, easiest and most important measures to prevent the spread of a virus.</string>
@@ -31,6 +30,8 @@
     <string name="food_tab_aliment">Foods to favor</string>
     <string name="food_tab_water">Recommended drinks</string>
     <string name="funeral_tab_how">How to organize the funeral?</string>
+
+    <!-- translation position -->
     <string name="prevention_water_used"><![CDATA[Le coronavirus peut être trouvé dans les fèces/urine, les eaux usées doivent donc être traitées correctement
 <br/><br/>
         <b>Eaux usées domestiques:</b>
@@ -94,27 +95,27 @@ Nécessité d’un dispositif respectant les spécificités des rituels ancestra
     </string>
     <string name="prevention_food_aliments"><![CDATA[Les aliments à privilégier sont ceux qui contiennent:<br/><b>Vitamine C</b><br/>2-4 grammes/ jour<br/>pendant 10 jours<br/><b>Vitamine D</b><br/>1500-2000 UI/J<br/><b>Vitamine A</b><br/><b>Vitamine E</b><br/><b>Zinc</b><br/>30 mg par jour<br/>pendant 10 jours<br/>à jeun à distance des repas.<br/><br/>Aliments riches en
 <b>Vitamines</b> et <b>Zinc</b> recommandés pour lutter contre le Covid19 ]]></string>
-    <string name="main_diagnosis_toolbar_title">ANALYZSEZ VOS SYMPTOMES</string>
-    <string name="main_diagnosis_title">ANALYZSEZ\nVOS SYMPTOMES</string>
+    <string name="main_diagnosis_toolbar_title">ANALYZSE YOUR SYMPTOMS</string>
+    <string name="main_diagnosis_title">ANALYZSE\nYOUR SYMPTOMS</string>
     <string name="diagnosis_subtitle">recevez aussitôt des informations adaptées sur ce qu\’il est préférable de faire</string>
-    <string name="btn_next_spaced">S U I V A N T</string>
-    <string name="btn_next_no_choice">AUCUN SYMPTOME</string>
-    <string name="diagnosis_continue_analysis">Continuer à analyser vos symptômes</string>
-    <string name="snack_check_one_case">Veuillez cocher une case pour continuer</string>
+    <string name="btn_next_spaced">N E X T</string>
+    <string name="btn_next_no_choice">NO SYMPTOM</string>
+    <string name="diagnosis_continue_analysis">Continue to analyse your symptoms</string>
+    <string name="snack_check_one_case">Check a box to continue</string>
     <string name="diagnosis_fourth_test_negative_depth3_question">Avez-vous au moins 3 des symptômes suivants ?</string>
     <string name="diagnosis_fourth_test_negative_depth2_question">Avez-vous au moins un des symptômes suivants ?</string>
-    <string name="diagnosis_none_of_symptoms">Non, j\'ai aucun de ces symptômes</string>
-    <string name="diagnosis_none_of_diseases">Non, Aucune</string>
-    <string name="diagnosis_result_negatif">Votre diagnostic est négatif</string>
-    <string name="diagnisis_result_toolbar_title">VOTRE RÉSULTAT</string>
+    <string name="diagnosis_none_of_symptoms">No,i have none of these symptoms</string>
+    <string name="diagnosis_none_of_diseases">None</string>
+    <string name="diagnosis_result_negatif">Your diagnosis is negative</string>
+    <string name="diagnisis_result_toolbar_title">YOUR RESULT</string>
     <string name="diagnosis_result_positive_btn_prevention">J’aide mon organisme à se défendre contre la maladie</string>
     <string name="diagosis_result_positive_advice">Pensez à protéger vos proches et concitoyens en observant les mésures barrières</string>
     <string name="diagnosis_prevention_cotinuation">Comment continuer à me protéger?</string>
-    <string name="diagnosis_result_positive">Consultez immédiatement un médecin ou un centre de soin Covid-19 le plus proche. Ou téléphonez au numéro dédié pour le Covid 19.</string>
-    <string name="diagnosis_btn_none_symptoms">Non, j\'ai aucun de ces symptômes</string>
-    <string name="diagnosis_restart">Récommencer le diagnostic</string>
+    <string name="diagnosis_result_positive">Consultez immédiatement un médecin ou un centre de soin COVID-19 le plus proche. Ou téléphonez au numéro dédié pour le Covid 19.</string>
+    <string name="diagnosis_btn_none_symptoms">No,i have none of these symptom</string>
+    <string name="diagnosis_restart">Restart diagnosis</string>
     <string name="diagnosis_result_negative_warning">Ne baissez pas la garde aussi longtemps que la pandémie est active dans le Pays où vous êtes</string>
-    <string name="diagnosis_check_cases">(cocher la ou les cases)</string>
+    <string name="diagnosis_check_cases">(check one or multiple boxes)</string>
     <string name="diagnosis_no_respiratory_difficulties">Non, je n’ai pas des difficultés à respirer</string>
     <string name="diagnosis_respiratory_difficulties">Oui, j’ai des difficultés à respirer</string>
     <string name="diagnosis_ten_days_trip">Avez-vous, dans les 10 jours suivants des symptômes d’une grippe, des difficultés respiratoires, une impression de la poitrine qui serre, une impression de ne pas pouvoir respirer profondément ?</string>
@@ -125,10 +126,10 @@ Nécessité d’un dispositif respectant les spécificités des rituels ancestra
     <string name="diagnosis_disease_question">Souffrez-vous d’une des maladies reconnues suivantes ?</string>
     <string name="diagnosis_disease_top_hint">Indiquez et recevez aussitôt des informations adaptées sur ce qu’il est préférable de faire</string>
     <string name="diagnosis_btn_test_protect_others">Comment protéger les autres?</string>
-    <string name="diagnosis_test_positive_result_question">Vous avez effectué un test de Covid-19 et il est positif?</string>
-    <string name="diagnosis_test_positive_yes">Oui, j’ai eu un test positif au COVID-19</string>
-    <string name="diagnosis_test_positive_no">Non, je n’ai pas eu de test positif au Covid-19</string>
-    <string name="about_policies_btn_text">politique de confidentialité</string>
+    <string name="diagnosis_test_positive_result_question">Vous avez effectué un test de COVID-19 et il est positif?</string>
+    <string name="diagnosis_test_positive_yes">Yes, i was tested positive to COVID-19</string>
+    <string name="diagnosis_test_positive_no">No, i was tested nagative to COVID-19</string>
+    <string name="about_policies_btn_text">privacy policies</string>
 
     <string name="member_1" translatable="false">Karima Brahimi</string>
     <string name="member_2" translatable="false">Paul Tossa</string>
@@ -160,11 +161,11 @@ Nécessité d’un dispositif respectant les spécificités des rituels ancestra
     <string name="prevention_movement_toa">TOÂ</string>
     <string name="prevention_toa">TOÂ</string>
     <string name="halt_select_a_case_to_continue">Veuillez cocher une case pour continuer</string>
-    <string name="main_covid_cases_worldwide">Covid-19 global data :</string>
-    <string name="main_covid_confirmed">Confirmés</string>
-    <string name="main_covid_active">Actifs</string>
-    <string name="main_covid_recovered">Guéris</string>
-    <string name="main_covid_deaths">Décès</string>
+    <string name="main_covid_cases_worldwide">COVID-19 global data :</string>
+    <string name="main_covid_confirmed">Confirmed</string>
+    <string name="main_covid_active">Active</string>
+    <string name="main_covid_recovered">Recovered</string>
+    <string name="main_covid_deaths">Deaths</string>
     <string name="main_covid_cases_origin">COVIC-19 Cases served from The Center for Systems Science and Engineering (CSSE) at John Hopkins University thanks to github.com/mathdroid/covid-19-ap</string>
 
     <array name="prevention_options">
@@ -223,7 +224,7 @@ Nécessité d’un dispositif respectant les spécificités des rituels ancestra
         <item>Continuer à prendre vos traitements comme d\’habitude 
             (hydrea/siklos, exjade, desferal…).
             \n* Le rythme et le protocole des transfusions doit être conservé.
-            \n* Eviter les anti-inflammatoires susceptibles d\’aggraver une infection à Covid-19.
+            \n* Eviter les anti-inflammatoires susceptibles d\’aggraver une infection à COVID-19.
             \n* Cependant, si les anti-inflammatoires constituent votre traitement journalier, il
             est nécessaire de continuer.
             \n* En cas de doute, n’hésitez pas à poser la question à votre pharmacien/médecin.
@@ -253,7 +254,7 @@ Nécessité d’un dispositif respectant les spécificités des rituels ancestra
             prendre d\’anti-inflammatoires non stéroïdiens (ex. Ibuprofène) ni de vitamine C à forte
             dose (plus de 250 mg/j).
         </item>
-        <item>Je suis susceptible de développer des formes graves de Covid-19 en cas de diabète non
+        <item>Je suis susceptible de développer des formes graves de COVID-19 en cas de diabète non
             équilibré ou de complications. Je respecte strictement les mesures barrières et la
             distanciation physique. Si je ne sais pas encore le faire, je dois apprendre à
             reconnaître les signes d\'aggravation du diabète et des complications. J\'en parle avec
@@ -337,7 +338,7 @@ Nécessité d’un dispositif respectant les spécificités des rituels ancestra
     </array>
 
     <array name="prevention_funeral_options_titles">
-        <item>Comment organiser les obsèques de patients décédés du Covid-19?</item>
+        <item>Comment organiser les obsèques de patients décédés du COVID-19?</item>
     </array>
     <array name="prevention_garbage_options_titles">
         <item>Comment gérer les déchets domestiques?</item>
