@@ -6,14 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
+    tools:context="com.africadevs.toa.MainActivity">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinator_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
-        tools:context=".MainActivity">
+        tools:context="com.africadevs.toa.MainActivity">
 
 
         <com.google.android.material.appbar.AppBarLayout
@@ -82,7 +82,7 @@
                     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                     app:layout_collapseMode="pin"
 
-                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    app:layout_scrollFlags="noScroll"
                     app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
 
@@ -116,7 +116,7 @@
         app:itemTextColor="@color/white">
 
         <fragment
-            class="org.changemakers.toa.ui.fragments.NavFragment"
+            class="com.africadevs.toa.ui.fragments.NavFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </com.google.android.material.navigation.NavigationView>

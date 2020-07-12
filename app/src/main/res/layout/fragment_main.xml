@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:clipToPadding="false">
+    android:layout_height="match_parent" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,9 +59,9 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/prevention_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/prevention_container"
             android:layout_marginTop="8dp"
             android:clipToPadding="false">
 
@@ -70,7 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="15dp"
                 android:layout_marginLeft="-20dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="33dp"
                 android:layout_marginRight="50dp"
                 android:background="@drawable/ic_bg_fragment_main_tbox_green_color"
                 android:rotation="348" />
@@ -94,8 +94,8 @@
                     android:orientation="horizontal">
 
                     <RelativeLayout
-                        android:layout_width="120dp"
-                        android:layout_height="110dp"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
                         android:clipToPadding="false">
 
                         <com.airbnb.lottie.LottieAnimationView
@@ -130,12 +130,12 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="10dp"
-                    android:layout_marginStart="95dp"
-                    android:layout_marginLeft="95dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/ic_bg_fragment_main_tbox_green_color"
                     android:elevation="0dp"
-                    android:rotation="325" />
+                    android:rotation="332" />
 
 
             </androidx.cardview.widget.CardView>
@@ -154,7 +154,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="15dp"
                 android:layout_marginLeft="-20dp"
-                android:layout_marginTop="55dp"
+                android:layout_marginTop="33dp"
                 android:layout_marginRight="55dp"
                 android:background="@drawable/ic_bg_fragment_main_tbox_blue_color"
                 android:rotation="348" />
@@ -176,9 +176,9 @@
                     android:orientation="horizontal">
 
                     <RelativeLayout
-                        android:layout_width="120dp"
-                        android:layout_height="110dp"
-                        android:padding="25dp">
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:padding="10dp">
 
                         <com.airbnb.lottie.LottieAnimationView
                             android:id="@+id/lottie_covid_anim_diagnosis"
@@ -210,12 +210,12 @@
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="10dp"
-                    android:layout_marginStart="95dp"
-                    android:layout_marginLeft="95dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/ic_bg_fragment_main_tbox_blue_color"
                     android:elevation="0dp"
-                    android:rotation="325" />
+                    android:rotation="332" />
 
             </androidx.cardview.widget.CardView>
 
@@ -242,7 +242,169 @@
                 android:textSize="14sp" />
         </LinearLayout>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/value_16dp"
+            android:layout_marginLeft="@dimen/value_16dp"
+            android:layout_marginTop="@dimen/value_16dp"
+            android:layout_marginEnd="@dimen/value_16dp"
+            android:layout_marginRight="@dimen/value_16dp"
+            android:text="@string/main_covid_cases_worldwide"
 
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/value_16dp"
+            android:layout_marginLeft="@dimen/value_16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="@dimen/value_16dp"
+            android:layout_marginRight="@dimen/value_16dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="130dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageCountryFlag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:minWidth="50dp"
+                    android:src="@drawable/cg" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/main_covid_confirmed"
+                        android:textColor="@color/black_overlay" />
+
+                    <TextView
+                        android:id="@+id/casesConfirmedCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:text="0"
+                        android:textColor="@color/materialYellow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/main_covid_active"
+                        android:textColor="@color/black_overlay" />
+
+                    <TextView
+                        android:id="@+id/casesActiveCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:text="0"
+                        android:textColor="@color/materialYellow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/main_covid_recovered"
+                        android:textColor="@color/black_overlay" />
+
+                    <TextView
+                        android:id="@+id/casesRecoveredCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:text="0"
+                        android:textColor="@color/materialYellow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/main_covid_deaths"
+                        android:textColor="@color/black_overlay" />
+
+                    <TextView
+                        android:id="@+id/casesDeathsCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:text="0"
+                        android:textColor="@color/materialYellow" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <NumberPicker
+                android:id="@+id/countryNumberPicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/value_16dp"
+                android:layout_marginLeft="@dimen/value_16dp"
+                android:descendantFocusability="blocksDescendants"
+                android:tooltipText="Sélectionner un Pays" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/onlineStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/value_16dp"
+            android:layout_marginLeft="@dimen/value_16dp"
+            android:layout_marginTop="@dimen/value_5dp"
+            android:layout_marginEnd="@dimen/value_16dp"
+            android:textSize="12sp"
+            android:textColor="@color/materialRed"
+            android:text="vous n'êtes pas connecté à internet"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/value_16dp"
+            android:layout_marginLeft="@dimen/value_16dp"
+            android:layout_marginTop="@dimen/value_10dp"
+            android:layout_marginEnd="@dimen/value_16dp"
+            android:layout_marginRight="@dimen/value_16dp"
+            android:layout_marginBottom="@dimen/value_20dp"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:text="@string/main_covid_cases_origin"
+            android:textColor="#616161"
+            android:textColorLink="@color/colorAccent"
+            android:textSize="14sp" />
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

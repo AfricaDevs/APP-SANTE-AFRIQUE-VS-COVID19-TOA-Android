@@ -1,0 +1,44 @@
+package com.africadevs.toa.ui.fragments.prevention;
+
+import android.os.Bundle;
+import android.text.Html;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
+import com.africadevs.toa.R;
+import com.africadevs.toa.databinding.FragmentPreventionFuneralHowBinding;
+
+public class PreventionFuneralHowFragment extends Fragment {
+
+    FragmentPreventionFuneralHowBinding binding;
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+        binding = FragmentPreventionFuneralHowBinding.inflate(getLayoutInflater());
+
+        binding.expandableText.setTextMaxLines(6);
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            binding.expandableIdShowTextview.setText(Html.fromHtml(getResources().getString(R.string.prevention_funeral_how), Html.FROM_HTML_MODE_LEGACY));
+        } else {
+            binding.expandableIdShowTextview.setText(Html.fromHtml(getResources().getString(R.string.prevention_funeral_how)));
+        }
+
+        binding.expandableText.setTextMaxLines(8);
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+            binding.textview2.setText(Html.fromHtml(getResources().getString(R.string.prevention_funeral_how2), Html.FROM_HTML_MODE_LEGACY));
+        } else
+            binding.textview2.setText(Html.fromHtml(getResources().getString(R.string.prevention_funeral_how2)));
+
+        return binding.getRoot();
+
+    }
+}

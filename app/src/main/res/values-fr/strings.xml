@@ -1,0 +1,350 @@
+<resources>
+    <string name="app_name">TOÂ</string>
+    <string name="main_intro_about_app">Chercheurs, médecins et scientifiques ont créé cette application rien que pour TOÂ.\nPour promouvoir les bonnes pratiques pour faire face à la pandémie de Covid-19 en Afrique.</string>
+
+    <string name="navigation_drawer_open">Drawer Open</string>
+    <string name="navigation_drawer_close">Drawer Closed</string>
+    <string name="alert_cant_handle">Erreur !</string>
+    <string name="main_frag_prevention_btn">COMMENT\nSE PROTEGER\nTOUS LES JOURS?</string>
+    <string name="main_frag_prevention_title">Comment se protéger?</string>
+    <string name="transition_shared_main_activity_lottie_image">shared_lottie_icon</string>
+    <string name="transition_splash_shared_logo">transition_shared_logo</string>
+
+    <string name="prevention_toolbar_title">Comment se protéger tous les jours?</string>
+    <string name="hands_tab_why">Pourquoi ?</string>
+    <string name="hands_tab_when">Quand ?</string>
+    <string name="hands_tab_how">Comment ?</string>
+
+    <string name="prevention_hands_why_content_first">Le lavage des mains\n\nLes virus respiratoires tels que la maladie à coronavirus (COVID-19) se propagent lorsque du mucus ou des gouttelettes contenant le virus pénètrent dans votre corps par l\’intermédiaire de votre bouche, votre nez et vos yeux.</string>
+    <string name="prevention_hands_why_content_second">Le plus souvent, ce contact a lieu par les mains. \n\nLes mains sont également l\’une des manières les plus courantes de transmettre le virus d\’une personne à une autre.</string>
+    <string name="prevention_hands_why_content_third">Durant une pandémie, le fait de se laver fréquemment les mains avec de l\’eau et du savon fait partie des mesures les plus économiques, les plus faciles et les plus importantes pour prévenir la propagation d\’un virus.</string>
+
+    <string name="text_expand">voir plus ...</string>
+    <string name="text_collapse">réduire</string>
+    <string name="water_tab_consumption">Eau de consommation</string>
+    <string name="water_tab_used">Eaux usées</string>
+    <string name="food_tab_aliment">Aliments à privilégier</string>
+    <string name="food_tab_water">Boissons récommandées</string>
+    <string name="funeral_tab_how">Comment organiser les obsèques?</string>
+    <string name="prevention_water_used"><![CDATA[Le coronavirus peut être trouvé dans les fèces/urine, les eaux usées doivent donc être traitées correctement
+<br/><br/>
+        <b>Eaux usées domestiques:</b>
+<br/>
+quand c\’est possible, prévoir des tranchées pour drainer les eaux usées afin qu\’elles ne ruissellent pas à proximité des lieux de vie
+<br/><br/>
+<b>Latrines:</b>
+<br/>
+Utiliser la chaux active pour désinfecter des excréments (chaulage)]]>
+    </string>
+    <string name="prevention_water_consumption_first">Au 15-4-2020\n\nL\’OMS a confirmé qu\’il n\’y a selon les connaissances scientifiques et épidémiologiques, aucun cas de contamination en lien avec l\’eau potable. \n\n Les procédés conventionnels de désinfection en place sur les usines de potabilisation (chlore, UV, ozone) permettent ainsi d\’éliminer le virus COVID-19, tout comme les autres virus. \n\n En Afrique, l\’accès à l\’eau salubre est l\’une des conditions essentiels des gestes barrières, le lavage des mains</string>
+
+    <string name="prevention_water_consumption_second"><![CDATA[La présence du virus dans
+    l\'eau <b>non traitée</b> est possible<br/><br/>
+
+    <strong>Pour détruire le virus dans l\’eau,
+    il est recommandé</strong>
+            <br /><br/>
+                <b>* faire bouillir l\’eau pendant 10 minute</b><br/>
+                <b>* d\’utiliser</b> du chlore pour désinfecter l\’eau destinée à la consommation humaine<br/>
+                <b>*</b> Chlore (en pastilles ou SURE EAU)<br/>
+                <b>*</b> maintenir un taux de chlore résiduel à 0,5 mg par Litre d\’eau<br/>
+            <br/><br/>
+
+    <strong>Attention, rester vigilant sur les dosages de chlore</strong> qui peuvent se trouver sous forme de pastille, d\’eau de javel, de DCNA, ou SURE-EAU.
+]]>
+    </string>
+    <string name="prevention_movement_why">Evitez les foules,  Pratiquez la distanciation sociale   S\'abstenir de toute sortie non indispensable dans un lieu public. Ne participer à aucun regroupement, qu\'il soit de nature professionnelle, sociale ou familiale.\n\nEviter tout contact avec des personnes vulnérables (personnes âgées…). Eviter de fréquenter de lieux où se trouvent des personnes fragiles (hôpitaux, maternités, structures d\'hébergement pour personnes âgées...)</string>
+    <string name="prevention_movement_how">"Nommer une personne plus jeune et en bonne santé de faire les courses pendant toute la période de pandémie. "</string>
+
+    <string name="prevention_funeral_how2"><![CDATA[<b><big>Dispositif au domicile
+ou au sein de la communauté</big></b><br/><br/>
+
+La Croix Rouge locale recommande des procédure basée sur des spécificités locales
+<br/><br/>
+mesures de protection spécifiques aux soignants
+port de combinaisons + masque + gants <br/>
+désinfection par pulvérisations du logement du défunt (chaulage)<br/><br/>
+
+<b>Combien de personnes peuvent assister aux obsèques?</b><br/><br/>
+
+En chambre funéraire : 2 maximum<br/>
+Lors de cérémonie religieuse: 20 maximum<br/> <br/>
+Au cimetière : <br/>
+les tombes sont numérotées,
+un dispositif de géolocalisation est  mis en place afin d’associer le domicile du défunt à sa tombe. (?? en AF )<br/> <br/>
+Accompagnement de la famille et des proches endeuillés
+]]></string>
+    <string name="prevention_funeral_how"><![CDATA[<b>www.CICR.org</b> : voir site<br/>
+
+Plans de préparation et de gestion garantissant le respect de la dignité des défunts et de leurs familles.<br/><br/>
+
+Les mesures exceptionnelles visent à
+<br/>
+<br/><b>*</b> protéger  les soignants, la famille, la communauté
+    <b>*</b> éviter la propagation du virus<br/><br/>
+
+Nécessité d’un dispositif respectant les spécificités des rituels ancestrales et les croyances pour la qualification d’un “Enterrement  Digne et Sécurisé “
+]]>
+    </string>
+    <string name="prevention_food_aliments"><![CDATA[Les aliments à privilégier sont ceux qui contiennent:<br/><b>Vitamine C</b><br/>2-4 grammes/ jour<br/>pendant 10 jours<br/><b>Vitamine D</b><br/>1500-2000 UI/J<br/><b>Vitamine A</b><br/><b>Vitamine E</b><br/><b>Zinc</b><br/>30 mg par jour<br/>pendant 10 jours<br/>à jeun à distance des repas.<br/><br/>Aliments riches en
+<b>Vitamines</b> et <b>Zinc</b> recommandés pour lutter contre le Covid19 ]]></string>
+    <string name="main_diagnosis_toolbar_title">ANALYZSEZ VOS SYMPTÔMES</string>
+    <string name="main_diagnosis_title">ANALYZSEZ\nVOS SYMPTÔMES</string>
+    <string name="diagnosis_subtitle">recevez aussitôt des informations adaptées sur ce qu\’il est préférable de faire</string>
+    <string name="btn_next_spaced">S U I V A N T</string>
+    <string name="btn_next_no_choice">AUCUN SYMPTÔME</string>
+    <string name="diagnosis_continue_analysis">Continuer à analyser vos symptômes</string>
+    <string name="snack_check_one_case">Veuillez cocher une case pour continuer</string>
+    <string name="diagnosis_fourth_test_negative_depth3_question">Avez-vous au moins 3 des symptômes suivants ?</string>
+    <string name="diagnosis_fourth_test_negative_depth2_question">Avez-vous au moins un des symptômes suivants ?</string>
+    <string name="diagnosis_none_of_symptoms">Non, j\'ai aucun de ces symptômes</string>
+    <string name="diagnosis_none_of_diseases">Non, Aucune</string>
+    <string name="diagnosis_result_negatif">Votre diagnostic est négatif</string>
+    <string name="diagnisis_result_toolbar_title">VOTRE RÉSULTAT</string>
+    <string name="diagnosis_result_positive_btn_prevention">J’aide mon organisme à se défendre contre la maladie</string>
+    <string name="diagosis_result_positive_advice">Pensez à protéger vos proches et concitoyens en observant les mésures barrières</string>
+    <string name="diagnosis_prevention_cotinuation">Comment continuer à me protéger?</string>
+    <string name="diagnosis_result_positive">Consultez immédiatement un médecin ou un centre de soin Covid-19 le plus proche. Ou téléphonez au numéro dédié pour le Covid 19.</string>
+    <string name="diagnosis_btn_none_symptoms">Non, j\'ai aucun de ces symptômes</string>
+    <string name="diagnosis_restart">Récommencer le diagnostic</string>
+    <string name="diagnosis_result_negative_warning">Ne baissez pas la garde aussi longtemps que la pandémie est active dans le Pays où vous êtes</string>
+    <string name="diagnosis_check_cases">(cocher la ou les cases)</string>
+    <string name="diagnosis_no_respiratory_difficulties">Non, je n’ai pas des difficultés à respirer</string>
+    <string name="diagnosis_respiratory_difficulties">Oui, j’ai des difficultés à respirer</string>
+    <string name="diagnosis_ten_days_trip">Avez-vous, dans les 10 jours suivants des symptômes d’une grippe, des difficultés respiratoires, une impression de la poitrine qui serre, une impression de ne pas pouvoir respirer profondément ?</string>
+    <string name="diagnosis_result_positive_restart">Récommencer mon diagnostic COVID-19</string>
+    <string name="main_publishing_authors">Nom des responsables de publication</string>
+    <string name="diagnosis_one_or_more_symptoms_question">Avez-vous un ou plusieurs des symptômes suivants ? (cocher la ou les cases). recevez aussitôt des informations adaptées sur ce qu’il est préférable de faire</string>
+    <string name="diagnosis_malaria_text">Vous avez un ou plusieurs symptômes du paludisme, il est nécessaire que vous consultiez un médecin qui pourra vous faire un test et vous donner les médicaments adéquats. \n\nSi vous avez déjà consulté et effectué ce test du paludisme et qu’il s’est révélé négatif alors cliquez sur le bouton ci-dessous.</string>
+    <string name="diagnosis_disease_question">Souffrez-vous d’une des maladies reconnues suivantes ?</string>
+    <string name="diagnosis_disease_top_hint">Indiquez et recevez aussitôt des informations adaptées sur ce qu’il est préférable de faire</string>
+    <string name="diagnosis_btn_test_protect_others">Comment protéger les autres?</string>
+    <string name="diagnosis_test_positive_result_question">Vous avez effectué un test de Covid-19 et il est positif?</string>
+    <string name="diagnosis_test_positive_yes">Oui, j’ai eu un test positif au COVID-19</string>
+    <string name="diagnosis_test_positive_no">Non, je n’ai pas eu de test positif au Covid-19</string>
+    <string name="about_policies_btn_text">politique de confidentialité</string>
+
+    <string name="member_1" translatable="false">Karima Brahimi</string>
+    <string name="member_2" translatable="false">Paul Tossa</string>
+    <string name="member_3" translatable="false">Armelle Hebert</string>
+    <string name="member_4" translatable="false">Manon Aminatou</string>
+    <string name="member_5" translatable="false">Nyan Frederick Goumou</string>
+    <string name="member_6" translatable="false">Sandrine Mansoutre</string>
+    <string name="member_7" translatable="false">Clémentine Langlois</string>
+    <string name="member_8" translatable="false">Steve Ndende</string>
+
+    <string name="member_1_intro">Médecin, microbiologiste</string>
+    <string name="member_2_intro">Médecin toxicologue et de santé publique</string>
+    <string name="member_3_intro">Expert en Santé Environnementale Renforcement des capacités Pays / Politiques publiques, Immunologiste</string>
+    <string name="member_4_intro">Dr en Pharmacologie, Toxicologue, Directrice VisaTox</string>
+    <string name="member_5_intro">Médecin, chirurgien oncologue pédiatre et consultant en PCI</string>
+    <string name="member_6_intro">Docteur en physique et ingénieur en chimie, Open innovation</string>
+    <string name="member_7_intro">Directeur de programme Santé, épidémiologiste</string>
+    <string name="member_8_intro">Chef de projet mobile</string>
+
+    <string name="prevention_garbage_text1">Jeter ses mouchoirs, gants et masques à usage unique dans un sac dans une poubelle avec couvercle.\n\nFermer soigneusement le sac poubelle et conserver 24 heures avant d\'être jeté dans le container d\'ordures ménagères ou mettre dans un second sac poubelle et fermer celui-ci. \n\nSe laver les mains soigneusement à l\'eau savonneuse ou au gel hydroalcoolique après cette opération. \n</string>
+    <string name="prevention_garbage_text2">Encore plus que jamais, veiller à ne surtout pas jeter ses mouchoirs et masques par terre.</string>
+    <string name="prevention_mask_how1">Avant tout, se laver les mains avant de porter le masque</string>
+    <string name="prevention_mask_how2"><![CDATA[Le masque doit : . s\'adapter parfaitement mais confortablement sur le côté du visage . être attaché avec des élastiques/cordons autour des oreilles . permettre de respirer sans restriction (etc…) => mettre la suite sur page suivante…]]></string>
+    <string name="prevention_mask_when">Dans les lieux publics où toutes autres mesures de distanciation sociale sont difficiles à maintenir partout à l’extérieur, dans les épiceries, les pharmacies, les marchés dans les zones de transmission communautaire importante</string>
+    <string name="prevention_mask_why">Pour ralentir la propagation du virus protéger les personnes fragiles (vos proches, personnes âgées et malades autour de vous)</string>
+    <string name="prevention_movement_when1">Evitez tout contact raproché, y compris les salutations et les accolades avec les autres</string>
+    <string name="prevention_movement_when2">Maintenez une distance d\'au moins 1m avec les autres personnes</string>
+    <string name="prevention_movement_when3">Evitez les attroupements, les lieux et les transports publics</string>
+    <string name="prevention_movement_toa">TOÂ</string>
+    <string name="prevention_toa">TOÂ</string>
+    <string name="halt_select_a_case_to_continue">Veuillez cocher une case pour continuer</string>
+
+    <string name="main_covid_cases_worldwide">Cas de Covid-19 dans le monde :</string>
+    <string name="main_covid_confirmed">Confirmés</string>
+    <string name="main_covid_active">Actifs</string>
+    <string name="main_covid_recovered">Guéris</string>
+    <string name="main_covid_deaths">Décès</string>
+    <string name="main_covid_cases_origin">Cas du COVID-19 servis par le centre de science des systèmes et d\'ingénierie (CSSE) de l\'Université John Hopkins grâce à l\'API github.com/mathdroid/covid-19-api</string>
+
+    <array name="prevention_options">
+        <item>Pourquoi, quand et comment se laver les mains?</item>
+        <item>Pourquoi, quand et comment fabriquer, porter et laver un masque?</item>
+        <item>Pourquoi, quand et comment se déplacer?</item>
+        <item>Que puis-je manger pour aider mon organisme à lutter?</item>
+        <item>Comment je gère l\’eau?</item>
+        <item>Comment je gère les déchets ménagers?</item>
+        <item>Comment je gère les obsèques d\’une personne?</item>
+    </array>
+
+    <array name="diagnosis_options_fourth_depth2">
+        <item>Perte d\'odorat</item>
+        <item>Perte du goût</item>
+        <item>Fièvre élevée (dès 38,5°C)</item>
+    </array>
+    <array name="diagnosis_options_fourth_depth3">
+        <item>Une toux, mal de gorge, rhume</item>
+        <item>Forte fatigue</item>
+        <item>souffle court</item>
+        <item>Des nausées, vomissements, diarrhées</item>
+        <item>Des maux de tête, migraine</item>
+        <item>Douleur dans les muscles et articulations</item>
+        <item>Yeux gonflés, humides, rouges</item>
+        <item>Rougeurs sur la peau, rash cutané, petites vésicules</item>
+    </array>
+    <array name="diagnosis_options">
+        <item>Des maux de tête</item>
+        <item>Une forte fatigue</item>
+        <item>Un toux</item>
+        <item>Des nausées</item>
+        <item>Des vomissements</item>
+        <item>De la diarrhée</item>
+        <item>Fièvre élevée et accompagnée de frissons, de sudations, de douleurs dans les muscles
+            et les articulations
+        </item>
+    </array>
+    <array name="diagnosis_second_options">
+        <item>Drépanocytose</item>
+        <item>Hypertension Artérielle</item>
+        <item>Maladies respiratoires chroniques</item>
+        <item>Thalassémie</item>
+        <item>Diabète</item>
+        <item>Obésité</item>
+    </array>
+    <array name="diagnosis_second_options_details_titles">
+        <item>Je souffre de Drépanocytose</item>
+        <item>Je souffre d\’Hypertension Artérielle</item>
+        <item>Je souffre de maladies respiratoires chroniques</item>
+        <item>Je souffre de Thalassémie</item>
+        <item>Je souffre de Diabète</item>
+        <item>Je souffre d\'Obésité</item>
+    </array>
+    <array name="diagnosis_second_options_details">
+        <item>Continuer à prendre vos traitements comme d\’habitude 
+            (hydrea/siklos, exjade, desferal…).
+            \n* Le rythme et le protocole des transfusions doit être conservé.
+            \n* Eviter les anti-inflammatoires susceptibles d\’aggraver une infection à Covid-19.
+            \n* Cependant, si les anti-inflammatoires constituent votre traitement journalier, il
+            est nécessaire de continuer.
+            \n* En cas de doute, n’hésitez pas à poser la question à votre pharmacien/médecin.
+        </item>
+        <item>Je vais consulter mon médecin pour adapter si nécessaire mon traitement pendant la
+            pandémie.\n
+            Si vous prenez des médicaments contre l\'hypertension de la famille des bêtabloquants
+            connus pour leur capacité à entrainer un étouffement (bronchospasme) chez les personnes
+            déjà sensibles sur le plan respiratoire.\n\n
+            La prudence recommande d\'en discuter avec votre médecin pour une alternative
+            thérapeutique. Continuez votre traitement s\'il n\'existe pas d\'alternative efficace
+            pour contrôler votre tension. Surtout,  n\'interrompez pas votre traitement sans en
+            parler votre votre médecin
+        </item>
+        <item>Les Bêta-bloquants peuvent provoquer un bronchospasme chez les sujets ayant des déjà
+            des pathologies bronchiques (bronchite chronique, Asthme, BPCO...). Si vous souffrez
+            d\'une affection bronchique chronique et que vous êtes sous bêta-bloquants pour
+            d\'autres affections, consulter votre médecin pour étudier une alternative
+            thérapeutique. N\'interrompez pas votre traitement sans en parler votre votre médecin.
+        </item>
+        <item>Si vous avez une thalassémie majeure, vous êtes régulièrement transfusé. Ces
+            transfusions sont nécessaires pour corriger l\’anémie mais également pour prévenir
+            d\’autres complications. Elles doivent se poursuivre selon le rythme habituel. Si vous
+            avez une thalassémie intermédiaire et que vous recevez des transfusions régulières, le
+            médecin spécialiste décidera de maintenir ou non les transfusions régulières en fonction
+            de votre situation médicale personnelle et des complications potentielles. Ne pas
+            prendre d\’anti-inflammatoires non stéroïdiens (ex. Ibuprofène) ni de vitamine C à forte
+            dose (plus de 250 mg/j).
+        </item>
+        <item>Je suis susceptible de développer des formes graves de Covid-19 en cas de diabète non
+            équilibré ou de complications. Je respecte strictement les mesures barrières et la
+            distanciation physique. Si je ne sais pas encore le faire, je dois apprendre à
+            reconnaître les signes d\'aggravation du diabète et des complications. J\'en parle avec
+            mon médecin si je ne sais le faire. Je dois veiller à maintenir un bon équilibre
+            glycémique. Je maintiens une alimentation adaptée pour prévenir le risque
+            d\'hypoglycémie et je limite la consommation d\'aliments riches en acides gras saturés
+            afin de contrôler la prise de poids. Une activité physique régulière minimale est
+            vivement conseillée.
+        </item>
+        <item>Je suis concerné si j\'ai un IMC supérieur ou égal à 30 kg/m2 et je respecte
+            strictement les mesures barrières et la distanciation physique. Si de plus, mon IMC est
+            supérieur ou égal à 40 kg/m2, j\'étudie sérieusement la possibilité de travailler à
+            distance dans la période de l\’épidémie en limitant au maximum possible les contacts. Je
+            continue tous mes traitements en cours. Je maintiens une alimentation adaptée et je
+            limite la consommation d\’aliments riches en acides gras saturés afin de contrôler la
+            prise de poids. Une activité physique régulière minimale est vivement conseillée.
+        </item>
+    </array>
+    <array name="prevention_icons">
+        <item>lottie_covid_hands</item>
+        <item>lottie_covid_mask</item>
+        <item>lottie_social_distancing</item>
+        <item>covid_doctor</item>
+        <item>lottie_water</item>
+        <item>lottie_trash_clean</item>
+        <item>lottie_sad</item>
+    </array>
+
+    <array name="prevention_hands_options_titles">
+        <item>Pourquoi se laver les mains?</item>
+        <item>Quand se laver les mains?</item>
+        <item>Comment se laver les mains?</item>
+    </array>
+    <array name="prevention_hands_when">
+        <item>Avant de toucher vos yeux, votre nez ou votre bouche, car c\'est par là que les germes
+            pénètrent dans notre corps.
+        </item>
+        <item>Avant, pendant et après la préparation des aliments</item>
+        <item>Avant de manger</item>
+        <item>Avant et après la prise en charge d\'une personne à domicile souffrant de vomissements
+            ou de diarrhée
+        </item>
+        <item>Avant et après le traitement d\'une coupure ou d\'une plaie</item>
+        <item>Après avoir utilisé les toilettes</item>
+        <item>Après avoir changé des couches ou nettoyé un enfant qui a utilisé les toilettes</item>
+        <item>Après s\'être mouché, avoir toussé ou éternué</item>
+        <item>Après avoir touché un animal, des aliments pour animaux ou des déchets d\'animaux
+        </item>
+        <item>Après avoir touché des ordures</item>
+        <item>Après avoir été dans un lieu public et avoir touché un objet ou une surface qui peut
+            être fréquemment touché par d\'autres personnes, comme les poignées de porte, les
+            tables, les pompes à essence
+        </item>
+    </array>
+    <array name="prevention_hands_how">
+        <item>Paume contre paume</item>
+        <item>Le dos des mains</item>
+        <item>Entre les doigts</item>
+        <item>Le dos des doigts</item>
+        <item>Les pouces</item>
+        <item>Le bout des doigts et les angles</item>
+    </array>
+    <array name="prevention_hands_how_icons" translatable="false">
+        <item>hands_how1</item>
+        <item>hands_how2</item>
+        <item>hands_how3</item>
+        <item>hands_how4</item>
+        <item>hands_how5</item>
+        <item>hands_how6</item>
+    </array>
+
+    <array name="prevention_water_options_titles">
+        <item>Comment gérer l\’eau destinée à la consommation humaine?</item>
+        <item>Comment gérer les eaux usées (nettoyage, domestique) et les latrines?</item>
+    </array>
+
+    <array name="prevention_movement_options_titles">
+        <item>Pourquoi réduire ses déplacements?</item>
+        <item>Quand se déplacer?</item>
+        <item>Comment se déplacer?</item>
+    </array>
+
+    <array name="prevention_funeral_options_titles">
+        <item>Comment organiser les obsèques de patients décédés du Covid-19?</item>
+    </array>
+    <array name="prevention_garbage_options_titles">
+        <item>Comment gérer les déchets domestiques?</item>
+    </array>
+    <array name="prevention_food_options_titles">
+        <item>Quels sont les aliments à privilégier?</item>
+        <item>Quelles sont les boissons froides et chaudes que je peux consommer?</item>
+    </array>
+    <array name="prevention_mask_options_titles">
+        <item>Pourquoi porter un masque?</item>
+        <item>Quand porter un masque?</item>
+        <item>Comment porter un masque?</item>
+    </array>
+
+</resources>

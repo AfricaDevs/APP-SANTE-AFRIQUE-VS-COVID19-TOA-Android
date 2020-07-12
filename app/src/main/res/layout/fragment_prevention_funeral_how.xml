@@ -23,7 +23,7 @@
             android:padding="@dimen/value_10dp">
 
 
-            <org.changemakers.toa.custom_views.ExpandableTextLayout
+            <com.africadevs.toa.custom_views.ExpandableTextLayout
                 android:id="@+id/expandable_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -34,13 +34,13 @@
                     android:id="@+id/expandable_id_show_textview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:autoLink="web"
                     android:ellipsize="end"
-                    android:linksClickable="true"
                     android:scrollHorizontally="false"
                     android:text="@string/prevention_water_consumption_first"
                     android:textColor="@color/prevention_details_text_color"
                     android:textColorLink="@color/colorAccent"
+                    android:linksClickable="true"
+                    android:autoLink="web"
                     android:textIsSelectable="true"
                     android:textSize="@dimen/app_main_text_size" />
 
@@ -54,7 +54,7 @@
                     android:paddingBottom="5dp"
                     android:text="@string/text_expand"
                     android:textColor="@color/colorAccent" />
-            </org.changemakers.toa.custom_views.ExpandableTextLayout>
+            </com.africadevs.toa.custom_views.ExpandableTextLayout>
 
             <!-- string resource is HTML encoded, binded programatically -->
             <TextView
