@@ -33,8 +33,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    //toa-v1.0_FrenchOnly.apk
-
 
     viewBinding {
         enabled = true
@@ -72,7 +70,11 @@ dependencies {
     implementation 'com.facebook.rebound:rebound:0.3.8'
     implementation 'com.airbnb.android:lottie:3.4.0'
 
+    //HTTP client
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    //Data parsing
     implementation 'com.google.code.gson:gson:2.8.5'
+
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
