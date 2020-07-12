@@ -27,15 +27,15 @@
     <string name="text_expand">expand ...</string>
     <string name="text_collapse">collapse</string>
     <string name="water_tab_consumption">Water supply for human consumption</string>
-    <string name="water_tab_used">Eaux usées</string>
-    <string name="food_tab_aliment">Aliments à privilégier</string>
-    <string name="food_tab_water">Boissons récommandées</string>
-    <string name="funeral_tab_how">Comment organiser les obsèques?</string>
+    <string name="water_tab_used">Wastewater</string>
+    <string name="food_tab_aliment">Foods to favor</string>
+    <string name="food_tab_water">Recommended drinks</string>
+    <string name="funeral_tab_how">How to organize the funeral?</string>
     <string name="prevention_water_used"><![CDATA[Le coronavirus peut être trouvé dans les fèces/urine, les eaux usées doivent donc être traitées correctement
 <br/><br/>
         <b>Eaux usées domestiques:</b>
 <br/>
-quand c’est possible, prévoir des tranchées pour drainer les eaux usées afin qu’elles ne ruissellent pas à proximité des lieux de vie
+quand c\’est possible, prévoir des tranchées pour drainer les eaux usées afin qu\’elles ne ruissellent pas à proximité des lieux de vie
 <br/><br/>
 <b>Latrines:</b>
 <br/>
@@ -79,7 +79,7 @@ les tombes sont numérotées,
 un dispositif de géolocalisation est  mis en place afin d’associer le domicile du défunt à sa tombe. (?? en AF )<br/> <br/>
 Accompagnement de la famille et des proches endeuillés
 ]]></string>
-    <string name="prevention_funeral_how"><![CDATA[<b>CICR</b> : <a href="https://www.icrc.org/fr">voir site</a><br/>
+    <string name="prevention_funeral_how"><![CDATA[<b>www.CICR.org</b> : visit website<br/>
 
 Plans de préparation et de gestion garantissant le respect de la dignité des défunts et de leurs familles.<br/><br/>
 

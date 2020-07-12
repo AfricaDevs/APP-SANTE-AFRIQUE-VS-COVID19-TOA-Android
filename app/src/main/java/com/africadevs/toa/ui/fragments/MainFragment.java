@@ -1,57 +1,43 @@
 package com.africadevs.toa.ui.fragments;
 
 import android.content.Context;
-import android.graphics.Region;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.NumberPicker;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
 
+import com.africadevs.toa.MainActivity;
+import com.africadevs.toa.R;
 import com.africadevs.toa.databinding.FragmentMainBinding;
+import com.africadevs.toa.interfaces.MainActivityCallbackInterface;
 import com.africadevs.toa.interfaces.MathdroApiService;
 import com.africadevs.toa.model.Country;
 import com.africadevs.toa.model.CountryCases;
 import com.africadevs.toa.utils.CompatUtils;
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-
-import com.africadevs.toa.MainActivity;
-import com.africadevs.toa.R;
-import com.africadevs.toa.interfaces.MainActivityCallbackInterface;
 import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.reflect.TypeToken;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.lang.reflect.Type;
-import java.util.List;
-
-import okhttp3.Cache;
-import okhttp3.OkHttpClient;
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+
+;
 
 public class MainFragment extends BottomSheetDialogFragment implements View.OnClickListener, NumberPicker.OnValueChangeListener{
 
     private FragmentMainBinding binding;
     private MainActivityCallbackInterface mCallback;
 
-    long cacheSize = 5 * 1024 * 1024;
-    Cache myCache;
     Country[] countries;
+    MathdroApiService service;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -67,7 +53,8 @@ public class MainFragment extends BottomSheetDialogFragment implements View.OnCl
         binding.cardPrevention.setOnClickListener(this);
         binding.cardDiagnosis.setOnClickListener(this);
 
-        myCache  = new Cache(getActivity().getCacheDir(), cacheSize);
+
+
         String JSON_STRING =  CompatUtils.getJsonFromAssets(getActivity(), "countries_list.json");
 
         Gson gson = new Gson();
@@ -77,6 +64,9 @@ public class MainFragment extends BottomSheetDialogFragment implements View.OnCl
         String[] displayedCountries = new String[countries.length];
         for (Country country: countries ) {
             displayedCountries[country.getId()] = country.getName();
+
+            if(country.getName() == null)
+                Log.i("empty_country", country.getId()+"");
         }
 
         binding.countryNumberPicker.setMinValue(0);
@@ -109,14 +99,14 @@ public class MainFragment extends BottomSheetDialogFragment implements View.OnCl
     private void loadCountryCases(String countryName){
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://covid19.mathdro.id/api/")
                 .addConverterFactory(GsonConverterFactory.create())
+                .baseUrl("https://covid19.mathdro.id/api/")
                 .build();
 
-        MathdroApiService service = retrofit.create(MathdroApiService.class);
+        service = retrofit.create(MathdroApiService.class);
         service.getCountryCases(countryName).enqueue(new Callback<CountryCases>() {
             @Override
-            public void onResponse(Call<CountryCases> call, Response<CountryCases> response) {
+            public void onResponse(Call<CountryCases> call, retrofit2.Response<CountryCases> response) {
                 Log.i("cases", response.body().confirmed.value+"");
 
                 //bind data
@@ -128,12 +118,13 @@ public class MainFragment extends BottomSheetDialogFragment implements View.OnCl
 
             @Override
             public void onFailure(Call<CountryCases> call, Throwable t) {
-                Log.i("cases_error", t.getMessage());
-            }
 
+            }
         });
 
     }
+
+
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
@@ -154,16 +145,27 @@ public class MainFragment extends BottomSheetDialogFragment implements View.OnCl
 
     @Override
     public void onValueChange(NumberPicker picker, int oldVal, int newValCountryIndex) {
-        //Use the NumberPicker int index to load a country name from countries Array
 
         //reinit values
         binding.casesConfirmedCount.setText("0");
         binding.casesRecoveredCount.setText("0");
         binding.casesDeathsCount.setText("0");
         binding.casesActiveCount.setText("0");
-        binding.imageCountryFlag.setImageResource(  getResources().getIdentifier(countries[newValCountryIndex].getIso2().toLowerCase(), "drawable", getActivity().getPackageName()) );
 
-        loadCountryCases( countries[newValCountryIndex].getName() );
+        //Use the NumberPicker int index to load a country name from countries Array
+        binding.imageCountryFlag.setImageResource(getResources().getIdentifier(countries[newValCountryIndex].getIso2().toLowerCase(), "drawable", getActivity().getPackageName()));
 
+        //If the user is online, we load online data
+        if(CompatUtils.isNetworkAvailable(getActivity())) {
+
+            //We hide the view that says : the user is offline
+            binding.onlineStatus.setAlpha(0.0f);
+            loadCountryCases(countries[newValCountryIndex].getName());
+        } else{
+            //We show the view that says : the user is offline
+            binding.onlineStatus.setAlpha(1.0f);
+            YoYo.with(Techniques.FadeIn).playOn(binding.onlineStatus);
+        }
     }
+
 }
